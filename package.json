@@ -73,7 +73,7 @@
     "gatsby-plugin-root-import": "2.0.5",
     "gh-pages": "^3.0.0",
     "husky": "4.2.5",
-    "jest": "25",
+    "jest": "25.5.4",
     "prettier": "2.0.5",
     "react-test-renderer": "16.13.1",
     "typescript": "^3.9.5"
