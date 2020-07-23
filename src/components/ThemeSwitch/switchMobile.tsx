@@ -1,21 +1,21 @@
 import React from "react"
 import { Box, Typography } from "@material-ui/core"
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles, createStyles } from "@material-ui/core/styles"
 import * as cs from "classnames"
 import { LightMode } from "../../shared/theme"
 
 interface Props {
-    lightMode: LightMode
-    toggleLightMode: () => void
-  }
+  lightMode: LightMode
+  toggleLightMode: () => void
+}
 
-export const useStylesClasses = makeStyles((theme: Theme) =>
+export const useStylesClasses = makeStyles(() =>
   createStyles({
     container: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: 120
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: 120,
     },
     box: {
       width: 25,
@@ -24,8 +24,7 @@ export const useStylesClasses = makeStyles((theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      alignItems: "center"
-
+      alignItems: "center",
     },
     inactive: {
       height: 15,
@@ -33,23 +32,23 @@ export const useStylesClasses = makeStyles((theme: Theme) =>
       background: "#c4c4c4",
       borderRadius: 0,
       border: "none",
-      outline: "none !important"
-      },
+      outline: "none !important",
+    },
     active: {
       height: 15,
       width: 15,
       background: "#FFF",
       borderRadius: 0,
       border: "none",
-      outline: "none !important"
-      },
+      outline: "none !important",
+    },
   }),
 )
 
 export function ThemeSwitchMobile({
-    lightMode,
-    toggleLightMode
-  }: Props): React.ReactElement {
+  lightMode,
+  toggleLightMode,
+}: Props): React.ReactElement {
   const classes = useStylesClasses()
 
   const { inactive, active } = useStylesClasses()
@@ -66,11 +65,13 @@ export function ThemeSwitchMobile({
 
   return (
     <Box className={classes.container}>
-        <Typography style={{ fontSize: 10, width: 70, color: "#fff" }}>{label}</Typography>
-        <Box className={classes.box}>
-            <button onClick={toggleLightMode} className={LMButtonClass}/>
-            <button onClick={toggleLightMode} className={DMButtonClass}/>
-        </Box>
+      <Typography style={{ fontSize: 10, width: 70, color: "#fff" }}>
+        {label}
+      </Typography>
+      <Box className={classes.box}>
+        <button onClick={toggleLightMode} className={LMButtonClass} />
+        <button onClick={toggleLightMode} className={DMButtonClass} />
+      </Box>
     </Box>
   )
 }

@@ -18,14 +18,10 @@ const componentes = ({
     <Fragment>
       <Container style={{ display: "flex", justifyContent: "space-evenly" }}>
         <LanguageSwitcher />
-        <ThemeSwitch
-          lightMode={lightMode}
-          toggleLightMode={toggleLightMode}
-        />
+        <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />
         <Container style={{ background: "rgba(0, 0, 0, 0.81)" }}>
-          <ThemeSwitchMobile/>
+          <ThemeSwitchMobile />
         </Container>
-
       </Container>
     </Fragment>
   )

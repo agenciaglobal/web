@@ -9,7 +9,6 @@ import { ThemeSwitch } from "../ThemeSwitch/switch"
 import * as cs from "classnames"
 import { ThemeSwitchMobile } from "../ThemeSwitch/switchMobile"
 
-
 interface Props {
   lightMode: LightMode
   toggleLightMode: () => void
@@ -180,14 +179,14 @@ const LayoutHeaderMobile = ({
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "flex-end",
-                padding: "40px 16px"
+                padding: "40px 16px",
               }}
             >
               <ThemeSwitch
                 lightMode={lightMode}
                 toggleLightMode={toggleLightMode}
               />
-              <ThemeSwitchMobile/>
+              <ThemeSwitchMobile />
             </Box>
           </Container>
         </Container>
