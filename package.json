@@ -17,6 +17,7 @@
     "@types/react-helmet": "6.0.0",
     "@types/styled-components": "5.1.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "chromatic": "5.0.0",
     "classnames": "2.2.6",
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
@@ -98,7 +99,9 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "deploy": "PATH_PREFIX=/web gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git"
+    "deploy": "PATH_PREFIX=/web gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "chromatic": "npx chromatic  --project-token=qjj4nd3r8im"
   },
   "husky": {
     "hooks": {
