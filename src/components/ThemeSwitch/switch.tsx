@@ -1,4 +1,4 @@
-import { Paper, StyleRules, Switch } from "@material-ui/core"
+import { Paper, Switch } from "@material-ui/core"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import React from "react"
 import { LightMode } from "../../shared/theme"
@@ -72,8 +72,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 }))
 
 const SwitchPaper = ({
@@ -81,7 +81,7 @@ const SwitchPaper = ({
 }: {
   children: React.ReactElement
 }): React.ReactElement => {
-const classes = useStyles()
+  const classes = useStyles()
   return <Paper className={classes.switchPaper}>{children}</Paper>
 }
 const IconBox = ({
@@ -95,7 +95,7 @@ const IconBox = ({
         margin: "0px 8px",
         height: 16,
         background: "transparent",
-        boxShadow: "none"
+        boxShadow: "none",
       },
     }),
   )()

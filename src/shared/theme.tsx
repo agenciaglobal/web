@@ -10,18 +10,18 @@ export type LightMode = "light" | "dark"
 const darkPalette = {
   primary: { main: "#000" },
   secondary: { main: "#FFF" },
-  grey: { 
+  grey: {
     A100: "rgba(255, 255, 255, 0.6)",
-    A200: "#232323"
-  }
+    A200: "#232323",
+  },
 }
 const lightPalette = {
   primary: { main: "#FFF" },
   secondary: { main: "#000" },
   grey: {
     A100: "rgba(0, 0, 0, 0.6)",
-    A200: "#E5E5E5"
-  }
+    A200: "#E5E5E5",
+  },
 }
 const lightOptions: ThemeOptions = {
   palette: lightPalette,
