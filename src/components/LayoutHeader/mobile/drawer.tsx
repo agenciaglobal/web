@@ -52,7 +52,7 @@ export const MobileDrawer = ({
   ]
   return (
     <Drawer
-      anchor={"right"}
+      anchor={"bottom"}
       classes={{ paper: classes.drawer }}
       onClose={close}
       BackdropProps={{ className: classes.backdrop }}
