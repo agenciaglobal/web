@@ -3,11 +3,11 @@ import i18next from "i18next"
 i18next.init({
   fallbackLng: "pt-BR",
   resources: {
-    "pt-BR": {
-      translations: require("../locales/translations.json").pt,
+    pt: {
+      translations: require("../locales/pt/translations.json"),
     },
     en: {
-      translations: require("../locales/translations.json").en,
+      translations: require("../locales/en/translations.json"),
     },
   },
   ns: ["translations"],
@@ -20,8 +20,8 @@ i18next.init({
   react: {
     wait: true,
   },
-})
+} as any)
 
-i18next.languages = ["pt-BR", "en"]
+i18next.languages = ["pt", "en"]
 
 export default i18next
