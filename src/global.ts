@@ -1778,8 +1778,6 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>
-  port?: Maybe<DateQueryOperatorInput>
-  host?: Maybe<StringQueryOperatorInput>
   pathPrefix?: Maybe<StringQueryOperatorInput>
   polyfill?: Maybe<BooleanQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
@@ -1883,8 +1881,6 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars["Date"]>
   siteMetadata?: Maybe<SiteSiteMetadata>
-  port?: Maybe<Scalars["Date"]>
-  host?: Maybe<Scalars["String"]>
   pathPrefix?: Maybe<Scalars["String"]>
   polyfill?: Maybe<Scalars["Boolean"]>
   id: Scalars["ID"]
@@ -1894,13 +1890,6 @@ export type Site = Node & {
 }
 
 export type SiteBuildTimeArgs = {
-  formatString?: Maybe<Scalars["String"]>
-  fromNow?: Maybe<Scalars["Boolean"]>
-  difference?: Maybe<Scalars["String"]>
-  locale?: Maybe<Scalars["String"]>
-}
-
-export type SitePortArgs = {
   formatString?: Maybe<Scalars["String"]>
   fromNow?: Maybe<Scalars["Boolean"]>
   difference?: Maybe<Scalars["String"]>
@@ -2090,8 +2079,6 @@ export type SiteFieldsEnum =
   | "siteMetadata___description"
   | "siteMetadata___siteUrl"
   | "siteMetadata___social___twitter"
-  | "port"
-  | "host"
   | "pathPrefix"
   | "polyfill"
   | "id"
@@ -2184,8 +2171,6 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>
-  port?: Maybe<DateQueryOperatorInput>
-  host?: Maybe<StringQueryOperatorInput>
   pathPrefix?: Maybe<StringQueryOperatorInput>
   polyfill?: Maybe<BooleanQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
@@ -2240,15 +2225,117 @@ export type SitePageConnectionGroupArgs = {
 }
 
 export type SitePageContext = {
+  language?: Maybe<Scalars["String"]>
+  i18n?: Maybe<SitePageContextI18n>
   slug?: Maybe<Scalars["String"]>
   previous?: Maybe<SitePageContextPrevious>
   next?: Maybe<SitePageContextNext>
 }
 
 export type SitePageContextFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>
+  i18n?: Maybe<SitePageContextI18nFilterInput>
   slug?: Maybe<StringQueryOperatorInput>
   previous?: Maybe<SitePageContextPreviousFilterInput>
   next?: Maybe<SitePageContextNextFilterInput>
+}
+
+export type SitePageContextI18n = {
+  language?: Maybe<Scalars["String"]>
+  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
+  defaultLanguage?: Maybe<Scalars["String"]>
+  routed?: Maybe<Scalars["Boolean"]>
+  resources?: Maybe<SitePageContextI18nResources>
+  originalPath?: Maybe<Scalars["String"]>
+  path?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>
+  languages?: Maybe<StringQueryOperatorInput>
+  defaultLanguage?: Maybe<StringQueryOperatorInput>
+  routed?: Maybe<BooleanQueryOperatorInput>
+  resources?: Maybe<SitePageContextI18nResourcesFilterInput>
+  originalPath?: Maybe<StringQueryOperatorInput>
+  path?: Maybe<StringQueryOperatorInput>
+}
+
+export type SitePageContextI18nResources = {
+  pt?: Maybe<SitePageContextI18nResourcesPt>
+  en?: Maybe<SitePageContextI18nResourcesEn>
+}
+
+export type SitePageContextI18nResourcesEn = {
+  translations?: Maybe<SitePageContextI18nResourcesEnTranslations>
+}
+
+export type SitePageContextI18nResourcesEnFilterInput = {
+  translations?: Maybe<SitePageContextI18nResourcesEnTranslationsFilterInput>
+}
+
+export type SitePageContextI18nResourcesEnTranslations = {
+  home?: Maybe<SitePageContextI18nResourcesEnTranslationsHome>
+  news?: Maybe<Scalars["String"]>
+  projects?: Maybe<Scalars["String"]>
+  client?: Maybe<Scalars["String"]>
+  team?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesEnTranslationsFilterInput = {
+  home?: Maybe<SitePageContextI18nResourcesEnTranslationsHomeFilterInput>
+  news?: Maybe<StringQueryOperatorInput>
+  projects?: Maybe<StringQueryOperatorInput>
+  client?: Maybe<StringQueryOperatorInput>
+  team?: Maybe<StringQueryOperatorInput>
+}
+
+export type SitePageContextI18nResourcesEnTranslationsHome = {
+  title?: Maybe<Scalars["String"]>
+  subtitle?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesEnTranslationsHomeFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>
+  subtitle?: Maybe<StringQueryOperatorInput>
+}
+
+export type SitePageContextI18nResourcesFilterInput = {
+  pt?: Maybe<SitePageContextI18nResourcesPtFilterInput>
+  en?: Maybe<SitePageContextI18nResourcesEnFilterInput>
+}
+
+export type SitePageContextI18nResourcesPt = {
+  translations?: Maybe<SitePageContextI18nResourcesPtTranslations>
+}
+
+export type SitePageContextI18nResourcesPtFilterInput = {
+  translations?: Maybe<SitePageContextI18nResourcesPtTranslationsFilterInput>
+}
+
+export type SitePageContextI18nResourcesPtTranslations = {
+  home?: Maybe<SitePageContextI18nResourcesPtTranslationsHome>
+  news?: Maybe<Scalars["String"]>
+  projects?: Maybe<Scalars["String"]>
+  client?: Maybe<Scalars["String"]>
+  team?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesPtTranslationsFilterInput = {
+  home?: Maybe<SitePageContextI18nResourcesPtTranslationsHomeFilterInput>
+  news?: Maybe<StringQueryOperatorInput>
+  projects?: Maybe<StringQueryOperatorInput>
+  client?: Maybe<StringQueryOperatorInput>
+  team?: Maybe<StringQueryOperatorInput>
+}
+
+export type SitePageContextI18nResourcesPtTranslationsHome = {
+  title?: Maybe<Scalars["String"]>
+  subtitle?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesPtTranslationsHomeFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>
+  subtitle?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageContextNext = {
@@ -2418,6 +2505,13 @@ export type SitePageFieldsEnum =
   | "internal___owner"
   | "internal___type"
   | "isCreatedByStatefulCreatePages"
+  | "context___language"
+  | "context___i18n___language"
+  | "context___i18n___languages"
+  | "context___i18n___defaultLanguage"
+  | "context___i18n___routed"
+  | "context___i18n___originalPath"
+  | "context___i18n___path"
   | "context___slug"
   | "context___previous___fields___slug"
   | "context___previous___frontmatter___date"
@@ -2479,15 +2573,6 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___plugins___version"
   | "pluginCreator___pluginOptions___plugins___browserAPIs"
   | "pluginCreator___pluginOptions___plugins___pluginFilepath"
-  | "pluginCreator___pluginOptions___importWorkboxFrom"
-  | "pluginCreator___pluginOptions___globDirectory"
-  | "pluginCreator___pluginOptions___globPatterns"
-  | "pluginCreator___pluginOptions___modifyUrlPrefix____"
-  | "pluginCreator___pluginOptions___cacheId"
-  | "pluginCreator___pluginOptions___runtimeCaching"
-  | "pluginCreator___pluginOptions___runtimeCaching___handler"
-  | "pluginCreator___pluginOptions___skipWaiting"
-  | "pluginCreator___pluginOptions___clientsClaim"
   | "pluginCreator___pluginOptions___src"
   | "pluginCreator___pluginOptions___pages"
   | "pluginCreator___pluginOptions___cachePublic"
@@ -2507,7 +2592,14 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___legacy"
   | "pluginCreator___pluginOptions___theme_color_in_head"
   | "pluginCreator___pluginOptions___cacheDigest"
-  | "pluginCreator___pluginOptions___pathToConfigModule"
+  | "pluginCreator___pluginOptions___languages"
+  | "pluginCreator___pluginOptions___defaultLanguage"
+  | "pluginCreator___pluginOptions___i18nextOptions___language"
+  | "pluginCreator___pluginOptions___i18nextOptions___ns"
+  | "pluginCreator___pluginOptions___i18nextOptions___defaultNS"
+  | "pluginCreator___pluginOptions___i18nextOptions___returnObjects"
+  | "pluginCreator___pluginOptions___i18nextOptions___debug"
+  | "pluginCreator___pluginOptions___i18nextOptions___nsSeparator"
   | "pluginCreator___pluginOptions___codegen"
   | "pluginCreator___pluginOptions___fileName"
   | "pluginCreator___pluginOptions___pathCheck"
@@ -2703,15 +2795,6 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___plugins___version"
   | "pluginOptions___plugins___browserAPIs"
   | "pluginOptions___plugins___pluginFilepath"
-  | "pluginOptions___importWorkboxFrom"
-  | "pluginOptions___globDirectory"
-  | "pluginOptions___globPatterns"
-  | "pluginOptions___modifyUrlPrefix____"
-  | "pluginOptions___cacheId"
-  | "pluginOptions___runtimeCaching"
-  | "pluginOptions___runtimeCaching___handler"
-  | "pluginOptions___skipWaiting"
-  | "pluginOptions___clientsClaim"
   | "pluginOptions___src"
   | "pluginOptions___pages"
   | "pluginOptions___cachePublic"
@@ -2721,17 +2804,7 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___gatsbyRemarkPlugins"
   | "pluginOptions___gatsbyRemarkPlugins___resolve"
   | "pluginOptions___gatsbyRemarkPlugins___options___maxWidth"
-  | "pluginOptions___gatsbyRemarkPlugins___options___pathPrefix"
   | "pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle"
-  | "pluginOptions___gatsbyRemarkPlugins___options___backgroundColor"
-  | "pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal"
-  | "pluginOptions___gatsbyRemarkPlugins___options___showCaptions"
-  | "pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions"
-  | "pluginOptions___gatsbyRemarkPlugins___options___withWebp"
-  | "pluginOptions___gatsbyRemarkPlugins___options___tracedSVG"
-  | "pluginOptions___gatsbyRemarkPlugins___options___loading"
-  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha"
-  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImage"
   | "pluginOptions___short_name"
   | "pluginOptions___start_url"
   | "pluginOptions___background_color"
@@ -2743,7 +2816,16 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___legacy"
   | "pluginOptions___theme_color_in_head"
   | "pluginOptions___cacheDigest"
-  | "pluginOptions___pathToConfigModule"
+  | "pluginOptions___languages"
+  | "pluginOptions___defaultLanguage"
+  | "pluginOptions___i18nextOptions___language"
+  | "pluginOptions___i18nextOptions___ns"
+  | "pluginOptions___i18nextOptions___defaultNS"
+  | "pluginOptions___i18nextOptions___returnObjects"
+  | "pluginOptions___i18nextOptions___debug"
+  | "pluginOptions___i18nextOptions___react___wait"
+  | "pluginOptions___i18nextOptions___interpolation___escapeValue"
+  | "pluginOptions___i18nextOptions___nsSeparator"
   | "pluginOptions___codegen"
   | "pluginOptions___fileName"
   | "pluginOptions___pathCheck"
@@ -2863,14 +2945,6 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>
-  importWorkboxFrom?: Maybe<Scalars["String"]>
-  globDirectory?: Maybe<Scalars["String"]>
-  globPatterns?: Maybe<Array<Maybe<Scalars["String"]>>>
-  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefix>
-  cacheId?: Maybe<Scalars["String"]>
-  runtimeCaching?: Maybe<Array<Maybe<SitePluginPluginOptionsRuntimeCaching>>>
-  skipWaiting?: Maybe<Scalars["Boolean"]>
-  clientsClaim?: Maybe<Scalars["Boolean"]>
   src?: Maybe<Scalars["String"]>
   pages?: Maybe<Scalars["String"]>
   cachePublic?: Maybe<Scalars["Boolean"]>
@@ -2891,7 +2965,9 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars["Boolean"]>
   theme_color_in_head?: Maybe<Scalars["Boolean"]>
   cacheDigest?: Maybe<Scalars["String"]>
-  pathToConfigModule?: Maybe<Scalars["String"]>
+  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
+  defaultLanguage?: Maybe<Scalars["String"]>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
   codegen?: Maybe<Scalars["Boolean"]>
   fileName?: Maybe<Scalars["String"]>
   pathCheck?: Maybe<Scalars["Boolean"]>
@@ -2899,14 +2975,6 @@ export type SitePluginPluginOptions = {
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>
-  importWorkboxFrom?: Maybe<StringQueryOperatorInput>
-  globDirectory?: Maybe<StringQueryOperatorInput>
-  globPatterns?: Maybe<StringQueryOperatorInput>
-  modifyUrlPrefix?: Maybe<SitePluginPluginOptionsModifyUrlPrefixFilterInput>
-  cacheId?: Maybe<StringQueryOperatorInput>
-  runtimeCaching?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterListInput>
-  skipWaiting?: Maybe<BooleanQueryOperatorInput>
-  clientsClaim?: Maybe<BooleanQueryOperatorInput>
   src?: Maybe<StringQueryOperatorInput>
   pages?: Maybe<StringQueryOperatorInput>
   cachePublic?: Maybe<BooleanQueryOperatorInput>
@@ -2927,7 +2995,9 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>
   cacheDigest?: Maybe<StringQueryOperatorInput>
-  pathToConfigModule?: Maybe<StringQueryOperatorInput>
+  languages?: Maybe<StringQueryOperatorInput>
+  defaultLanguage?: Maybe<StringQueryOperatorInput>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
   codegen?: Maybe<BooleanQueryOperatorInput>
   fileName?: Maybe<StringQueryOperatorInput>
   pathCheck?: Maybe<BooleanQueryOperatorInput>
@@ -2949,40 +3019,52 @@ export type SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput = {
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
   maxWidth?: Maybe<Scalars["Int"]>
-  pathPrefix?: Maybe<Scalars["String"]>
   wrapperStyle?: Maybe<Scalars["String"]>
-  backgroundColor?: Maybe<Scalars["String"]>
-  linkImagesToOriginal?: Maybe<Scalars["Boolean"]>
-  showCaptions?: Maybe<Scalars["Boolean"]>
-  markdownCaptions?: Maybe<Scalars["Boolean"]>
-  withWebp?: Maybe<Scalars["Boolean"]>
-  tracedSVG?: Maybe<Scalars["Boolean"]>
-  loading?: Maybe<Scalars["String"]>
-  disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>
-  disableBgImage?: Maybe<Scalars["Boolean"]>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>
-  pathPrefix?: Maybe<StringQueryOperatorInput>
   wrapperStyle?: Maybe<StringQueryOperatorInput>
-  backgroundColor?: Maybe<StringQueryOperatorInput>
-  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
-  showCaptions?: Maybe<BooleanQueryOperatorInput>
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>
-  withWebp?: Maybe<BooleanQueryOperatorInput>
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>
-  loading?: Maybe<StringQueryOperatorInput>
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>
 }
 
-export type SitePluginPluginOptionsModifyUrlPrefix = {
-  _?: Maybe<Scalars["String"]>
+export type SitePluginPluginOptionsI18nextOptions = {
+  language?: Maybe<Scalars["String"]>
+  ns?: Maybe<Array<Maybe<Scalars["String"]>>>
+  defaultNS?: Maybe<Scalars["String"]>
+  returnObjects?: Maybe<Scalars["Boolean"]>
+  debug?: Maybe<Scalars["Boolean"]>
+  react?: Maybe<SitePluginPluginOptionsI18nextOptionsReact>
+  interpolation?: Maybe<SitePluginPluginOptionsI18nextOptionsInterpolation>
+  nsSeparator?: Maybe<Scalars["Boolean"]>
 }
 
-export type SitePluginPluginOptionsModifyUrlPrefixFilterInput = {
-  _?: Maybe<StringQueryOperatorInput>
+export type SitePluginPluginOptionsI18nextOptionsFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>
+  ns?: Maybe<StringQueryOperatorInput>
+  defaultNS?: Maybe<StringQueryOperatorInput>
+  returnObjects?: Maybe<BooleanQueryOperatorInput>
+  debug?: Maybe<BooleanQueryOperatorInput>
+  react?: Maybe<SitePluginPluginOptionsI18nextOptionsReactFilterInput>
+  interpolation?: Maybe<
+    SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput
+  >
+  nsSeparator?: Maybe<BooleanQueryOperatorInput>
+}
+
+export type SitePluginPluginOptionsI18nextOptionsInterpolation = {
+  escapeValue?: Maybe<Scalars["Boolean"]>
+}
+
+export type SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput = {
+  escapeValue?: Maybe<BooleanQueryOperatorInput>
+}
+
+export type SitePluginPluginOptionsI18nextOptionsReact = {
+  wait?: Maybe<Scalars["Boolean"]>
+}
+
+export type SitePluginPluginOptionsI18nextOptionsReactFilterInput = {
+  wait?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginPluginOptionsPlugins = {
@@ -3005,18 +3087,6 @@ export type SitePluginPluginOptionsPluginsFilterInput = {
 
 export type SitePluginPluginOptionsPluginsFilterListInput = {
   elemMatch?: Maybe<SitePluginPluginOptionsPluginsFilterInput>
-}
-
-export type SitePluginPluginOptionsRuntimeCaching = {
-  handler?: Maybe<Scalars["String"]>
-}
-
-export type SitePluginPluginOptionsRuntimeCachingFilterInput = {
-  handler?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsRuntimeCachingFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsRuntimeCachingFilterInput>
 }
 
 export type SitePluginSortInput = {
@@ -3062,6 +3132,22 @@ export type StringQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars["String"]>>>
   regex?: Maybe<Scalars["String"]>
   glob?: Maybe<Scalars["String"]>
+}
+
+export type ClientQueryQueryVariables = Exact<{ [key: string]: never }>
+
+export type ClientQueryQuery = {
+  site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, "title">> }>
+  allMdx: Pick<MdxConnection, "totalCount"> & {
+    edges: Array<{
+      node: Pick<Mdx, "excerpt"> & {
+        fields?: Maybe<Pick<MdxFields, "slug">>
+        frontmatter?: Maybe<
+          Pick<MdxFrontmatter, "date" | "name" | "description" | "image">
+        >
+      }
+    }>
+  }
 }
 
 export type HomeQueryQueryVariables = Exact<{ [key: string]: never }>
@@ -3123,8 +3209,193 @@ export type TeamQueryQuery = {
     edges: Array<{
       node: Pick<Mdx, "excerpt"> & {
         fields?: Maybe<Pick<MdxFields, "slug">>
-        frontmatter?: Maybe<Pick<MdxFrontmatter, "date" | "name" | "job">>
+        frontmatter?: Maybe<
+          Pick<MdxFrontmatter, "date" | "name" | "job" | "image">
+        >
       }
     }>
   }
 }
+
+export type NewsPostBySlugQueryVariables = Exact<{
+  slug: Scalars["String"]
+}>
+
+export type NewsPostBySlugQuery = {
+  site?: Maybe<{
+    siteMetadata?: Maybe<Pick<SiteSiteMetadata, "title" | "author">>
+  }>
+  mdx?: Maybe<
+    Pick<Mdx, "id" | "excerpt" | "body"> & {
+      frontmatter?: Maybe<
+        Pick<MdxFrontmatter, "title" | "date" | "description">
+      >
+    }
+  >
+}
+
+export type PortifolioPostBySlugQueryVariables = Exact<{
+  slug: Scalars["String"]
+}>
+
+export type PortifolioPostBySlugQuery = {
+  site?: Maybe<{
+    siteMetadata?: Maybe<Pick<SiteSiteMetadata, "title" | "author">>
+  }>
+  mdx?: Maybe<
+    Pick<Mdx, "id" | "excerpt" | "body"> & {
+      frontmatter?: Maybe<
+        Pick<MdxFrontmatter, "title" | "date" | "description">
+      >
+    }
+  >
+}
+
+export type GatsbyImageSharpFixedFragment = Pick<
+  ImageSharpFixed,
+  "base64" | "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpFixed_TracedSvgFragment = Pick<
+  ImageSharpFixed,
+  "tracedSVG" | "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpFixed_WithWebpFragment = Pick<
+  ImageSharpFixed,
+  "base64" | "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpFixed_WithWebp_TracedSvgFragment = Pick<
+  ImageSharpFixed,
+  "tracedSVG" | "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpFixed_NoBase64Fragment = Pick<
+  ImageSharpFixed,
+  "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpFixed_WithWebp_NoBase64Fragment = Pick<
+  ImageSharpFixed,
+  "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpFluidFragment = Pick<
+  ImageSharpFluid,
+  "base64" | "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpFluidLimitPresentationSizeFragment = {
+  maxHeight: ImageSharpFluid["presentationHeight"]
+  maxWidth: ImageSharpFluid["presentationWidth"]
+}
+
+export type GatsbyImageSharpFluid_TracedSvgFragment = Pick<
+  ImageSharpFluid,
+  "tracedSVG" | "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpFluid_WithWebpFragment = Pick<
+  ImageSharpFluid,
+  | "base64"
+  | "aspectRatio"
+  | "src"
+  | "srcSet"
+  | "srcWebp"
+  | "srcSetWebp"
+  | "sizes"
+>
+
+export type GatsbyImageSharpFluid_WithWebp_TracedSvgFragment = Pick<
+  ImageSharpFluid,
+  | "tracedSVG"
+  | "aspectRatio"
+  | "src"
+  | "srcSet"
+  | "srcWebp"
+  | "srcSetWebp"
+  | "sizes"
+>
+
+export type GatsbyImageSharpFluid_NoBase64Fragment = Pick<
+  ImageSharpFluid,
+  "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = Pick<
+  ImageSharpFluid,
+  "aspectRatio" | "src" | "srcSet" | "srcWebp" | "srcSetWebp" | "sizes"
+>
+
+export type GatsbyImageSharpResolutionsFragment = Pick<
+  ImageSharpResolutions,
+  "base64" | "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpResolutions_TracedSvgFragment = Pick<
+  ImageSharpResolutions,
+  "tracedSVG" | "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpResolutions_WithWebpFragment = Pick<
+  ImageSharpResolutions,
+  "base64" | "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpResolutions_WithWebp_TracedSvgFragment = Pick<
+  ImageSharpResolutions,
+  "tracedSVG" | "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpResolutions_NoBase64Fragment = Pick<
+  ImageSharpResolutions,
+  "width" | "height" | "src" | "srcSet"
+>
+
+export type GatsbyImageSharpResolutions_WithWebp_NoBase64Fragment = Pick<
+  ImageSharpResolutions,
+  "width" | "height" | "src" | "srcSet" | "srcWebp" | "srcSetWebp"
+>
+
+export type GatsbyImageSharpSizesFragment = Pick<
+  ImageSharpSizes,
+  "base64" | "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpSizes_TracedSvgFragment = Pick<
+  ImageSharpSizes,
+  "tracedSVG" | "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpSizes_WithWebpFragment = Pick<
+  ImageSharpSizes,
+  | "base64"
+  | "aspectRatio"
+  | "src"
+  | "srcSet"
+  | "srcWebp"
+  | "srcSetWebp"
+  | "sizes"
+>
+
+export type GatsbyImageSharpSizes_WithWebp_TracedSvgFragment = Pick<
+  ImageSharpSizes,
+  | "tracedSVG"
+  | "aspectRatio"
+  | "src"
+  | "srcSet"
+  | "srcWebp"
+  | "srcSetWebp"
+  | "sizes"
+>
+
+export type GatsbyImageSharpSizes_NoBase64Fragment = Pick<
+  ImageSharpSizes,
+  "aspectRatio" | "src" | "srcSet" | "sizes"
+>
+
+export type GatsbyImageSharpSizes_WithWebp_NoBase64Fragment = Pick<
+  ImageSharpSizes,
+  "aspectRatio" | "src" | "srcSet" | "srcWebp" | "srcSetWebp" | "sizes"
+>
