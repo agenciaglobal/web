@@ -1,4 +1,12 @@
 {
+  "sidebar": {
+    "main": "Portifolio",
+    "team": "Equipe",
+    "news": "Notícias",
+    "about": "Sobre",
+    "contact": "Contato",
+    "client": "Clientes"
+  },
   "home": {
     "title": "Mudança requer Criatividade",
     "subtitle": "Somos uma Agência criativa para marcas em constante transformação."
