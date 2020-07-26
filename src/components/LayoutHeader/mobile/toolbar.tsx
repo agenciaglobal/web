@@ -1,29 +1,18 @@
 import { Container, Hidden } from "@material-ui/core"
-import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
-import logo from "../../../../static/logo-white.png"
-import logoBlack from "../../../../static/logo-black.png"
 import React from "react"
+import logoBlack from "../../../../static/logo-black.png"
+import logo from "../../../../static/logo-white.png"
 import { CloseButton } from "./close"
+import { useStylesHeader } from "./toolbar_styles"
 
-export const useStylesHeader = makeStyles((theme: Theme) => ({
-  mobileHeaderContainer: {
-    backgroundColor: theme.palette.primary.main,
-    position: "fixed",
-    top: 0,
-    height: 155,
-    zIndex: 1,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-}))
-
-export const MobileToolbar = (props: {
+interface Props {
   lightMode: "light" | "dark"
   onClick: () => void
   open: boolean
-}): React.ReactElement => {
+}
+
+export const MobileToolbar = (props: Props): React.ReactElement => {
   const c = useStylesHeader()
   const { mobileHeaderContainer } = c
   return (
