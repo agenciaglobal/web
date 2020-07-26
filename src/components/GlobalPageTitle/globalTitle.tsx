@@ -11,7 +11,7 @@ export const GlobalPageTitle = ({
       fontSize: 40,
       paddingTop: 26,
       paddingBottom: 26,
-      fontFamily: "GSOne",
+      fontFamily: "GSThree",
     }}
   >
     {label}
