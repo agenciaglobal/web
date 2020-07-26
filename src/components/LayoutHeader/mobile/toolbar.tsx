@@ -13,8 +13,7 @@ interface Props {
 }
 
 export const MobileToolbar = (props: Props): React.ReactElement => {
-  const c = useStylesHeader()
-  const { mobileHeaderContainer } = c
+  const { mobileHeaderContainer } = useStylesHeader()
   return (
     <Hidden mdUp>
       <Container className={mobileHeaderContainer}>
