@@ -4,13 +4,15 @@ import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 
 const useStylesMenu = makeStyles((theme: Theme) => ({
-  menuItem: {
+  text: {
     listStyle: "none",
     textDecoration: "none",
     textAlign: "left",
-    fontSize: 24,
-    marginBottom: 6,
+    marginTop: 16,
+    marginBottom: 16,
     color: theme.palette.secondary.main,
+    fontSize: "30px",
+    lineHeight: "32px",
   },
 }))
 export const LinkMobileComponent = ({
@@ -31,9 +33,8 @@ export const LinkMobileComponent = ({
         color: `white`,
         textDecoration: `none`,
       }}
-      className={classes.menuItem}
     >
-      <Typography>{label}</Typography>
+      <Typography className={classes.text}>{label}</Typography>
     </Link>
   )
 }
