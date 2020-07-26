@@ -49,8 +49,8 @@ export const TabComponent = ({
   const { common, contactCommon, selected, contactSelected } = itemStyles()
   const isContact = label === "CONTACT"
   const { language } = useI18next()
-  let s = language === "en" ? "/" + language + page : page
-  let isCurrent = uri === s
+  const s = language === "en" ? "/" + language + page : page
+  const isCurrent = uri === s
   const here = isCurrent && !isContact
   const onContact = isCurrent && isContact
   const className = cs({

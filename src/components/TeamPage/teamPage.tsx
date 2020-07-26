@@ -9,7 +9,7 @@ interface Props {
   employees: Employes
 }
 
-export const TeamPage = ({ employees }: Props) => {
+export const TeamPage = ({ employees }: Props): React.ReactElement => {
   const { t } = useI18next()
   return (
     <React.Fragment>

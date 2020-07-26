@@ -2,12 +2,16 @@ import { Typography } from "@material-ui/core"
 import React, { useState } from "react"
 
 interface Props {
-  backgroundImage: any
+  backgroundImage: string
   title: string
   job: string
 }
 
-export const EmployeeComponent = ({ backgroundImage, job, title }: Props) => {
+export const EmployeeComponent = ({
+  backgroundImage,
+  job,
+  title,
+}: Props): React.ReactElement => {
   const [hover, setHover] = useState(false)
   return (
     <div

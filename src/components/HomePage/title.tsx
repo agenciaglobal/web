@@ -3,11 +3,8 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 
 export const HomeTitleComponent = (): React.ReactElement => {
-  const { t, language } = useI18next()
-  let home = t("home")
-  let title = t("home.title")
-
-  console.log(home, language, title)
+  const { t } = useI18next()
+  const home = t("home")
   return (
     <React.Fragment>
       <Typography

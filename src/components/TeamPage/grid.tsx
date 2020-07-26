@@ -2,7 +2,11 @@ import * as React from "react"
 import { EmployeeComponent } from "./employer"
 import { Employes } from "./types"
 
-export const GridEmployees = ({ employees }: { employees: Employes }) => {
+export const GridEmployees = ({
+  employees,
+}: {
+  employees: Employes
+}): React.ReactElement => {
   return (
     <div style={{ margin: "20px 0 40px" }}>
       <div className={"grid"}>

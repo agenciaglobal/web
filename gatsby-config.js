@@ -144,7 +144,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        codegen: false,
+        codegen: true,
         fileName: `src/global.ts`,
       },
     },

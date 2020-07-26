@@ -1,6 +1,5 @@
 import { Container } from "@material-ui/core"
 import * as React from "react"
-import { useTranslation } from "react-i18next"
 import { Waypoint } from "react-waypoint"
 import LayoutHeader from "../components/LayoutHeader/layoutHeader"
 import LayoutHeaderMobile from "../components/LayoutHeader/layoutHeaderMobile"
@@ -23,12 +22,6 @@ export const ActualLayout = ({
 }: Props): React.ReactElement => {
   const [open, setDrawerOpen] = React.useState(false)
   const classes = useStyles()
-
-  const { t } = useTranslation()
-  let home = t("home")
-  let message = t("news")
-  console.log(home)
-  console.log(message)
   return (
     <div className={classes.wrapper}>
       <RightDrawer open={open} uri={uri} />

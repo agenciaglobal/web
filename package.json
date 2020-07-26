@@ -100,7 +100,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
-    "start": "yarn develop",
+    "start": "yarn clean && yarn develop",
     "serve": "gatsby serve",
     "test": "jest",
     "deploy": "PATH_PREFIX=/web gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
