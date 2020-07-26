@@ -15,7 +15,7 @@ interface Props {
   uri: string
 }
 
-const LayoutHeader = ({
+export const LayoutHeader = ({
   lightMode,
   uri,
   toggleLightMode,
@@ -78,5 +78,3 @@ const LayoutHeader = ({
     </Fragment>
   )
 }
-
-export default LayoutHeader

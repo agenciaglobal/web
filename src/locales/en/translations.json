@@ -1,4 +1,12 @@
 {
+  "sidebar": {
+    "main": "Works",
+    "team": "Team",
+    "news": "News",
+    "about": "About",
+    "contact": "Contact",
+    "clients": "Clients"
+  },
   "home": {
     "title": "Change requires crEativity",
     "subtitle": "We are a Creativity Agency for constantly evolving brands"
