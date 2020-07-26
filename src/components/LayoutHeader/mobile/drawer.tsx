@@ -7,8 +7,12 @@ import { ThemeSwitch } from "../../ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
 
 const useStylesV2 = makeStyles((theme: Theme) => ({
+  backdrop: {
+    opacity: "0 !important",
+  },
   drawer: {
     marginTop: 155,
+    boxShadow: "none",
     height: "calc( 100vh - 155px )",
     backgroundColor: theme.palette.primary.main,
     width: "100vw",
@@ -51,6 +55,7 @@ export const MobileDrawer = ({
       anchor={"right"}
       classes={{ paper: classes.drawer }}
       onClose={close}
+      BackdropProps={{ className: classes.backdrop }}
       onBackdropClick={close}
       open={open}
     >
