@@ -1,66 +1,9 @@
-import { createMuiTheme, ThemeOptions } from "@material-ui/core"
+import { ThemeOptions } from "@material-ui/core"
+
+export type LightMode = "light" | "dark"
 
 declare module "@material-ui/core/styles/createMuiTheme" {
   interface ThemeOptions {
     themeName?: LightMode
   }
 }
-
-export type LightMode = "light" | "dark"
-const darkPalette = {
-  primary: { main: "#000" },
-  secondary: { main: "#FFF" },
-  grey: {
-    A100: "rgba(255, 255, 255, 0.6)",
-    A200: "#232323",
-    A400: "#AAA",
-  },
-}
-const lightPalette = {
-  primary: { main: "#FFF" },
-  secondary: { main: "#000" },
-  grey: {
-    A100: "rgba(0, 0, 0, 0.6)",
-    A200: "#E5E5E5",
-    A400: "#333",
-  },
-}
-const typography = {
-  fontFamily: "GSTwo",
-}
-const lightOptions: ThemeOptions = {
-  palette: lightPalette,
-  themeName: "light" as LightMode,
-  typography,
-  overrides: {
-    MuiTab: {
-      wrapper: {
-        color: "rgba(0, 0, 0, 0.6)",
-      },
-    },
-    MuiTypography: {
-      root: {
-        color: "rgba(0, 0, 0, 0.6)",
-      },
-    },
-  },
-}
-export const lightTheme = createMuiTheme(lightOptions)
-const darkOptions = {
-  palette: darkPalette,
-  themeName: "dark" as LightMode,
-  typography,
-  overrides: {
-    MuiTab: {
-      wrapper: {
-        color: "white",
-      },
-    },
-    MuiTypography: {
-      root: {
-        color: "white",
-      },
-    },
-  },
-}
-export const darkTheme = createMuiTheme(darkOptions)

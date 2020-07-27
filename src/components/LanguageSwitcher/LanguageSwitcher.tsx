@@ -1,8 +1,8 @@
 import { Box } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
-import * as cs from "classnames"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import * as classNames from "classnames"
+
 import React, { Fragment } from "react"
 
 export const useStylesClasses = makeStyles(() =>
@@ -45,35 +45,44 @@ export const useStylesClasses = makeStyles(() =>
   }),
 )
 
+type SuporttedLanguages = "pt" | "br"
+
 interface Props {
   style?: React.CSSProperties
+  language: SuporttedLanguages
+  changeLanguage: (lang: SuporttedLanguages) => void
 }
 
-export const LanguageSwitcher = ({ style }: Props): React.ReactElement => {
+export const LanguageSwitcher = ({
+  language,
+  changeLanguage,
+  style,
+}: Props): React.ReactElement => {
   const classes = useStylesClasses()
-  const { changeLanguage, language } = useI18next()
-  // const [language, setState] = React.useState(language)
-  const handleChangePT = () => {
-    void changeLanguage("pt")
-  }
-  const handleChangeEN = () => {
-    void changeLanguage("en")
-  }
   const { inactive, active } = useStylesClasses()
   const isEnglish = language === "en"
   const isPortuguese = language === "pt"
-  const PTButtonClass = cs({ [inactive]: isEnglish, [active]: isPortuguese })
-  const ENButtonClass = cs({
+  const PTButtonClass = classNames.default({
+    [inactive]: isEnglish,
+    [active]: isPortuguese,
+  })
+  const ENButtonClass = classNames.default({
     [inactive]: !isEnglish,
     [active]: !isPortuguese,
   })
   return (
     <Fragment>
       <Box style={style} className={classes.box}>
-        <button onClick={handleChangePT} className={PTButtonClass}>
+        <button
+          onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
+          className={PTButtonClass}
+        >
           <Typography>PT</Typography>
         </button>
-        <button onClick={handleChangeEN} className={ENButtonClass}>
+        <button
+          onClick={() => void changeLanguage("en" as SuporttedLanguages)}
+          className={ENButtonClass}
+        >
           <Typography>EN</Typography>
         </button>
       </Box>

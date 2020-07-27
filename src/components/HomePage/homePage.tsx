@@ -1,3 +1,4 @@
+import { Hidden } from "@material-ui/core"
 import * as React from "react"
 import { alphabetically } from "../../shared/alphabetically"
 import { HomeGrid } from "./grid"
@@ -24,8 +25,12 @@ export const HomePage = ({
   return (
     <React.Fragment>
       <HomeTitleComponent />
-      <DesktopTabs setValue={setVal} value={val} categories={categories} />
-      <MobileSelect setValue={setVal} value={val} categories={categories} />
+      <Hidden smDown>
+        <DesktopTabs setValue={setVal} value={val} categories={categories} />
+      </Hidden>
+      <Hidden smUp>
+        <MobileSelect setValue={setVal} value={val} categories={categories} />
+      </Hidden>
       <HomeGrid projects={projects} value={categories[val]} />
     </React.Fragment>
   )

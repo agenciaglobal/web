@@ -1,11 +1,12 @@
 import { Container, Hidden } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React, { Fragment } from "react"
 import { LightMode } from "shared/theme"
 import logoblack from "../../../static/logo-black.png"
 import logo from "../../../static/logo-white.png"
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher"
+import { useLanguageSwitcher } from "../LanguageSwitcher/useLanguageSwitcher"
 import { TabComponent } from "../TabComponent/drawerItem"
 import { ThemeSwitch } from "../ThemeSwitch/switch"
 
@@ -20,6 +21,7 @@ export const LayoutHeader = ({
   uri,
   toggleLightMode,
 }: Props): React.ReactElement => {
+  const { changeLanguage, language } = useI18next()
   return (
     <Fragment>
       <Hidden smDown>
@@ -57,7 +59,11 @@ export const LayoutHeader = ({
               <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
               <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
               <br />
-              <LanguageSwitcher style={{ paddingLeft: 24 }} />
+              <LanguageSwitcher
+                language={language}
+                changeLanguage={changeLanguage}
+                style={{ paddingLeft: 24 }}
+              />
             </ul>
           </Container>
           <Box

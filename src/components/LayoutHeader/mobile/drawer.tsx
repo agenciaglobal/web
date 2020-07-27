@@ -3,6 +3,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LanguageSwitcher } from "../../LanguageSwitcher/LanguageSwitcher"
+import { useLanguageSwitcher } from "../../LanguageSwitcher/useLanguageSwitcher"
 import { ThemeSwitch } from "../../ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
 
@@ -50,6 +51,7 @@ export const MobileDrawer = ({
     { to: "/clients", label: t("sidebar.clients") },
     { to: "/news", label: t("sidebar.news") },
   ]
+  const { changeLanguage, language } = useI18next()
   return (
     <Drawer
       anchor={"bottom"}
@@ -70,7 +72,7 @@ export const MobileDrawer = ({
         ))}
       </Container>
       <Container className={classes.lower}>
-        <LanguageSwitcher />
+        <LanguageSwitcher language={language} changeLanguage={changeLanguage} />
         <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />
       </Container>
     </Drawer>
