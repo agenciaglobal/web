@@ -50,6 +50,7 @@ export const MobileDrawer = ({
     { to: "/clients", label: t("sidebar.clients") },
     { to: "/news", label: t("sidebar.news") },
   ]
+  const { changeLanguage, language } = useI18next()
   return (
     <Drawer
       anchor={"bottom"}
@@ -70,7 +71,7 @@ export const MobileDrawer = ({
         ))}
       </Container>
       <Container className={classes.lower}>
-        <LanguageSwitcher />
+        <LanguageSwitcher language={language} changeLanguage={changeLanguage} />
         <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />
       </Container>
     </Drawer>
