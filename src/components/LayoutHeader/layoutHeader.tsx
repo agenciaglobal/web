@@ -6,7 +6,6 @@ import { LightMode } from "shared/theme"
 import logoblack from "../../../static/logo-black.png"
 import logo from "../../../static/logo-white.png"
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher"
-import { useLanguageSwitcher } from "../LanguageSwitcher/useLanguageSwitcher"
 import { TabComponent } from "../TabComponent/drawerItem"
 import { ThemeSwitch } from "../ThemeSwitch/switch"
 

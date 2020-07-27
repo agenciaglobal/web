@@ -3,7 +3,6 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LanguageSwitcher } from "../../LanguageSwitcher/LanguageSwitcher"
-import { useLanguageSwitcher } from "../../LanguageSwitcher/useLanguageSwitcher"
 import { ThemeSwitch } from "../../ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
 

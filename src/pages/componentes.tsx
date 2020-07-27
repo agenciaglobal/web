@@ -1,7 +1,6 @@
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React, { Fragment } from "react"
 import { Container } from "@material-ui/core"
-import { useLanguageSwitcher } from "../components/LanguageSwitcher/useLanguageSwitcher"
 import { ThemeSwitch } from "../components/ThemeSwitch/switch"
 import { LightMode } from "src/shared/theme"
 import { LanguageSwitcher } from "../components/LanguageSwitcher/LanguageSwitcher"
