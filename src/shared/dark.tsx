@@ -1,5 +1,4 @@
 import { createMuiTheme } from "@material-ui/core"
-import { lightPalette } from "./light"
 import { LightMode } from "./theme"
 import { typography } from "./typography"
 
