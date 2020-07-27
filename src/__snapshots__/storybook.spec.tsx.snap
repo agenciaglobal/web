@@ -46,7 +46,7 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
           className="MuiTab-wrapper"
         />
         <span
-          className="PrivateTabIndicator-root-17 PrivateTabIndicator-colorSecondary-19 MuiTabs-indicator"
+          className="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
           style={Object {}}
         />
       </button>
@@ -125,12 +125,15 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
 </div>
 `;
 
-exports[`Storyshots Language Switcher English 1`] = `
+exports[`Storyshots Light Language Switcher Portuguese 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "white",
-      "height": 50,
+      "alignItems": "center",
+      "backgroundColor": "black",
+      "display": "flex",
+      "height": 60,
+      "justifyContent": "center",
       "width": 150,
     }
   }
@@ -139,7 +142,7 @@ exports[`Storyshots Language Switcher English 1`] = `
     className="MuiBox-root MuiBox-root-4 makeStyles-box-1"
   >
     <button
-      className="makeStyles-inactive-2"
+      className=""
       onClick={[Function]}
     >
       <p
@@ -149,118 +152,7 @@ exports[`Storyshots Language Switcher English 1`] = `
       </p>
     </button>
     <button
-      className="makeStyles-active-3"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        EN
-      </p>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Language Switcher English Dark 1`] = `
-<div
-  style={
-    Object {
-      "backgroundColor": "black",
-      "height": 50,
-      "width": 150,
-    }
-  }
->
-  <div
-    className="MuiBox-root MuiBox-root-12 makeStyles-box-9"
-  >
-    <button
-      className="makeStyles-inactive-10"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        PT
-      </p>
-    </button>
-    <button
-      className="makeStyles-active-11"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        EN
-      </p>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Language Switcher Portuguese 1`] = `
-<div
-  style={
-    Object {
-      "backgroundColor": "white",
-      "height": 50,
-      "width": 150,
-    }
-  }
->
-  <div
-    className="MuiBox-root MuiBox-root-8 makeStyles-box-5"
-  >
-    <button
-      className="makeStyles-active-7"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        PT
-      </p>
-    </button>
-    <button
-      className="makeStyles-inactive-6"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        EN
-      </p>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Language Switcher Portuguese Dark 1`] = `
-<div
-  style={
-    Object {
-      "backgroundColor": "black",
-      "height": 50,
-      "width": 150,
-    }
-  }
->
-  <div
-    className="MuiBox-root MuiBox-root-16 makeStyles-box-13"
-  >
-    <button
-      className="makeStyles-active-15"
-      onClick={[Function]}
-    >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        PT
-      </p>
-    </button>
-    <button
-      className="makeStyles-inactive-14"
+      className="makeStyles-inactive-2 makeStyles-active-3"
       onClick={[Function]}
     >
       <p
