@@ -1,11 +1,11 @@
 import { Box } from "@material-ui/core"
-import { createStyles, makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 
 import React, { Fragment } from "react"
+// import { ThemeConsumer } from "styled-components"
 
-export const useStylesClasses = makeStyles(() =>
+export const useStylesClasses = makeStyles((theme: Theme) =>
   createStyles({
     box: {
       width: 60,
@@ -13,6 +13,8 @@ export const useStylesClasses = makeStyles(() =>
       display: "flex",
     },
     inactive: {
+      color: theme.palette.primary.contrastText,
+      fontFamily: "GSTwo",
       fontSize: 12,
       height: 30,
       width: 30,
@@ -26,9 +28,11 @@ export const useStylesClasses = makeStyles(() =>
       },
     },
     active: {
+      fontFamily: "GSThree",
       fontSize: 12,
+      fontWeight: "bold",
       height: 30,
-      color: "black",
+      color: "#000",
       width: 30,
       background: "#FFCC00",
       borderRadius: 0,
@@ -45,7 +49,7 @@ export const useStylesClasses = makeStyles(() =>
   }),
 )
 
-type SuporttedLanguages = "pt" | "br"
+type SuporttedLanguages = "pt" | "en"
 
 interface Props {
   style?: React.CSSProperties
@@ -77,13 +81,13 @@ export const LanguageSwitcher = ({
           onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
           className={PTButtonClass}
         >
-          <Typography>PT</Typography>
+          PT
         </button>
         <button
           onClick={() => void changeLanguage("en" as SuporttedLanguages)}
           className={ENButtonClass}
         >
-          <Typography>EN</Typography>
+          EN
         </button>
       </Box>
     </Fragment>

@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core"
+// import { Typography } from "@material-ui/core"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as cs from "classnames"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
@@ -31,14 +31,22 @@ const itemStyles = makeStyles((theme: Theme) => {
       border: "1px solid #FFCC00",
       margin: "0px 2px",
       padding: "5px 6px 3px",
-      "&:hover": { color },
+      "&:hover": {
+        color: color,
+        border: "2px solid #FFCC00",
+        padding: "4px 5px 2px",
+      },
     },
     contactSelected: {
       fontFamily: "GSThree",
-      color: color,
-      fontWeight: "bold",
-      border: "2px solid #FFCC00",
-      padding: "4px 6px 2px",
+      color: "#000",
+      background: "#FFCC00",
+      "&:hover": {
+        fontFamily: "GSThree",
+        color: "#000",
+        fontWeight: "bold",
+        background: "#FFCC00",
+      },
     },
   })
 })
@@ -74,9 +82,9 @@ export const TabComponent = ({
         color: `white`,
         textDecoration: `none`,
       }}
-      // className={className}
+      className={className}
     >
-      <Typography className={className}>{label}</Typography>
+      {label}
     </Link>
   )
 }

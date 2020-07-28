@@ -145,21 +145,13 @@ exports[`Storyshots Light Language Switcher Portuguese 1`] = `
       className=""
       onClick={[Function]}
     >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        PT
-      </p>
+      PT
     </button>
     <button
       className="makeStyles-inactive-2 makeStyles-active-3"
       onClick={[Function]}
     >
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        EN
-      </p>
+      EN
     </button>
   </div>
 </div>
