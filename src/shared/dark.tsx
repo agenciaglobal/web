@@ -14,7 +14,7 @@ const darkOptions = {
   custom: {
     grey1: "#AAA",
     grey2: "#232323",
-    greyAlpha: "rgba(255, 255, 255, 0.6)"
+    greyAlpha: "rgba(255, 255, 255, 0.6)",
   },
   typography: {
     allVariants: {
