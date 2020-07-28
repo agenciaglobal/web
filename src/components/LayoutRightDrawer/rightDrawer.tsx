@@ -6,7 +6,7 @@ import { TabComponent } from "../TabComponent/drawerItem"
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
-      background: theme.palette.primary.main,
+      // background: theme.palette.primary.main,
       height: "calc( 100vh - 155px )",
       marginTop: 155,
       width: 120,
