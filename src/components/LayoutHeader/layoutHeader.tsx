@@ -1,10 +1,14 @@
-import { Container, Hidden } from "@material-ui/core"
+import { Hidden } from "@material-ui/core"
+import AppBar from "@material-ui/core/AppBar"
 import Box from "@material-ui/core/Box"
+import Toolbar from "@material-ui/core/Toolbar"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React, { Fragment } from "react"
 import { LightMode } from "shared/theme"
 import logoblack from "../../../static/logo-black.png"
+
 import logo from "../../../static/logo-white.png"
+import mapGlobal from "../../../static/map.png"
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "../TabComponent/drawerItem"
 import { ThemeSwitch } from "../ThemeSwitch/switch"
@@ -21,18 +25,20 @@ export const LayoutHeader = ({
   toggleLightMode,
 }: Props): React.ReactElement => {
   const { changeLanguage, language } = useI18next()
+  const isContact = uri.includes("/contact")
+  console.log(isContact)
   return (
     <Fragment>
       <Hidden smDown>
-        <Container
+        <AppBar
           style={{
-            display: "flex",
-            maxWidth: "1280px",
-            alignItems: "flex-end",
-            height: 155,
+            height: isContact ? 400 : 155,
+            backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
+            zIndex: 0,
+            boxShadow: "none",
           }}
         >
-          <Container style={{ alignContent: "flex-start" }}>
+          <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
             <Link style={{ boxShadow: "none" }} to="/">
               <img
                 src={lightMode === "light" ? logoblack : logo}
@@ -40,45 +46,43 @@ export const LayoutHeader = ({
                 style={{ margin: 16, height: 100 }}
               />
             </Link>
-          </Container>
-          <Container style={{ display: "flex" }}>
-            <ul
+            <Box
               style={{
-                color: "#AAA",
-                listStyle: "none",
                 display: "flex",
-                justifyContent: "space-evenly",
-                padding: 8,
+                justifyContent: "center",
+                alignItems: "flex-end",
+                height: "100%",
               }}
             >
-              <TabComponent page={"/"} uri={uri} label={"WORKS"} />
-              <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
-              <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
-              <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
-              <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
-              <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
-              <br />
-              <LanguageSwitcher
-                language={language}
-                changeLanguage={changeLanguage}
-                style={{ paddingLeft: 24 }}
+              <ul
+                style={{
+                  color: "#AAA",
+                  listStyle: "none",
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  padding: 8,
+                }}
+              >
+                <TabComponent page={"/"} uri={uri} label={"WORKS"} />
+                <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
+                <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
+                <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
+                <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
+                <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
+                <br />
+                <LanguageSwitcher
+                  language={language}
+                  changeLanguage={changeLanguage}
+                  style={{ paddingLeft: 24 }}
+                />
+              </ul>
+              <ThemeSwitch
+                lightMode={lightMode}
+                toggleLightMode={toggleLightMode}
               />
-            </ul>
-          </Container>
-          <Box
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-end",
-              height: "100%",
-            }}
-          >
-            <ThemeSwitch
-              lightMode={lightMode}
-              toggleLightMode={toggleLightMode}
-            />
-          </Box>
-        </Container>
+            </Box>
+          </Toolbar>
+        </AppBar>
       </Hidden>
     </Fragment>
   )

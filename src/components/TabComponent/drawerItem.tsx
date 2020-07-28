@@ -50,7 +50,7 @@ export const TabComponent = ({
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
-  const isCurrent = uri === s
+  const isCurrent = uri === "/" ? uri === s : uri.includes(s)
   const here = isCurrent && !isContact
   const onContact = isCurrent && isContact
   const className = cs({

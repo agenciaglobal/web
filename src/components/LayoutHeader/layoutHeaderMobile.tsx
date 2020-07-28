@@ -10,12 +10,14 @@ interface Props {
 
 export const LayoutHeaderMobile = ({
   lightMode,
+  uri,
   toggleLightMode,
 }: Props): React.ReactElement => {
   const [open, showNav] = useState(false)
   return (
     <Fragment>
       <MobileToolbar
+        uri={uri}
         lightMode={lightMode}
         onClick={() => showNav(!open)}
         open={open}

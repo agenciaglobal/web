@@ -23,6 +23,10 @@ export const ActualLayout = ({
 }: Props): React.ReactElement => {
   const [scrolled, setScrolled] = React.useState(false)
   const classes = useStyles()
+  console.log(uri)
+  console.log(uri)
+  const isContact = uri.includes("/contact")
+  console.log(uri)
   return (
     <div className={classes.wrapper}>
       <RightDrawer scrolled={scrolled} uri={uri} />
@@ -38,12 +42,14 @@ export const ActualLayout = ({
         toggleLightMode={toggleLightMode}
       />
       <Waypoint
-        bottomOffset={-300}
         onEnter={() => setScrolled(false)}
         onLeave={() => setScrolled(true)}
       />
       <Container
-        className={classNames(classes.root, { [classes.scrolled]: scrolled })}
+        className={classNames(classes.root, {
+          [classes.scrolled]: scrolled,
+          [classes.contact]: isContact,
+        })}
       >
         {children}
       </Container>

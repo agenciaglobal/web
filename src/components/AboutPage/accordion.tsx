@@ -18,9 +18,9 @@ export const AboutAccordion = (): React.ReactElement => {
   const classes = useStylesAccordion()
   return (
     <div style={{ width: "100%", paddingBottom: 100, paddingTop: 100 }}>
-      {accordionData.map((d) => {
+      {accordionData.map((d, index) => {
         return (
-          <Accordion>
+          <Accordion key={index}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"

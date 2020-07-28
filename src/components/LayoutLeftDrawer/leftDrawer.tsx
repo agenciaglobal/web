@@ -1,11 +1,13 @@
 import { Drawer, Hidden } from "@material-ui/core"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
-      background: theme.palette.primary.main,
+      height: "calc( 100vh - 155px )",
+      marginTop: 155,
+      // background: theme.palette.primary.main,
       width: 120,
       border: "none",
       display: "flex",
