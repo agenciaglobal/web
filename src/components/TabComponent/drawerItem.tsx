@@ -85,7 +85,6 @@ export const TabComponent = ({
       className={className}
     >
       {label}
-    >
     </Link>
   )
 }
