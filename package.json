@@ -103,7 +103,7 @@
     "start": "yarn clean && yarn develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "deploy": "PATH_PREFIX=/web gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
+    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "chromatic": "npx chromatic  --project-token=jeeo3rqsvu --auto-accept-changes",
     "serve:static": "yarn clean  && yarn build && npx serve public"
