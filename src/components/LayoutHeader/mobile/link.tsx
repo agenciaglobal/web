@@ -1,16 +1,16 @@
 import { Typography } from "@material-ui/core"
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 
-const useStylesMenu = makeStyles((theme: Theme) => ({
+const useStylesMenu = makeStyles(() => ({
   text: {
     listStyle: "none",
     textDecoration: "none",
     textAlign: "left",
     marginTop: 16,
     marginBottom: 16,
-    color: theme.palette.secondary.main,
+    // color: theme.palette.secondary.main,
     fontSize: "30px",
     lineHeight: "32px",
   },

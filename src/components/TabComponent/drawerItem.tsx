@@ -50,7 +50,7 @@ export const TabComponent = ({
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
-  const isCurrent = uri === s
+  const isCurrent = uri === "/" ? uri === s : uri.includes(s)
   const here = isCurrent && !isContact
   const onContact = isCurrent && isContact
   const className = cs({
@@ -66,14 +66,7 @@ export const TabComponent = ({
   console.log("s")
   console.log(s)
   return (
-    <Link
-      to={page}
-      style={{
-        color: `white`,
-        textDecoration: `none`,
-      }}
-      className={className}
-    >
+    <Link to={page} style={{ textDecoration: `none` }} className={className}>
       <Typography>{label}</Typography>
     </Link>
   )

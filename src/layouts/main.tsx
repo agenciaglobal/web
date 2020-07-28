@@ -1,5 +1,6 @@
 import { Container } from "@material-ui/core"
 import * as React from "react"
+import * as classNames from "classnames"
 import { Waypoint } from "react-waypoint"
 import { LayoutHeader } from "../components/LayoutHeader/layoutHeader"
 import { LayoutHeaderMobile } from "../components/LayoutHeader/layoutHeaderMobile"
@@ -20,12 +21,16 @@ export const ActualLayout = ({
   toggleLightMode,
   uri,
 }: Props): React.ReactElement => {
-  const [open, setDrawerOpen] = React.useState(false)
+  const [scrolled, setScrolled] = React.useState(false)
   const classes = useStyles()
+  console.log(uri)
+  console.log(uri)
+  const isContact = uri.includes("/contact")
+  console.log(uri)
   return (
     <div className={classes.wrapper}>
-      <RightDrawer open={open} uri={uri} />
-      <LeftDrawer open={open} uri={uri} />
+      <RightDrawer scrolled={scrolled} uri={uri} />
+      <LeftDrawer scrolled={scrolled} uri={uri} />
       <LayoutHeaderMobile
         lightMode={lightMode}
         uri={uri}
@@ -37,11 +42,17 @@ export const ActualLayout = ({
         toggleLightMode={toggleLightMode}
       />
       <Waypoint
-        bottomOffset={-300}
-        onEnter={() => setDrawerOpen(false)}
-        onLeave={() => setDrawerOpen(true)}
+        onEnter={() => setScrolled(false)}
+        onLeave={() => setScrolled(true)}
       />
-      <Container className={classes.root}>{children}</Container>
+      <Container
+        className={classNames(classes.root, {
+          [classes.scrolled]: scrolled,
+          [classes.contact]: isContact,
+        })}
+      >
+        {children}
+      </Container>
       {/*<Footer />*/}
     </div>
   )

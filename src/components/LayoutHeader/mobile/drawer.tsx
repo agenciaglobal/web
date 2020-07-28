@@ -10,11 +10,18 @@ const useStylesV2 = makeStyles((theme: Theme) => ({
   backdrop: {
     opacity: "0 !important",
   },
+  box: {
+    height: "100%",
+    flexDirection: "column",
+    backgroundColor: theme.palette.background.default,
+    display: "flex",
+    justifyContent: "space-between",
+  },
   drawer: {
-    marginTop: 155,
     boxShadow: "none",
-    height: "calc( 100vh - 155px )",
-    backgroundColor: theme.palette.primary.main,
+    height: "-webkit-fill-available",
+    // backgroundColor: theme.palette.primary.main,
+    backgroundColor: "transparent",
     width: "100vw",
     display: "flex",
     justifyContent: "space-between",
@@ -52,28 +59,39 @@ export const MobileDrawer = ({
   ]
   const { changeLanguage, language } = useI18next()
   return (
-    <Drawer
-      anchor={"bottom"}
-      classes={{ paper: classes.drawer }}
-      onClose={close}
-      BackdropProps={{ className: classes.backdrop }}
-      onBackdropClick={close}
-      open={open}
-    >
-      <Container>
-        {menus.map(({ label, to }, index) => (
-          <LinkMobileComponent
-            key={index}
-            to={to}
-            label={label}
-            close={close}
-          />
-        ))}
-      </Container>
-      <Container className={classes.lower}>
-        <LanguageSwitcher language={language} changeLanguage={changeLanguage} />
-        <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />
-      </Container>
-    </Drawer>
+    <React.Fragment>
+      <Drawer
+        anchor={"bottom"}
+        classes={{ paper: classes.drawer }}
+        onClose={close}
+        BackdropProps={{ className: classes.backdrop }}
+        onBackdropClick={close}
+        open={open}
+      >
+        <div onClick={close} style={{ height: 155 }} />
+        <Container classes={{ root: classes.box }}>
+          <Container>
+            {menus.map(({ label, to }, index) => (
+              <LinkMobileComponent
+                key={index}
+                to={to}
+                label={label}
+                close={close}
+              />
+            ))}
+          </Container>
+          <Container className={classes.lower}>
+            <LanguageSwitcher
+              language={language}
+              changeLanguage={changeLanguage}
+            />
+            <ThemeSwitch
+              lightMode={lightMode}
+              toggleLightMode={toggleLightMode}
+            />
+          </Container>
+        </Container>
+      </Drawer>
+    </React.Fragment>
   )
 }

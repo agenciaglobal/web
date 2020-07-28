@@ -10,7 +10,7 @@ const useStylesClose = makeStyles((theme: Theme) => ({
     transition: "transform 500ms",
   },
   divIconOpen: {
-    background: theme.palette.secondary.main,
+    // background: theme.palette.secondary.main,
     width: 24,
     height: 3,
     "&:first-child": {

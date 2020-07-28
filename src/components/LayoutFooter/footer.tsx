@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: 16,
   },
   primaryText: {
-    color: theme.palette.secondary.main,
+    // color: theme.palette.secondary.main,
     marginBottom: 4,
   },
   secondaryText: {
-    color: theme.palette.grey.A400,
+    // color: theme.palette.grey.A400,
   },
 }))
 
