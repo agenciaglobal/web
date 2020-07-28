@@ -19,7 +19,6 @@ const itemStyles = makeStyles((theme: Theme) => {
     },
     selected: {
       fontFamily: "GSThree",
-      // fontWeight: "bold",
       color: color,
       borderBottom: "2px solid #FFCC00",
     },
@@ -40,7 +39,6 @@ const itemStyles = makeStyles((theme: Theme) => {
     contactSelected: {
       fontFamily: "GSThree",
       color: "#000",
-      fontWeight: "bold",
       background: "#FFCC00",
       "&:hover": {
         fontFamily: "GSThree",
@@ -83,9 +81,10 @@ export const TabComponent = ({
         color: `white`,
         textDecoration: `none`,
       }}
-      // className={className}
+      className={className}
     >
-      <Typography className={className}>{label}</Typography>
+      {label}
+      {/* <Typography className={className}>{label}</Typography> */}
     </Link>
   )
 }
