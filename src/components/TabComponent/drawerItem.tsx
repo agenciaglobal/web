@@ -31,14 +31,23 @@ const itemStyles = makeStyles((theme: Theme) => {
       border: "1px solid #FFCC00",
       margin: "0px 2px",
       padding: "5px 6px 3px",
-      "&:hover": { color },
+      "&:hover": { 
+        color: color,
+        border: "2px solid #FFCC00",
+        padding: "4px 5px 2px",
+      },
     },
     contactSelected: {
       fontFamily: "GSThree",
-      color: color,
+      color: "#000",
       fontWeight: "bold",
-      border: "2px solid #FFCC00",
-      padding: "4px 6px 2px",
+      background: "#FFCC00",
+      "&:hover": { 
+        fontFamily: "GSThree",
+        color: "#000",
+        fontWeight: "bold",
+        background: "#FFCC00",
+      },
     },
   })
 })
