@@ -11,6 +11,11 @@ const darkOptions = {
       paper: "#000",
     },
   },
+  custom: {
+    grey1: "#AAA",
+    grey2: "#232323",
+    greyAlpha: "rgba(255, 255, 255, 0.6)",
+  },
   typography: {
     allVariants: {
       color: "#FFF",

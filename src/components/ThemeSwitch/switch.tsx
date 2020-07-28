@@ -6,7 +6,7 @@ import { LightMode } from "../../shared/theme"
 const stylesYellowSwitch = {
   root: {
     width: 30,
-    height: 17,
+    height: 19,
     padding: 0,
     display: "flex",
     transform: "rotate(-90deg)",
@@ -30,7 +30,7 @@ const stylesYellowSwitch = {
     boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.15)",
   },
   track: {
-    margin: 1,
+    margin: 2,
     width: 30,
     height: 15,
     backgroundColor: "#FFCC00",
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: 50,
     height: 90,
     borderRadius: 0,
-    background: theme.palette.grey.A200,
+    background: theme.custom.grey2,
     boxShadow: "none",
     display: "flex",
     flexWrap: "wrap",

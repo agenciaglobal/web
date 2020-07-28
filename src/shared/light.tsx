@@ -10,6 +10,11 @@ const lightOptions: ThemeOptions = {
       paper: "#FFF",
     },
   },
+  custom: {
+    grey1: "#333",
+    grey2: "#F2F2F2",
+    greyAlpha: "rgba(0, 0, 0, 0.6)",
+  },
   typography: {
     allVariants: {
       color: "#000",
