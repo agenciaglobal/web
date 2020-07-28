@@ -12,6 +12,9 @@ export const useStylesClasses = makeStyles(() =>
       border: "none",
       display: "flex",
     },
+    typhography: {
+      fontSize: 12
+    },
     inactive: {
       fontSize: 12,
       height: 30,
@@ -27,6 +30,7 @@ export const useStylesClasses = makeStyles(() =>
     },
     active: {
       fontSize: 12,
+      fontWeight: "bold",
       height: 30,
       color: "black",
       width: 30,
@@ -45,7 +49,7 @@ export const useStylesClasses = makeStyles(() =>
   }),
 )
 
-type SuporttedLanguages = "pt" | "br"
+type SuporttedLanguages = "pt" | "en"
 
 interface Props {
   style?: React.CSSProperties
@@ -77,13 +81,13 @@ export const LanguageSwitcher = ({
           onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
           className={PTButtonClass}
         >
-          <Typography>PT</Typography>
+          <Typography className={classes.typhography}>PT</Typography>
         </button>
         <button
           onClick={() => void changeLanguage("en" as SuporttedLanguages)}
           className={ENButtonClass}
         >
-          <Typography>EN</Typography>
+          <Typography className={classes.typhography}>EN</Typography>
         </button>
       </Box>
     </Fragment>
