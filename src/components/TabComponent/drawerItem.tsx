@@ -19,6 +19,7 @@ const itemStyles = makeStyles((theme: Theme) => {
     },
     selected: {
       fontFamily: "GSThree",
+      fontWeight: "bold",
       color: color,
       borderBottom: "2px solid #FFCC00",
     },
@@ -84,7 +85,7 @@ export const TabComponent = ({
       className={className}
     >
       {label}
-      {/* <Typography className={className}>{label}</Typography> */}
+    >
     </Link>
   )
 }
