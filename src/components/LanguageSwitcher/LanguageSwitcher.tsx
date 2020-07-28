@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 
 import React, { Fragment } from "react"
-import { ThemeConsumer } from "styled-components"
+// import { ThemeConsumer } from "styled-components"
 
 export const useStylesClasses = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,12 +80,14 @@ export const LanguageSwitcher = ({
         <button
           onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
           className={PTButtonClass}
-        >PT
+        >
+          PT
         </button>
         <button
           onClick={() => void changeLanguage("en" as SuporttedLanguages)}
           className={ENButtonClass}
-        >EN
+        >
+          EN
         </button>
       </Box>
     </Fragment>

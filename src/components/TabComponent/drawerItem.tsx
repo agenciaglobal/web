@@ -19,7 +19,7 @@ const itemStyles = makeStyles((theme: Theme) => {
     },
     selected: {
       fontFamily: "GSThree",
-      fontWeight: "bold",
+      // fontWeight: "bold",
       color: color,
       borderBottom: "2px solid #FFCC00",
     },
@@ -31,7 +31,7 @@ const itemStyles = makeStyles((theme: Theme) => {
       border: "1px solid #FFCC00",
       margin: "0px 2px",
       padding: "5px 6px 3px",
-      "&:hover": { 
+      "&:hover": {
         color: color,
         border: "2px solid #FFCC00",
         padding: "4px 5px 2px",
@@ -42,7 +42,7 @@ const itemStyles = makeStyles((theme: Theme) => {
       color: "#000",
       fontWeight: "bold",
       background: "#FFCC00",
-      "&:hover": { 
+      "&:hover": {
         fontFamily: "GSThree",
         color: "#000",
         fontWeight: "bold",
