@@ -9,6 +9,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
       marginTop: `0px`,
     },
   },
+  scrolled: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: 140,
+      paddingRight: 140,
+    },
+  },
   wrapper: {
     minHeight: "100vh",
     backgroundColor: theme.palette.primary.main,

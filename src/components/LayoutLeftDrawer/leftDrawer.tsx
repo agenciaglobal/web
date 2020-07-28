@@ -15,11 +15,15 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-const LeftDrawer = ({ open }: { open: boolean }): React.ReactElement => {
+const LeftDrawer = ({
+  scrolled,
+}: {
+  scrolled: boolean
+}): React.ReactElement => {
   const classes = useStyles()
 
   return (
-    open && (
+    scrolled && (
       <Fragment>
         <Hidden smDown>
           <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>

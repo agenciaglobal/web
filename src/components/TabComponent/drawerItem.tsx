@@ -66,14 +66,7 @@ export const TabComponent = ({
   console.log("s")
   console.log(s)
   return (
-    <Link
-      to={page}
-      style={{
-        color: `white`,
-        textDecoration: `none`,
-      }}
-      className={className}
-    >
+    <Link to={page} style={{ textDecoration: `none` }} className={className}>
       <Typography>{label}</Typography>
     </Link>
   )

@@ -30,15 +30,15 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const RightDrawer = ({
   uri,
-  open,
+  scrolled,
 }: {
   uri: string
-  open: boolean
+  scrolled: boolean
 }): React.ReactElement => {
   const classes = useStyles()
   const drawerClasses = { paper: classes.drawerPaper }
   return (
-    open && (
+    scrolled && (
       <Fragment>
         <Hidden smDown>
           <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
