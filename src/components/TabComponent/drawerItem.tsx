@@ -9,7 +9,7 @@ const itemStyles = makeStyles((theme: Theme) => {
   return createStyles({
     common: {
       fontFamily: "GSTwo",
-      color: theme.palette.grey.A100,
+      color: "red",
       fontSize: 15,
       lineHeight: "18px",
       border: "2px solid transparent",
@@ -24,7 +24,7 @@ const itemStyles = makeStyles((theme: Theme) => {
     },
     contactCommon: {
       fontFamily: "GSTwo",
-      color: theme.palette.grey.A100,
+      color: "red",
       fontSize: 13,
       lineHeight: "18px",
       border: "1px solid #FFCC00",
@@ -50,7 +50,7 @@ export const TabComponent = ({
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
-  const isCurrent = uri === "/" ? uri === s : uri.includes(s)
+  const isCurrent = uri === s
   const here = isCurrent && !isContact
   const onContact = isCurrent && isContact
   const className = cs({
@@ -66,7 +66,14 @@ export const TabComponent = ({
   console.log("s")
   console.log(s)
   return (
-    <Link to={page} style={{ textDecoration: `none` }} className={className}>
+    <Link
+      to={page}
+      style={{
+        color: `white`,
+        textDecoration: `none`,
+      }}
+      className={className}
+    >
       <Typography>{label}</Typography>
     </Link>
   )
