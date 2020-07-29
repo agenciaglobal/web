@@ -9,6 +9,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: yarn
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
