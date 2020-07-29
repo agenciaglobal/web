@@ -3,14 +3,37 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
     marginTop: `155px`,
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: 120,
+      paddingRight: 120,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "unset",
+      paddingLeft: 120,
+      paddingRight: 120,
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingLeft: 0,
+      paddingRight: 0,
+    },
   },
   contact: {
     marginTop: `400px`,
   },
   scrolled: {
     [theme.breakpoints.up("md")]: {
-      paddingLeft: 140,
-      paddingRight: 140,
+      paddingLeft: 120,
+      paddingRight: 120,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "unset",
+      paddingLeft: 120,
+      paddingRight: 120,
+    },
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: "unset",
+      paddingLeft: 120,
+      paddingRight: 120,
     },
   },
   wrapper: {

@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     outline: "none",
     boxShadow: "none",
   },
+  container: {
+    justifyContent: "center",
+    display: "flex",
+  },
   div: {
     margin: 16,
   },
@@ -34,12 +38,7 @@ const Footer = (): React.ReactElement => {
   return (
     <Fragment>
       <Hidden smUp>
-        <Container
-          style={{
-            justifyContent: "center",
-            display: "flex",
-          }}
-        >
+        <Container className={classes.container}>
           <div className={classes.div}>
             <a
               className={classes.a}

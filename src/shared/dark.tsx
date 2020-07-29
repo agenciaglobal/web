@@ -6,6 +6,7 @@ const darkOptions = {
   palette: {
     type: "dark",
     primary: { main: "#000", contrastText: "#FFF" },
+    secondary: { main: "#FFCC00" },
     background: {
       default: "#000",
       paper: "#000",

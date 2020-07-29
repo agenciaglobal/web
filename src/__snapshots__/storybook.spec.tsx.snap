@@ -43,10 +43,10 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
         type="button"
       >
         <span
-          className="MuiTab-wrapper"
+          className="MuiTab-wrapper makeStyles-wrapper-5"
         />
         <span
-          className="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
+          className="PrivateTabIndicator-root-6 PrivateTabIndicator-colorSecondary-8 MuiTabs-indicator"
           style={Object {}}
         />
       </button>
@@ -73,7 +73,7 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
         type="button"
       >
         <span
-          className="MuiTab-wrapper"
+          className="MuiTab-wrapper makeStyles-wrapper-5"
         />
       </button>
     </div>

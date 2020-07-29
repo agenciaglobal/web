@@ -1,19 +1,21 @@
 import { Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 import * as React from "react"
 
-export const GlobalPageTitle = ({
-  label,
-}: {
+interface Props {
   label: string
-}): React.ReactElement => (
-  <Typography
-    style={{
-      fontSize: 40,
-      paddingTop: 26,
-      paddingBottom: 26,
-      fontFamily: "GSThree",
-    }}
-  >
-    {label}
-  </Typography>
-)
+}
+
+const useStyles = makeStyles(() => ({
+  civ: {
+    fontSize: 40,
+    paddingTop: 26,
+    paddingBottom: 26,
+    fontFamily: "GSThree",
+  },
+}))
+
+export const GlobalPageTitle = ({ label }: Props): React.ReactElement => {
+  const classes = useStyles()
+  return <Typography className={classes.civ}>{label}</Typography>
+}

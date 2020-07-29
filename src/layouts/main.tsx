@@ -1,4 +1,5 @@
 import { Container } from "@material-ui/core"
+import Box from "@material-ui/core/Box"
 import * as React from "react"
 import * as classNames from "classnames"
 import { Waypoint } from "react-waypoint"
@@ -51,7 +52,7 @@ export const ActualLayout = ({
           [classes.contact]: isContact,
         })}
       >
-        {children}
+        <Box>{children}</Box>
       </Container>
       {/*<Footer />*/}
     </div>

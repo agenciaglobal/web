@@ -54,7 +54,7 @@ export const MobileDrawer = ({
     { to: "/about", label: t("sidebar.about") },
     { to: "/contact", label: t("sidebar.contact") },
     { to: "/team", label: t("sidebar.team") },
-    { to: "/clients", label: t("sidebar.clients") },
+    { to: "/clients", label: t("sidebar.client") },
     { to: "/news", label: t("sidebar.news") },
   ]
   const { changeLanguage, language } = useI18next()

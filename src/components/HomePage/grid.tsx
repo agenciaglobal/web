@@ -1,4 +1,5 @@
 import { Box, Typography } from "@material-ui/core"
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import { navigate } from "gatsby"
 import * as React from "react"
 import Masonry from "react-masonry-css"
@@ -9,9 +10,14 @@ interface Props {
   value: string
 }
 
+const useGridStyles = makeStyles(() => ({
+  box: { width: "100%", paddingBottom: 300, paddingTop: 30 },
+}))
+
 export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
+  const classes = useGridStyles()
   return (
-    <Box style={{ width: "100%", paddingBottom: 300, paddingTop: 30 }}>
+    <Box className={classes.box}>
       {Object.keys(projects).map((key, index) => {
         const inner = projects[key]
         console.log("inner")

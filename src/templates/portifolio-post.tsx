@@ -12,14 +12,7 @@ const PortifolioPostTemplate = (props: {
   return (
     <React.Fragment>
       <h1>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          display: `block`,
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
-      <hr style={{}} />
+      <p>{post.frontmatter.date}</p>
       <ul
         style={{
           display: `flex`,

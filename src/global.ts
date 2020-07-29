@@ -2274,6 +2274,7 @@ export type SitePageContextI18nResourcesEnFilterInput = {
 }
 
 export type SitePageContextI18nResourcesEnTranslations = {
+  sidebar?: Maybe<SitePageContextI18nResourcesEnTranslationsSidebar>
   home?: Maybe<SitePageContextI18nResourcesEnTranslationsHome>
   news?: Maybe<Scalars["String"]>
   projects?: Maybe<Scalars["String"]>
@@ -2282,6 +2283,7 @@ export type SitePageContextI18nResourcesEnTranslations = {
 }
 
 export type SitePageContextI18nResourcesEnTranslationsFilterInput = {
+  sidebar?: Maybe<SitePageContextI18nResourcesEnTranslationsSidebarFilterInput>
   home?: Maybe<SitePageContextI18nResourcesEnTranslationsHomeFilterInput>
   news?: Maybe<StringQueryOperatorInput>
   projects?: Maybe<StringQueryOperatorInput>
@@ -2299,6 +2301,24 @@ export type SitePageContextI18nResourcesEnTranslationsHomeFilterInput = {
   subtitle?: Maybe<StringQueryOperatorInput>
 }
 
+export type SitePageContextI18nResourcesEnTranslationsSidebar = {
+  main?: Maybe<Scalars["String"]>
+  team?: Maybe<Scalars["String"]>
+  news?: Maybe<Scalars["String"]>
+  about?: Maybe<Scalars["String"]>
+  contact?: Maybe<Scalars["String"]>
+  clients?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesEnTranslationsSidebarFilterInput = {
+  main?: Maybe<StringQueryOperatorInput>
+  team?: Maybe<StringQueryOperatorInput>
+  news?: Maybe<StringQueryOperatorInput>
+  about?: Maybe<StringQueryOperatorInput>
+  contact?: Maybe<StringQueryOperatorInput>
+  clients?: Maybe<StringQueryOperatorInput>
+}
+
 export type SitePageContextI18nResourcesFilterInput = {
   pt?: Maybe<SitePageContextI18nResourcesPtFilterInput>
   en?: Maybe<SitePageContextI18nResourcesEnFilterInput>
@@ -2313,6 +2333,7 @@ export type SitePageContextI18nResourcesPtFilterInput = {
 }
 
 export type SitePageContextI18nResourcesPtTranslations = {
+  sidebar?: Maybe<SitePageContextI18nResourcesPtTranslationsSidebar>
   home?: Maybe<SitePageContextI18nResourcesPtTranslationsHome>
   news?: Maybe<Scalars["String"]>
   projects?: Maybe<Scalars["String"]>
@@ -2321,6 +2342,7 @@ export type SitePageContextI18nResourcesPtTranslations = {
 }
 
 export type SitePageContextI18nResourcesPtTranslationsFilterInput = {
+  sidebar?: Maybe<SitePageContextI18nResourcesPtTranslationsSidebarFilterInput>
   home?: Maybe<SitePageContextI18nResourcesPtTranslationsHomeFilterInput>
   news?: Maybe<StringQueryOperatorInput>
   projects?: Maybe<StringQueryOperatorInput>
@@ -2336,6 +2358,24 @@ export type SitePageContextI18nResourcesPtTranslationsHome = {
 export type SitePageContextI18nResourcesPtTranslationsHomeFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   subtitle?: Maybe<StringQueryOperatorInput>
+}
+
+export type SitePageContextI18nResourcesPtTranslationsSidebar = {
+  main?: Maybe<Scalars["String"]>
+  team?: Maybe<Scalars["String"]>
+  news?: Maybe<Scalars["String"]>
+  about?: Maybe<Scalars["String"]>
+  contact?: Maybe<Scalars["String"]>
+  client?: Maybe<Scalars["String"]>
+}
+
+export type SitePageContextI18nResourcesPtTranslationsSidebarFilterInput = {
+  main?: Maybe<StringQueryOperatorInput>
+  team?: Maybe<StringQueryOperatorInput>
+  news?: Maybe<StringQueryOperatorInput>
+  about?: Maybe<StringQueryOperatorInput>
+  contact?: Maybe<StringQueryOperatorInput>
+  client?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageContextNext = {
@@ -2592,6 +2632,9 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___legacy"
   | "pluginCreator___pluginOptions___theme_color_in_head"
   | "pluginCreator___pluginOptions___cacheDigest"
+  | "pluginCreator___pluginOptions___codegen"
+  | "pluginCreator___pluginOptions___fileName"
+  | "pluginCreator___pluginOptions___pathCheck"
   | "pluginCreator___pluginOptions___languages"
   | "pluginCreator___pluginOptions___defaultLanguage"
   | "pluginCreator___pluginOptions___i18nextOptions___language"
@@ -2600,9 +2643,6 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___i18nextOptions___returnObjects"
   | "pluginCreator___pluginOptions___i18nextOptions___debug"
   | "pluginCreator___pluginOptions___i18nextOptions___nsSeparator"
-  | "pluginCreator___pluginOptions___codegen"
-  | "pluginCreator___pluginOptions___fileName"
-  | "pluginCreator___pluginOptions___pathCheck"
   | "pluginCreator___nodeAPIs"
   | "pluginCreator___browserAPIs"
   | "pluginCreator___ssrAPIs"
@@ -2804,7 +2844,17 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___gatsbyRemarkPlugins"
   | "pluginOptions___gatsbyRemarkPlugins___resolve"
   | "pluginOptions___gatsbyRemarkPlugins___options___maxWidth"
+  | "pluginOptions___gatsbyRemarkPlugins___options___pathPrefix"
   | "pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle"
+  | "pluginOptions___gatsbyRemarkPlugins___options___backgroundColor"
+  | "pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal"
+  | "pluginOptions___gatsbyRemarkPlugins___options___showCaptions"
+  | "pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions"
+  | "pluginOptions___gatsbyRemarkPlugins___options___withWebp"
+  | "pluginOptions___gatsbyRemarkPlugins___options___tracedSVG"
+  | "pluginOptions___gatsbyRemarkPlugins___options___loading"
+  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha"
+  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImage"
   | "pluginOptions___short_name"
   | "pluginOptions___start_url"
   | "pluginOptions___background_color"
@@ -2816,6 +2866,9 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___legacy"
   | "pluginOptions___theme_color_in_head"
   | "pluginOptions___cacheDigest"
+  | "pluginOptions___codegen"
+  | "pluginOptions___fileName"
+  | "pluginOptions___pathCheck"
   | "pluginOptions___languages"
   | "pluginOptions___defaultLanguage"
   | "pluginOptions___i18nextOptions___language"
@@ -2826,9 +2879,6 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___i18nextOptions___react___wait"
   | "pluginOptions___i18nextOptions___interpolation___escapeValue"
   | "pluginOptions___i18nextOptions___nsSeparator"
-  | "pluginOptions___codegen"
-  | "pluginOptions___fileName"
-  | "pluginOptions___pathCheck"
   | "nodeAPIs"
   | "browserAPIs"
   | "ssrAPIs"
@@ -2965,12 +3015,12 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars["Boolean"]>
   theme_color_in_head?: Maybe<Scalars["Boolean"]>
   cacheDigest?: Maybe<Scalars["String"]>
-  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
-  defaultLanguage?: Maybe<Scalars["String"]>
-  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
   codegen?: Maybe<Scalars["Boolean"]>
   fileName?: Maybe<Scalars["String"]>
   pathCheck?: Maybe<Scalars["Boolean"]>
+  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
+  defaultLanguage?: Maybe<Scalars["String"]>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
 }
 
 export type SitePluginPluginOptionsFilterInput = {
@@ -2995,12 +3045,12 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>
   cacheDigest?: Maybe<StringQueryOperatorInput>
-  languages?: Maybe<StringQueryOperatorInput>
-  defaultLanguage?: Maybe<StringQueryOperatorInput>
-  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
   codegen?: Maybe<BooleanQueryOperatorInput>
   fileName?: Maybe<StringQueryOperatorInput>
   pathCheck?: Maybe<BooleanQueryOperatorInput>
+  languages?: Maybe<StringQueryOperatorInput>
+  defaultLanguage?: Maybe<StringQueryOperatorInput>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPlugins = {
@@ -3019,12 +3069,32 @@ export type SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput = {
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
   maxWidth?: Maybe<Scalars["Int"]>
+  pathPrefix?: Maybe<Scalars["String"]>
   wrapperStyle?: Maybe<Scalars["String"]>
+  backgroundColor?: Maybe<Scalars["String"]>
+  linkImagesToOriginal?: Maybe<Scalars["Boolean"]>
+  showCaptions?: Maybe<Scalars["Boolean"]>
+  markdownCaptions?: Maybe<Scalars["Boolean"]>
+  withWebp?: Maybe<Scalars["Boolean"]>
+  tracedSVG?: Maybe<Scalars["Boolean"]>
+  loading?: Maybe<Scalars["String"]>
+  disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>
+  disableBgImage?: Maybe<Scalars["Boolean"]>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>
+  pathPrefix?: Maybe<StringQueryOperatorInput>
   wrapperStyle?: Maybe<StringQueryOperatorInput>
+  backgroundColor?: Maybe<StringQueryOperatorInput>
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
+  showCaptions?: Maybe<BooleanQueryOperatorInput>
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>
+  withWebp?: Maybe<BooleanQueryOperatorInput>
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>
+  loading?: Maybe<StringQueryOperatorInput>
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginPluginOptionsI18nextOptions = {

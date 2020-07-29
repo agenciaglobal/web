@@ -1,14 +1,20 @@
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
 import { EmployeeComponent } from "./employer"
 import { Employes } from "./types"
 
-export const GridEmployees = ({
-  employees,
-}: {
+const useGridStyles = makeStyles(() => ({
+  div: { margin: "20px 0 40px" },
+}))
+
+interface Props {
   employees: Employes
-}): React.ReactElement => {
+}
+
+export const GridEmployees = ({ employees }: Props): React.ReactElement => {
+  const classes = useGridStyles()
   return (
-    <div style={{ margin: "20px 0 40px" }}>
+    <div className={classes.div}>
       <div className={"grid"}>
         {employees.map(({ node }, index: number) => {
           console.log(node)

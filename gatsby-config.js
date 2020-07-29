@@ -6,7 +6,7 @@ module.exports = {
     title: `Agencia Global Website`,
     author: `@agenciaglobal`,
     description: `A Gatsby blog powered by Netlify CMS.`,
-    siteUrl: `http://beta.global.tt`,
+    siteUrl: `https://beta.global.tt`,
     social: {
       twitter: `@agenciaglobal`,
     },

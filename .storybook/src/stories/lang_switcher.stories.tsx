@@ -8,22 +8,20 @@ import { lightTheme } from "../../../src/shared/light"
 export default {
   title: "Light Language Switcher",
 }
-
-function extracted(color: string) {
-  return {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 150,
-    height: 60,
-    backgroundColor: color,
-  }
-}
-
 export const portuguese = ({ language, mode }) => {
+  let color = mode === "light" ? "white" : "black"
   return (
     <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
-      <div style={extracted(mode === "light" ? "white" : "black")}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 150,
+          height: 60,
+          backgroundColor: color,
+        }}
+      >
         <LanguageSwitcher
           language={language}
           languages={["pt", "en"]}
