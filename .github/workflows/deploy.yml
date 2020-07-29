@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.16.1
-      - run: yarn
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
