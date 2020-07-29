@@ -9,6 +9,13 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - run: git config --global user.email "francescoaferraro@gmail.com"
+      - run: git config --global user.name "@cescoferraro"
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.1
       - run: yarn
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
