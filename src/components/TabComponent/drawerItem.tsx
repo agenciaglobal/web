@@ -49,6 +49,30 @@ const itemStyles = makeStyles((theme: Theme) => {
         background: "#FFCC00",
       },
     },
+    labelCommon: {
+      fontFamily: "GSTwo",
+      color: theme.custom.greyAlpha,
+      fontSize: 15,
+      lineHeight: "18px",
+      "&:hover": {
+        color: color,
+      },
+    },
+    labelSelected: {
+      fontFamily: "GSThree",
+      color: color,
+      "&:hover": {
+        fontFamily: "GSThree"
+      },
+    },
+    labelContactSelected: {
+      fontFamily: "GSThree",
+      color: "#000",
+      "&:hover": {
+        fontFamily: "GSThree",
+        color: "#000"
+      },
+    },
   })
 })
 
@@ -57,7 +81,7 @@ export const TabComponent = ({
   page,
   uri,
 }: Props): React.ReactElement => {
-  const { common, contactCommon, selected, contactSelected } = itemStyles()
+  const { common, contactCommon, selected, contactSelected, labelCommon, labelSelected, labelContactSelected } = itemStyles()
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
@@ -70,6 +94,11 @@ export const TabComponent = ({
     [contactCommon]: isContact,
     [selected]: here,
     [contactSelected]: onContact,
+  })
+  const labelClassName = cs({
+    [labelCommon]: true,
+    [labelSelected]: here,
+    [labelContactSelected]: onContact
   })
   console.log(`uri: ${uri} | s: ${s} | page: ${page} `)
   console.log(uri)
@@ -86,7 +115,7 @@ export const TabComponent = ({
       }}
       className={className}
     >
-      <Typography>{label}</Typography>
+      <Typography className={labelClassName}>{label}</Typography>
     </Link>
   )
 }
