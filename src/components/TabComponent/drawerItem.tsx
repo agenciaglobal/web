@@ -1,4 +1,5 @@
 // import { Typography } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as cs from "classnames"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
@@ -60,7 +61,8 @@ export const TabComponent = ({
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
-  const isCurrent = uri === s
+  const isCurrent =
+    page === "/" ? "/en" === uri || "/" === uri : uri.includes(s)
   const here = isCurrent && !isContact
   const onContact = isCurrent && isContact
   const className = cs({
@@ -69,7 +71,7 @@ export const TabComponent = ({
     [selected]: here,
     [contactSelected]: onContact,
   })
-  console.log("uri")
+  console.log(`uri: ${uri} | s: ${s} | page: ${page} `)
   console.log(uri)
   console.log("page")
   console.log(page)
@@ -84,7 +86,7 @@ export const TabComponent = ({
       }}
       className={className}
     >
-      {label}
+      <Typography>{label}</Typography>
     </Link>
   )
 }

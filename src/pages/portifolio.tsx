@@ -1,21 +1,24 @@
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import { graphql, Link, navigate } from "gatsby"
 import * as React from "react"
 
 import Button from "../components/Button/button"
 import { BlogQueryQuery } from "../global"
 
+const useGridStyles = makeStyles(() => ({ div: { margin: "20px 0 40px" } }))
+
 const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
+  const classes = useGridStyles()
   const { data } = props
   const posts = data.allMdx.edges
   return (
     <React.Fragment>
-      <div style={{ margin: "20px 0 40px" }}>
+      <div className={classes.div}>
         {posts.map(({ node }, index: number) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={index}>
               <a
-                style={{}}
                 onClick={() => {
                   navigate("/portifolio" + node.fields.slug)
                 }}

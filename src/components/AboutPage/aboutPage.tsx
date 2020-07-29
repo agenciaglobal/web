@@ -1,12 +1,25 @@
+import Grid from "@material-ui/core/Grid"
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
 import { AboutAccordion } from "./accordion"
-import { MainAboutText } from "./main"
+import { AboutImageGrid } from "./grid_image"
+import { AboutTextGrid } from "./grid_text"
 import { SVGAbout } from "./svg_about"
 
-export const AboutPage = (): React.ReactElement => (
-  <div style={{ flexGrow: 1, paddingTop: 30 }}>
-    <MainAboutText />
-    <SVGAbout />
-    <AboutAccordion />
-  </div>
-)
+const useGridStyles = makeStyles(() => ({
+  div: { flexGrow: 1, paddingTop: 30 },
+}))
+
+export const AboutPage = (): React.ReactElement => {
+  const classes = useGridStyles()
+  return (
+    <div className={classes.div}>
+      <Grid container spacing={3}>
+        <AboutTextGrid />
+        <AboutImageGrid />
+      </Grid>
+      <SVGAbout />
+      <AboutAccordion />
+    </div>
+  )
+}

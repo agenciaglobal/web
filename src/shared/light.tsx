@@ -5,6 +5,7 @@ const lightOptions: ThemeOptions = {
   themeName: "light" as LightMode,
   palette: {
     primary: { main: "#FFF", contrastText: "#000" },
+    secondary: { main: "#FFCC00" },
     background: {
       default: "#FFF",
       paper: "#FFF",

@@ -10,30 +10,29 @@ const useStylesMenu = makeStyles(() => ({
     textAlign: "left",
     marginTop: 16,
     marginBottom: 16,
-    // color: theme.palette.secondary.main,
     fontSize: "30px",
     lineHeight: "32px",
   },
+  link: {
+    color: `white`,
+    textDecoration: `none`,
+  },
 }))
+
+interface Props {
+  close: () => void
+  label: string
+  to: string
+}
+
 export const LinkMobileComponent = ({
   label,
   close,
   to,
-}: {
-  close: () => void
-  label: string
-  to: string
-}): React.ReactElement => {
+}: Props): React.ReactElement => {
   const classes = useStylesMenu()
   return (
-    <Link
-      to={to}
-      onClick={close}
-      style={{
-        color: `white`,
-        textDecoration: `none`,
-      }}
-    >
+    <Link to={to} onClick={close} className={classes.link}>
       <Typography className={classes.text}>{label}</Typography>
     </Link>
   )
