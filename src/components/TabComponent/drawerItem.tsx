@@ -1,4 +1,3 @@
-// import { Typography } from "@material-ui/core"
 import { Typography } from "@material-ui/core"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as cs from "classnames"
@@ -62,7 +61,7 @@ const itemStyles = makeStyles((theme: Theme) => {
       fontFamily: "GSThree",
       color: color,
       "&:hover": {
-        fontFamily: "GSThree"
+        fontFamily: "GSThree",
       },
     },
     labelContactSelected: {
@@ -70,7 +69,7 @@ const itemStyles = makeStyles((theme: Theme) => {
       color: "#000",
       "&:hover": {
         fontFamily: "GSThree",
-        color: "#000"
+        color: "#000",
       },
     },
   })
@@ -81,7 +80,15 @@ export const TabComponent = ({
   page,
   uri,
 }: Props): React.ReactElement => {
-  const { common, contactCommon, selected, contactSelected, labelCommon, labelSelected, labelContactSelected } = itemStyles()
+  const {
+    common,
+    contactCommon,
+    selected,
+    contactSelected,
+    labelCommon,
+    labelSelected,
+    labelContactSelected,
+  } = itemStyles()
   const isContact = label === "CONTACT"
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + page : page
@@ -98,14 +105,8 @@ export const TabComponent = ({
   const labelClassName = cs({
     [labelCommon]: true,
     [labelSelected]: here,
-    [labelContactSelected]: onContact
+    [labelContactSelected]: onContact,
   })
-  console.log(`uri: ${uri} | s: ${s} | page: ${page} `)
-  console.log(uri)
-  console.log("page")
-  console.log(page)
-  console.log("s")
-  console.log(s)
   return (
     <Link
       to={page}
