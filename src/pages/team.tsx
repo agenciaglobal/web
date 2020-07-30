@@ -33,6 +33,7 @@ export const pageQuery = graphql`
             name
             job
             image
+            black_image
           }
         }
       }

@@ -23,6 +23,7 @@ export const LayoutHeaderMobile = ({
         open={open}
       />
       <MobileDrawer
+        uri={uri}
         open={open}
         lightMode={lightMode}
         close={() => showNav(!open)}

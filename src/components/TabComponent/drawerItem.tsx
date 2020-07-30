@@ -75,6 +75,14 @@ const itemStyles = makeStyles((theme: Theme) => {
   })
 })
 
+export const isCurrentHook = (destination: string, uri: string) => {
+  const { language } = useI18next()
+  const s = language === "en" ? "/" + language + destination : destination
+  const isCurrent =
+    destination === "/" ? "/en" === uri || "/" === uri : uri.includes(s)
+  return { isCurrent }
+}
+
 export const TabComponent = ({
   label,
   page,
@@ -90,22 +98,17 @@ export const TabComponent = ({
     labelContactSelected,
   } = itemStyles()
   const isContact = label === "CONTACT"
-  const { language } = useI18next()
-  const s = language === "en" ? "/" + language + page : page
-  const isCurrent =
-    page === "/" ? "/en" === uri || "/" === uri : uri.includes(s)
-  const here = isCurrent && !isContact
-  const onContact = isCurrent && isContact
+  const { isCurrent } = isCurrentHook(page, uri)
   const className = cs({
     [common]: !isContact,
     [contactCommon]: isContact,
-    [selected]: here,
-    [contactSelected]: onContact,
+    [selected]: isCurrent && !isContact,
+    [contactSelected]: isCurrent && isContact,
   })
   const labelClassName = cs({
     [labelCommon]: true,
-    [labelSelected]: here,
-    [labelContactSelected]: onContact,
+    [labelSelected]: isCurrent && !isContact,
+    [labelContactSelected]: isCurrent && isContact,
   })
   return (
     <Link

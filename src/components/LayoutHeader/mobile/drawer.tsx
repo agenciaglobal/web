@@ -35,6 +35,7 @@ const useStylesV2 = makeStyles((theme: Theme) => ({
 }))
 
 interface Props {
+  uri: string
   close: () => void
   open: boolean
   lightMode: "light" | "dark"
@@ -42,6 +43,7 @@ interface Props {
 }
 
 export const MobileDrawer = ({
+  uri,
   close,
   lightMode,
   open,
@@ -73,6 +75,7 @@ export const MobileDrawer = ({
           <Container>
             {menus.map(({ label, to }, index) => (
               <LinkMobileComponent
+                uri={uri}
                 key={index}
                 to={to}
                 label={label}

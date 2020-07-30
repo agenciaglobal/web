@@ -1,9 +1,14 @@
-import { Typography } from "@material-ui/core"
+import { Theme, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
+import classNames from "classnames"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
+import { isCurrentHook } from "../../TabComponent/drawerItem"
 
-const useStylesMenu = makeStyles(() => ({
+const useStylesMenu = makeStyles((theme: Theme) => ({
+  current: {
+    color: theme.palette.secondary.main,
+  },
   text: {
     listStyle: "none",
     textDecoration: "none",
@@ -26,14 +31,23 @@ interface Props {
 }
 
 export const LinkMobileComponent = ({
+  uri,
   label,
   close,
   to,
 }: Props): React.ReactElement => {
   const classes = useStylesMenu()
+  const { isCurrent } = isCurrentHook(to, uri)
+  console.log(isCurrent)
   return (
     <Link to={to} onClick={close} className={classes.link}>
-      <Typography className={classes.text}>{label}</Typography>
+      <Typography
+        className={classNames(classes.text, {
+          [classes.current]: isCurrent,
+        })}
+      >
+        {label}
+      </Typography>
     </Link>
   )
 }

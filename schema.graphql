@@ -449,6 +449,7 @@ type Mdx implements Node {
   mdxAST: JSON
   parent: Node
   rawBody: String!
+  slug: String
   tableOfContents(maxDepth: Int): JSON
   timeToRead: Int
   wordCount: MdxWordCount
@@ -474,8 +475,9 @@ type MdxFields {
 }
 
 type MdxFrontmatter {
-    categorie: String
-    date(
+  black_image: String
+  categorie: String
+  date(
     "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
     "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
@@ -485,10 +487,10 @@ type MdxFrontmatter {
     "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date
-    description: String
-    image: String
-    job: String
-    name: String
+  description: String
+  image: String
+  job: String
+  name: String
   path: String
   title: String!
 }
@@ -535,8 +537,8 @@ type Query {
   directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
   file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childImageSharp: ImageSharpFilterInput, childMdx: MdxFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
   imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
-  mdx(body: StringQueryOperatorInput, children: NodeFilterListInput, excerpt: StringQueryOperatorInput, fields: MdxFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mdxAST: JSONQueryOperatorInput, parent: NodeFilterInput, rawBody: StringQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput): Mdx
-  site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
+  mdx(body: StringQueryOperatorInput, children: NodeFilterListInput, excerpt: StringQueryOperatorInput, fields: MdxFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mdxAST: JSONQueryOperatorInput, parent: NodeFilterInput, rawBody: StringQueryOperatorInput, slug: StringQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput): Mdx
+  site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
   siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
   sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
   sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
@@ -560,16 +562,7 @@ type Site implements Node {
   parent: Node
   pathPrefix: String
   polyfill: Boolean
-  port(
-    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
-    difference: String,
-    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
-    formatString: String,
-    "Returns a string generated with Moment.js' `fromNow` function"
-    fromNow: Boolean,
-    "Configures the locale Moment.js will use to format the date."
-    locale: String
-  ): Date
+  port: Int
   siteMetadata: SiteSiteMetadata
 }
 
@@ -665,9 +658,80 @@ type SitePageConnection {
 }
 
 type SitePageContext {
+  i18n: SitePageContextI18n
+  language: String
   next: SitePageContextNext
   previous: SitePageContextPrevious
   slug: String
+}
+
+type SitePageContextI18n {
+  defaultLanguage: String
+  language: String
+  languages: [String]
+  originalPath: String
+  path: String
+  resources: SitePageContextI18nResources
+  routed: Boolean
+}
+
+type SitePageContextI18nResources {
+  en: SitePageContextI18nResourcesEn
+  pt: SitePageContextI18nResourcesPt
+}
+
+type SitePageContextI18nResourcesEn {
+  translations: SitePageContextI18nResourcesEnTranslations
+}
+
+type SitePageContextI18nResourcesEnTranslations {
+  client: String
+  home: SitePageContextI18nResourcesEnTranslationsHome
+  news: String
+  projects: String
+  sidebar: SitePageContextI18nResourcesEnTranslationsSidebar
+  team: String
+}
+
+type SitePageContextI18nResourcesEnTranslationsHome {
+  subtitle: String
+  title: String
+}
+
+type SitePageContextI18nResourcesEnTranslationsSidebar {
+  about: String
+  client: String
+  contact: String
+  main: String
+  news: String
+  team: String
+}
+
+type SitePageContextI18nResourcesPt {
+  translations: SitePageContextI18nResourcesPtTranslations
+}
+
+type SitePageContextI18nResourcesPtTranslations {
+  client: String
+  home: SitePageContextI18nResourcesPtTranslationsHome
+  news: String
+  projects: String
+  sidebar: SitePageContextI18nResourcesPtTranslationsSidebar
+  team: String
+}
+
+type SitePageContextI18nResourcesPtTranslationsHome {
+  subtitle: String
+  title: String
+}
+
+type SitePageContextI18nResourcesPtTranslationsSidebar {
+  about: String
+  client: String
+  contact: String
+  main: String
+  news: String
+  team: String
 }
 
 type SitePageContextNext {
@@ -680,6 +744,10 @@ type SitePageContextNextFields {
 }
 
 type SitePageContextNextFrontmatter {
+  categorie: String
+  date: String
+  description: String
+  image: String
   title: String
 }
 
@@ -693,6 +761,10 @@ type SitePageContextPreviousFields {
 }
 
 type SitePageContextPreviousFrontmatter {
+  categorie: String
+  date: String
+  description: String
+  image: String
   title: String
 }
 
@@ -785,18 +857,20 @@ type SitePluginPluginOptions {
   cachePublic: Boolean
   cache_busting_mode: String
   codegen: Boolean
+  defaultLanguage: String
   display: String
   extensions: [String]
   fileName: String
   gatsbyRemarkPlugins: [SitePluginPluginOptionsGatsbyRemarkPlugins]
+  i18nextOptions: SitePluginPluginOptionsI18nextOptions
   icon: String
   include_favicon: Boolean
+  languages: [String]
   legacy: Boolean
   name: String
   pages: String
   path: String
   pathCheck: Boolean
-  pathToConfigModule: String
   plugins: [SitePluginPluginOptionsPlugins]
   short_name: String
   src: String
@@ -811,18 +885,27 @@ type SitePluginPluginOptionsGatsbyRemarkPlugins {
 }
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions {
-  backgroundColor: String
-  disableBgImage: Boolean
-  disableBgImageOnAlpha: Boolean
-  linkImagesToOriginal: Boolean
-  loading: String
-  markdownCaptions: Boolean
   maxWidth: Int
-  pathPrefix: String
-  showCaptions: Boolean
-  tracedSVG: Boolean
-  withWebp: Boolean
   wrapperStyle: String
+}
+
+type SitePluginPluginOptionsI18nextOptions {
+  debug: Boolean
+  defaultNS: String
+  interpolation: SitePluginPluginOptionsI18nextOptionsInterpolation
+  language: String
+  ns: [String]
+  nsSeparator: Boolean
+  react: SitePluginPluginOptionsI18nextOptionsReact
+  returnObjects: Boolean
+}
+
+type SitePluginPluginOptionsI18nextOptionsInterpolation {
+  escapeValue: Boolean
+}
+
+type SitePluginPluginOptionsI18nextOptionsReact {
+  wait: Boolean
 }
 
 type SitePluginPluginOptionsPlugins {
@@ -1083,27 +1166,28 @@ enum FileFieldsEnum {
   childMdx___children___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___children___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___children___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___children___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___children___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___children___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___children___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___fileAbsolutePath
-    childMdx___frontmatter___categorie
-    childMdx___frontmatter___date
-    childMdx___frontmatter___description
-    childMdx___frontmatter___image
-    childMdx___frontmatter___job
-    childMdx___frontmatter___name
-    childMdx___frontmatter___path
-    childMdx___frontmatter___title
-    childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMdx___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___children___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___children___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___children___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___children___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___fileAbsolutePath
+  childMdx___frontmatter___black_image
+  childMdx___frontmatter___categorie
+  childMdx___frontmatter___date
+  childMdx___frontmatter___description
+  childMdx___frontmatter___image
+  childMdx___frontmatter___job
+  childMdx___frontmatter___name
+  childMdx___frontmatter___path
+  childMdx___frontmatter___title
+  childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1127,6 +1211,7 @@ enum FileFieldsEnum {
   childMdx___parent___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___rawBody
+  childMdx___slug
   childMdx___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1460,27 +1545,28 @@ enum MdxFieldsEnum {
   children___parent___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   children___parent___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   children___parent___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    children___parent___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    children___parent___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    children___parent___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    children___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    fileAbsolutePath
-    frontmatter___categorie
-    frontmatter___date
-    frontmatter___description
-    frontmatter___image
-    frontmatter___job
-    frontmatter___name
-    frontmatter___path
-    frontmatter___title
-    headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  children___parent___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  children___parent___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  children___parent___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  children___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  fileAbsolutePath
+  frontmatter___black_image
+  frontmatter___categorie
+  frontmatter___date
+  frontmatter___description
+  frontmatter___image
+  frontmatter___job
+  frontmatter___name
+  frontmatter___path
+  frontmatter___title
+  headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1528,6 +1614,7 @@ enum MdxFieldsEnum {
   parent___parent___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   parent___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   rawBody
+  slug
   tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1776,9 +1863,24 @@ enum SitePageFieldsEnum {
   component
   componentChunkName
   componentPath
+  context___i18n___defaultLanguage
+  context___i18n___language
+  context___i18n___languages
+  context___i18n___originalPath
+  context___i18n___path
+  context___i18n___routed
+  context___language
   context___next___fields___slug
+  context___next___frontmatter___categorie
+  context___next___frontmatter___date
+  context___next___frontmatter___description
+  context___next___frontmatter___image
   context___next___frontmatter___title
   context___previous___fields___slug
+  context___previous___frontmatter___categorie
+  context___previous___frontmatter___date
+  context___previous___frontmatter___description
+  context___previous___frontmatter___image
   context___previous___frontmatter___title
   context___slug
   id
@@ -1896,19 +1998,26 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___cachePublic
   pluginCreator___pluginOptions___cache_busting_mode
   pluginCreator___pluginOptions___codegen
+  pluginCreator___pluginOptions___defaultLanguage
   pluginCreator___pluginOptions___display
   pluginCreator___pluginOptions___extensions
   pluginCreator___pluginOptions___fileName
   pluginCreator___pluginOptions___gatsbyRemarkPlugins
   pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve
+  pluginCreator___pluginOptions___i18nextOptions___debug
+  pluginCreator___pluginOptions___i18nextOptions___defaultNS
+  pluginCreator___pluginOptions___i18nextOptions___language
+  pluginCreator___pluginOptions___i18nextOptions___ns
+  pluginCreator___pluginOptions___i18nextOptions___nsSeparator
+  pluginCreator___pluginOptions___i18nextOptions___returnObjects
   pluginCreator___pluginOptions___icon
   pluginCreator___pluginOptions___include_favicon
+  pluginCreator___pluginOptions___languages
   pluginCreator___pluginOptions___legacy
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___pages
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___pathCheck
-  pluginCreator___pluginOptions___pathToConfigModule
   pluginCreator___pluginOptions___plugins
   pluginCreator___pluginOptions___plugins___browserAPIs
   pluginCreator___pluginOptions___plugins___id
@@ -2038,31 +2147,30 @@ enum SitePluginFieldsEnum {
   pluginOptions___cachePublic
   pluginOptions___cache_busting_mode
   pluginOptions___codegen
+  pluginOptions___defaultLanguage
   pluginOptions___display
   pluginOptions___extensions
   pluginOptions___fileName
   pluginOptions___gatsbyRemarkPlugins
-  pluginOptions___gatsbyRemarkPlugins___options___backgroundColor
-  pluginOptions___gatsbyRemarkPlugins___options___disableBgImage
-  pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha
-  pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal
-  pluginOptions___gatsbyRemarkPlugins___options___loading
-  pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions
   pluginOptions___gatsbyRemarkPlugins___options___maxWidth
-  pluginOptions___gatsbyRemarkPlugins___options___pathPrefix
-  pluginOptions___gatsbyRemarkPlugins___options___showCaptions
-  pluginOptions___gatsbyRemarkPlugins___options___tracedSVG
-  pluginOptions___gatsbyRemarkPlugins___options___withWebp
   pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle
   pluginOptions___gatsbyRemarkPlugins___resolve
+  pluginOptions___i18nextOptions___debug
+  pluginOptions___i18nextOptions___defaultNS
+  pluginOptions___i18nextOptions___interpolation___escapeValue
+  pluginOptions___i18nextOptions___language
+  pluginOptions___i18nextOptions___ns
+  pluginOptions___i18nextOptions___nsSeparator
+  pluginOptions___i18nextOptions___react___wait
+  pluginOptions___i18nextOptions___returnObjects
   pluginOptions___icon
   pluginOptions___include_favicon
+  pluginOptions___languages
   pluginOptions___legacy
   pluginOptions___name
   pluginOptions___pages
   pluginOptions___path
   pluginOptions___pathCheck
-  pluginOptions___pathToConfigModule
   pluginOptions___plugins
   pluginOptions___plugins___browserAPIs
   pluginOptions___plugins___id
@@ -2347,29 +2455,31 @@ input MdxFilterInput {
   headings: MdxHeadingMdxFilterListInput
   html: StringQueryOperatorInput
   id: StringQueryOperatorInput
-    internal: InternalFilterInput
-    mdxAST: JSONQueryOperatorInput
-    parent: NodeFilterInput
-    rawBody: StringQueryOperatorInput
-    tableOfContents: JSONQueryOperatorInput
-    timeToRead: IntQueryOperatorInput
-    wordCount: MdxWordCountFilterInput
+  internal: InternalFilterInput
+  mdxAST: JSONQueryOperatorInput
+  parent: NodeFilterInput
+  rawBody: StringQueryOperatorInput
+  slug: StringQueryOperatorInput
+  tableOfContents: JSONQueryOperatorInput
+  timeToRead: IntQueryOperatorInput
+  wordCount: MdxWordCountFilterInput
 }
 
 input MdxFrontmatterFilterInput {
-    categorie: StringQueryOperatorInput
-    date: DateQueryOperatorInput
+  black_image: StringQueryOperatorInput
+  categorie: StringQueryOperatorInput
+  date: DateQueryOperatorInput
   description: StringQueryOperatorInput
-    image: StringQueryOperatorInput
-    job: StringQueryOperatorInput
-    name: StringQueryOperatorInput
-    path: StringQueryOperatorInput
-    title: StringQueryOperatorInput
+  image: StringQueryOperatorInput
+  job: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  path: StringQueryOperatorInput
+  title: StringQueryOperatorInput
 }
 
 input MdxHeadingMdxFilterInput {
-    depth: IntQueryOperatorInput
-    value: StringQueryOperatorInput
+  depth: IntQueryOperatorInput
+  value: StringQueryOperatorInput
 }
 
 input MdxHeadingMdxFilterListInput {
@@ -2432,14 +2542,85 @@ input SiteFilterInput {
   parent: NodeFilterInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
-  port: DateQueryOperatorInput
+  port: IntQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
 }
 
 input SitePageContextFilterInput {
+  i18n: SitePageContextI18nFilterInput
+  language: StringQueryOperatorInput
   next: SitePageContextNextFilterInput
   previous: SitePageContextPreviousFilterInput
   slug: StringQueryOperatorInput
+}
+
+input SitePageContextI18nFilterInput {
+  defaultLanguage: StringQueryOperatorInput
+  language: StringQueryOperatorInput
+  languages: StringQueryOperatorInput
+  originalPath: StringQueryOperatorInput
+  path: StringQueryOperatorInput
+  resources: SitePageContextI18nResourcesFilterInput
+  routed: BooleanQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesEnFilterInput {
+  translations: SitePageContextI18nResourcesEnTranslationsFilterInput
+}
+
+input SitePageContextI18nResourcesEnTranslationsFilterInput {
+  client: StringQueryOperatorInput
+  home: SitePageContextI18nResourcesEnTranslationsHomeFilterInput
+  news: StringQueryOperatorInput
+  projects: StringQueryOperatorInput
+  sidebar: SitePageContextI18nResourcesEnTranslationsSidebarFilterInput
+  team: StringQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesEnTranslationsHomeFilterInput {
+  subtitle: StringQueryOperatorInput
+  title: StringQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesEnTranslationsSidebarFilterInput {
+  about: StringQueryOperatorInput
+  client: StringQueryOperatorInput
+  contact: StringQueryOperatorInput
+  main: StringQueryOperatorInput
+  news: StringQueryOperatorInput
+  team: StringQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesFilterInput {
+  en: SitePageContextI18nResourcesEnFilterInput
+  pt: SitePageContextI18nResourcesPtFilterInput
+}
+
+input SitePageContextI18nResourcesPtFilterInput {
+  translations: SitePageContextI18nResourcesPtTranslationsFilterInput
+}
+
+input SitePageContextI18nResourcesPtTranslationsFilterInput {
+  client: StringQueryOperatorInput
+  home: SitePageContextI18nResourcesPtTranslationsHomeFilterInput
+  news: StringQueryOperatorInput
+  projects: StringQueryOperatorInput
+  sidebar: SitePageContextI18nResourcesPtTranslationsSidebarFilterInput
+  team: StringQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesPtTranslationsHomeFilterInput {
+  subtitle: StringQueryOperatorInput
+  title: StringQueryOperatorInput
+}
+
+input SitePageContextI18nResourcesPtTranslationsSidebarFilterInput {
+  about: StringQueryOperatorInput
+  client: StringQueryOperatorInput
+  contact: StringQueryOperatorInput
+  main: StringQueryOperatorInput
+  news: StringQueryOperatorInput
+  team: StringQueryOperatorInput
 }
 
 input SitePageContextNextFieldsFilterInput {
@@ -2452,6 +2633,10 @@ input SitePageContextNextFilterInput {
 }
 
 input SitePageContextNextFrontmatterFilterInput {
+  categorie: StringQueryOperatorInput
+  date: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  image: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
 
@@ -2465,6 +2650,10 @@ input SitePageContextPreviousFilterInput {
 }
 
 input SitePageContextPreviousFrontmatterFilterInput {
+  categorie: StringQueryOperatorInput
+  date: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  image: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
 
@@ -2552,18 +2741,20 @@ input SitePluginPluginOptionsFilterInput {
   cachePublic: BooleanQueryOperatorInput
   cache_busting_mode: StringQueryOperatorInput
   codegen: BooleanQueryOperatorInput
+  defaultLanguage: StringQueryOperatorInput
   display: StringQueryOperatorInput
   extensions: StringQueryOperatorInput
   fileName: StringQueryOperatorInput
   gatsbyRemarkPlugins: SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
+  i18nextOptions: SitePluginPluginOptionsI18nextOptionsFilterInput
   icon: StringQueryOperatorInput
   include_favicon: BooleanQueryOperatorInput
+  languages: StringQueryOperatorInput
   legacy: BooleanQueryOperatorInput
   name: StringQueryOperatorInput
   pages: StringQueryOperatorInput
   path: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
-  pathToConfigModule: StringQueryOperatorInput
   plugins: SitePluginPluginOptionsPluginsFilterListInput
   short_name: StringQueryOperatorInput
   src: StringQueryOperatorInput
@@ -2582,18 +2773,27 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
-  backgroundColor: StringQueryOperatorInput
-  disableBgImage: BooleanQueryOperatorInput
-  disableBgImageOnAlpha: BooleanQueryOperatorInput
-  linkImagesToOriginal: BooleanQueryOperatorInput
-  loading: StringQueryOperatorInput
-  markdownCaptions: BooleanQueryOperatorInput
   maxWidth: IntQueryOperatorInput
-  pathPrefix: StringQueryOperatorInput
-  showCaptions: BooleanQueryOperatorInput
-  tracedSVG: BooleanQueryOperatorInput
-  withWebp: BooleanQueryOperatorInput
   wrapperStyle: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsI18nextOptionsFilterInput {
+  debug: BooleanQueryOperatorInput
+  defaultNS: StringQueryOperatorInput
+  interpolation: SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput
+  language: StringQueryOperatorInput
+  ns: StringQueryOperatorInput
+  nsSeparator: BooleanQueryOperatorInput
+  react: SitePluginPluginOptionsI18nextOptionsReactFilterInput
+  returnObjects: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput {
+  escapeValue: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsI18nextOptionsReactFilterInput {
+  wait: BooleanQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {

@@ -3,11 +3,13 @@ import React, { useState } from "react"
 
 interface Props {
   backgroundImage: string
+  blackBackgroundImage: string
   title: string
   job: string
 }
 
 export const EmployeeComponent = ({
+  blackBackgroundImage,
   backgroundImage,
   job,
   title,
@@ -22,8 +24,11 @@ export const EmployeeComponent = ({
         // "-webkit-filter": hover ? `grayscale(0%)` : `grayscale(100%)`,
         filter: hover ? `grayscale(0%)` : `grayscale(100%)`,
         alignItems: "flex-end",
-        backgroundImage: `url(${require("../../../content/" +
-          backgroundImage)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundImage: hover
+          ? `url(${require("../../../content/" + blackBackgroundImage)})`
+          : `url(${require("../../../content/" + backgroundImage)})`,
       }}
     >
       <div

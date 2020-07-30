@@ -4,7 +4,7 @@ import { EmployeeComponent } from "./employer"
 import { Employes } from "./types"
 
 const useGridStyles = makeStyles(() => ({
-  div: { margin: "20px 0 40px" },
+  div: { paddingTop: 50, paddingBottom: 300 },
 }))
 
 interface Props {
@@ -21,6 +21,7 @@ export const GridEmployees = ({ employees }: Props): React.ReactElement => {
           return (
             <EmployeeComponent
               backgroundImage={node.frontmatter.image}
+              blackBackgroundImage={node.frontmatter.black_image}
               key={index}
               title={node.frontmatter.name}
               job={node.frontmatter.job}
