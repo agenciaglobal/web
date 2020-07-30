@@ -20,6 +20,8 @@ export const EmployeeComponent = ({
       style={{
         display: "flex",
         // "-webkit-filter": hover ? `grayscale(0%)` : `grayscale(100%)`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         filter: hover ? `grayscale(0%)` : `grayscale(100%)`,
         alignItems: "flex-end",
         backgroundImage: `url(${require("../../../content/" +
@@ -46,9 +48,9 @@ export const EmployeeComponent = ({
             <Typography style={{ color: "black", textAlign: "center" }}>
               {title}
             </Typography>
-            <Typography style={{ color: "black", textAlign: "center" }}>
-              {job}
-            </Typography>
+            {/*<Typography style={{ color: "black", textAlign: "center" }}>*/}
+            {/*  {job}*/}
+            {/*</Typography>*/}
           </div>
         </div>
       )}
