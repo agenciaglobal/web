@@ -1,8 +1,7 @@
-import { Box, Container, Drawer, Hidden } from "@material-ui/core"
+import { Container, Drawer, Hidden } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { TabComponent } from "../TabComponent/drawerItem"
-import classNames from "classnames"
 
 const useStyles = makeStyles(() =>
   createStyles({
