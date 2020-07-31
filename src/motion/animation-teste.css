@@ -1,0 +1,1017 @@
+/*
+The CSS export should solely be used as a reference.
+For a more detailed animation export the JSON file should be used.
+*/
+#BOX1 {
+    transform: ;
+    animation: BOX1__x__1 1000ms 0ms ease-in-out forwards, BOX1__x__2 1000ms 1000ms ease-in-out forwards, BOX1__x__3 2000ms 2000ms ease-in-out forwards, BOX1__y__1 1000ms 0ms ease-in-out forwards, BOX1__y__2 1000ms 1000ms ease-in-out forwards, BOX1__y__3 2000ms 2000ms ease-in-out forwards, BOX1__width__1 1000ms 0ms ease-in-out forwards, BOX1__width__2 1000ms 1000ms ease-in-out forwards, BOX1__width__3 2000ms 2000ms ease-in-out forwards, BOX1__height__1 1000ms 0ms ease-in-out forwards, BOX1__height__2 1000ms 1000ms ease-in-out forwards, BOX1__height__3 2000ms 2000ms ease-in-out forwards, BOX1__fillColor__1 1ms 0ms linear forwards, BOX1__fillColor__2 999ms 1ms ease-in-out forwards, BOX1__fillColor__3 1000ms 1000ms ease-in-out forwards, BOX1__fillColor__4 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes BOX1__x__1 {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+@keyframes BOX1__x__2 {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+@keyframes BOX1__x__3 {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+@keyframes BOX1__y__1 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+@keyframes BOX1__y__2 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 410px;
+    }
+}
+@keyframes BOX1__y__3 {
+    from {
+        top: 410px;
+    }
+
+    to {
+        top: 310px;
+    }
+}
+@keyframes BOX1__width__1 {
+    from {
+        width: 530px;
+    }
+
+    to {
+        width: 530px;
+    }
+}
+@keyframes BOX1__width__2 {
+    from {
+        width: 530px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+@keyframes BOX1__width__3 {
+    from {
+        width: 300px;
+    }
+
+    to {
+        width: 320px;
+    }
+}
+@keyframes BOX1__height__1 {
+    from {
+        height: 550px;
+    }
+
+    to {
+        height: 550px;
+    }
+}
+@keyframes BOX1__height__2 {
+    from {
+        height: 550px;
+    }
+
+    to {
+        height: 310px;
+    }
+}
+@keyframes BOX1__height__3 {
+    from {
+        height: 310px;
+    }
+
+    to {
+        height: 410px;
+    }
+}
+@keyframes BOX1__fillColor__1 {
+    from {
+        background-color: rgba(255,204.00000303983688,0,1);
+    }
+
+    to {
+        background-color: rgba(255,204.00000303983688,0,1);
+    }
+}
+@keyframes BOX1__fillColor__2 {
+    from {
+        background-color: rgba(255,204.00000303983688,0,1);
+    }
+
+    to {
+        background-color: rgba(255,204,0,1);
+    }
+}
+@keyframes BOX1__fillColor__3 {
+    from {
+        background-color: rgba(255,204,0,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX1__fillColor__4 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+#BOX4 {
+    transform: ;
+    animation: BOX4__x__1 1000ms 0ms ease-in-out forwards, BOX4__x__2 1000ms 1000ms ease-in-out forwards, BOX4__x__3 2000ms 2000ms ease-in-out forwards, BOX4__y__1 1000ms 0ms ease-in-out forwards, BOX4__y__2 1000ms 1000ms ease-in-out forwards, BOX4__y__3 2000ms 2000ms ease-in-out forwards, BOX4__width__1 1000ms 0ms ease-in-out forwards, BOX4__width__2 1000ms 1000ms ease-in-out forwards, BOX4__width__3 2000ms 2000ms ease-in-out forwards, BOX4__height__1 1000ms 0ms ease-in-out forwards, BOX4__height__2 1000ms 1000ms ease-in-out forwards, BOX4__height__3 2000ms 2000ms ease-in-out forwards, BOX4__fillColor__1 1000ms 0ms ease-in-out forwards, BOX4__fillColor__2 1000ms 1000ms ease-in-out forwards, BOX4__fillColor__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes BOX4__x__1 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 900px;
+    }
+}
+@keyframes BOX4__x__2 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 900px;
+    }
+}
+@keyframes BOX4__x__3 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 660px;
+    }
+}
+@keyframes BOX4__y__1 {
+    from {
+        top: 240px;
+    }
+
+    to {
+        top: 240px;
+    }
+}
+@keyframes BOX4__y__2 {
+    from {
+        top: 240px;
+    }
+
+    to {
+        top: 130px;
+    }
+}
+@keyframes BOX4__y__3 {
+    from {
+        top: 130px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+@keyframes BOX4__width__1 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+@keyframes BOX4__width__2 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+@keyframes BOX4__width__3 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 620px;
+    }
+}
+@keyframes BOX4__height__1 {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 160px;
+    }
+}
+@keyframes BOX4__height__2 {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 190px;
+    }
+}
+@keyframes BOX4__height__3 {
+    from {
+        height: 190px;
+    }
+
+    to {
+        height: 420px;
+    }
+}
+@keyframes BOX4__fillColor__1 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX4__fillColor__2 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX4__fillColor__3 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,204,0,1);
+    }
+}
+
+#BOX5 {
+    transform: ;
+    animation: BOX5__x__1 1000ms 0ms ease-in-out forwards, BOX5__x__2 1000ms 1000ms ease-in-out forwards, BOX5__x__3 2000ms 2000ms ease-in-out forwards, BOX5__y__1 1000ms 0ms ease-in-out forwards, BOX5__y__2 1000ms 1000ms ease-in-out forwards, BOX5__y__3 2000ms 2000ms ease-in-out forwards, BOX5__width__1 1000ms 0ms ease-in-out forwards, BOX5__width__2 1000ms 1000ms ease-in-out forwards, BOX5__width__3 2000ms 2000ms ease-in-out forwards, BOX5__height__1 1000ms 0ms ease-in-out forwards, BOX5__height__2 1000ms 1000ms ease-in-out forwards, BOX5__height__3 2000ms 2000ms ease-in-out forwards, BOX5__fillColor__1 1000ms 0ms ease-in-out forwards, BOX5__fillColor__2 1000ms 1000ms ease-in-out forwards, BOX5__fillColor__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes BOX5__x__1 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 900px;
+    }
+}
+@keyframes BOX5__x__2 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 900px;
+    }
+}
+@keyframes BOX5__x__3 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 890px;
+    }
+}
+@keyframes BOX5__y__1 {
+    from {
+        top: 390px;
+    }
+
+    to {
+        top: 390px;
+    }
+}
+@keyframes BOX5__y__2 {
+    from {
+        top: 390px;
+    }
+
+    to {
+        top: 310px;
+    }
+}
+@keyframes BOX5__y__3 {
+    from {
+        top: 310px;
+    }
+
+    to {
+        top: 410px;
+    }
+}
+@keyframes BOX5__width__1 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+@keyframes BOX5__width__2 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+@keyframes BOX5__width__3 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 390px;
+    }
+}
+@keyframes BOX5__height__1 {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 160px;
+    }
+}
+@keyframes BOX5__height__2 {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 210px;
+    }
+}
+@keyframes BOX5__height__3 {
+    from {
+        height: 210px;
+    }
+
+    to {
+        height: 160px;
+    }
+}
+@keyframes BOX5__fillColor__1 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX5__fillColor__2 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX5__fillColor__3 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+#BOX3 {
+    transform: ;
+    animation: BOX3__x__1 1000ms 0ms ease-in-out forwards, BOX3__x__2 1000ms 1000ms ease-in-out forwards, BOX3__x__3 2000ms 2000ms ease-in-out forwards, BOX3__y__1 1000ms 0ms ease-in-out forwards, BOX3__y__2 1000ms 1000ms ease-in-out forwards, BOX3__y__3 2000ms 2000ms ease-in-out forwards, BOX3__width__1 1000ms 0ms ease-in-out forwards, BOX3__width__2 1000ms 1000ms ease-in-out forwards, BOX3__width__3 2000ms 2000ms ease-in-out forwards, BOX3__height__1 1000ms 0ms ease-in-out forwards, BOX3__height__2 1000ms 1000ms ease-in-out forwards, BOX3__height__3 2000ms 2000ms ease-in-out forwards, BOX3__fillColor__1 1000ms 0ms ease-in-out forwards, BOX3__fillColor__2 1000ms 1000ms ease-in-out forwards, BOX3__fillColor__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes BOX3__x__1 {
+    from {
+        left: 520px;
+    }
+
+    to {
+        left: 520px;
+    }
+}
+@keyframes BOX3__x__2 {
+    from {
+        left: 520px;
+    }
+
+    to {
+        left: 900px;
+    }
+}
+@keyframes BOX3__x__3 {
+    from {
+        left: 900px;
+    }
+
+    to {
+        left: 890px;
+    }
+}
+@keyframes BOX3__y__1 {
+    from {
+        top: 540px;
+    }
+
+    to {
+        top: 540px;
+    }
+}
+@keyframes BOX3__y__2 {
+    from {
+        top: 540px;
+    }
+
+    to {
+        top: 510px;
+    }
+}
+@keyframes BOX3__y__3 {
+    from {
+        top: 510px;
+    }
+
+    to {
+        top: 560px;
+    }
+}
+@keyframes BOX3__width__1 {
+    from {
+        width: 390px;
+    }
+
+    to {
+        width: 390px;
+    }
+}
+@keyframes BOX3__width__2 {
+    from {
+        width: 390px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+@keyframes BOX3__width__3 {
+    from {
+        width: 380px;
+    }
+
+    to {
+        width: 390px;
+    }
+}
+@keyframes BOX3__height__1 {
+    from {
+        height: 180px;
+    }
+
+    to {
+        height: 180px;
+    }
+}
+@keyframes BOX3__height__2 {
+    from {
+        height: 180px;
+    }
+
+    to {
+        height: 210px;
+    }
+}
+@keyframes BOX3__height__3 {
+    from {
+        height: 210px;
+    }
+
+    to {
+        height: 160px;
+    }
+}
+@keyframes BOX3__fillColor__1 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX3__fillColor__2 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX3__fillColor__3 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+#TEXT1 {
+    transform: ;
+    animation: TEXT1__x__1 1000ms 0ms ease-in-out forwards, TEXT1__x__2 1000ms 1000ms ease-in-out forwards, TEXT1__x__3 2000ms 2000ms ease-in-out forwards, TEXT1__y__1 1000ms 0ms ease-in-out forwards, TEXT1__y__2 1000ms 1000ms ease-in-out forwards, TEXT1__y__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes TEXT1__x__1 {
+    from {
+        left: 28px;
+    }
+
+    to {
+        left: 28px;
+    }
+}
+@keyframes TEXT1__x__2 {
+    from {
+        left: 28px;
+    }
+
+    to {
+        left: 28px;
+    }
+}
+@keyframes TEXT1__x__3 {
+    from {
+        left: 28px;
+    }
+
+    to {
+        left: 28px;
+    }
+}
+@keyframes TEXT1__y__1 {
+    from {
+        top: 28px;
+    }
+
+    to {
+        top: 28px;
+    }
+}
+@keyframes TEXT1__y__2 {
+    from {
+        top: 28px;
+    }
+
+    to {
+        top: 438px;
+    }
+}
+@keyframes TEXT1__y__3 {
+    from {
+        top: 438px;
+    }
+
+    to {
+        top: 338px;
+    }
+}
+
+#TEXT4 {
+    transform: ;
+    animation: TEXT4__x__1 1000ms 0ms ease-in-out forwards, TEXT4__x__2 1000ms 1000ms ease-in-out forwards, TEXT4__x__3 2000ms 2000ms ease-in-out forwards, TEXT4__y__1 1000ms 0ms ease-in-out forwards, TEXT4__y__2 1000ms 1000ms ease-in-out forwards, TEXT4__y__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes TEXT4__x__1 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 928px;
+    }
+}
+@keyframes TEXT4__x__2 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 928px;
+    }
+}
+@keyframes TEXT4__x__3 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 688px;
+    }
+}
+@keyframes TEXT4__y__1 {
+    from {
+        top: 268px;
+    }
+
+    to {
+        top: 268px;
+    }
+}
+@keyframes TEXT4__y__2 {
+    from {
+        top: 268px;
+    }
+
+    to {
+        top: 158px;
+    }
+}
+@keyframes TEXT4__y__3 {
+    from {
+        top: 158px;
+    }
+
+    to {
+        top: 28px;
+    }
+}
+
+#TEXT5 {
+    transform: ;
+    animation: TEXT5__x__1 1000ms 0ms ease-in-out forwards, TEXT5__x__2 1000ms 1000ms ease-in-out forwards, TEXT5__x__3 2000ms 2000ms ease-in-out forwards, TEXT5__y__1 1000ms 0ms ease-in-out forwards, TEXT5__y__2 1000ms 1000ms ease-in-out forwards, TEXT5__y__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes TEXT5__x__1 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 928px;
+    }
+}
+@keyframes TEXT5__x__2 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 928px;
+    }
+}
+@keyframes TEXT5__x__3 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 918px;
+    }
+}
+@keyframes TEXT5__y__1 {
+    from {
+        top: 418px;
+    }
+
+    to {
+        top: 418px;
+    }
+}
+@keyframes TEXT5__y__2 {
+    from {
+        top: 418px;
+    }
+
+    to {
+        top: 338px;
+    }
+}
+@keyframes TEXT5__y__3 {
+    from {
+        top: 338px;
+    }
+
+    to {
+        top: 438px;
+    }
+}
+
+#TEXT3 {
+    transform: ;
+    animation: TEXT3__x__1 1000ms 0ms ease-in-out forwards, TEXT3__x__2 1000ms 1000ms ease-in-out forwards, TEXT3__x__3 2000ms 2000ms ease-in-out forwards, TEXT3__y__1 1000ms 0ms ease-in-out forwards, TEXT3__y__2 1000ms 1000ms ease-in-out forwards, TEXT3__y__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes TEXT3__x__1 {
+    from {
+        left: 548px;
+    }
+
+    to {
+        left: 548px;
+    }
+}
+@keyframes TEXT3__x__2 {
+    from {
+        left: 548px;
+    }
+
+    to {
+        left: 928px;
+    }
+}
+@keyframes TEXT3__x__3 {
+    from {
+        left: 928px;
+    }
+
+    to {
+        left: 918px;
+    }
+}
+@keyframes TEXT3__y__1 {
+    from {
+        top: 568px;
+    }
+
+    to {
+        top: 568px;
+    }
+}
+@keyframes TEXT3__y__2 {
+    from {
+        top: 568px;
+    }
+
+    to {
+        top: 538px;
+    }
+}
+@keyframes TEXT3__y__3 {
+    from {
+        top: 538px;
+    }
+
+    to {
+        top: 588px;
+    }
+}
+
+#BOX2 {
+    transform: ;
+    animation: BOX2__x__1 1000ms 0ms ease-in-out forwards, BOX2__x__2 1000ms 1000ms ease-in-out forwards, BOX2__x__3 2000ms 2000ms ease-in-out forwards, BOX2__y__1 1000ms 0ms ease-in-out forwards, BOX2__y__2 1000ms 1000ms ease-in-out forwards, BOX2__y__3 2000ms 2000ms ease-in-out forwards, BOX2__width__1 1000ms 0ms ease-in-out forwards, BOX2__width__2 1000ms 1000ms ease-in-out forwards, BOX2__width__3 2000ms 2000ms ease-in-out forwards, BOX2__height__1 1000ms 0ms ease-in-out forwards, BOX2__height__2 1000ms 1000ms ease-in-out forwards, BOX2__height__3 2000ms 2000ms ease-in-out forwards, BOX2__fillColor__1 1000ms 0ms ease-in-out forwards, BOX2__fillColor__2 1000ms 1000ms ease-in-out forwards, BOX2__fillColor__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes BOX2__x__1 {
+    from {
+        left: 520px;
+    }
+
+    to {
+        left: 520px;
+    }
+}
+@keyframes BOX2__x__2 {
+    from {
+        left: 520px;
+    }
+
+    to {
+        left: 290px;
+    }
+}
+@keyframes BOX2__x__3 {
+    from {
+        left: 290px;
+    }
+
+    to {
+        left: 310px;
+    }
+}
+@keyframes BOX2__y__1 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+@keyframes BOX2__y__2 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+@keyframes BOX2__y__3 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+@keyframes BOX2__width__1 {
+    from {
+        width: 390px;
+    }
+
+    to {
+        width: 390px;
+    }
+}
+@keyframes BOX2__width__2 {
+    from {
+        width: 390px;
+    }
+
+    to {
+        width: 620px;
+    }
+}
+@keyframes BOX2__width__3 {
+    from {
+        width: 620px;
+    }
+
+    to {
+        width: 360px;
+    }
+}
+@keyframes BOX2__height__1 {
+    from {
+        height: 250px;
+    }
+
+    to {
+        height: 250px;
+    }
+}
+@keyframes BOX2__height__2 {
+    from {
+        height: 250px;
+    }
+
+    to {
+        height: 720px;
+    }
+}
+@keyframes BOX2__height__3 {
+    from {
+        height: 720px;
+    }
+
+    to {
+        height: 320px;
+    }
+}
+@keyframes BOX2__fillColor__1 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+@keyframes BOX2__fillColor__2 {
+    from {
+        background-color: rgba(255,255,255,1);
+    }
+
+    to {
+        background-color: rgba(255,204,0,1);
+    }
+}
+@keyframes BOX2__fillColor__3 {
+    from {
+        background-color: rgba(255,204,0,1);
+    }
+
+    to {
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+#TEXT2 {
+    transform: ;
+    animation: TEXT2__x__1 1000ms 0ms ease-in-out forwards, TEXT2__x__2 1000ms 1000ms ease-in-out forwards, TEXT2__x__3 2000ms 2000ms ease-in-out forwards, TEXT2__y__1 1000ms 0ms ease-in-out forwards, TEXT2__y__2 1000ms 1000ms ease-in-out forwards, TEXT2__y__3 2000ms 2000ms ease-in-out forwards;
+}
+
+@keyframes TEXT2__x__1 {
+    from {
+        left: 548px;
+    }
+
+    to {
+        left: 548px;
+    }
+}
+@keyframes TEXT2__x__2 {
+    from {
+        left: 548px;
+    }
+
+    to {
+        left: 318px;
+    }
+}
+@keyframes TEXT2__x__3 {
+    from {
+        left: 318px;
+    }
+
+    to {
+        left: 338px;
+    }
+}
+@keyframes TEXT2__y__1 {
+    from {
+        top: 28px;
+    }
+
+    to {
+        top: 28px;
+    }
+}
+@keyframes TEXT2__y__2 {
+    from {
+        top: 28px;
+    }
+
+    to {
+        top: 28px;
+    }
+}
+@keyframes TEXT2__y__3 {
+    from {
+        top: 28px;
+    }
+
+    to {
+        top: 28px;
+    }
+}
