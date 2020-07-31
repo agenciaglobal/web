@@ -1,9 +1,9 @@
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "./full_news"
 
-const useStylesClose = makeStyles((theme: Theme) => ({}))
+const useStylesClose = makeStyles(() => ({}))
 
 interface Props {
   description: string
