@@ -1,5 +1,6 @@
 import { navigate } from "gatsby"
 import * as React from "react"
+import { shuffle } from "lodash"
 import Masonry from "react-masonry-css"
 import { Maybe, Mdx, MdxFields, MdxFrontmatter } from "../../global"
 import News from "../../pages/news"
@@ -28,7 +29,7 @@ export const NewsPage = ({ news }: Props): React.ReactElement => {
       className="global-news-grid"
       columnClassName="global-news-grid-column"
     >
-      {_.shuffle(news).map(({ node }, index: number) => {
+      {shuffle(news).map(({ node }, index: number) => {
         const title = node.frontmatter.title || node.fields.slug
         const date = node.frontmatter.date || node.fields.slug
         const description = node.frontmatter.description || node.fields.slug
