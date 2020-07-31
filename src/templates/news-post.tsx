@@ -45,15 +45,15 @@ const NewsPostTemplate = (props: {
 
   return (
     <React.Fragment>
-      <h3>newss</h3>
-      <h1>{post.frontmatter.title}</h1>
-      <p
+      <Typography>newss</Typography>
+      <Typography>{post.frontmatter.title}</Typography>
+      <Typography
         style={{
           display: `block`,
         }}
       >
         {post.frontmatter.date}
-      </p>
+      </Typography>
 
       {/*<Box*/}
       {/*  className={classes.type}*/}

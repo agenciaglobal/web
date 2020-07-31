@@ -12,15 +12,24 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-styled-components`,
+    // `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-layout`,
+
     {
       resolve: "gatsby-plugin-root-import",
       options: {

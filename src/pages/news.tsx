@@ -4,6 +4,7 @@ import * as React from "react"
 import { GlobalPageTitle } from "../components/GlobalPageTitle/globalTitle"
 import { NewsPage } from "../components/NewsPage/newsPage"
 import { BlogQueryQuery } from "../global"
+import "../components/NewsPage/index.css"
 
 const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
   const { data } = props

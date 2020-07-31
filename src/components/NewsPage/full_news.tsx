@@ -1,4 +1,5 @@
 import { Box, Typography } from "@material-ui/core"
+import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 
 export function ExpandTExt(props: {
@@ -50,6 +51,7 @@ export function ExpandTExt(props: {
 
 export const FullNewsComponent = (props: {
   require1: string
+  slug: string
   title: string
   description: string
   date: string
@@ -63,10 +65,12 @@ export const FullNewsComponent = (props: {
       backgroundImage: `url(${props.require1})`,
     }}
   >
-    <ExpandTExt
-      date={props.date}
-      title={props.title}
-      description={props.description}
-    />
+    <Link style={{ textDecoration: "none" }} to={"/news" + props.slug}>
+      <ExpandTExt
+        date={props.date}
+        title={props.title}
+        description={props.description}
+      />
+    </Link>
   </div>
 )

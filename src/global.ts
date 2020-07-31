@@ -2233,20 +2233,20 @@ export type SitePageConnectionGroupArgs = {
 }
 
 export type SitePageContext = {
-  language?: Maybe<Scalars["String"]>
-  i18n?: Maybe<SitePageContextI18n>
   slug?: Maybe<Scalars["String"]>
   previous?: Maybe<SitePageContextPrevious>
   next?: Maybe<SitePageContextNext>
+  language?: Maybe<Scalars["String"]>
+  i18n?: Maybe<SitePageContextI18n>
   news?: Maybe<Array<Maybe<SitePageContextNews>>>
 }
 
 export type SitePageContextFilterInput = {
-  language?: Maybe<StringQueryOperatorInput>
-  i18n?: Maybe<SitePageContextI18nFilterInput>
   slug?: Maybe<StringQueryOperatorInput>
   previous?: Maybe<SitePageContextPreviousFilterInput>
   next?: Maybe<SitePageContextNextFilterInput>
+  language?: Maybe<StringQueryOperatorInput>
+  i18n?: Maybe<SitePageContextI18nFilterInput>
   news?: Maybe<SitePageContextNewsFilterListInput>
 }
 
@@ -2605,13 +2605,6 @@ export type SitePageFieldsEnum =
   | "internal___owner"
   | "internal___type"
   | "isCreatedByStatefulCreatePages"
-  | "context___language"
-  | "context___i18n___language"
-  | "context___i18n___languages"
-  | "context___i18n___defaultLanguage"
-  | "context___i18n___routed"
-  | "context___i18n___originalPath"
-  | "context___i18n___path"
   | "context___slug"
   | "context___previous___fields___slug"
   | "context___previous___frontmatter___date"
@@ -2627,6 +2620,13 @@ export type SitePageFieldsEnum =
   | "context___next___frontmatter___image"
   | "context___next___frontmatter___categorie"
   | "context___next___frontmatter___type"
+  | "context___language"
+  | "context___i18n___language"
+  | "context___i18n___languages"
+  | "context___i18n___defaultLanguage"
+  | "context___i18n___routed"
+  | "context___i18n___originalPath"
+  | "context___i18n___path"
   | "context___news"
   | "pluginCreator___id"
   | "pluginCreator___parent___id"
@@ -2676,6 +2676,7 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___plugins___version"
   | "pluginCreator___pluginOptions___plugins___browserAPIs"
   | "pluginCreator___pluginOptions___plugins___pluginFilepath"
+  | "pluginCreator___pluginOptions___stylesProvider___injectFirst"
   | "pluginCreator___pluginOptions___src"
   | "pluginCreator___pluginOptions___pages"
   | "pluginCreator___pluginOptions___cachePublic"
@@ -2695,9 +2696,6 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___legacy"
   | "pluginCreator___pluginOptions___theme_color_in_head"
   | "pluginCreator___pluginOptions___cacheDigest"
-  | "pluginCreator___pluginOptions___codegen"
-  | "pluginCreator___pluginOptions___fileName"
-  | "pluginCreator___pluginOptions___pathCheck"
   | "pluginCreator___pluginOptions___languages"
   | "pluginCreator___pluginOptions___defaultLanguage"
   | "pluginCreator___pluginOptions___i18nextOptions___language"
@@ -2706,6 +2704,9 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___i18nextOptions___returnObjects"
   | "pluginCreator___pluginOptions___i18nextOptions___debug"
   | "pluginCreator___pluginOptions___i18nextOptions___nsSeparator"
+  | "pluginCreator___pluginOptions___codegen"
+  | "pluginCreator___pluginOptions___fileName"
+  | "pluginCreator___pluginOptions___pathCheck"
   | "pluginCreator___nodeAPIs"
   | "pluginCreator___browserAPIs"
   | "pluginCreator___ssrAPIs"
@@ -2898,6 +2899,7 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___plugins___version"
   | "pluginOptions___plugins___browserAPIs"
   | "pluginOptions___plugins___pluginFilepath"
+  | "pluginOptions___stylesProvider___injectFirst"
   | "pluginOptions___src"
   | "pluginOptions___pages"
   | "pluginOptions___cachePublic"
@@ -2907,17 +2909,7 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___gatsbyRemarkPlugins"
   | "pluginOptions___gatsbyRemarkPlugins___resolve"
   | "pluginOptions___gatsbyRemarkPlugins___options___maxWidth"
-  | "pluginOptions___gatsbyRemarkPlugins___options___pathPrefix"
   | "pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle"
-  | "pluginOptions___gatsbyRemarkPlugins___options___backgroundColor"
-  | "pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal"
-  | "pluginOptions___gatsbyRemarkPlugins___options___showCaptions"
-  | "pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions"
-  | "pluginOptions___gatsbyRemarkPlugins___options___withWebp"
-  | "pluginOptions___gatsbyRemarkPlugins___options___tracedSVG"
-  | "pluginOptions___gatsbyRemarkPlugins___options___loading"
-  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha"
-  | "pluginOptions___gatsbyRemarkPlugins___options___disableBgImage"
   | "pluginOptions___short_name"
   | "pluginOptions___start_url"
   | "pluginOptions___background_color"
@@ -2929,9 +2921,6 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___legacy"
   | "pluginOptions___theme_color_in_head"
   | "pluginOptions___cacheDigest"
-  | "pluginOptions___codegen"
-  | "pluginOptions___fileName"
-  | "pluginOptions___pathCheck"
   | "pluginOptions___languages"
   | "pluginOptions___defaultLanguage"
   | "pluginOptions___i18nextOptions___language"
@@ -2942,6 +2931,9 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___i18nextOptions___react___wait"
   | "pluginOptions___i18nextOptions___interpolation___escapeValue"
   | "pluginOptions___i18nextOptions___nsSeparator"
+  | "pluginOptions___codegen"
+  | "pluginOptions___fileName"
+  | "pluginOptions___pathCheck"
   | "nodeAPIs"
   | "browserAPIs"
   | "ssrAPIs"
@@ -3058,6 +3050,7 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>
+  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProvider>
   src?: Maybe<Scalars["String"]>
   pages?: Maybe<Scalars["String"]>
   cachePublic?: Maybe<Scalars["Boolean"]>
@@ -3078,16 +3071,17 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars["Boolean"]>
   theme_color_in_head?: Maybe<Scalars["Boolean"]>
   cacheDigest?: Maybe<Scalars["String"]>
-  codegen?: Maybe<Scalars["Boolean"]>
-  fileName?: Maybe<Scalars["String"]>
-  pathCheck?: Maybe<Scalars["Boolean"]>
   languages?: Maybe<Array<Maybe<Scalars["String"]>>>
   defaultLanguage?: Maybe<Scalars["String"]>
   i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
+  codegen?: Maybe<Scalars["Boolean"]>
+  fileName?: Maybe<Scalars["String"]>
+  pathCheck?: Maybe<Scalars["Boolean"]>
 }
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>
+  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProviderFilterInput>
   src?: Maybe<StringQueryOperatorInput>
   pages?: Maybe<StringQueryOperatorInput>
   cachePublic?: Maybe<BooleanQueryOperatorInput>
@@ -3108,12 +3102,12 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>
   cacheDigest?: Maybe<StringQueryOperatorInput>
-  codegen?: Maybe<BooleanQueryOperatorInput>
-  fileName?: Maybe<StringQueryOperatorInput>
-  pathCheck?: Maybe<BooleanQueryOperatorInput>
   languages?: Maybe<StringQueryOperatorInput>
   defaultLanguage?: Maybe<StringQueryOperatorInput>
   i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
+  codegen?: Maybe<BooleanQueryOperatorInput>
+  fileName?: Maybe<StringQueryOperatorInput>
+  pathCheck?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPlugins = {
@@ -3132,32 +3126,12 @@ export type SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput = {
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
   maxWidth?: Maybe<Scalars["Int"]>
-  pathPrefix?: Maybe<Scalars["String"]>
   wrapperStyle?: Maybe<Scalars["String"]>
-  backgroundColor?: Maybe<Scalars["String"]>
-  linkImagesToOriginal?: Maybe<Scalars["Boolean"]>
-  showCaptions?: Maybe<Scalars["Boolean"]>
-  markdownCaptions?: Maybe<Scalars["Boolean"]>
-  withWebp?: Maybe<Scalars["Boolean"]>
-  tracedSVG?: Maybe<Scalars["Boolean"]>
-  loading?: Maybe<Scalars["String"]>
-  disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>
-  disableBgImage?: Maybe<Scalars["Boolean"]>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>
-  pathPrefix?: Maybe<StringQueryOperatorInput>
   wrapperStyle?: Maybe<StringQueryOperatorInput>
-  backgroundColor?: Maybe<StringQueryOperatorInput>
-  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
-  showCaptions?: Maybe<BooleanQueryOperatorInput>
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>
-  withWebp?: Maybe<BooleanQueryOperatorInput>
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>
-  loading?: Maybe<StringQueryOperatorInput>
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginPluginOptionsI18nextOptions = {
@@ -3220,6 +3194,14 @@ export type SitePluginPluginOptionsPluginsFilterInput = {
 
 export type SitePluginPluginOptionsPluginsFilterListInput = {
   elemMatch?: Maybe<SitePluginPluginOptionsPluginsFilterInput>
+}
+
+export type SitePluginPluginOptionsStylesProvider = {
+  injectFirst?: Maybe<Scalars["Boolean"]>
+}
+
+export type SitePluginPluginOptionsStylesProviderFilterInput = {
+  injectFirst?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginSortInput = {

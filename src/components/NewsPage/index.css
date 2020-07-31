@@ -14,6 +14,18 @@
   min-height: 300px;
 }
 
+.global-news-grid-column > div > a > div {
+  min-height: 300px;
+}
+
+.global-news-grid-column > div > a {
+  min-height: 300px;
+}
+
+.global-news-grid-column > div > .global-news-left {
+  min-height: 300px;
+}
+
 .global-news-grid > div:nth-child(2) {
   margin-left: 20px;
 }
