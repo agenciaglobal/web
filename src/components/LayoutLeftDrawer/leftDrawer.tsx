@@ -7,6 +7,7 @@ const useStyles = makeStyles(() =>
     drawerPaper: {
       height: "calc( 100vh - 155px )",
       marginTop: 155,
+      zIndex: -2,
       // background: theme.palette.primary.main,
       width: 120,
       border: "none",

@@ -9,6 +9,7 @@ const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
   const { data } = props
   const { t } = useI18next()
   const news = data.allMdx.edges
+  console.log(news)
   return (
     <React.Fragment>
       <GlobalPageTitle label={t("news")} />

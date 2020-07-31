@@ -34,9 +34,11 @@ let s = `
               slug
             }
             frontmatter {
+              date(formatString: "DD/M/YYYY")
               title
-              date(formatString: "MMMM DD YYYY")
               description
+              image
+              type
             }
           }
         }
@@ -55,6 +57,7 @@ const createNewsPages = (result, createPage) => {
       path: `${key}${post.node.fields.slug}`,
       component: newsTemplate,
       context: {
+        news,
         slug: post.node.fields.slug,
         previous,
         next,

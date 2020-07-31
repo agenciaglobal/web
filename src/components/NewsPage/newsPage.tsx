@@ -37,7 +37,11 @@ export const NewsPage = ({ news }: Props): React.ReactElement => {
         /* eslint-disable  @typescript-eslint/no-var-requires */
         const require1 = require("../../../content/" + node.frontmatter.image)
         return (
-          <Link key={index} to={"/news" + node.fields.slug}>
+          <Link
+            style={{ textDecoration: "none", minHeight: 300 }}
+            key={index}
+            to={"/news" + node.fields.slug}
+          >
             {node.frontmatter.type === "FULL" && (
               <FullNewsComponent
                 require1={require1}

@@ -1,11 +1,13 @@
-import { Container, Drawer, Hidden } from "@material-ui/core"
+import { Box, Container, Drawer, Hidden } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { TabComponent } from "../TabComponent/drawerItem"
+import classNames from "classnames"
 
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
+      // zIndex: -2,
       // background: theme.palette.primary.main,
       height: "calc( 100vh - 155px )",
       marginTop: 155,
@@ -16,6 +18,7 @@ const useStyles = makeStyles(() =>
       paddingBottom: 110,
     },
     container: {
+      zIndex: 3,
       display: "flex",
       alignItems: "center",
       transform: "rotate(-90deg)",

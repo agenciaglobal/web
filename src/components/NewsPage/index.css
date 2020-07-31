@@ -11,7 +11,7 @@
 
 .global-news-grid-column > div {
   margin-bottom: 20px;
-  /*height: 390px;*/
+  min-height: 300px;
 }
 
 .global-news-grid > div:nth-child(2) {

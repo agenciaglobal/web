@@ -36,7 +36,11 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
                 const require1 = require("../../../content/" + tile.image)
                 console.log(tile)
                 return (
-                  <Link key={idx} to={"/portifolio" + tile.slug}>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    key={idx}
+                    to={"/portifolio" + tile.slug}
+                  >
                     <div
                       style={{
                         height: 300,

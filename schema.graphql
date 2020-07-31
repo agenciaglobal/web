@@ -661,6 +661,7 @@ type SitePageConnection {
 type SitePageContext {
   i18n: SitePageContextI18n
   language: String
+  news: [SitePageContextNews]
   next: SitePageContextNext
   previous: SitePageContextPrevious
   slug: String
@@ -733,6 +734,25 @@ type SitePageContextI18nResourcesPtTranslationsSidebar {
   main: String
   news: String
   team: String
+}
+
+type SitePageContextNews {
+  node: SitePageContextNewsNode
+}
+
+type SitePageContextNewsNode {
+  fields: SitePageContextNewsNodeFields
+  frontmatter: SitePageContextNewsNodeFrontmatter
+}
+
+type SitePageContextNewsNodeFields {
+  slug: String
+}
+
+type SitePageContextNewsNodeFrontmatter {
+  date: String
+  description: String
+  title: String
 }
 
 type SitePageContextNext {
@@ -886,17 +906,7 @@ type SitePluginPluginOptionsGatsbyRemarkPlugins {
 }
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions {
-  backgroundColor: String
-  disableBgImage: Boolean
-  disableBgImageOnAlpha: Boolean
-  linkImagesToOriginal: Boolean
-  loading: String
-  markdownCaptions: Boolean
   maxWidth: Int
-  pathPrefix: String
-  showCaptions: Boolean
-  tracedSVG: Boolean
-  withWebp: Boolean
   wrapperStyle: String
 }
 
@@ -1883,6 +1893,7 @@ enum SitePageFieldsEnum {
   context___i18n___path
   context___i18n___routed
   context___language
+  context___news
   context___next___fields___slug
   context___next___frontmatter___categorie
   context___next___frontmatter___date
@@ -2165,17 +2176,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___extensions
   pluginOptions___fileName
   pluginOptions___gatsbyRemarkPlugins
-  pluginOptions___gatsbyRemarkPlugins___options___backgroundColor
-  pluginOptions___gatsbyRemarkPlugins___options___disableBgImage
-  pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha
-  pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal
-  pluginOptions___gatsbyRemarkPlugins___options___loading
-  pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions
   pluginOptions___gatsbyRemarkPlugins___options___maxWidth
-  pluginOptions___gatsbyRemarkPlugins___options___pathPrefix
-  pluginOptions___gatsbyRemarkPlugins___options___showCaptions
-  pluginOptions___gatsbyRemarkPlugins___options___tracedSVG
-  pluginOptions___gatsbyRemarkPlugins___options___withWebp
   pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle
   pluginOptions___gatsbyRemarkPlugins___resolve
   pluginOptions___i18nextOptions___debug
@@ -2573,6 +2574,7 @@ input SiteFilterInput {
 input SitePageContextFilterInput {
   i18n: SitePageContextI18nFilterInput
   language: StringQueryOperatorInput
+  news: SitePageContextNewsFilterListInput
   next: SitePageContextNextFilterInput
   previous: SitePageContextPreviousFilterInput
   slug: StringQueryOperatorInput
@@ -2645,6 +2647,29 @@ input SitePageContextI18nResourcesPtTranslationsSidebarFilterInput {
   main: StringQueryOperatorInput
   news: StringQueryOperatorInput
   team: StringQueryOperatorInput
+}
+
+input SitePageContextNewsFilterInput {
+  node: SitePageContextNewsNodeFilterInput
+}
+
+input SitePageContextNewsFilterListInput {
+  elemMatch: SitePageContextNewsFilterInput
+}
+
+input SitePageContextNewsNodeFieldsFilterInput {
+  slug: StringQueryOperatorInput
+}
+
+input SitePageContextNewsNodeFilterInput {
+  fields: SitePageContextNewsNodeFieldsFilterInput
+  frontmatter: SitePageContextNewsNodeFrontmatterFilterInput
+}
+
+input SitePageContextNewsNodeFrontmatterFilterInput {
+  date: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  title: StringQueryOperatorInput
 }
 
 input SitePageContextNextFieldsFilterInput {
@@ -2797,17 +2822,7 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
-  backgroundColor: StringQueryOperatorInput
-  disableBgImage: BooleanQueryOperatorInput
-  disableBgImageOnAlpha: BooleanQueryOperatorInput
-  linkImagesToOriginal: BooleanQueryOperatorInput
-  loading: StringQueryOperatorInput
-  markdownCaptions: BooleanQueryOperatorInput
   maxWidth: IntQueryOperatorInput
-  pathPrefix: StringQueryOperatorInput
-  showCaptions: BooleanQueryOperatorInput
-  tracedSVG: BooleanQueryOperatorInput
-  withWebp: BooleanQueryOperatorInput
   wrapperStyle: StringQueryOperatorInput
 }
 

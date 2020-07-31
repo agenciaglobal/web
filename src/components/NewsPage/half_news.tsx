@@ -6,10 +6,12 @@ import { ExpandTExt } from "./full_news"
 
 const useStylesClose = makeStyles((theme: Theme) => ({
   base: {
+    marginBottom: 30,
     display: "flex",
     height: 300,
     position: "relative",
   },
+
   full: {
     height: 350,
   },
@@ -68,7 +70,7 @@ export const HalNewsComponent = (props: Props): React.ReactElement => {
         [classes.full]: ["HALF"].includes(props.type),
       })}
     >
-      <div style={{ marginBottom: 20 }}>
+      <div style={{}}>
         {!["QUOTE"].includes(props.type) && (
           <div
             className={classNames({
