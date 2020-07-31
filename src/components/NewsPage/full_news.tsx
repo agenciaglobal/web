@@ -49,14 +49,12 @@ export function ExpandTExt(props: {
 }
 
 export const FullNewsComponent = (props: {
-  onClick: () => Promise<void>
   require1: string
   title: string
   description: string
   date: string
 }): React.ReactElement => (
   <div
-    onClick={props.onClick}
     style={{
       marginBottom: 30,
       height: 350,

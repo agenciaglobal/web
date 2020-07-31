@@ -1,4 +1,4 @@
-import { navigate } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { shuffle } from "lodash"
 import Masonry from "react-masonry-css"
@@ -30,17 +30,16 @@ export const NewsPage = ({ news }: Props): React.ReactElement => {
       columnClassName="global-news-grid-column"
     >
       {shuffle(news).map(({ node }, index: number) => {
+        console.log(node)
         const title = node.frontmatter.title || node.fields.slug
         const date = node.frontmatter.date || node.fields.slug
         const description = node.frontmatter.description || node.fields.slug
         /* eslint-disable  @typescript-eslint/no-var-requires */
         const require1 = require("../../../content/" + node.frontmatter.image)
         return (
-          <>
+          <Link key={index} to={"/news" + node.fields.slug}>
             {node.frontmatter.type === "FULL" && (
               <FullNewsComponent
-                key={index}
-                onClick={() => navigate("/news" + node.fields.slug)}
                 require1={require1}
                 title={title}
                 description={description}
@@ -53,15 +52,13 @@ export const NewsPage = ({ news }: Props): React.ReactElement => {
             ) && (
               <HalNewsComponent
                 type={node.frontmatter.type}
-                key={index}
-                onClick={() => navigate("/news" + node.fields.slug)}
                 title={title}
                 date={date + " | NOTÍCIA"}
                 description={description}
                 require1={require1}
               />
             )}
-          </>
+          </Link>
         )
       })}
     </Masonry>

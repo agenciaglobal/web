@@ -1,6 +1,6 @@
 import { Box, Typography } from "@material-ui/core"
 import makeStyles from "@material-ui/core/styles/makeStyles"
-import { navigate } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
@@ -34,24 +34,29 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
               .map((tile, idx) => {
                 /* eslint-disable  @typescript-eslint/no-var-requires */
                 const require1 = require("../../../content/" + tile.image)
+                console.log(tile)
                 return (
-                  <div
-                    key={idx}
-                    onClick={() => navigate("portifolio" + tile.slug)}
-                    style={{ backgroundImage: `url(${require1})` }}
-                  >
-                    <Box style={{ padding: "15px" }}>
-                      <Typography
-                        style={{
-                          fontSize: "20px",
-                          fontFamily: "GSThree",
-                        }}
-                      >
-                        {tile.title}
-                      </Typography>
-                      <Typography style={{}}>{tile.description}</Typography>
-                    </Box>
-                  </div>
+                  <Link key={idx} to={"/portifolio" + tile.slug}>
+                    <div
+                      style={{
+                        height: 300,
+                        marginBottom: 20,
+                        backgroundImage: `url(${require1})`,
+                      }}
+                    >
+                      <Box style={{ padding: "15px" }}>
+                        <Typography
+                          style={{
+                            fontSize: "20px",
+                            fontFamily: "GSThree",
+                          }}
+                        >
+                          {tile.title}
+                        </Typography>
+                        <Typography style={{}}>{tile.description}</Typography>
+                      </Box>
+                    </div>
+                  </Link>
                 )
               })}
           </Masonry>

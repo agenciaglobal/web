@@ -54,7 +54,6 @@ const useStylesClose = makeStyles((theme: Theme) => ({
 interface Props {
   description: string
   date: string
-  onClick: () => Promise<void>
   title: string
   type: "MIRROR" | "HALF" | "LEFT" | "RIGHT" | "QUOTE"
   require1: string
@@ -64,7 +63,6 @@ export const HalNewsComponent = (props: Props): React.ReactElement => {
   const classes = useStylesClose()
   return (
     <div
-      onClick={props.onClick}
       className={classNames({
         [classes.base]: true,
         [classes.full]: ["HALF"].includes(props.type),
