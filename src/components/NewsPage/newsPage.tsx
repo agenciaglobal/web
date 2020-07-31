@@ -25,7 +25,7 @@ export const NewsPage = ({ news }: Props): React.ReactElement => {
   console.log(news)
   return (
     <Masonry
-      breakpointCols={{ default: 2, 400: 1 }}
+      breakpointCols={{ default: 2, 700: 1 }}
       className="global-news-grid"
       columnClassName="global-news-grid-column"
     >

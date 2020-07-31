@@ -20,7 +20,6 @@ export const MobileToolbar = (props: Props): React.ReactElement => {
     <Hidden mdUp>
       <AppBar
         style={{
-          zIndex: 0,
           height: isContact ? 400 : 155,
           backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
           boxShadow: "none",
