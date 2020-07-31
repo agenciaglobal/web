@@ -1,9 +1,8 @@
-import { makeStyles } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "./full_news"
 
-const useStylesClose = makeStyles(() => ({}))
+// const useStylesClose = makeStyles(() => ({}))
 
 interface Props {
   description: string
@@ -15,7 +14,7 @@ interface Props {
 }
 
 export const LeftNewsComponent = (props: Props): React.ReactElement => {
-  const classes = useStylesClose()
+  // const classes = useStylesClose()
   return (
     <div>
       <Link
