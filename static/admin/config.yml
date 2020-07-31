@@ -15,6 +15,20 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        default: "/uploads/chocolate-dogecoin.jpg"
+      - name: type
+        label: Type
+        widget: select
+        options:
+          - { label: "Full", value: "FULL" }
+          - { label: "Half", value: "HALF" }
+          - { label: "Mirror", value: "MIRROR" }
+          - { label: "Left", value: "LEFT" }
+          - { label: "Right", value: "RIGHT" }
+          - { label: "Quote", value: "QUOTE" }
   - name: client
     label: Clientes
     folder: content/client

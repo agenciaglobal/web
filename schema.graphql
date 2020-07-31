@@ -493,6 +493,7 @@ type MdxFrontmatter {
   name: String
   path: String
   title: String!
+  type: String
 }
 
 type MdxGroupConnection {
@@ -885,7 +886,17 @@ type SitePluginPluginOptionsGatsbyRemarkPlugins {
 }
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions {
+  backgroundColor: String
+  disableBgImage: Boolean
+  disableBgImageOnAlpha: Boolean
+  linkImagesToOriginal: Boolean
+  loading: String
+  markdownCaptions: Boolean
   maxWidth: Int
+  pathPrefix: String
+  showCaptions: Boolean
+  tracedSVG: Boolean
+  withWebp: Boolean
   wrapperStyle: String
 }
 
@@ -1182,6 +1193,7 @@ enum FileFieldsEnum {
   childMdx___frontmatter___name
   childMdx___frontmatter___path
   childMdx___frontmatter___title
+  childMdx___frontmatter___type
   childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1561,6 +1573,7 @@ enum MdxFieldsEnum {
   frontmatter___name
   frontmatter___path
   frontmatter___title
+  frontmatter___type
   headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2152,7 +2165,17 @@ enum SitePluginFieldsEnum {
   pluginOptions___extensions
   pluginOptions___fileName
   pluginOptions___gatsbyRemarkPlugins
+  pluginOptions___gatsbyRemarkPlugins___options___backgroundColor
+  pluginOptions___gatsbyRemarkPlugins___options___disableBgImage
+  pluginOptions___gatsbyRemarkPlugins___options___disableBgImageOnAlpha
+  pluginOptions___gatsbyRemarkPlugins___options___linkImagesToOriginal
+  pluginOptions___gatsbyRemarkPlugins___options___loading
+  pluginOptions___gatsbyRemarkPlugins___options___markdownCaptions
   pluginOptions___gatsbyRemarkPlugins___options___maxWidth
+  pluginOptions___gatsbyRemarkPlugins___options___pathPrefix
+  pluginOptions___gatsbyRemarkPlugins___options___showCaptions
+  pluginOptions___gatsbyRemarkPlugins___options___tracedSVG
+  pluginOptions___gatsbyRemarkPlugins___options___withWebp
   pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle
   pluginOptions___gatsbyRemarkPlugins___resolve
   pluginOptions___i18nextOptions___debug
@@ -2475,6 +2498,7 @@ input MdxFrontmatterFilterInput {
   name: StringQueryOperatorInput
   path: StringQueryOperatorInput
   title: StringQueryOperatorInput
+  type: StringQueryOperatorInput
 }
 
 input MdxHeadingMdxFilterInput {
@@ -2773,7 +2797,17 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
+  backgroundColor: StringQueryOperatorInput
+  disableBgImage: BooleanQueryOperatorInput
+  disableBgImageOnAlpha: BooleanQueryOperatorInput
+  linkImagesToOriginal: BooleanQueryOperatorInput
+  loading: StringQueryOperatorInput
+  markdownCaptions: BooleanQueryOperatorInput
   maxWidth: IntQueryOperatorInput
+  pathPrefix: StringQueryOperatorInput
+  showCaptions: BooleanQueryOperatorInput
+  tracedSVG: BooleanQueryOperatorInput
+  withWebp: BooleanQueryOperatorInput
   wrapperStyle: StringQueryOperatorInput
 }
 

@@ -16,7 +16,11 @@
 @font-face {
   font-family: "GSStreet";
   src: url("../static/GlobalSans/GlobalSansStreet/GlobalSansStreet.otf")
-    format("opentype");
+  format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 }
 
 body::-webkit-scrollbar {

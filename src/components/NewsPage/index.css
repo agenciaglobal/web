@@ -1,0 +1,19 @@
+.global-news-grid {
+  z-index: -1;
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  width: auto;
+}
+.global-news-grid-column {
+  background-clip: padding-box;
+}
+
+.global-news-grid-column > div {
+  margin-bottom: 20px;
+  /*height: 390px;*/
+}
+
+.global-news-grid > div:nth-child(2) {
+  margin-left: 20px;
+}
