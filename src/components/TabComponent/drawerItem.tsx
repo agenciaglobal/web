@@ -75,7 +75,10 @@ const itemStyles = makeStyles((theme: Theme) => {
   })
 })
 
-export const isCurrentHook = (destination: string, uri: string) => {
+export const isCurrentHook = (
+  destination: string,
+  uri: string,
+): { isCurrent: boolean } => {
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + destination : destination
   const isCurrent =

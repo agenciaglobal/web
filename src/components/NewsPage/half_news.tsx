@@ -30,7 +30,6 @@ const useStylesClose = makeStyles((theme: Theme) => ({
     position: "absolute",
     left: 0,
     bottom: 0,
-    backgroundColor: "purple",
   },
   textbox: {
     border: "3px solid",
@@ -58,10 +57,10 @@ interface Props {
   onClick: () => Promise<void>
   title: string
   type: "MIRROR" | "HALF" | "LEFT" | "RIGHT" | "QUOTE"
-  require1: any
+  require1: string
 }
 
-export const HalNewsComponent = (props: Props) => {
+export const HalNewsComponent = (props: Props): React.ReactElement => {
   const classes = useStylesClose()
   return (
     <div

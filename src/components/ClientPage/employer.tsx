@@ -9,7 +9,6 @@ interface Props {
 
 export const EmployeeComponent = ({
   backgroundImage,
-  job,
   title,
 }: Props): React.ReactElement => {
   const [hover, setHover] = useState(false)

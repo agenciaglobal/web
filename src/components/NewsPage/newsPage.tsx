@@ -20,7 +20,7 @@ interface Props {
   news: Array<News>
 }
 
-export const NewsPage = ({ news }: Props) => {
+export const NewsPage = ({ news }: Props): React.ReactElement => {
   console.log(news)
   return (
     <Masonry

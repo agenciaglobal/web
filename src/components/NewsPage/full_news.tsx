@@ -5,7 +5,7 @@ export function ExpandTExt(props: {
   date: string
   title: string
   description: string
-}) {
+}): React.ReactElement {
   return (
     <Box
       style={{
@@ -50,11 +50,11 @@ export function ExpandTExt(props: {
 
 export const FullNewsComponent = (props: {
   onClick: () => Promise<void>
-  require1: any
+  require1: string
   title: string
   description: string
   date: string
-}) => (
+}): React.ReactElement => (
   <div
     onClick={props.onClick}
     style={{
