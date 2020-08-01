@@ -22,6 +22,7 @@ export const RightNewsComponent = ({
         >
           <div
             style={{
+              display: "block",
               width: "40%",
               marginLeft: "auto",
               backgroundImage: `url(${imageSrc})`,

@@ -18,6 +18,10 @@
   margin-left: 20px;
 }
 
+.global-news-grid > div:nth-child(3) {
+  margin-left: 20px;
+}
+
 .global-news-grid-column > div > .global-news-right > div {
   min-height: 300px;
 }

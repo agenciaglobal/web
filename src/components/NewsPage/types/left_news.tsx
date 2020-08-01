@@ -23,6 +23,7 @@ export const LeftNewsComponent = ({
           <div
             style={{
               width: "40%",
+              display: "block",
               backgroundImage: `url(${imageSrc})`,
             }}
           >

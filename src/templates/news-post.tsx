@@ -1,13 +1,14 @@
 import { Box } from "@material-ui/core"
-import List from "@material-ui/core/List"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import { graphql } from "gatsby"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
+import ScrollMenu from "react-horizontal-scrolling-menu"
 import { ExpandTExt } from "../components/NewsPage/components/expand_text"
 import { NewsPage } from "../components/NewsPage/newsPage"
 import { SitePageContext } from "../global"
+import "./scroll.css"
 
 const height = 660
 export const useStyles = makeStyles((theme: Theme) => ({
@@ -23,15 +24,21 @@ export const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.secondary.main,
     height: height,
   },
-  flexContainer: {
-    overflowX: "scroll",
-    overflowY: "hidden",
-    height: height,
-    display: "flex",
-    flexDirection: "row",
-    padding: 0,
-  },
 }))
+
+const selected = "item1"
+
+const Arrow = ({ text, className }) => {
+  return <div className={className}>{text}</div>
+}
+const MenuItem = ({ description, date, image, title }) => {
+  return (
+    <div className={`menu-item`} style={{ background: `url(${image})` }}>
+      <ExpandTExt date={date} title={title} description={description} />
+    </div>
+  )
+}
+
 const NewsPostTemplate = (props: {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   data?: any
@@ -46,6 +53,7 @@ const NewsPostTemplate = (props: {
   return (
     <React.Fragment>
       <Typography>newss</Typography>
+
       <Typography>{post.frontmatter.title}</Typography>
       <Typography
         style={{
@@ -54,16 +62,6 @@ const NewsPostTemplate = (props: {
       >
         {post.frontmatter.date}
       </Typography>
-
-      {/*<Box*/}
-      {/*  className={classes.type}*/}
-      {/*  style={{*/}
-      {/*    width: 120,*/}
-      {/*    position: "relative",*/}
-      {/*    transform: "translate3d(-120px, 400px, 0px)",*/}
-      {/*  }}*/}
-      {/*/>*/}
-
       <Box className={classes.type}>
         <Box
           style={{
@@ -78,59 +76,31 @@ const NewsPostTemplate = (props: {
             Conteúdo Relacionado
           </Typography>
         </Box>
-        <List className={classes.flexContainer}>
-          {news
+        <ScrollMenu
+          alignCenter={false}
+          data={news
             .map((d) => d.node)
-            // .filter((g) => g.type === post.type)
-            .map((d, index) => {
-              console.log(d)
+            .map((el, index) => {
               /* eslint-disable  @typescript-eslint/no-var-requires */
-              const require1 = require("../../content/" + d.frontmatter.image)
+              const image = require("../../content/" + el.frontmatter.image)
               return (
-                <div key={index}>
-                  <Link
-                    style={{ textDecoration: "none", maxHeight: height }}
-                    to={"/news" + d.fields.slug}
-                  >
-                    <div
-                      style={{
-                        margin: 24,
-                        marginBottom: 80,
-                        height: 460,
-                        minWidth: 290,
-                        backgroundImage: `url(${require1})`,
-                      }}
-                    >
-                      <ExpandTExt
-                        date={d.frontmatter.date}
-                        title={d.frontmatter.title}
-                        description={d.frontmatter.description}
-                      />
-                    </div>
-                  </Link>
-                </div>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  key={index}
+                  to={"/news" + el.fields.slug}
+                >
+                  <MenuItem
+                    image={image}
+                    date={el.frontmatter.date}
+                    title={el.frontmatter.title}
+                    description={el.frontmatter.description}
+                  />
+                </Link>
               )
             })}
-        </List>
+          selected={selected}
+        />
       </Box>
-
-      {/*<Box*/}
-      {/*  style={{*/}
-      {/*    display: "flex",*/}
-      {/*    height: 40,*/}
-      {/*    justifyContent: "flex-end",*/}
-      {/*    // transform: "translate3d(-120px, 0px, 0px)",*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <Box*/}
-      {/*    className={classes.type}*/}
-      {/*    style={{*/}
-      {/*      width: 120,*/}
-      {/*      position: "relative",*/}
-      {/*      transform: "translate3d(120px, -400px, 0px)",*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*</Box>*/}
       <NewsPage news={news} />
     </React.Fragment>
   )
