@@ -1,15 +1,11 @@
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { ExpandTExt } from "./full_news"
+import { ExpandTExt } from "../components/expand_text"
+import { FinalNews } from "../types"
 
 interface Props {
-  description: string
-  date: string
-  type: string
-  slug: string
-  title: string
-  image: string
+  current: FinalNews
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -22,22 +18,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const QuoteNewsComponent = (props: Props): React.ReactElement => {
+export const QuoteNewsComponent = ({
+  current: { description, slug, title, type },
+}: Props): React.ReactElement => {
   const classes = useStyles()
   return (
-    props.type === "QUOTE" && (
+    type === "QUOTE" && (
       <div>
         <Link
           className={"global-news-quote"}
           style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-          to={"/news" + props.slug}
+          to={"/news" + slug}
         >
           <div className={classes.style}>
-            <ExpandTExt
-              date={props.type}
-              title={props.title}
-              description={props.description}
-            />
+            <ExpandTExt date={type} title={title} description={description} />
           </div>
         </Link>
       </div>

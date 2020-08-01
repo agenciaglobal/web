@@ -1,15 +1,12 @@
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { ExpandTExt } from "./full_news"
+import { ExpandTExt } from "../components/expand_text"
+import { FinalNews } from "../types"
+import { useRequireNewImage } from "../shared/useRequireNewImage"
 
 interface Props {
-  description: string
-  date: string
-  type: string
-  slug: string
-  title: string
-  image: string
+  current: FinalNews
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -24,8 +21,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const MirrorNewsComponent = (props: Props): React.ReactElement => {
+export const MirrorNewsComponent = (x: Props): React.ReactElement => {
+  const props = x.current
   const classes = useStyles()
+  const imageSrc = useRequireNewImage(x.current.image)
   return (
     props.type === "MIRROR" && (
       <div>
@@ -38,7 +37,7 @@ export const MirrorNewsComponent = (props: Props): React.ReactElement => {
             <div
               style={{
                 display: "grid",
-                backgroundImage: `url(${props.image})`,
+                backgroundImage: `url(${imageSrc})`,
               }}
               className={classes.style}
             >

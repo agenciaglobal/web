@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography"
 import { graphql } from "gatsby"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { ExpandTExt } from "../components/NewsPage/full_news"
+import { ExpandTExt } from "../components/NewsPage/components/expand_text"
 import { NewsPage } from "../components/NewsPage/newsPage"
 import { SitePageContext } from "../global"
 

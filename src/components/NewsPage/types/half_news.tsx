@@ -1,10 +1,10 @@
 import { Box } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
-import { useMemo } from "react"
 import * as React from "react"
-import { ExpandTExt } from "./full_news"
-import { FinalNews } from "./newsPage"
+import { ExpandTExt } from "../components/expand_text"
+import { FinalNews } from "../types"
+import { useRequireNewImage } from "../shared/useRequireNewImage"
 
 interface Props {
   current: FinalNews
@@ -29,11 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const HalfNewsComponent = (props: Props): React.ReactElement => {
   const classes = useStyles()
-  const imageSrc = useMemo(
-    /* eslint-disable  @typescript-eslint/no-var-requires */
-    () => require("../../../content/" + props.current.image),
-    [props.current.image],
-  )
+  const imageSrc = useRequireNewImage(props.current.image)
   const date = props.current.date + "| NOTÍCIAS"
   return (
     props.current.type === "HALF" && (
