@@ -5,10 +5,10 @@ import React from "react"
 import { SitePageContextNext } from "../../global"
 
 interface Props {
-  next: SitePageContextNext
+  next: SitePageContextNext | null
 }
 
-export const Next = (props: Props) => {
+export const Next = (props: Props): React.ReactElement => {
   return (
     <Box
       style={{

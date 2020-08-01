@@ -4,14 +4,20 @@ import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { SitePageContextPrevious } from "../../global"
 
-export function Previous(props: { previous: SitePageContextPrevious }) {
-  const style = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }
+interface Props {
+  previous: SitePageContextPrevious | null
+}
+
+export const Previous = (props: Props): React.ReactElement => {
   return (
-    <Box style={{ ...style, width: "35%" }}>
+    <Box
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "35%",
+      }}
+    >
       {props.previous && (
         <Link
           style={{ textDecoration: "none" }}

@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export const PortifolioSwitcher = (props: Props) => {
+export const PortifolioSwitcher = (props: Props): React.ReactElement => {
   const classes = useStyles()
   return (
     <Box className={classes.style}>
