@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 }))
 export const RelatedContent = (props: {
   news: Array<Maybe<SitePageContextNews>>
-}) => {
+}): React.ReactElement => {
   const classes = useStyles()
   return (
     <Box className={classes.type}>
