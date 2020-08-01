@@ -3,9 +3,18 @@
   height: 450px;
   background-size: cover;
   user-select: none;
-  margin-left: 20px;
   cursor: pointer;
   border: none;
+}
+
+.menu-item-wrapper:not(:first-child) {
+  margin-left: 20px;
+
+}
+.menu-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  /*border: 1px blue solid;*/
 }
 .menu-item-wrapper.active {
   /*border: 1px blue solid;*/
