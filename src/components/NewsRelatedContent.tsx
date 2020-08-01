@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     height: 660,
   },
 }))
-export const RelatedContent = (props: {
+export const NewsRelatedContent = (props: {
   news: Array<Maybe<SitePageContextNews>>
 }): React.ReactElement => {
   const classes = useStyles()

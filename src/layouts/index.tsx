@@ -5,7 +5,9 @@ import { lightTheme } from "../shared/light"
 import { LightMode } from "../shared/theme"
 import "./global.css"
 import { ActualLayout } from "./main"
-import { useLocalStorage } from "./useLocalStorage"
+// import youtube from "netlify-cms-widget-youtube"
+//
+// CMS.registerWidget("youtube", youtubeControl, youtubePreview)
 
 interface Props {
   uri: string
@@ -13,7 +15,7 @@ interface Props {
 }
 
 const Layout = ({ children, uri }: Props): React.ReactElement => {
-  const [mode, setMode] = useLocalStorage<LightMode>("gblm", "dark")
+  const [mode, setMode] = React.useState<LightMode>("light")
   return (
     <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
       <ActualLayout

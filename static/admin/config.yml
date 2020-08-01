@@ -47,13 +47,14 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - label: "Youtube"
+        name: "youtube"
+        widget: "youtube"
+        APIkey: "AIzaSyCtMJUB8zK6Thy4FPgGNCzDrgR0_IEcbmQ"
       - label: "Image"
         name: "image"
         widget: "image"
         default: "/uploads/chocolate-dogecoin.jpg"
-        media_library:
-          config:
-            multiple: true
       - name: categorie
         label: Categorie
         widget: select

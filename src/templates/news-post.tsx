@@ -1,8 +1,8 @@
-import Typography from "@material-ui/core/Typography"
 import { graphql } from "gatsby"
 import React from "react"
-import { NewsPage } from "../components/NewsPage/newsPage"
-import { RelatedContent } from "../components/RelatedContent"
+import { NewsContent } from "../components/NewsContent/newsContant"
+import { NewsPageList } from "../components/NewsPage/newsPageList"
+import { NewsRelatedContent } from "../components/NewsRelatedContent"
 import { NewsPostBySlugQuery, SitePageContext } from "../global"
 import "./scroll.css"
 
@@ -16,13 +16,9 @@ const NewsPostTemplate = (props: Props): React.ReactElement => {
   const news = props.pageContext.news
   return (
     <React.Fragment>
-      <Typography>newss</Typography>
-      <Typography>{post.frontmatter.title}</Typography>
-      <Typography style={{ display: `block` }}>
-        {post.frontmatter.date}
-      </Typography>
-      <RelatedContent news={news} />
-      <NewsPage news={news} />
+      <NewsContent current={post} news={news} />
+      <NewsRelatedContent news={news} />
+      <NewsPageList news={news} />
     </React.Fragment>
   )
 }

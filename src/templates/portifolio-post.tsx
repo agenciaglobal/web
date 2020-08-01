@@ -1,42 +1,22 @@
-import { graphql, Link } from "gatsby"
+import { Typography } from "@material-ui/core"
+import { graphql } from "gatsby"
 import React from "react"
-import { SitePageContext } from "../global"
+import { PortifolioSwitcher } from "../components/PortifolioSwitcher/portifolioSwticher"
+import { PortifolioPostBySlugQuery, SitePageContext } from "../global"
 
-const PortifolioPostTemplate = (props: {
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
-  data?: any
+interface Props {
+  data?: PortifolioPostBySlugQuery
   pageContext: SitePageContext
-}): React.ReactElement => {
-  const post = props.data.mdx
-  const { previous, next } = props.pageContext
+}
+
+const PortifolioPostTemplate = ({
+  data: { mdx: post },
+  pageContext: { next, previous },
+}: Props): React.ReactElement => {
   return (
     <React.Fragment>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={`..${previous.fields.slug}`} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={`..${next.fields.slug}`} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+      <Typography>{post.frontmatter.description}</Typography>
+      <PortifolioSwitcher previous={previous} next={next} />
     </React.Fragment>
   )
 }

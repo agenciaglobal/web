@@ -13,7 +13,7 @@ interface Props {
   }>
 }
 
-export const NewsPage = ({ news }: Props): React.ReactElement => {
+export const NewsPageList = ({ news }: Props): React.ReactElement => {
   const map = news.map((f) => ({
     ...f.node.frontmatter,
     slug: f.node.fields.slug,
