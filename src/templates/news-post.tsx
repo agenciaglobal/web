@@ -7,100 +7,90 @@ import React from "react"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { ExpandTExt } from "../components/NewsPage/components/expand_text"
 import { NewsPage } from "../components/NewsPage/newsPage"
-import { SitePageContext } from "../global"
+import {
+  Maybe,
+  NewsPostBySlugQuery,
+  SitePageContext,
+  SitePageContextNews,
+} from "../global"
 import "./scroll.css"
 
-const height = 660
 export const useStyles = makeStyles((theme: Theme) => ({
-  item: {
-    color: theme.palette.primary.contrastText,
-    height: "100%",
-  },
   type: {
     display: "flex",
     marginTop: 40,
     marginBottom: 40,
     flexDirection: "column",
     backgroundColor: theme.palette.secondary.main,
-    height: height,
+    height: 660,
   },
 }))
 
-const selected = "item1"
-
-const Arrow = ({ text, className }) => {
-  return <div className={className}>{text}</div>
-}
-const MenuItem = ({ description, date, image, title }) => {
-  return (
-    <div className={`menu-item`} style={{ background: `url(${image})` }}>
-      <ExpandTExt date={date} title={title} description={description} />
-    </div>
-  )
-}
-
-const NewsPostTemplate = (props: {
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
-  data?: any
+interface Props {
+  data?: NewsPostBySlugQuery
   pageContext: SitePageContext
-}): React.ReactElement => {
+}
+
+const RelatedContent = (props: { news: Array<Maybe<SitePageContextNews>> }) => {
   const classes = useStyles()
-  console.log(props.pageContext)
-  console.log(props.pageContext)
-  const news = props.pageContext.news
-  const post = props.data.mdx
-
   return (
-    <React.Fragment>
-      <Typography>newss</Typography>
-
-      <Typography>{post.frontmatter.title}</Typography>
-      <Typography
+    <Box className={classes.type}>
+      <Box
         style={{
-          display: `block`,
+          height: 150,
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          marginLeft: 24,
         }}
       >
-        {post.frontmatter.date}
-      </Typography>
-      <Box className={classes.type}>
-        <Box
-          style={{
-            height: 150,
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            marginLeft: 24,
-          }}
-        >
-          <Typography variant={"h2"} noWrap={false} style={{ fontSize: 30 }}>
-            Conteúdo Relacionado
-          </Typography>
-        </Box>
-        <ScrollMenu
-          alignCenter={false}
-          data={news
-            .map((d) => d.node)
-            .map((el, index) => {
-              /* eslint-disable  @typescript-eslint/no-var-requires */
-              const image = require("../../content/" + el.frontmatter.image)
-              return (
-                <Link
-                  style={{ textDecoration: "none" }}
-                  key={index}
-                  to={"/news" + el.fields.slug}
+        <Typography variant={"h2"} noWrap={false} style={{ fontSize: 30 }}>
+          Conteúdo Relacionado
+        </Typography>
+      </Box>
+      <ScrollMenu
+        alignCenter={false}
+        data={props.news
+          .map((d) => d.node)
+          .map((el, index) => {
+            /* eslint-disable  @typescript-eslint/no-var-requires */
+            const image = require("../../content/" + el.frontmatter.image)
+            return (
+              <Link
+                style={{ textDecoration: "none" }}
+                key={index}
+                to={"/news" + el.fields.slug}
+              >
+                <div
+                  className={`menu-item`}
+                  style={{ background: `url(${image})` }}
                 >
-                  <MenuItem
-                    image={image}
+                  <ExpandTExt
                     date={el.frontmatter.date}
                     title={el.frontmatter.title}
                     description={el.frontmatter.description}
                   />
-                </Link>
-              )
-            })}
-          selected={selected}
-        />
-      </Box>
+                </div>
+              </Link>
+            )
+          })}
+        selected={"item1"}
+      />
+    </Box>
+  )
+}
+
+const NewsPostTemplate = (props: Props): React.ReactElement => {
+  const post = props.data.mdx
+  const news = props.pageContext.news
+  return (
+    <React.Fragment>
+      <Typography>newss</Typography>
+      <Typography>{post.frontmatter.title}</Typography>
+      <Typography style={{ display: `block` }}>
+        {post.frontmatter.date}
+      </Typography>
+      <RelatedContent news={news} />
       <NewsPage news={news} />
     </React.Fragment>
   )
