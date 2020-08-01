@@ -2,9 +2,7 @@ import Typography from "@material-ui/core/Typography"
 import React from "react"
 import { Props } from "./props"
 
-export const NewsContent = (props: Props) => {
-  console.log(props)
-  console.log(props.current.frontmatter.title)
+export const NewsContent = (props: Props): React.ReactElement => {
   return (
     <React.Fragment>
       <Typography>newss</Typography>
