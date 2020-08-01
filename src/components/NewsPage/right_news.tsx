@@ -11,18 +11,19 @@ interface Props {
   image: string
 }
 
-export const LeftNewsComponent = (props: Props): React.ReactElement => {
+export const RightNewsComponent = (props: Props): React.ReactElement => {
   return (
-    props.type === "LEFT" && (
+    props.type === "RIGHT" && (
       <div>
         <Link
-          className={"global-news-left"}
+          className={"global-news-right"}
           style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
           to={"/news" + props.slug}
         >
           <div
             style={{
               width: "40%",
+              marginLeft: "auto",
               backgroundImage: `url(${props.image})`,
             }}
           >

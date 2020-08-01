@@ -50,27 +50,29 @@ export function ExpandTExt(props: {
 }
 
 export const FullNewsComponent = (props: {
-  require1: string
+  image: string
   slug: string
+  type: string
   title: string
   description: string
   date: string
-}): React.ReactElement => (
-  <div
-    style={{
-      marginBottom: 30,
-      height: 350,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundImage: `url(${props.require1})`,
-    }}
-  >
-    <Link style={{ textDecoration: "none" }} to={"/news" + props.slug}>
-      <ExpandTExt
-        date={props.date}
-        title={props.title}
-        description={props.description}
-      />
-    </Link>
-  </div>
-)
+}): React.ReactElement =>
+  props.type === "FULL" ? (
+    <div
+      className={"global-news-full"}
+      style={{
+        marginBottom: 30,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(${props.image})`,
+      }}
+    >
+      <Link style={{ textDecoration: "none" }} to={"/news" + props.slug}>
+        <ExpandTExt
+          date={props.date}
+          title={props.title}
+          description={props.description}
+        />
+      </Link>
+    </div>
+  ) : null

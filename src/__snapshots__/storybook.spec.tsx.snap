@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots GlobalPageTitle Global Page Title 1`] = `
+<p
+  className="MuiTypography-root makeStyles-civ-5 MuiTypography-body1"
+/>
+`;
+
 exports[`Storyshots Home Categories Selector Desktop 1`] = `
 <div
   className="MuiTabs-root"
@@ -43,10 +49,10 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
         type="button"
       >
         <span
-          className="MuiTab-wrapper makeStyles-wrapper-5"
+          className="MuiTab-wrapper makeStyles-wrapper-6"
         />
         <span
-          className="PrivateTabIndicator-root-6 PrivateTabIndicator-colorSecondary-8 MuiTabs-indicator"
+          className="PrivateTabIndicator-root-7 PrivateTabIndicator-colorSecondary-9 MuiTabs-indicator"
           style={Object {}}
         />
       </button>
@@ -73,7 +79,7 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
         type="button"
       >
         <span
-          className="MuiTab-wrapper makeStyles-wrapper-5"
+          className="MuiTab-wrapper makeStyles-wrapper-6"
         />
       </button>
     </div>
