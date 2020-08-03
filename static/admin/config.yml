@@ -35,16 +35,32 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: name, label: Name }
-      - { name: description, label: Description }
+      - { name: date, label: Data, widget: date }
+      - { name: name, label: Cliente }
+      - label: "Logo"
+        name: "image"
+        widget: "image"
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - { name: testimonial, label: Depoimento }
+      - { name: author, label: Autor }
+      - label: "Foto do autor"
+        name: "author_image"
+        widget: "image"
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
   - name: portifolio
     label: Portifolio
     folder: content/portifolio
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
+      - { name: creation date, label: Data publicação, widget: date }
+      - { name: job date, label: Data do job, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - label: "Youtube"
@@ -70,17 +86,17 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: name, label: Title }
-      - { name: job, label: Description }
-      - label: "Black Image"
+      - { name: date, label: Data, widget: date }
+      - { name: name, label: Nome }
+      - { name: job, label: Cargo }
+      - label: "Foto P&B"
         name: "black_image"
         widget: "image"
         default: "/uploads/chocolate-dogecoin.jpg"
         media_library:
           config:
             multiple: true
-      - label: "Image"
+      - label: "Foto colorida"
         name: "image"
         widget: "image"
         default: "/uploads/chocolate-dogecoin.jpg"
