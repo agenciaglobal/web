@@ -1,8 +1,8 @@
 ---
-path: Bianca Gutier
+path: Giulia Andreazza
 date: 2020-08-04T12:53:55.939Z
-name: Bianca Gutier
-job: Mídia
-black_image: assets/bianca-gutier.png
-image: assets/bianca-gutier.png
+name: Giulia Andreazza
+job: Planejamento
+black_image: assets/giulia-andreazza.png
+image: assets/giulia-andreazza.png
 ---
