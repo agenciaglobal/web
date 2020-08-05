@@ -27,8 +27,8 @@ export const EmployeeComponent = ({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundImage: hover
-          ? `url(${require("../../../content/" + blackBackgroundImage)})`
-          : `url(${require("../../../content/" + backgroundImage)})`,
+          ? `url(${require("../../../content/" + backgroundImage)})`
+          : `url(${require("../../../content/" + blackBackgroundImage)})`,
       }}
     >
       <div
