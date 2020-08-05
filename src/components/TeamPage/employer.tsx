@@ -46,20 +46,24 @@ export const EmployeeComponent = ({
             filter: "unset",
           }}
         >
-          <Typography style={{
-            fontFamily: "GSTwo",
-            fontSize: 20,
-            color: hover ? "#000" : "transparent", 
-            textAlign: "center" 
-          }}>
+          <Typography
+            style={{
+              fontFamily: "GSTwo",
+              fontSize: 20,
+              color: hover ? "#000" : "transparent",
+              textAlign: "center",
+            }}
+          >
             {title}
           </Typography>
-          <Typography style={{ 
-            fontFamily: "GSThree",
-            fontSize: 14,
-            color: hover ? "#000" : "transparent", 
-            textAlign: "center" 
-          }}>
+          <Typography
+            style={{
+              fontFamily: "GSThree",
+              fontSize: 14,
+              color: hover ? "#000" : "transparent",
+              textAlign: "center",
+            }}
+          >
             {job}
           </Typography>
         </div>
