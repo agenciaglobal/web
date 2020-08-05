@@ -34,7 +34,7 @@ export const EmployeeComponent = ({
       <div
         style={{
           width: "100%",
-          backgroundColor: hover ? "yellow" : "transparent",
+          backgroundColor: hover ? "rgba(255, 204, 0, 0.7)" : "transparent",
           padding: 10,
           display: "flex",
           justifyContent: "center",
@@ -44,13 +44,26 @@ export const EmployeeComponent = ({
           style={{
             zIndex: 3,
             filter: "unset",
-            backgroundColor: hover ? "yellow" : "transparent",
           }}
         >
-          <Typography style={{ color: "black", textAlign: "center" }}>
+          <Typography
+            style={{
+              fontFamily: "GSTwo",
+              fontSize: 20,
+              color: hover ? "#000" : "transparent",
+              textAlign: "center",
+            }}
+          >
             {title}
           </Typography>
-          <Typography style={{ color: "black", textAlign: "center" }}>
+          <Typography
+            style={{
+              fontFamily: "GSThree",
+              fontSize: 14,
+              color: hover ? "#000" : "transparent",
+              textAlign: "center",
+            }}
+          >
             {job}
           </Typography>
         </div>
