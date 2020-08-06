@@ -12,15 +12,8 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
       - name: type
-        label: Type
+        label: Tipo do box de exibição na lista
         widget: select
         options:
           - { label: "Full", value: "FULL" }
@@ -29,6 +22,41 @@ collections:
           - { label: "Left", value: "LEFT" }
           - { label: "Right", value: "RIGHT" }
           - { label: "Quote", value: "QUOTE" }
+      - { name: date, label: Data, widget: date }
+      - name: postType
+        label: Tipo de post
+        widget: select
+        options:
+        - { label: "Notícia", value: "News" }
+        - { label: "Artigo", value: "Article" }
+      - { name: title, label: Título }
+      - { name: description, label: Descrição }
+      - name: "image"
+        label: "Imagem de destaque"
+        widget: "image"
+        default: "/uploads/chocolate-dogecoin.jpg"
+      - { name: 'body', label: 'Conteúdo do blog post', widget: 'markdown' }
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        multiple: true
+        searchFields: ["name"]
+        valueField: "name"
+        displayFields: ["name"]
+      - label: "Autor do post"
+        name: "author"
+        widget: "relation"
+        collection: "team"
+        searchFields: ["name", "about", "image"]
+        valueField: "name"
+        displayFields: ["name"]
+  - name: tags
+    label: Tags
+    folder: content/tags
+    create: true
+    fields:
+      - { name: tag, label: tag, widget: string }
   - name: client
     label: Clientes
     folder: content/client
@@ -89,6 +117,7 @@ collections:
       - { name: date, label: Data, widget: date }
       - { name: name, label: Nome }
       - { name: job, label: Cargo }
+      - { name: about, label: Sobre}
       - label: "Foto P&B"
         name: "black_image"
         widget: "image"
