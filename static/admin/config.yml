@@ -41,9 +41,9 @@ collections:
         widget: "relation"
         collection: "tags"
         multiple: true
-        searchFields: ["name"]
-        valueField: "name"
-        displayFields: ["name"]
+        searchFields: ["tag"]
+        valueField: "tag"
+        displayFields: ["tag"]
       - label: "Autor do post"
         name: "author"
         widget: "relation"
