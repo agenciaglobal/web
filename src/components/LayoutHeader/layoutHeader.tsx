@@ -30,7 +30,7 @@ export const LayoutHeader = ({
   return (
     <Hidden smDown>
       <AppBar
-        position={"fixed"}
+        position="static"
         style={{
           zIndex: 222,
           height: isContact ? 400 : 155,
