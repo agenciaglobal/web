@@ -38,12 +38,18 @@ export const LayoutHeader = ({
           boxShadow: "none",
         }}
       >
-        <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+        <Toolbar
+          style={{
+            display: "flex",
+            padding: "0px 120px",
+            justifyContent: "space-between",
+          }}
+        >
           <Link style={{ boxShadow: "none" }} to="/">
             <img
               src={lightMode === "light" ? logoblack : logo}
               alt="logo-black"
-              style={{ margin: 16, height: 100 }}
+              style={{ margin: "16px 32px 16px 0px", height: 100 }}
             />
           </Link>
           <Box
