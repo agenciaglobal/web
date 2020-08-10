@@ -13,7 +13,7 @@ const useGridStyles = makeStyles(() => ({
     },
     lineHeight: "1.4em",
     textTransform: "capitalize",
-    paddingBottom: 10,
+    paddingBottom: 12,
   },
   subtitle: {
     fontWeight: 500,
