@@ -7,15 +7,17 @@ const useGridStyles = makeStyles(() => ({
   title: {
     marginTop: 24,
     fontFamily: "GSThree",
-    fontSize: "40px",
-    lineHeight: "65px",
+    fontSize: "30px",
+    lineHeight: "36px",
     textTransform: "capitalize",
+    paddingBottom: 15,
   },
   subtitle: {
     fontWeight: 500,
-    fontSize: "27px",
-    lineHeight: "30px",
+    fontSize: "18px",
+    lineHeight: "24px",
     textTransform: "capitalize",
+    paddingBottom: 45,
   },
 }))
 export const HomeTitleComponent = (): React.ReactElement => {
@@ -24,10 +26,10 @@ export const HomeTitleComponent = (): React.ReactElement => {
   const home = t("home")
   return (
     <React.Fragment>
-      <Typography className={classes.title} noWrap={true}>
+      <Typography className={classes.title} noWrap={false}>
         {home.title}
       </Typography>
-      <Typography noWrap={true} className={classes.subtitle}>
+      <Typography noWrap={false} className={classes.subtitle}>
         {home.subtitle}
       </Typography>
     </React.Fragment>
