@@ -44,7 +44,7 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
                     <div
                       style={{
                         height: 0,
-                        paddingBottom: '75%',
+                        paddingBottom: "75%",
                         backgroundImage: `url(${require1})`,
                       }}
                     >
