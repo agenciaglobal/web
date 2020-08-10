@@ -25,7 +25,7 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
         return (
           <Masonry
             key={index}
-            breakpointCols={{ default: 3, 700: 1, 1300: 2 }}
+            breakpointCols={{ default: 2, 700: 1, 1300: 2 }}
             className="global-home-grid"
             columnClassName="global-home-grid-column"
           >
@@ -43,7 +43,8 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
                   >
                     <div
                       style={{
-                        height: 300,
+                        height: 0,
+                        paddingBottom: '75%',
                         backgroundImage: `url(${require1})`,
                       }}
                     >
