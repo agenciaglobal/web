@@ -24,7 +24,6 @@ const useGridStyles = makeStyles(() => ({
     lineHeight: "1.4em",
     textTransform: "capitalize",
     paddingBottom: 45
-
   },
 }))
 export const HomeTitleComponent = (): React.ReactElement => {
