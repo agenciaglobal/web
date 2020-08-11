@@ -30,21 +30,21 @@ const useStylesAccordion = makeStyles((theme) => ({
   ul: {
     margin: 0,
     padding: 0,
-    '@media (min-width:600px)': {
+    "@media (min-width:600px)": {
       transform: "translateY(-54px)",
-      textAlign: "right"
-      },
+      textAlign: "right",
+    },
   },
   li: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: 600,
     lineHeight: "2.2em",
-    fontWeight: "bold",
     fontSize: "14px",
-    listStyle: 'none',
-    '@media (min-width:600px)': {
-      fontSize: '16px',
-      }
-  }
+    listStyle: "none",
+    "@media (min-width:600px)": {
+      fontSize: "16px",
+    },
+  },
 }))
 
 
@@ -61,7 +61,9 @@ export const AboutAccordion = (): React.ReactElement => {
             <Typography>
               <ul className={classes.ul}>
                 {d.text.map((item, index) => (
-                  <li key={index} className={classes.li}>{item}</li>
+                  <li key={index} className={classes.li}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             </Typography>
