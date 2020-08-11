@@ -10,43 +10,42 @@ import { accordionData } from "./accordion_date"
 const useStylesAccordion = makeStyles((theme) => ({
   heading: {
     fontSize: "16px",
-    '@media (min-width:600px)': {
-      fontSize: '22px',
-      },
+    "@media (min-width:600px)": {
+      fontSize: "22px",
+    },
     fontWeight: theme.typography.fontWeightRegular,
   },
-  div: { 
+  div: {
     width: "100%",
     paddingBottom: 100,
-    paddingTop: 100
+    paddingTop: 100,
   },
   details: {
-    '@media (min-width:600px)': {
+    "@media (min-width:600px)": {
       padding: "0px 56px",
       display: "flex",
-      justifyContent: "flex-end"
-    }
+      justifyContent: "flex-end",
+    },
   },
   ul: {
     margin: 0,
     padding: 0,
-    '@media (min-width:600px)': {
+    "@media (min-width:600px)": {
       transform: "translateY(-54px)",
-      textAlign: "right"
-      },
+      textAlign: "right",
+    },
   },
   li: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: 600,
     lineHeight: "2.2em",
-    fontWeight: "bold",
     fontSize: "14px",
-    listStyle: 'none',
-    '@media (min-width:600px)': {
-      fontSize: '16px',
-      }
-  }
+    listStyle: "none",
+    "@media (min-width:600px)": {
+      fontSize: "16px",
+    },
+  },
 }))
-
 
 export const AboutAccordion = (): React.ReactElement => {
   const classes = useStylesAccordion()
@@ -61,7 +60,9 @@ export const AboutAccordion = (): React.ReactElement => {
             <Typography>
               <ul className={classes.ul}>
                 {d.text.map((item, index) => (
-                  <li key={index} className={classes.li}>{item}</li>
+                  <li key={index} className={classes.li}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             </Typography>

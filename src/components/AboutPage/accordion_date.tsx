@@ -9,8 +9,8 @@ export const accordionData = [
       "Mapeamento da jornada do consumidor",
       "Estratégia de conteúdo",
       "Pesquisa com usuário",
-      "Pesquisa de mercado"
-    ]
+      "Pesquisa de mercado",
+    ],
   },
   {
     title: "DATA INTELLIGENCE & ANALYTICS",
@@ -23,8 +23,8 @@ export const accordionData = [
       "Insights de Consumidor - 1st and 3rd party data",
       "Segmentação de Audiência - 1st party data",
       "Desenvolvimento de KPI",
-      "Report de marketing digital"
-    ]
+      "Report de marketing digital",
+    ],
   },
   {
     title: "COMUNICAÇÃO",
@@ -35,8 +35,8 @@ export const accordionData = [
       "Desenvolvimento e produção de conteúdo digital display",
       "Print & outdoor",
       "Vídeo & tv",
-      "Crm - canais diretos da marca"
-    ]
+      "Crm - canais diretos da marca",
+    ],
   },
   {
     title: "DESIGN",
@@ -49,8 +49,8 @@ export const accordionData = [
       "Design de hotsite/landing page",
       "Prototipação",
       "Design web responsivo",
-      "Native apps"
-    ]
+      "Native apps",
+    ],
   },
   {
     title: "MÍDIAS E PLATAFORMAS",
@@ -59,8 +59,8 @@ export const accordionData = [
       "Compra de mídia",
       "Planejamento de canais",
       "Connections Planning",
-      "Mensuração e otimização"
-    ]
+      "Mensuração e otimização",
+    ],
   },
   {
     title: "PERFORMANCE",
@@ -72,7 +72,7 @@ export const accordionData = [
       "Otimização de resposta direta (Lead, Website Purchase, App Installs, App Purchase)",
       "Taggemento e otimização de landing page",
       "E-mail marketing e otimização",
-      "Campanhas de remarketing em Mobile, APP, and Desktop campaigns"
-    ]
+      "Campanhas de remarketing em Mobile, APP, and Desktop campaigns",
+    ],
   },
 ]

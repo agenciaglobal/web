@@ -37,7 +37,7 @@ export const ExpandTExt = (props: {
       <Typography
         style={{
           fontSize: "16px",
-          fontFamily: "Montserrat",
+          fontFamily: "Montserrat, sans-serif",
         }}
       >
         {props.description}
