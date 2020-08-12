@@ -20,7 +20,7 @@
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat");
 }
 
 body::-webkit-scrollbar {

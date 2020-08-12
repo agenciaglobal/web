@@ -12,6 +12,8 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
+      - { name: text_1, label: "Text Principal" }
+      - { name: text_2, label: "Text Secundário" }
       - name: type
         label: Tipo do box de exibição na lista
         widget: select
@@ -105,6 +107,10 @@ collections:
         displayFields: ["name"]
       - label: "Image"
         name: "image"
+        widget: "image"
+        default: "/content/assets/uma.png"
+      - label: "Image 1"
+        name: "image_1"
         widget: "image"
         default: "/content/assets/uma.png"
       - label: "Image 1"
