@@ -23,6 +23,8 @@ export const SVGAbout = (): React.ReactElement => {
           src={video}
           autoPlay
           loop
+          muted
+          playsInline
           style={{ maxWidth: 900, width: "100%", height: "auto" }}
         />
       </Box>
