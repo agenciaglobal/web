@@ -8,6 +8,7 @@ import { LayoutHeaderMobile } from "../components/LayoutHeader/layoutHeaderMobil
 import LeftDrawer from "../components/LayoutLeftDrawer/leftDrawer"
 import RightDrawer from "../components/LayoutRightDrawer/rightDrawer"
 import { useStyles } from "./styles"
+import Footer from "../components/LayoutFooter/footer"
 
 interface Props {
   uri: string
@@ -54,6 +55,7 @@ export const ActualLayout = ({
       >
         <Box>{children}</Box>
       </Container>
+      <Footer/>
     </div>
   )
 }
