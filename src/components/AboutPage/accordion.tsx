@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core"
+import { Box, Typography } from "@material-ui/core"
 import Accordion from "@material-ui/core/Accordion"
 import AccordionDetails from "@material-ui/core/AccordionDetails"
 import AccordionSummary from "@material-ui/core/AccordionSummary"
@@ -15,10 +15,18 @@ const useStylesAccordion = makeStyles((theme) => ({
     },
     fontWeight: theme.typography.fontWeightRegular,
   },
+  style: {
+    fontFamily: "GSThree",
+    textAlign: "center",
+    fontSize: "50px",
+    lineHeight: "50px",
+    // fontWeight: 700,
+    paddingTop: 100
+  },
   div: {
     width: "100%",
     paddingBottom: 100,
-    paddingTop: 100,
+    paddingTop: 40,
   },
   details: {
     "@media (min-width:600px)": {
@@ -50,25 +58,30 @@ const useStylesAccordion = makeStyles((theme) => ({
 export const AboutAccordion = (): React.ReactElement => {
   const classes = useStylesAccordion()
   return (
-    <div className={classes.div}>
-      {accordionData.map((d, index) => (
-        <Accordion key={index}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>{d.title}</Typography>
-          </AccordionSummary>
-          <AccordionDetails className={classes.details}>
-            <Typography>
-              <ul className={classes.ul}>
-                {d.text.map((item, index) => (
-                  <li key={index} className={classes.li}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </div>
+    <React.Fragment>
+      <Box lineHeight={3}>
+        <Typography className={classes.style}>COMO NÓS TRABALHAMOS</Typography>
+      </Box>
+      <div className={classes.div}>
+        {accordionData.map((d, index) => (
+            <Accordion key={index}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography className={classes.heading}>{d.title}</Typography>
+              </AccordionSummary>
+              <AccordionDetails className={classes.details}>
+                <Typography>
+                  <ul className={classes.ul}>
+                    {d.text.map((item, index) => (
+                      <li key={index} className={classes.li}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+        ))}
+      </div>
+    </React.Fragment>
   )
 }
