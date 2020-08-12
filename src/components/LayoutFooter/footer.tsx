@@ -4,8 +4,8 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 
 const useStyles = makeStyles((theme: Theme) => ({
   SvgIcon: {
-    fontSize: 32,
-    fill: theme.palette.grey.A400,
+    fontSize: 22,
+    fill: theme.custom.grey1,
     "&:hover": {
       fill: "#FFCC00",
     },
@@ -21,14 +21,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
   },
   div: {
-    margin: 16,
+    margin: 12,
   },
   primaryText: {
-    // color: theme.palette.secondary.main,
+    color: theme.palette.primary.contrastText,
+    fontFamily: "GSThree",
+    fontSize: 12,
     marginBottom: 4,
   },
   secondaryText: {
-    // color: theme.palette.grey.A400,
+    fontFamily: "Montserrat, sans-serif",
+    fontSize: 12,
+    color: theme.custom.greyAlpha,
   },
 }))
 
@@ -105,7 +109,7 @@ const Footer = (): React.ReactElement => {
           Todos os direitos reservados.
         </Typography>
         <div
-          style={{ height: 1, width: 185, background: "#FFCC00", marginTop: 6 }}
+          style={{ height: 1, width: 165, background: "#FFCC00", marginTop: 6 }}
         />
       </Container>
     </Fragment>
