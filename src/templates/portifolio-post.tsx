@@ -9,6 +9,7 @@ import Box from "@material-ui/core/Box"
 import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { useImageRequire } from "./use-image-require"
+import { LongMontsetrratText } from "../components/NewsContent/newsContant"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -50,7 +51,7 @@ const GridImage = (props: { src: string }): React.ReactElement => (
   />
 )
 
-const Fullmage = (props: {
+export const Fullmage = (props: {
   paddingTop: number
   image: string
 }): React.ReactElement => (
@@ -147,11 +148,11 @@ const PortifolioPostTemplate = ({
   return (
     <React.Fragment>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <Typography>{data?.mdx?.frontmatter?.text_1}</Typography>
+        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
       </Box>
       <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
       <GridLocal
-        left={<Typography>{data?.mdx?.frontmatter?.text_2}</Typography>}
+        left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
         right={<GridImage src={image} />}
       />
       <GridLocal
@@ -159,11 +160,11 @@ const PortifolioPostTemplate = ({
         right={<GridImage src={image2} />}
       />
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <Typography>{data?.mdx?.frontmatter?.text_3}</Typography>
+        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
       </Box>
       <Fullmage paddingTop={gutterVertical} image={image2} />
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <Typography>{data?.mdx?.frontmatter?.text_4}</Typography>
+        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
       </Box>
       <ImageScroller images={[image, image1, image2, image3]} />
       <QuoteComponent
