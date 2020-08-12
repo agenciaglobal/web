@@ -3,6 +3,7 @@ import Box from "@material-ui/core/Box"
 import * as React from "react"
 import { useAboutSvgStyles } from "./about_styles"
 import { SVGGlobalCool } from "./svg"
+import video from "../../../static/videos/mov.mp4"
 
 export const SVGAbout = (): React.ReactElement => {
   const classes = useAboutSvgStyles()
@@ -17,7 +18,8 @@ export const SVGAbout = (): React.ReactElement => {
         </Typography>
       </Box>
       <Box className={classes.box}>
-        <SVGGlobalCool />
+          {/* <SVGGlobalCool/> */}
+          <video src={video} autoPlay loop style={{ maxWidth: 900, width: "100%", height: "auto"}}/>
       </Box>
     </Box>
   )
