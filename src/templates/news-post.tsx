@@ -19,8 +19,9 @@ interface Props {
 export type New = Maybe<SitePageContextNews>
 
 const NewsPostTemplate = (props: Props): React.ReactElement => {
-  const post = props.data?.mdx
+  const post = props.data
   const news: New[] | null | undefined = props.pageContext.news
+  console.log(post)
   return (
     <React.Fragment>
       <NewsContent current={post} news={news} />
@@ -43,11 +44,17 @@ export const pageQuery = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
+      fields {
+        slug
+      }
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        tags
+        date(formatString: "DD/MM/YYYY")
         description
+        text_1
+        text_2
         image
       }
     }

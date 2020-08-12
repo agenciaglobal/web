@@ -1539,6 +1539,7 @@ export type MdxFrontmatter = {
   image?: Maybe<Scalars["String"]>
   image_1?: Maybe<Scalars["String"]>
   image_2?: Maybe<Scalars["String"]>
+  tags?: Maybe<Scalars["String"][]>
   image_3?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
@@ -3361,7 +3362,17 @@ export type NewsPostBySlugQuery = {
   mdx?: Maybe<
     Pick<Mdx, "id" | "excerpt" | "body"> & {
       frontmatter?: Maybe<
-        Pick<MdxFrontmatter, "title" | "date" | "description" | "image">
+        Pick<
+          MdxFrontmatter,
+          | "title"
+          | "date"
+          | "tags"
+          | "text_1"
+          | "text_2"
+          | "description"
+          | "image"
+          | "image_1"
+        >
       >
     }
   >
