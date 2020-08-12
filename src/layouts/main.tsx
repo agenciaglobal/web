@@ -55,7 +55,7 @@ export const ActualLayout = ({
       >
         <Box>{children}</Box>
       </Container>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
