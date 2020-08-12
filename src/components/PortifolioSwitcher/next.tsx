@@ -5,7 +5,7 @@ import React from "react"
 import { SitePageContextNext } from "../../global"
 
 interface Props {
-  next: SitePageContextNext | null
+  next?: SitePageContextNext | null
 }
 
 export const Next = (props: Props): React.ReactElement => {
@@ -23,7 +23,7 @@ export const Next = (props: Props): React.ReactElement => {
       {props.next && (
         <Link
           style={{ textDecoration: "none" }}
-          to={`/portifolio${props.next.fields.slug}`}
+          to={`/portifolio${props.next.fields?.slug}`}
         >
           <Box
             style={{
@@ -46,7 +46,7 @@ export const Next = (props: Props): React.ReactElement => {
                   {"PROÓXIMO TRABALHO"}
                 </Typography>
                 <Typography style={{ textAlign: "end" }}>
-                  {props.next === null ? "" : props.next.frontmatter.title}
+                  {props.next.frontmatter?.title}
                 </Typography>
               </Box>
             </Box>

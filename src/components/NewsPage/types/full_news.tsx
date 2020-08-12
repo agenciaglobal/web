@@ -1,15 +1,16 @@
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "../components/expand_text"
-import { FinalNews } from "../types"
+import { SlugType } from "../types"
 import { useRequireNewImage } from "../shared/useRequireNewImage"
+import { SitePageContextNewsNodeFrontmatter } from "../../../global"
 
 export const FullNewsComponent = ({
   current: { date, description, image, slug, title, type },
 }: {
-  current: FinalNews
-}): React.ReactElement => {
-  const imageSrc = useRequireNewImage(image)
+  current: SitePageContextNewsNodeFrontmatter & SlugType
+}): React.ReactElement | null => {
+  const imageSrc = useRequireNewImage(image || "")
   return type === "FULL" ? (
     <div
       className={"global-news-full"}
@@ -21,7 +22,11 @@ export const FullNewsComponent = ({
       }}
     >
       <Link style={{ textDecoration: "none" }} to={"/news" + slug}>
-        <ExpandTExt date={date} title={title} description={description} />
+        <ExpandTExt
+          date={date || ""}
+          title={title || ""}
+          description={description || ""}
+        />
       </Link>
     </div>
   ) : null

@@ -27,15 +27,15 @@ collections:
         label: Tipo de post
         widget: select
         options:
-        - { label: "Notícia", value: "News" }
-        - { label: "Artigo", value: "Article" }
+          - { label: "Notícia", value: "News" }
+          - { label: "Artigo", value: "Article" }
       - { name: title, label: Título }
       - { name: description, label: Descrição }
       - name: "image"
         label: "Imagem de destaque"
         widget: "image"
         default: "/uploads/chocolate-dogecoin.jpg"
-      - { name: 'body', label: 'Conteúdo do blog post', widget: 'markdown' }
+      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -90,6 +90,8 @@ collections:
       - { name: creation date, label: Data publicação, widget: date }
       - { name: job date, label: Data do job, widget: date }
       - { name: title, label: Title }
+      - { name: text_1, label: "Text Principal" }
+      - { name: text_2, label: "Text Secundário" }
       - { name: description, label: Description }
       - label: "Youtube"
         name: "youtube"
@@ -117,7 +119,7 @@ collections:
       - { name: date, label: Data, widget: date }
       - { name: name, label: Nome }
       - { name: job, label: Cargo }
-      - { name: about, label: Sobre}
+      - { name: about, label: Sobre }
       - label: "Foto P&B"
         name: "black_image"
         widget: "image"

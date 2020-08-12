@@ -106,7 +106,7 @@ const Footer = (): React.ReactElement => {
         </Typography>
         <div
           style={{ height: 1, width: 185, background: "#FFCC00", marginTop: 6 }}
-        ></div>
+        />
       </Container>
     </Fragment>
   )

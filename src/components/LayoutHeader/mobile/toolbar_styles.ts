@@ -1,8 +1,7 @@
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 
-export const useStylesHeader = makeStyles((theme: Theme) => ({
+export const useStylesHeader = makeStyles(() => ({
   mobileHeaderContainer: {
-    // backgroundColor: theme.palette.primary.main,
     position: "fixed",
     top: 0,
     height: 155,

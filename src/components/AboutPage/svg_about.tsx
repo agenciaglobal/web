@@ -12,7 +12,7 @@ export const SVGAbout = (): React.ReactElement => {
         <Typography className={classes.style}>COMO NÓS TRABALHAMOS</Typography>
       </Box>
       <Box lineHeight={3}>
-        <Typography className={classes.sstyle}>
+        <Typography className={classes.another}>
           Módulos integrados de trabalho para atender marcas contemporâneas
         </Typography>
       </Box>

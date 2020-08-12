@@ -7,8 +7,8 @@ import { Next } from "./next"
 import { Previous } from "./previous"
 
 interface Props {
-  previous: SitePageContextPrevious
-  next: SitePageContextNext
+  previous?: SitePageContextPrevious | null
+  next?: SitePageContextNext | null
 }
 
 const useStyles = makeStyles(() => ({

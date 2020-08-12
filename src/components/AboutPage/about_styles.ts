@@ -8,7 +8,7 @@ export const useAboutSvgStyles = makeStyles(() => ({
     lineHeight: "50px",
     fontWeight: 700,
   },
-  sstyle: {
+  another: {
     fontFamily: "GSOne",
     fontSize: "16px",
     lineHeight: "50px",

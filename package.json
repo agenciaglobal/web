@@ -3,9 +3,28 @@
   "private": true,
   "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
   "version": "1.0.0",
-  "author": "Thomas Wang <thomas@wang.sh>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "author": "Francesco Ferraro <francescoaferraro@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agenciaglobal/web.git"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "prettier": "prettier src/**/*.{ts,tsx}",
+    "lint": "eslint . --ext tsx",
+    "checkup": "yarn prettier --check && yarn lint",
+    "format": "yarn prettier --write && yarn lint --fix",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean",
+    "start": "yarn clean && yarn develop",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "chromatic": "npx chromatic  --project-token=jeeo3rqsvu --auto-accept-changes",
+    "serve:static": "yarn clean  && yarn build && npx serve public"
   },
   "dependencies": {
     "@material-ui/core": "4.11.0",
@@ -52,9 +71,11 @@
     "react-horizontal-scrolling-menu": "0.7.7",
     "react-i18next": "11.7.0",
     "react-masonry-css": "1.0.14",
+    "react-sizeme": "2.6.12",
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
     "react-waypoint": "9.0.3",
+    "react-youtube": "7.11.3",
     "sharp": "^0.25.4",
     "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
@@ -84,33 +105,6 @@
     "prettier": "2.0.5",
     "react-test-renderer": "16.13.1",
     "typescript": "^3.9.5"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/agenciaglobal/web.git"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006 -c .storybook",
-    "prettier": "prettier src/**/*.{js,jsx,ts,tsx}",
-    "lint": "eslint . --ext tsx",
-    "checkup": "yarn prettier --check && yarn lint",
-    "format": "yarn prettier --write && yarn lint --fix",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "clean": "gatsby clean",
-    "start": "yarn clean && yarn develop",
-    "serve": "gatsby serve",
-    "test": "jest",
-    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/agenciaglobal/web.git",
-    "build-storybook": "build-storybook -c .storybook -o .out",
-    "chromatic": "npx chromatic  --project-token=jeeo3rqsvu --auto-accept-changes",
-    "serve:static": "yarn clean  && yarn build && npx serve public"
   },
   "husky": {
     "hooks": {

@@ -1,21 +1,41 @@
 import { Typography } from "@material-ui/core"
+import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
 import React from "react"
 import { PortifolioSwitcher } from "../components/PortifolioSwitcher/portifolioSwticher"
 import { PortifolioPostBySlugQuery, SitePageContext } from "../global"
+import YouTube from "react-youtube"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
   pageContext: SitePageContext
 }
 
+// use an actual url library
+const extractIdFromUrl = (data: string | undefined) =>
+  data?.replace("https://www.youtube.com/watch?v=", "")
+
 const PortifolioPostTemplate = ({
-  data: { mdx: post },
-  pageContext: { next, previous },
+  data,
+  pageContext,
 }: Props): React.ReactElement => {
+  const { next, previous } = pageContext
   return (
     <React.Fragment>
-      <Typography>{post.frontmatter.description}</Typography>
+      <Typography>{data?.mdx?.frontmatter?.description}</Typography>
+      <Typography>
+        <SizeMe monitorHeight={true}>
+          {({ size }) => (
+            <YouTube
+              opts={{
+                width: size.width?.toString(),
+                height: "500",
+              }}
+              videoId={extractIdFromUrl(data?.mdx?.frontmatter?.youtube)}
+            />
+          )}
+        </SizeMe>
+      </Typography>
       <PortifolioSwitcher previous={previous} next={next} />
     </React.Fragment>
   )
@@ -39,6 +59,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image
+        youtube
       }
     }
   }

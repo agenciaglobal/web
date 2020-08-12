@@ -5,10 +5,11 @@ import { LeftNewsComponent } from "../types/left_news"
 import { MirrorNewsComponent } from "../types/mirror_news"
 import { QuoteNewsComponent } from "../types/quote_news"
 import { RightNewsComponent } from "../types/right_news"
-import { FinalNews } from "../types"
+import { SlugType } from "../types"
+import { SitePageContextNewsNodeFrontmatter } from "../../../global"
 
 export const callBackFN: (
-  news: FinalNews,
+  news: SitePageContextNewsNodeFrontmatter & SlugType,
   index: number,
 ) => React.ReactElement = (current, index) => {
   return current.type === "HALF" ? (

@@ -3,11 +3,12 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "../components/expand_text"
-import { FinalNews } from "../types"
+import { SlugType } from "../types"
 import { useRequireNewImage } from "../shared/useRequireNewImage"
+import { SitePageContextNewsNodeFrontmatter } from "../../../global"
 
 interface Props {
-  current: FinalNews
+  current: SitePageContextNewsNodeFrontmatter & SlugType
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -27,48 +28,47 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const HalfNewsComponent = (props: Props): React.ReactElement => {
+export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
   const classes = useStyles()
-  const imageSrc = useRequireNewImage(props.current.image)
+  const imageSrc = useRequireNewImage(props.current?.image || "")
   const date = props.current.date + "| NOTÍCIAS"
-  return (
-    props.current.type === "HALF" && (
-      <div>
-        <Link
-          className={"global-news-half"}
-          style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-          to={"/news" + props.current.slug}
-        >
-          <Box className={classes.lag}>
-            <div className={classes.style}>
-              <div style={{ height: "20%" }} />
-              <div
-                className={classes.border}
-                style={{ height: "80%", backgroundImage: `url(${imageSrc})` }}
-              >
-                <ExpandTExt
-                  date={date}
-                  title={props.current.title}
-                  description={props.current.description}
-                />
-              </div>
+  const test = props.current?.type === "HALF"
+  return test ? (
+    <div>
+      <Link
+        className={"global-news-half"}
+        style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
+        to={"/news" + props.current?.slug}
+      >
+        <Box className={classes.lag}>
+          <div className={classes.style}>
+            <div style={{ height: "20%" }} />
+            <div
+              className={classes.border}
+              style={{ height: "80%", backgroundImage: `url(${imageSrc})` }}
+            >
+              <ExpandTExt
+                date={date}
+                title={props.current?.title || ""}
+                description={props.current?.description || ""}
+              />
             </div>
-            <div className={classes.style2}>
-              <div
-                className={classes.border}
-                style={{ height: "80%", display: "grid" }}
-              >
-                <ExpandTExt
-                  date={date}
-                  title={props.current.title}
-                  description={props.current.description}
-                />
-              </div>
-              <div style={{ height: "20%" }} />
+          </div>
+          <div className={classes.style2}>
+            <div
+              className={classes.border}
+              style={{ height: "80%", display: "grid" }}
+            >
+              <ExpandTExt
+                date={date}
+                title={props.current?.title || ""}
+                description={props.current?.description || ""}
+              />
             </div>
-          </Box>
-        </Link>
-      </div>
-    )
-  )
+            <div style={{ height: "20%" }} />
+          </div>
+        </Box>
+      </Link>
+    </div>
+  ) : null
 }

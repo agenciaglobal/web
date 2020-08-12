@@ -3,7 +3,12 @@ import React from "react"
 import { NewsContent } from "../components/NewsContent/newsContant"
 import { NewsPageList } from "../components/NewsPage/newsPageList"
 import { NewsRelatedContent } from "../components/NewsRelatedContent"
-import { NewsPostBySlugQuery, SitePageContext } from "../global"
+import {
+  Maybe,
+  NewsPostBySlugQuery,
+  SitePageContext,
+  SitePageContextNews,
+} from "../global"
 import "./scroll.css"
 
 interface Props {
@@ -11,9 +16,11 @@ interface Props {
   pageContext: SitePageContext
 }
 
+export type New = Maybe<SitePageContextNews>
+
 const NewsPostTemplate = (props: Props): React.ReactElement => {
-  const post = props.data.mdx
-  const news = props.pageContext.news
+  const post = props.data?.mdx
+  const news: New[] | null | undefined = props.pageContext.news
   return (
     <React.Fragment>
       <NewsContent current={post} news={news} />

@@ -4,8 +4,8 @@ import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import ScrollMenu from "react-horizontal-scrolling-menu"
-import { Maybe, SitePageContextNews } from "../global"
 import { ExpandTExt } from "./NewsPage/components/expand_text"
+import { New } from "../templates/news-post"
 
 export const useStyles = makeStyles((theme: Theme) => ({
   type: {
@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 export const NewsRelatedContent = (props: {
-  news: Array<Maybe<SitePageContextNews>>
+  news?: Array<New> | null | undefined
 }): React.ReactElement => {
   const classes = useStyles()
   return (
@@ -38,25 +38,25 @@ export const NewsRelatedContent = (props: {
       </Box>
       <ScrollMenu
         alignCenter={false}
-        data={props.news
-          .map((d) => d.node)
+        data={(props.news || [])
+          .map((d) => d?.node)
           .map((el, index) => {
             /* eslint-disable  @typescript-eslint/no-var-requires */
-            const image = require("../../content/" + el.frontmatter.image)
+            const image = require("../../content/" + el?.frontmatter?.image)
             return (
               <Link
                 style={{ textDecoration: "none" }}
                 key={index}
-                to={"/news" + el.fields.slug}
+                to={"/news" + el?.fields?.slug}
               >
                 <div
                   className={`menu-item`}
                   style={{ background: `url(${image})` }}
                 >
                   <ExpandTExt
-                    date={el.frontmatter.date}
-                    title={el.frontmatter.title}
-                    description={el.frontmatter.description}
+                    date={el?.frontmatter?.date || ""}
+                    title={el?.frontmatter?.title || ""}
+                    description={el?.frontmatter?.description || ""}
                   />
                 </div>
               </Link>

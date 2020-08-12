@@ -3,10 +3,10 @@ import * as React from "react"
 import { GlobalPageTitle } from "../GlobalPageTitle/globalTitle"
 import { GridEmployees } from "./grid"
 import "./team.css"
-import { Employes } from "./types"
+import { Employees } from "./types"
 
 interface Props {
-  employees: Employes
+  employees: Employees
 }
 
 export const TeamPage = ({ employees }: Props): React.ReactElement => {

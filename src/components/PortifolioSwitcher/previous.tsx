@@ -5,7 +5,7 @@ import React from "react"
 import { SitePageContextPrevious } from "../../global"
 
 interface Props {
-  previous: SitePageContextPrevious | null
+  previous?: SitePageContextPrevious | null
 }
 
 export const Previous = (props: Props): React.ReactElement => {
@@ -21,7 +21,7 @@ export const Previous = (props: Props): React.ReactElement => {
       {props.previous && (
         <Link
           style={{ textDecoration: "none" }}
-          to={`/portifolio${props.previous.fields.slug}`}
+          to={`/portifolio${props.previous.fields?.slug}`}
         >
           <Box
             style={{
@@ -57,9 +57,7 @@ export const Previous = (props: Props): React.ReactElement => {
                   {"TRABALHO ANTERIOR"}
                 </Typography>
                 <Typography style={{ textAlign: "start" }}>
-                  {props.previous === null
-                    ? ""
-                    : props.previous.frontmatter.title}
+                  {props.previous.frontmatter?.title}
                 </Typography>
               </Box>
             </Box>

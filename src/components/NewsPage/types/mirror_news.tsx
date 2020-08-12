@@ -2,11 +2,12 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "../components/expand_text"
-import { FinalNews } from "../types"
+import { SlugType } from "../types"
 import { useRequireNewImage } from "../shared/useRequireNewImage"
+import { SitePageContextNewsNodeFrontmatter } from "../../../global"
 
 interface Props {
-  current: FinalNews
+  current: SitePageContextNewsNodeFrontmatter & SlugType
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -21,47 +22,45 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const MirrorNewsComponent = (x: Props): React.ReactElement => {
+export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
   const props = x.current
   const classes = useStyles()
-  const imageSrc = useRequireNewImage(x.current.image)
-  return (
-    props.type === "MIRROR" && (
-      <div>
-        <Link
-          className={"global-news-mirror"}
-          style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-          to={"/news" + props.slug}
-        >
-          <div className={classes.lag}>
-            <div
-              style={{
-                display: "grid",
-                backgroundImage: `url(${imageSrc})`,
-              }}
-              className={classes.style}
-            >
-              <ExpandTExt
-                date={props.type}
-                title={props.title}
-                description={props.description}
-              />
-            </div>
-            <div
-              style={{
-                display: "grid",
-              }}
-              className={classes.style}
-            >
-              <ExpandTExt
-                date={props.type}
-                title={props.title}
-                description={props.description}
-              />
-            </div>
+  const imageSrc = useRequireNewImage(x.current.image || "")
+  return props.type === "MIRROR" ? (
+    <div>
+      <Link
+        className={"global-news-mirror"}
+        style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
+        to={"/news" + props.slug}
+      >
+        <div className={classes.lag}>
+          <div
+            style={{
+              display: "grid",
+              backgroundImage: `url(${imageSrc})`,
+            }}
+            className={classes.style}
+          >
+            <ExpandTExt
+              date={props.type}
+              title={props.title || ""}
+              description={props.description || ""}
+            />
           </div>
-        </Link>
-      </div>
-    )
-  )
+          <div
+            style={{
+              display: "grid",
+            }}
+            className={classes.style}
+          >
+            <ExpandTExt
+              date={props.type}
+              title={props.title || ""}
+              description={props.description || ""}
+            />
+          </div>
+        </div>
+      </Link>
+    </div>
+  ) : null
 }

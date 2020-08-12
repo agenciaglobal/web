@@ -6,7 +6,7 @@ import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
 
 interface Props {
-  projects: { "[key]": Portifolio[] }
+  projects: { [key: string]: Portifolio[] }
   value: string
 }
 
@@ -19,7 +19,7 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
   return (
     <Box className={classes.box}>
       {Object.keys(projects).map((key, index) => {
-        const inner = projects[key]
+        const inner: Portifolio[] = projects[key.toString()]
         console.log("inner")
         console.log(inner)
         return (
@@ -33,7 +33,10 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
               .filter((tile) => tile.categorie === value)
               .map((tile, idx) => {
                 /* eslint-disable  @typescript-eslint/no-var-requires */
-                const require1 = require("../../../content/" + tile.image)
+                let require1 = ""
+                if (tile?.image !== "") {
+                  require1 = require("../../../content/" + tile?.image)
+                }
                 console.log(tile)
                 return (
                   <Link

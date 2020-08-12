@@ -10,25 +10,25 @@ const useGridStyles = makeStyles(() => ({ div: { margin: "20px 0 40px" } }))
 const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
   const classes = useGridStyles()
   const { data } = props
-  const posts = data.allMdx.edges
+  const posts = data?.allMdx.edges
   return (
     <React.Fragment>
       <div className={classes.div}>
-        {posts.map(({ node }, index: number) => {
-          const title = node.frontmatter.title || node.fields.slug
+        {(posts || []).map(({ node }, index: number) => {
+          const title = node?.frontmatter?.title || ""
           return (
             <div key={index}>
               <a
                 onClick={() => {
-                  navigate("/portifolio" + node.fields.slug)
+                  void navigate("/portifolio" + node?.fields?.slug)
                 }}
               >
                 {title}
               </a>
-              <small>{node.frontmatter.date}</small>
+              <small>{node?.frontmatter?.date}</small>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: node?.frontmatter?.description || node.excerpt,
                 }}
               />
             </div>

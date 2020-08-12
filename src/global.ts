@@ -1,4 +1,5 @@
 export type Maybe<T> = T | null
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] }
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
@@ -11,8 +12,10 @@ export type Scalars = {
    * A date string, such as 2007-12-03, compliant with the ISO 8601 standard for
    * representation of dates and times using the Gregorian calendar.
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Date: any
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   JSON: any
 }
 
@@ -1523,6 +1526,7 @@ export type MdxFilterInput = {
 
 export type MdxFrontmatter = {
   title: Scalars["String"]
+  youtube?: Scalars["String"]
   path?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["Date"]>
   type?: Maybe<Scalars["String"]>
@@ -3366,7 +3370,7 @@ export type PortifolioPostBySlugQuery = {
   mdx?: Maybe<
     Pick<Mdx, "id" | "excerpt" | "body"> & {
       frontmatter?: Maybe<
-        Pick<MdxFrontmatter, "title" | "date" | "description">
+        Pick<MdxFrontmatter, "title" | "date" | "description" | "youtube">
       >
     }
   >

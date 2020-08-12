@@ -1,22 +1,17 @@
 import * as React from "react"
 import Masonry from "react-masonry-css"
-import { Maybe, Mdx } from "../../global"
 import { callBackFN } from "./shared/picker_callback"
-import { ActualNews, SlugType } from "./types"
+import { New } from "../../templates/news-post"
+import { SlugType } from "./types"
 
 interface Props {
-  news: Array<{
-    node: Pick<Mdx, "excerpt"> & {
-      fields?: Maybe<SlugType>
-      frontmatter?: Maybe<ActualNews>
-    }
-  }>
+  news?: Array<New> | null | undefined
 }
 
 export const NewsPageList = ({ news }: Props): React.ReactElement => {
-  const map = news.map((f) => ({
-    ...f.node.frontmatter,
-    slug: f.node.fields.slug,
+  const map: Array<New & SlugType> = (news || []).map((f) => ({
+    ...f?.node?.frontmatter,
+    slug: f?.node?.fields?.slug,
   }))
   return (
     <Masonry

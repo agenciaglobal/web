@@ -1,14 +1,14 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
 import { EmployeeComponent } from "./employer"
-import { Employes } from "./types"
+import { Employees } from "./types"
 
 const useGridStyles = makeStyles(() => ({
   div: { paddingTop: 50, paddingBottom: 300 },
 }))
 
 interface Props {
-  employees: Employes
+  employees: Employees
 }
 
 export const GridEmployees = ({ employees }: Props): React.ReactElement => {
