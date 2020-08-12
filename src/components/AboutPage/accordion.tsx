@@ -10,22 +10,22 @@ import { accordionData } from "./accordion_date"
 const useStylesAccordion = makeStyles((theme) => ({
   heading: {
     fontSize: "16px",
-    '@media (min-width:600px)': {
-      fontSize: '22px',
-      },
+    "@media (min-width:600px)": {
+      fontSize: "22px",
+    },
     fontWeight: theme.typography.fontWeightRegular,
   },
-  div: { 
+  div: {
     width: "100%",
     paddingBottom: 100,
-    paddingTop: 100
+    paddingTop: 100,
   },
   details: {
-    '@media (min-width:600px)': {
+    "@media (min-width:600px)": {
       padding: "0px 56px",
       display: "flex",
-      justifyContent: "flex-end"
-    }
+      justifyContent: "flex-end",
+    },
   },
   ul: {
     margin: 0,
@@ -46,7 +46,6 @@ const useStylesAccordion = makeStyles((theme) => ({
     },
   },
 }))
-
 
 export const AboutAccordion = (): React.ReactElement => {
   const classes = useStylesAccordion()

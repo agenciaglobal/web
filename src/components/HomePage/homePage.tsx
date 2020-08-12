@@ -11,7 +11,7 @@ import { Portifolio } from "./types"
 interface Props {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   all: any[]
-  projects: { [key]: Portifolio[] }
+  projects: { [key: string]: Portifolio[] }
   categories: string[]
 }
 

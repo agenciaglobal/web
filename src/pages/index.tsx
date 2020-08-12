@@ -3,19 +3,28 @@ import _ from "lodash"
 import * as React from "react"
 import { HomePage } from "../components/HomePage/homePage"
 import { HomeQueryQuery } from "../global"
+import { Portifolio } from "../components/HomePage/types"
 
 interface Props {
   data?: HomeQueryQuery
 }
 
-const usePortifolio = (data: HomeQueryQuery) => {
-  const all = data.projects.edges.map((d) => ({
+interface UsePortifolioResult {
+  all: Portifolio[]
+  projects: _.Dictionary<Portifolio[]>
+  categories: string[]
+}
+
+const usePortifolio = (
+  data: HomeQueryQuery | undefined,
+): UsePortifolioResult => {
+  const all = (data?.projects.edges || []).map((d) => ({
     ...d.node.frontmatter,
-    slug: d.node.fields.slug,
+    slug: d.node?.fields?.slug,
   }))
   return {
-    all,
-    projects: _.groupBy(all, "categorie"),
+    all: all as Portifolio[],
+    projects: _.groupBy(all as Portifolio[], "categorie"),
     categories: Object.keys(_.groupBy(all, "categorie")),
   }
 }
