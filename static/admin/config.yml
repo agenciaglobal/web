@@ -34,7 +34,7 @@ collections:
       - name: "image"
         label: "Imagem de destaque"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
       - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
       - label: "Tags"
         name: "tags"
@@ -68,7 +68,7 @@ collections:
       - label: "Logo"
         name: "image"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
         media_library:
           config:
             multiple: true
@@ -77,7 +77,7 @@ collections:
       - label: "Foto do autor"
         name: "author_image"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
         media_library:
           config:
             multiple: true
@@ -93,15 +93,32 @@ collections:
       - { name: text_1, label: "Text Principal" }
       - { name: text_2, label: "Text Secundário" }
       - { name: text_3, label: "Terceiro Text" }
+      - { name: text_4, label: "Quarto Text" }
+      - { name: youtube, label: "Youtube ID" }
       - { name: description, label: Description }
-      - label: "Youtube"
-        name: "youtube"
-        widget: "youtube"
-        APIkey: "AIzaSyCtMJUB8zK6Thy4FPgGNCzDrgR0_IEcbmQ"
+      - label: "Autor do post"
+        name: "author"
+        widget: "relation"
+        collection: "team"
+        searchFields: ["name", "about", "image"]
+        valueField: "name"
+        displayFields: ["name"]
       - label: "Image"
         name: "image"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
+      - label: "Image 1"
+        name: "image_1"
+        widget: "image"
+        default: "/content/assets/uma.png"
+      - label: "Image 2"
+        name: "image_2"
+        widget: "image"
+        default: "/content/assets/uma.png"
+      - label: "Image 3"
+        name: "image_3"
+        widget: "image"
+        default: "/content/assets/uma.png"
       - name: categorie
         label: Categorie
         widget: select
@@ -124,14 +141,14 @@ collections:
       - label: "Foto P&B"
         name: "black_image"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
         media_library:
           config:
             multiple: true
       - label: "Foto colorida"
         name: "image"
         widget: "image"
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: "/content/assets/uma.png"
         media_library:
           config:
             multiple: true

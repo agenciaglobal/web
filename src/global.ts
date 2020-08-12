@@ -1531,7 +1531,15 @@ export type MdxFrontmatter = {
   date?: Maybe<Scalars["Date"]>
   type?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
+  text_1?: Maybe<Scalars["String"]>
+  text_2?: Maybe<Scalars["String"]>
+  text_3?: Maybe<Scalars["String"]>
+  text_4?: Maybe<Scalars["String"]>
+  author?: Maybe<Scalars["String"]>
   image?: Maybe<Scalars["String"]>
+  image_1?: Maybe<Scalars["String"]>
+  image_2?: Maybe<Scalars["String"]>
+  image_3?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   job?: Maybe<Scalars["String"]>
@@ -3370,7 +3378,22 @@ export type PortifolioPostBySlugQuery = {
   mdx?: Maybe<
     Pick<Mdx, "id" | "excerpt" | "body"> & {
       frontmatter?: Maybe<
-        Pick<MdxFrontmatter, "title" | "date" | "description" | "youtube">
+        Pick<
+          MdxFrontmatter,
+          | "image"
+          | "image_1"
+          | "image_2"
+          | "image_3"
+          | "author"
+          | "title"
+          | "date"
+          | "description"
+          | "youtube"
+          | "text_1"
+          | "text_2"
+          | "text_3"
+          | "text_4"
+        >
       >
     }
   >

@@ -1,5 +1,5 @@
 ---
-path: aluga-facil
+path: iguatemi
 date: 2020-07-12T00:14:01.690Z
 title: ALUGA FÁCIL
 description: CRÉDITO REAL
