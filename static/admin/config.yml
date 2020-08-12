@@ -92,6 +92,7 @@ collections:
       - { name: title, label: Title }
       - { name: text_1, label: "Text Principal" }
       - { name: text_2, label: "Text Secundário" }
+      - { name: text_3, label: "Terceiro Text" }
       - { name: description, label: Description }
       - label: "Youtube"
         name: "youtube"
