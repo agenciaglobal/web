@@ -1,10 +1,8 @@
 name: https://beta.global.xyz
-
 on:
   push:
     branches:
       - master
-
 jobs:
   Deploy:
     runs-on: ubuntu-latest
