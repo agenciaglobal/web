@@ -1,18 +1,28 @@
 import { makeStyles } from "@material-ui/core/styles"
 
 export const useAboutSvgStyles = makeStyles(() => ({
-  container: { marginTop: 24, paddingTop: 80 },
+  container: { marginTop: 24, paddingTop: 60 },
   style: {
     fontFamily: "GSThree",
-    fontSize: "50px",
+    fontSize: "24px",
     lineHeight: "50px",
-    fontWeight: 700,
+    textAlign: "center",
+    "@media (min-width:600px)": {
+      fontSize: "50px",
+      lineHeight: "50px",
+      textAlign: "left",
+    },
   },
   another: {
     fontFamily: "GSTwo",
-    fontSize: "16px",
-    lineHeight: "50px",
-    fontWeight: 500,
+    fontSize: "14px",
+    lineHeight: "20px",
+    textAlign: "center",
+    "@media (min-width:600px)": {
+      fontSize: "16px",
+      lineHeight: "50px",
+      textAlign: "left",
+    },
   },
   box: {
     position: "relative",

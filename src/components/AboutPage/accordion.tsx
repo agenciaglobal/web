@@ -18,10 +18,13 @@ const useStylesAccordion = makeStyles((theme) => ({
   style: {
     fontFamily: "GSThree",
     textAlign: "center",
-    fontSize: "50px",
-    lineHeight: "50px",
-    // fontWeight: 700,
+    fontSize: "24px",
+    lineHeight: "30px",
     paddingTop: 100,
+    "@media (min-width:600px)": {
+      fontSize: "50px",
+      lineHeight: "50px",
+    },
   },
   div: {
     width: "100%",
@@ -60,7 +63,7 @@ export const AboutAccordion = (): React.ReactElement => {
   return (
     <React.Fragment>
       <Box lineHeight={3}>
-        <Typography className={classes.style}>COMO NÓS TRABALHAMOS</Typography>
+        <Typography className={classes.style}>NOSSAS CAPACIDADES</Typography>
       </Box>
       <div className={classes.div}>
         {accordionData.map((d, index) => (
