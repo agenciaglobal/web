@@ -33,7 +33,7 @@ text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 
 sdfsdfds
 
-![cesco](assets/10-maria-dornelles.jpg "cescp")
+![cesco](../assets/10-maria-dornelles.jpg "cescp")
 
 asddasasd
 ASDsad
