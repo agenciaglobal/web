@@ -1,5 +1,4 @@
 export type Maybe<T> = T | null
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] }
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
@@ -12,10 +11,8 @@ export type Scalars = {
    * A date string, such as 2007-12-03, compliant with the ISO 8601 standard for
    * representation of dates and times using the Gregorian calendar.
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Date: any
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   JSON: any
 }
 
@@ -671,24 +668,30 @@ export type FileFieldsEnum =
   | "childMdx___frontmatter___title"
   | "childMdx___frontmatter___path"
   | "childMdx___frontmatter___date"
-  | "childMdx___frontmatter___type"
-  | "childMdx___frontmatter___description"
+  | "childMdx___frontmatter___name"
+  | "childMdx___frontmatter___job"
+  | "childMdx___frontmatter___black_image"
   | "childMdx___frontmatter___image"
+  | "childMdx___frontmatter___tag"
+  | "childMdx___frontmatter___description"
   | "childMdx___frontmatter___image_1"
-  | "childMdx___frontmatter___text_1"
-  | "childMdx___frontmatter___text_2"
-  | "childMdx___frontmatter___tags"
-  | "childMdx___frontmatter___body"
   | "childMdx___frontmatter___image_2"
   | "childMdx___frontmatter___image_3"
+  | "childMdx___frontmatter___text_1"
+  | "childMdx___frontmatter___text_2"
   | "childMdx___frontmatter___text_3"
   | "childMdx___frontmatter___text_4"
   | "childMdx___frontmatter___author"
   | "childMdx___frontmatter___youtube"
   | "childMdx___frontmatter___categorie"
-  | "childMdx___frontmatter___name"
-  | "childMdx___frontmatter___job"
-  | "childMdx___frontmatter___black_image"
+  | "childMdx___frontmatter___creation_date"
+  | "childMdx___frontmatter___job_date"
+  | "childMdx___frontmatter___postType"
+  | "childMdx___frontmatter___type"
+  | "childMdx___frontmatter___tags"
+  | "childMdx___frontmatter___body"
+  | "childMdx___frontmatter___testimonial"
+  | "childMdx___frontmatter___author_image"
   | "childMdx___slug"
   | "childMdx___body"
   | "childMdx___excerpt"
@@ -1403,24 +1406,30 @@ export type MdxFieldsEnum =
   | "frontmatter___title"
   | "frontmatter___path"
   | "frontmatter___date"
-  | "frontmatter___type"
-  | "frontmatter___description"
+  | "frontmatter___name"
+  | "frontmatter___job"
+  | "frontmatter___black_image"
   | "frontmatter___image"
+  | "frontmatter___tag"
+  | "frontmatter___description"
   | "frontmatter___image_1"
-  | "frontmatter___text_1"
-  | "frontmatter___text_2"
-  | "frontmatter___tags"
-  | "frontmatter___body"
   | "frontmatter___image_2"
   | "frontmatter___image_3"
+  | "frontmatter___text_1"
+  | "frontmatter___text_2"
   | "frontmatter___text_3"
   | "frontmatter___text_4"
   | "frontmatter___author"
   | "frontmatter___youtube"
   | "frontmatter___categorie"
-  | "frontmatter___name"
-  | "frontmatter___job"
-  | "frontmatter___black_image"
+  | "frontmatter___creation_date"
+  | "frontmatter___job_date"
+  | "frontmatter___postType"
+  | "frontmatter___type"
+  | "frontmatter___tags"
+  | "frontmatter___body"
+  | "frontmatter___testimonial"
+  | "frontmatter___author_image"
   | "slug"
   | "body"
   | "excerpt"
@@ -1550,27 +1559,47 @@ export type MdxFrontmatter = {
   title: Scalars["String"]
   path?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["Date"]>
-  type?: Maybe<Scalars["String"]>
-  description?: Maybe<Scalars["String"]>
+  name?: Maybe<Scalars["String"]>
+  job?: Maybe<Scalars["String"]>
+  black_image?: Maybe<Scalars["String"]>
   image?: Maybe<Scalars["String"]>
+  tag?: Maybe<Scalars["String"]>
+  description?: Maybe<Scalars["String"]>
   image_1?: Maybe<Scalars["String"]>
-  text_1?: Maybe<Scalars["String"]>
-  text_2?: Maybe<Scalars["String"]>
-  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
-  body?: Maybe<Scalars["String"]>
   image_2?: Maybe<Scalars["String"]>
   image_3?: Maybe<Scalars["String"]>
+  text_1?: Maybe<Scalars["String"]>
+  text_2?: Maybe<Scalars["String"]>
   text_3?: Maybe<Scalars["String"]>
   text_4?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
   youtube?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
-  name?: Maybe<Scalars["String"]>
-  job?: Maybe<Scalars["String"]>
-  black_image?: Maybe<Scalars["String"]>
+  creation_date?: Maybe<Scalars["Date"]>
+  job_date?: Maybe<Scalars["Date"]>
+  postType?: Maybe<Scalars["String"]>
+  type?: Maybe<Scalars["String"]>
+  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
+  body?: Maybe<Scalars["String"]>
+  testimonial?: Maybe<Scalars["String"]>
+  author_image?: Maybe<Scalars["String"]>
 }
 
 export type MdxFrontmatterDateArgs = {
+  formatString?: Maybe<Scalars["String"]>
+  fromNow?: Maybe<Scalars["Boolean"]>
+  difference?: Maybe<Scalars["String"]>
+  locale?: Maybe<Scalars["String"]>
+}
+
+export type MdxFrontmatterCreation_DateArgs = {
+  formatString?: Maybe<Scalars["String"]>
+  fromNow?: Maybe<Scalars["Boolean"]>
+  difference?: Maybe<Scalars["String"]>
+  locale?: Maybe<Scalars["String"]>
+}
+
+export type MdxFrontmatterJob_DateArgs = {
   formatString?: Maybe<Scalars["String"]>
   fromNow?: Maybe<Scalars["Boolean"]>
   difference?: Maybe<Scalars["String"]>
@@ -1581,24 +1610,30 @@ export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   path?: Maybe<StringQueryOperatorInput>
   date?: Maybe<DateQueryOperatorInput>
-  type?: Maybe<StringQueryOperatorInput>
-  description?: Maybe<StringQueryOperatorInput>
+  name?: Maybe<StringQueryOperatorInput>
+  job?: Maybe<StringQueryOperatorInput>
+  black_image?: Maybe<StringQueryOperatorInput>
   image?: Maybe<StringQueryOperatorInput>
+  tag?: Maybe<StringQueryOperatorInput>
+  description?: Maybe<StringQueryOperatorInput>
   image_1?: Maybe<StringQueryOperatorInput>
-  text_1?: Maybe<StringQueryOperatorInput>
-  text_2?: Maybe<StringQueryOperatorInput>
-  tags?: Maybe<StringQueryOperatorInput>
-  body?: Maybe<StringQueryOperatorInput>
   image_2?: Maybe<StringQueryOperatorInput>
   image_3?: Maybe<StringQueryOperatorInput>
+  text_1?: Maybe<StringQueryOperatorInput>
+  text_2?: Maybe<StringQueryOperatorInput>
   text_3?: Maybe<StringQueryOperatorInput>
   text_4?: Maybe<StringQueryOperatorInput>
   author?: Maybe<StringQueryOperatorInput>
   youtube?: Maybe<StringQueryOperatorInput>
   categorie?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  job?: Maybe<StringQueryOperatorInput>
-  black_image?: Maybe<StringQueryOperatorInput>
+  creation_date?: Maybe<DateQueryOperatorInput>
+  job_date?: Maybe<DateQueryOperatorInput>
+  postType?: Maybe<StringQueryOperatorInput>
+  type?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<StringQueryOperatorInput>
+  body?: Maybe<StringQueryOperatorInput>
+  testimonial?: Maybe<StringQueryOperatorInput>
+  author_image?: Maybe<StringQueryOperatorInput>
 }
 
 export type MdxGroupConnection = {
@@ -1833,6 +1868,8 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>
+  port?: Maybe<IntQueryOperatorInput>
+  host?: Maybe<StringQueryOperatorInput>
   pathPrefix?: Maybe<StringQueryOperatorInput>
   polyfill?: Maybe<BooleanQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
@@ -1936,6 +1973,8 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars["Date"]>
   siteMetadata?: Maybe<SiteSiteMetadata>
+  port?: Maybe<Scalars["Int"]>
+  host?: Maybe<Scalars["String"]>
   pathPrefix?: Maybe<Scalars["String"]>
   polyfill?: Maybe<Scalars["Boolean"]>
   id: Scalars["ID"]
@@ -2134,6 +2173,8 @@ export type SiteFieldsEnum =
   | "siteMetadata___description"
   | "siteMetadata___siteUrl"
   | "siteMetadata___social___twitter"
+  | "port"
+  | "host"
   | "pathPrefix"
   | "polyfill"
   | "id"
@@ -2226,6 +2267,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>
+  port?: Maybe<IntQueryOperatorInput>
+  host?: Maybe<StringQueryOperatorInput>
   pathPrefix?: Maybe<StringQueryOperatorInput>
   polyfill?: Maybe<BooleanQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
@@ -2716,27 +2759,28 @@ export type SitePageFieldsEnum =
   | "pluginCreator___resolve"
   | "pluginCreator___name"
   | "pluginCreator___version"
-  | "pluginCreator___pluginOptions___plugins"
-  | "pluginCreator___pluginOptions___plugins___resolve"
-  | "pluginCreator___pluginOptions___plugins___id"
-  | "pluginCreator___pluginOptions___plugins___name"
-  | "pluginCreator___pluginOptions___plugins___version"
-  | "pluginCreator___pluginOptions___plugins___browserAPIs"
-  | "pluginCreator___pluginOptions___plugins___pluginFilepath"
-  | "pluginCreator___pluginOptions___stylesProvider___injectFirst"
-  | "pluginCreator___pluginOptions___modulePath"
   | "pluginCreator___pluginOptions___src"
   | "pluginCreator___pluginOptions___content"
   | "pluginCreator___pluginOptions___pages"
   | "pluginCreator___pluginOptions___shared"
   | "pluginCreator___pluginOptions___components"
   | "pluginCreator___pluginOptions___static"
-  | "pluginCreator___pluginOptions___cachePublic"
-  | "pluginCreator___pluginOptions___path"
-  | "pluginCreator___pluginOptions___name"
   | "pluginCreator___pluginOptions___extensions"
   | "pluginCreator___pluginOptions___gatsbyRemarkPlugins"
   | "pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve"
+  | "pluginCreator___pluginOptions___path"
+  | "pluginCreator___pluginOptions___name"
+  | "pluginCreator___pluginOptions___stylesProvider___injectFirst"
+  | "pluginCreator___pluginOptions___modulePath"
+  | "pluginCreator___pluginOptions___cachePublic"
+  | "pluginCreator___pluginOptions___languages"
+  | "pluginCreator___pluginOptions___defaultLanguage"
+  | "pluginCreator___pluginOptions___i18nextOptions___language"
+  | "pluginCreator___pluginOptions___i18nextOptions___ns"
+  | "pluginCreator___pluginOptions___i18nextOptions___defaultNS"
+  | "pluginCreator___pluginOptions___i18nextOptions___returnObjects"
+  | "pluginCreator___pluginOptions___i18nextOptions___debug"
+  | "pluginCreator___pluginOptions___i18nextOptions___nsSeparator"
   | "pluginCreator___pluginOptions___short_name"
   | "pluginCreator___pluginOptions___start_url"
   | "pluginCreator___pluginOptions___background_color"
@@ -2748,14 +2792,6 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___legacy"
   | "pluginCreator___pluginOptions___theme_color_in_head"
   | "pluginCreator___pluginOptions___cacheDigest"
-  | "pluginCreator___pluginOptions___languages"
-  | "pluginCreator___pluginOptions___defaultLanguage"
-  | "pluginCreator___pluginOptions___i18nextOptions___language"
-  | "pluginCreator___pluginOptions___i18nextOptions___ns"
-  | "pluginCreator___pluginOptions___i18nextOptions___defaultNS"
-  | "pluginCreator___pluginOptions___i18nextOptions___returnObjects"
-  | "pluginCreator___pluginOptions___i18nextOptions___debug"
-  | "pluginCreator___pluginOptions___i18nextOptions___nsSeparator"
   | "pluginCreator___pluginOptions___codegen"
   | "pluginCreator___pluginOptions___fileName"
   | "pluginCreator___pluginOptions___pathCheck"
@@ -2944,29 +2980,31 @@ export type SitePluginFieldsEnum =
   | "resolve"
   | "name"
   | "version"
-  | "pluginOptions___plugins"
-  | "pluginOptions___plugins___resolve"
-  | "pluginOptions___plugins___id"
-  | "pluginOptions___plugins___name"
-  | "pluginOptions___plugins___version"
-  | "pluginOptions___plugins___browserAPIs"
-  | "pluginOptions___plugins___pluginFilepath"
-  | "pluginOptions___stylesProvider___injectFirst"
-  | "pluginOptions___modulePath"
   | "pluginOptions___src"
   | "pluginOptions___content"
   | "pluginOptions___pages"
   | "pluginOptions___shared"
   | "pluginOptions___components"
   | "pluginOptions___static"
-  | "pluginOptions___cachePublic"
-  | "pluginOptions___path"
-  | "pluginOptions___name"
   | "pluginOptions___extensions"
   | "pluginOptions___gatsbyRemarkPlugins"
   | "pluginOptions___gatsbyRemarkPlugins___resolve"
   | "pluginOptions___gatsbyRemarkPlugins___options___maxWidth"
-  | "pluginOptions___gatsbyRemarkPlugins___options___wrapperStyle"
+  | "pluginOptions___path"
+  | "pluginOptions___name"
+  | "pluginOptions___stylesProvider___injectFirst"
+  | "pluginOptions___modulePath"
+  | "pluginOptions___cachePublic"
+  | "pluginOptions___languages"
+  | "pluginOptions___defaultLanguage"
+  | "pluginOptions___i18nextOptions___language"
+  | "pluginOptions___i18nextOptions___ns"
+  | "pluginOptions___i18nextOptions___defaultNS"
+  | "pluginOptions___i18nextOptions___returnObjects"
+  | "pluginOptions___i18nextOptions___debug"
+  | "pluginOptions___i18nextOptions___react___wait"
+  | "pluginOptions___i18nextOptions___interpolation___escapeValue"
+  | "pluginOptions___i18nextOptions___nsSeparator"
   | "pluginOptions___short_name"
   | "pluginOptions___start_url"
   | "pluginOptions___background_color"
@@ -2978,16 +3016,6 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___legacy"
   | "pluginOptions___theme_color_in_head"
   | "pluginOptions___cacheDigest"
-  | "pluginOptions___languages"
-  | "pluginOptions___defaultLanguage"
-  | "pluginOptions___i18nextOptions___language"
-  | "pluginOptions___i18nextOptions___ns"
-  | "pluginOptions___i18nextOptions___defaultNS"
-  | "pluginOptions___i18nextOptions___returnObjects"
-  | "pluginOptions___i18nextOptions___debug"
-  | "pluginOptions___i18nextOptions___react___wait"
-  | "pluginOptions___i18nextOptions___interpolation___escapeValue"
-  | "pluginOptions___i18nextOptions___nsSeparator"
   | "pluginOptions___codegen"
   | "pluginOptions___fileName"
   | "pluginOptions___pathCheck"
@@ -3106,22 +3134,24 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 }
 
 export type SitePluginPluginOptions = {
-  plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>
-  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProvider>
-  modulePath?: Maybe<Scalars["String"]>
   src?: Maybe<Scalars["String"]>
   content?: Maybe<Scalars["String"]>
   pages?: Maybe<Scalars["String"]>
   shared?: Maybe<Scalars["String"]>
   components?: Maybe<Scalars["String"]>
   static?: Maybe<Scalars["String"]>
-  cachePublic?: Maybe<Scalars["Boolean"]>
-  path?: Maybe<Scalars["String"]>
-  name?: Maybe<Scalars["String"]>
   extensions?: Maybe<Array<Maybe<Scalars["String"]>>>
   gatsbyRemarkPlugins?: Maybe<
     Array<Maybe<SitePluginPluginOptionsGatsbyRemarkPlugins>>
   >
+  path?: Maybe<Scalars["String"]>
+  name?: Maybe<Scalars["String"]>
+  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProvider>
+  modulePath?: Maybe<Scalars["String"]>
+  cachePublic?: Maybe<Scalars["Boolean"]>
+  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
+  defaultLanguage?: Maybe<Scalars["String"]>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
   short_name?: Maybe<Scalars["String"]>
   start_url?: Maybe<Scalars["String"]>
   background_color?: Maybe<Scalars["String"]>
@@ -3133,31 +3163,30 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars["Boolean"]>
   theme_color_in_head?: Maybe<Scalars["Boolean"]>
   cacheDigest?: Maybe<Scalars["String"]>
-  languages?: Maybe<Array<Maybe<Scalars["String"]>>>
-  defaultLanguage?: Maybe<Scalars["String"]>
-  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>
   codegen?: Maybe<Scalars["Boolean"]>
   fileName?: Maybe<Scalars["String"]>
   pathCheck?: Maybe<Scalars["Boolean"]>
 }
 
 export type SitePluginPluginOptionsFilterInput = {
-  plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>
-  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProviderFilterInput>
-  modulePath?: Maybe<StringQueryOperatorInput>
   src?: Maybe<StringQueryOperatorInput>
   content?: Maybe<StringQueryOperatorInput>
   pages?: Maybe<StringQueryOperatorInput>
   shared?: Maybe<StringQueryOperatorInput>
   components?: Maybe<StringQueryOperatorInput>
   static?: Maybe<StringQueryOperatorInput>
-  cachePublic?: Maybe<BooleanQueryOperatorInput>
-  path?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
   extensions?: Maybe<StringQueryOperatorInput>
   gatsbyRemarkPlugins?: Maybe<
     SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
   >
+  path?: Maybe<StringQueryOperatorInput>
+  name?: Maybe<StringQueryOperatorInput>
+  stylesProvider?: Maybe<SitePluginPluginOptionsStylesProviderFilterInput>
+  modulePath?: Maybe<StringQueryOperatorInput>
+  cachePublic?: Maybe<BooleanQueryOperatorInput>
+  languages?: Maybe<StringQueryOperatorInput>
+  defaultLanguage?: Maybe<StringQueryOperatorInput>
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
   short_name?: Maybe<StringQueryOperatorInput>
   start_url?: Maybe<StringQueryOperatorInput>
   background_color?: Maybe<StringQueryOperatorInput>
@@ -3169,9 +3198,6 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>
   cacheDigest?: Maybe<StringQueryOperatorInput>
-  languages?: Maybe<StringQueryOperatorInput>
-  defaultLanguage?: Maybe<StringQueryOperatorInput>
-  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>
   codegen?: Maybe<BooleanQueryOperatorInput>
   fileName?: Maybe<StringQueryOperatorInput>
   pathCheck?: Maybe<BooleanQueryOperatorInput>
@@ -3193,12 +3219,10 @@ export type SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput = {
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
   maxWidth?: Maybe<Scalars["Int"]>
-  wrapperStyle?: Maybe<Scalars["String"]>
 }
 
 export type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>
-  wrapperStyle?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePluginPluginOptionsI18nextOptions = {
@@ -3239,28 +3263,6 @@ export type SitePluginPluginOptionsI18nextOptionsReact = {
 
 export type SitePluginPluginOptionsI18nextOptionsReactFilterInput = {
   wait?: Maybe<BooleanQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsPlugins = {
-  resolve?: Maybe<Scalars["String"]>
-  id?: Maybe<Scalars["String"]>
-  name?: Maybe<Scalars["String"]>
-  version?: Maybe<Scalars["String"]>
-  browserAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
-  pluginFilepath?: Maybe<Scalars["String"]>
-}
-
-export type SitePluginPluginOptionsPluginsFilterInput = {
-  resolve?: Maybe<StringQueryOperatorInput>
-  id?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
-  browserAPIs?: Maybe<StringQueryOperatorInput>
-  pluginFilepath?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsPluginsFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsPluginsFilterInput>
 }
 
 export type SitePluginPluginOptionsStylesProvider = {

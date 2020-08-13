@@ -3,7 +3,7 @@ backend:
   repo: agenciaglobal/web
 
 media_folder: content/assets
-public_folder: assets
+public_folder: ../assets
 
 collections:
   - name: news

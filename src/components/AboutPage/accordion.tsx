@@ -69,15 +69,13 @@ export const AboutAccordion = (): React.ReactElement => {
               <Typography className={classes.heading}>{d.title}</Typography>
             </AccordionSummary>
             <AccordionDetails className={classes.details}>
-              <Typography>
-                <ul className={classes.ul}>
-                  {d.text.map((item, index) => (
-                    <li key={index} className={classes.li}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </Typography>
+              <ul className={classes.ul}>
+                {d.text.map((item, index) => (
+                  <li key={index} className={classes.li}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </AccordionDetails>
           </Accordion>
         ))}

@@ -21,6 +21,7 @@ const NewsPostTemplate = (props: Props): React.ReactElement => {
   const news: Maybe<SitePageContextNews>[] | null | undefined =
     props.pageContext.news
   const body = post?.mdx?.body || ""
+  console.log(post?.mdx)
   return (
     <React.Fragment>
       <NewsContent body={body} current={post} news={news} />
