@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
-    padding: 0
+    padding: 0,
   },
   div: {
     margin: 2,

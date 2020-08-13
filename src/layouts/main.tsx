@@ -83,7 +83,7 @@ export const ActualLayout = ({
             zIndex: 1500,
           }}
         >
-        <SideFooter/>
+          <SideFooter />
         </div>
       </Hidden>
       <Footer />
