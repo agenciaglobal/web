@@ -6,9 +6,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   SvgIcon: {
     fontSize: 22,
     fill: theme.custom.grey1,
-    // "&:hover": {
-    //   fill: "#FFCC00",
-    // },
+    "&:hover": {
+      fill: "#FFCC00",
+    },
   },
   a: {
     background: "transparent",
@@ -19,29 +19,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   container: {
     justifyContent: "center",
     display: "flex",
+    flexDirection: "column",
+    padding: 0
   },
   div: {
-    margin: 12,
-  },
-  primaryText: {
-    color: theme.palette.primary.contrastText,
-    fontFamily: "GSThree",
-    fontSize: 12,
-    marginBottom: 4,
-  },
-  secondaryText: {
-    fontFamily: "Montserrat, sans-serif",
-    fontSize: 12,
-    color: theme.custom.greyAlpha,
+    margin: 2,
   },
 }))
 
-const Footer = (): React.ReactElement => {
+const SideFooter = (): React.ReactElement => {
   const classes = useStyles()
 
   return (
     <Fragment>
-      <Hidden smUp>
+      <Hidden smDown>
         <Container className={classes.container}>
           <div className={classes.div}>
             <a
@@ -93,27 +84,8 @@ const Footer = (): React.ReactElement => {
           </div>
         </Container>
       </Hidden>
-      <Container
-        style={{
-          textAlign: "center",
-          paddingBottom: 40,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Typography className={classes.primaryText}>
-          {new Date().getFullYear()} - AGÊNCIA GLOBAL
-        </Typography>
-        <Typography variant="body2" className={classes.secondaryText}>
-          Todos os direitos reservados.
-        </Typography>
-        <div
-          style={{ height: 1, width: 165, background: "#FFCC00", marginTop: 6 }}
-        />
-      </Container>
     </Fragment>
   )
 }
 
-export default Footer
+export default SideFooter

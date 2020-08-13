@@ -51,7 +51,7 @@ export const LayoutHeader = ({
             <img
               src={lightMode === "light" ? logoblack : logo}
               alt="logo-black"
-              style={{ margin: "16px 32px 16px 0px", height: 100 }}
+              style={{ margin: "32px 32px 0px 0px", height: 100 }}
             />
           </Link>
           <Box
@@ -84,10 +84,10 @@ export const LayoutHeader = ({
                 style={{ paddingLeft: 24 }}
               />
             </ul>
-            <ThemeSwitch
+            {/* <ThemeSwitch
               lightMode={lightMode}
               toggleLightMode={toggleLightMode}
-            />
+            /> */}
           </Box>
         </Toolbar>
       </AppBar>

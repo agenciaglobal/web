@@ -10,6 +10,7 @@ import RightDrawer from "components/LayoutRightDrawer/rightDrawer"
 import { useStyles } from "./styles"
 import Footer from "../components/LayoutFooter/footer"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
+import SideFooter from "components/LayoutFooter/side-footer"
 
 interface Props {
   uri: string
@@ -63,13 +64,26 @@ export const ActualLayout = ({
             position: "fixed",
             bottom: 20,
             right: 33,
-            zIndex: 1500
+            zIndex: 1500,
           }}
         >
-        <ThemeSwitch
-          lightMode={lightMode}
-          toggleLightMode={toggleLightMode}   
-        />
+          <ThemeSwitch
+            lightMode={lightMode}
+            toggleLightMode={toggleLightMode}
+          />
+        </div>
+      </Hidden>
+      <Hidden smDown>
+        <div
+          style={{
+            display: "block",
+            position: "fixed",
+            bottom: 16,
+            left: 33,
+            zIndex: 1500,
+          }}
+        >
+        <SideFooter/>
         </div>
       </Hidden>
       <Footer />
