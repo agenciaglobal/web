@@ -1,7 +1,7 @@
 import Grid from "@material-ui/core/Grid"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
-import aboutImage from "../../../static/about.png"
+import aboutImage from "static/about.png"
 
 const useGridStyles = makeStyles(() => ({
   grid: {

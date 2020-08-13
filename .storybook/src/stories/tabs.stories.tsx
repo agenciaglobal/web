@@ -9,25 +9,27 @@ export default {
 
 const defaultItens = ["WORK", "CLIENT"]
 
-export const desktop = ({ setVal, val, categories }) => {
+interface Props {
+  setValue: (n: number) => void
+  value: number
+  categories: string[]
+}
+
+export const desktop = ({ setValue, value, categories }: Props) => {
   return (
     <DesktopTabs
-      setValue={setVal}
-      value={val === undefined ? 0 : val}
-      categories={(categories === undefined ? defaultItens : categories).map(
-        (r) => r.name,
-      )}
+      setValue={setValue}
+      value={value === undefined ? 0 : value }
+      categories={categories === undefined ? defaultItens : categories}
     />
   )
 }
 
-export const mobile = ({ setVal, val, categories }) => (
+export const mobile = ({ setValue, value, categories }: Props) => (
   <MobileSelect
-    setValue={setVal}
-    value={val === undefined ? 0 : val}
-    categories={(categories === undefined ? defaultItens : categories).map(
-      (r) => r.name,
-    )}
+    setValue={setValue}
+    value={value === undefined ? 0 : value}
+    categories={categories === undefined ? defaultItens : categories}
   />
 )
 
@@ -42,7 +44,7 @@ const controls = {
     rowType: {
       name: { type: ControlTypes.TEXT },
     },
-    value: [{ name: "Laptop" }, { name: "Book" }, { name: "Whiskey" }],
+    value: ["Laptop", "Book", "Whiskey"],
   },
   setVal: {
     type: ControlTypes.BUTTON,

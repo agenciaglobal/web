@@ -1,9 +1,8 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import { graphql, Link, navigate } from "gatsby"
 import * as React from "react"
-
-import Button from "../components/Button/button"
-import { BlogQueryQuery } from "../global"
+import Button from "components/Button/button"
+import { BlogQueryQuery } from "global"
 
 const useGridStyles = makeStyles(() => ({ div: { margin: "20px 0 40px" } }))
 

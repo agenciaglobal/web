@@ -2,8 +2,8 @@ import { Container, Drawer } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { LanguageSwitcher } from "../../LanguageSwitcher/LanguageSwitcher"
-import { ThemeSwitch } from "../../ThemeSwitch/switch"
+import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher"
+import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
 
 const useStylesV2 = makeStyles((theme: Theme) => ({

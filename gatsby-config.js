@@ -39,7 +39,11 @@ module.exports = {
       resolve: "gatsby-plugin-root-import",
       options: {
         src: path.join(__dirname, "src"),
+        content: path.join(__dirname, "content"),
         pages: path.join(__dirname, "src/pages"),
+        shared: path.join(__dirname, "src/shared"),
+        components: path.join(__dirname, "src/components"),
+        static: path.join(__dirname, "static"),
       },
     },
     {
@@ -159,7 +163,7 @@ module.exports = {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         codegen: true,
-        fileName: `src/global.ts`,
+        fileName: `src/global.d.ts`,
       },
     },
   ],

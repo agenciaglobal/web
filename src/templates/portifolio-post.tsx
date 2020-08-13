@@ -2,14 +2,14 @@ import { Typography } from "@material-ui/core"
 import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
 import React from "react"
-import { PortifolioSwitcher } from "../components/PortifolioSwitcher/portifolioSwticher"
-import { PortifolioPostBySlugQuery, SitePageContext } from "../global"
+import { PortifolioSwitcher } from "components/PortifolioSwitcher/portifolioSwticher"
+import { PortifolioPostBySlugQuery, SitePageContext } from "global"
 import YouTube from "react-youtube"
 import Box from "@material-ui/core/Box"
 import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
-import { useImageRequire } from "./use-image-require"
-import { LongMontsetrratText } from "../components/NewsContent/newsContant"
+import { LongMontsetrratText } from "components/NewsContent/newsContant"
+import { useDynamicImageImport } from "components/HomePage/grid"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -141,10 +141,11 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-  const image = useImageRequire(data?.mdx?.frontmatter?.image)
-  const image1 = useImageRequire(data?.mdx?.frontmatter?.image_1)
-  const image2 = useImageRequire(data?.mdx?.frontmatter?.image_2)
-  const image3 = useImageRequire(data?.mdx?.frontmatter?.image_3)
+  const image = useDynamicImageImport(data?.mdx?.frontmatter?.image || "")
+  const image1 = useDynamicImageImport(data?.mdx?.frontmatter?.image_1 || "")
+
+  const image2 = useDynamicImageImport(data?.mdx?.frontmatter?.image_2 || "")
+  const image3 = useDynamicImageImport(data?.mdx?.frontmatter?.image_3 || "")
   return (
     <React.Fragment>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>

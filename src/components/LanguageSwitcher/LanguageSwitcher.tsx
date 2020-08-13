@@ -49,7 +49,7 @@ export const useStylesClasses = makeStyles((theme: Theme) =>
   }),
 )
 
-type SuporttedLanguages = "pt" | "en"
+export type SuporttedLanguages = "pt" | "en"
 
 interface Props {
   style?: React.CSSProperties

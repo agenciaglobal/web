@@ -2,9 +2,9 @@ import { AppBar, Hidden } from "@material-ui/core"
 import Toolbar from "@material-ui/core/Toolbar"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
-import logoBlack from "../../../../static/logo-black.png"
-import logo from "../../../../static/logo-white.png"
-import mapGlobal from "../../../../static/map.png"
+import logoBlack from "static/logo-black.png"
+import logo from "static/logo-white.png"
+import mapGlobal from "static/map.png"
 import { CloseButton } from "./close"
 
 interface Props {

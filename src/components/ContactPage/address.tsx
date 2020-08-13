@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import * as React from "react"
-import salaGlobal from "../../../static/sala_global.png"
+import salaGlobal from "static/sala_global.png"
 
 export const AddressComponent = (): React.ReactElement => (
   <Grid

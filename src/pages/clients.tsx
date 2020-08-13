@@ -1,13 +1,14 @@
 import { graphql } from "gatsby"
 import React from "react"
-import { ClientPage } from "../components/ClientPage/clientPage"
+import { ClientPage } from "components/ClientPage/clientPage"
+import { ClientQueryQuery } from "global"
 
-const Clients = (props: {
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
-  data: any
-}): React.ReactElement => {
-  const clients = props.data.allMdx.edges.map((f) => f.node.frontmatter)
-  return <ClientPage clients={clients} />
+const Clients = (props: { data: ClientQueryQuery }): React.ReactElement => {
+  return (
+    <ClientPage
+      clients={props.data.allMdx.edges.map((f) => f.node.frontmatter)}
+    />
+  )
 }
 
 export default Clients

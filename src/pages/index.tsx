@@ -1,9 +1,9 @@
 import { graphql } from "gatsby"
 import _ from "lodash"
 import * as React from "react"
-import { HomePage } from "../components/HomePage/homePage"
-import { HomeQueryQuery } from "../global"
-import { Portifolio } from "../components/HomePage/types"
+import { HomePage } from "components/HomePage/homePage"
+import { HomeQueryQuery } from "global"
+import { Portifolio } from "components/HomePage/types"
 
 interface Props {
   data?: HomeQueryQuery

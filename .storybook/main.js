@@ -1,13 +1,11 @@
-const path = require('path')
-
 module.exports = {
-  stories: ['./src/**/*.stories.(tsx|mdx)'],
+  stories: ["./src/**/*.stories.(tsx|mdx)"],
   addons: [
-    '@storybook/addon-viewport/register',
+    "@storybook/addon-viewport/register",
     {
-      name: '@component-controls/storybook',
+      name: "@component-controls/storybook",
       options: {
-        webpack: ['instrument', 'react-docgen-typescript'],
+        webpack: ["instrument", "react-docgen-typescript"],
       },
     },
   ],

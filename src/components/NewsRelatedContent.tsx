@@ -5,7 +5,8 @@ import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { ExpandTExt } from "./NewsPage/components/expand_text"
-import { New } from "../templates/news-post"
+import { Maybe, SitePageContextNews, SitePageContextNewsNode } from "global"
+import { useDynamicImageImport } from "components/HomePage/grid"
 
 export const useStyles = makeStyles((theme: Theme) => ({
   type: {
@@ -17,8 +18,29 @@ export const useStyles = makeStyles((theme: Theme) => ({
     height: 660,
   },
 }))
+
+function NewComponent(props: {
+  el: Maybe<SitePageContextNewsNode> | null | undefined
+}) {
+  const image = useDynamicImageImport(props.el?.frontmatter?.image || "")
+  return (
+    <Link
+      style={{ textDecoration: "none" }}
+      to={"/news" + props.el?.fields?.slug}
+    >
+      <div className={`menu-item`} style={{ background: `url(${image})` }}>
+        <ExpandTExt
+          date={props.el?.frontmatter?.date || ""}
+          title={props.el?.frontmatter?.title || ""}
+          description={props.el?.frontmatter?.description || ""}
+        />
+      </div>
+    </Link>
+  )
+}
+
 export const NewsRelatedContent = (props: {
-  news?: Array<New> | null | undefined
+  news?: Array<Maybe<SitePageContextNews>> | null | undefined
 }): React.ReactElement => {
   const classes = useStyles()
   return (
@@ -42,25 +64,7 @@ export const NewsRelatedContent = (props: {
           .map((d) => d?.node)
           .map((el, index) => {
             /* eslint-disable  @typescript-eslint/no-var-requires */
-            const image = require("../../content/" + el?.frontmatter?.image)
-            return (
-              <Link
-                style={{ textDecoration: "none" }}
-                key={index}
-                to={"/news" + el?.fields?.slug}
-              >
-                <div
-                  className={`menu-item`}
-                  style={{ background: `url(${image})` }}
-                >
-                  <ExpandTExt
-                    date={el?.frontmatter?.date || ""}
-                    title={el?.frontmatter?.title || ""}
-                    description={el?.frontmatter?.description || ""}
-                  />
-                </div>
-              </Link>
-            )
+            return <NewComponent key={index} el={el} />
           })}
       />
     </Box>

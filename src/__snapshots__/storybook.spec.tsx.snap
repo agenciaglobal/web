@@ -50,7 +50,9 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
       >
         <span
           className="MuiTab-wrapper makeStyles-wrapper-6"
-        />
+        >
+          WORK
+        </span>
         <span
           className="PrivateTabIndicator-root-7 PrivateTabIndicator-colorSecondary-9 MuiTabs-indicator"
           style={Object {}}
@@ -80,7 +82,9 @@ exports[`Storyshots Home Categories Selector Desktop 1`] = `
       >
         <span
           className="MuiTab-wrapper makeStyles-wrapper-6"
-        />
+        >
+          CLIENT
+        </span>
       </button>
     </div>
   </div>
@@ -102,13 +106,7 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
     role="button"
     tabIndex={0}
   >
-    <span
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "&#8203;",
-        }
-      }
-    />
+    WORK
   </div>
   <input
     aria-hidden={true}
