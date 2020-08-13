@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { Container, Typography, SvgIcon, Hidden } from "@material-ui/core"
+import { Container, SvgIcon, Hidden } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 
 const useStyles = makeStyles((theme: Theme) => ({

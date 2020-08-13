@@ -13,18 +13,15 @@ import {
   SuporttedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
-import { ThemeSwitch } from "components/ThemeSwitch/switch"
 
 interface Props {
   lightMode: LightMode
-  toggleLightMode: () => void
   uri: string
 }
 
 export const LayoutHeader = ({
   lightMode,
   uri,
-  toggleLightMode,
 }: Props): React.ReactElement => {
   const { changeLanguage, language } = useI18next()
   const isContact = uri.includes("/contact")
