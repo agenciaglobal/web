@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: 50,
     height: 90,
     borderRadius: 0,
-    background: theme.custom.grey2,
+    background: theme.palette.primary.main,
     boxShadow: "none",
     display: "flex",
     flexWrap: "wrap",

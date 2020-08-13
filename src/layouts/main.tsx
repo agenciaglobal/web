@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core"
+import { Container, Hidden } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import * as React from "react"
 import * as classNames from "classnames"
@@ -9,6 +9,7 @@ import LeftDrawer from "components/LayoutLeftDrawer/leftDrawer"
 import RightDrawer from "components/LayoutRightDrawer/rightDrawer"
 import { useStyles } from "./styles"
 import Footer from "../components/LayoutFooter/footer"
+import { ThemeSwitch } from "components/ThemeSwitch/switch"
 
 interface Props {
   uri: string
@@ -55,6 +56,22 @@ export const ActualLayout = ({
       >
         <Box>{children}</Box>
       </Container>
+      <Hidden smDown>
+        <div
+          style={{
+            display: "block",
+            position: "fixed",
+            bottom: 20,
+            right: 33,
+            zIndex: 1500
+          }}
+        >
+        <ThemeSwitch
+          lightMode={lightMode}
+          toggleLightMode={toggleLightMode}   
+        />
+        </div>
+      </Hidden>
       <Footer />
     </div>
   )
