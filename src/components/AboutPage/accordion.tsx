@@ -21,7 +21,7 @@ const useStylesAccordion = makeStyles((theme) => ({
     fontSize: "50px",
     lineHeight: "50px",
     // fontWeight: 700,
-    paddingTop: 100
+    paddingTop: 100,
   },
   div: {
     width: "100%",
@@ -64,22 +64,22 @@ export const AboutAccordion = (): React.ReactElement => {
       </Box>
       <div className={classes.div}>
         {accordionData.map((d, index) => (
-            <Accordion key={index}>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography className={classes.heading}>{d.title}</Typography>
-              </AccordionSummary>
-              <AccordionDetails className={classes.details}>
-                <Typography>
-                  <ul className={classes.ul}>
-                    {d.text.map((item, index) => (
-                      <li key={index} className={classes.li}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
+          <Accordion key={index}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography className={classes.heading}>{d.title}</Typography>
+            </AccordionSummary>
+            <AccordionDetails className={classes.details}>
+              <Typography>
+                <ul className={classes.ul}>
+                  {d.text.map((item, index) => (
+                    <li key={index} className={classes.li}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         ))}
       </div>
     </React.Fragment>

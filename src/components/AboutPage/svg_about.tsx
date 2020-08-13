@@ -2,10 +2,15 @@ import { Typography } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import * as React from "react"
 import { useAboutSvgStyles } from "./about_styles"
-// import { SVGGlobalCool } from "./svg"
+import { LightMode } from "shared/theme"
 import video from "../../../static/videos/mov.mp4"
+import videoDark from "../../../static/videos/mov-dark.mp4"
 
-export const SVGAbout = (): React.ReactElement => {
+interface Props {
+  lightMode: LightMode
+}
+
+export const SVGAbout = ({lightMode}:Props ): React.ReactElement => {
   const classes = useAboutSvgStyles()
   return (
     <Box className={classes.container}>
@@ -18,13 +23,12 @@ export const SVGAbout = (): React.ReactElement => {
         </Typography>
       </Box>
       <Box className={classes.box}>
-        {/* <SVGGlobalCool/> */}
         <video
-          src={video}
-          autoPlay
-          loop
+          src={lightMode == "light" ? video : videoDark }
           muted
           playsInline
+          autoPlay
+          loop
           style={{ maxWidth: 900, width: "100%", height: "auto" }}
         />
       </Box>
