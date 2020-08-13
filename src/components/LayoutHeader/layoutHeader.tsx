@@ -13,19 +13,13 @@ import {
   SuporttedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
-import { ThemeSwitch } from "components/ThemeSwitch/switch"
 
 interface Props {
   lightMode: LightMode
-  toggleLightMode: () => void
   uri: string
 }
 
-export const LayoutHeader = ({
-  lightMode,
-  uri,
-  toggleLightMode,
-}: Props): React.ReactElement => {
+export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
   const { changeLanguage, language } = useI18next()
   const isContact = uri.includes("/contact")
   console.log(isContact)
@@ -51,7 +45,7 @@ export const LayoutHeader = ({
             <img
               src={lightMode === "light" ? logoblack : logo}
               alt="logo-black"
-              style={{ margin: "16px 32px 16px 0px", height: 100 }}
+              style={{ margin: "32px 32px 0px 0px", height: 100 }}
             />
           </Link>
           <Box
@@ -84,10 +78,10 @@ export const LayoutHeader = ({
                 style={{ paddingLeft: 24 }}
               />
             </ul>
-            <ThemeSwitch
+            {/* <ThemeSwitch
               lightMode={lightMode}
               toggleLightMode={toggleLightMode}
-            />
+            /> */}
           </Box>
         </Toolbar>
       </AppBar>

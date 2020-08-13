@@ -8,8 +8,8 @@ const useStyles = makeStyles(() =>
     drawerPaper: {
       // zIndex: -2,
       // background: theme.palette.primary.main,
-      height: "calc( 100vh - 155px )",
-      marginTop: 155,
+      height: "100vh",
+      // marginBottom: 155,
       width: 120,
       border: "none",
       display: "flex",
@@ -27,7 +27,7 @@ const useStyles = makeStyles(() =>
       listStyle: "none",
       display: "flex",
       justifyContent: "space-evenly",
-      margin: 16,
+      margin: "16px 16px 16px 80px",
     },
   }),
 )
