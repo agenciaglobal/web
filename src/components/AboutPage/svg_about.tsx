@@ -10,7 +10,7 @@ interface Props {
   lightMode: LightMode
 }
 
-export const SVGAbout = ({lightMode}:Props ): React.ReactElement => {
+export const SVGAbout = ({ lightMode }: Props): React.ReactElement => {
   const classes = useAboutSvgStyles()
   return (
     <Box className={classes.container}>
@@ -24,7 +24,7 @@ export const SVGAbout = ({lightMode}:Props ): React.ReactElement => {
       </Box>
       <Box className={classes.box}>
         <video
-          src={lightMode == "light" ? video : videoDark }
+          src={lightMode == "light" ? video : videoDark}
           muted
           playsInline
           autoPlay
