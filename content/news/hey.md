@@ -5,13 +5,11 @@ title: hey
 description: fe
 postType: news
 type: HALF
-image: assets/25-matheus-motta-.png
+image: ../assets/8-josué-orsolin.png
 tags:
   - yay!!
 author: João Paulo Rocha
 ---
 laõoo
 
-
-
-![](assets/www-2.png)
+![](../assets/1000x550.png)

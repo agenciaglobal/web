@@ -40,9 +40,11 @@ export const NewsContent = (props: {
       <MDXRenderer>{props.body}</MDXRenderer>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
         <Typography>{"Tags"}</Typography>
-        {post?.frontmatter?.tags?.map((tag: string, index) => {
-          return <React.Fragment key={index}>{tag + " "}</React.Fragment>
-        })}
+        {(post?.frontmatter?.tags || [])
+          .filter((d) => d)
+          .map((tag: string, index) => {
+            return <React.Fragment key={index}>{tag + " "}</React.Fragment>
+          })}
       </Box>
     </React.Fragment>
   )
