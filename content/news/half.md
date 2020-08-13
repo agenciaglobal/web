@@ -3,9 +3,13 @@ path: bianca-legal
 
 date: 2020-07-12T00:33:11.387Z
 
-title: Platea dictumst vestibulum rhoncus est pellentesque elit. 
+title: Platea dictumst vestibulum rhoncus est pellentesque elit.
+
+author: article
 
 type: HALF
+
+postType: article
 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -22,7 +26,6 @@ body: dksdjfnsdjfkksd ksdjfnsdkf sdfsdfbb sdkfnjsdf
 tags:
   - sdfsd
   - df
-
 ---
 
 zdfkjnsdfkjnsdf
