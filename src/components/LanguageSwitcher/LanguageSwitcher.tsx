@@ -3,7 +3,6 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 
 import React, { Fragment } from "react"
-// import { ThemeConsumer } from "styled-components"
 
 export const useStylesClasses = makeStyles((theme: Theme) =>
   createStyles({
