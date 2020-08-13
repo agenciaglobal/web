@@ -6,10 +6,16 @@ import * as React from "react"
 
 const useGridStyles = makeStyles(() => ({
   div: {
+    textAlign: "justify",
     fontFamily: "GSTwo",
-    fontSize: "16px",
-    lineHeight: "25px",
-    paddingBottom: 20,
+    fontSize: "14px",
+    lineHeight: "28px",
+    paddingBottom: 28,
+    "@media (min-width:600px)": {
+      fontSize: "16px",
+      lineHeight: "36px",
+      paddingBottom: 36,
+    },
   },
   div2: {
     fontFamily: "GSThree",
@@ -19,12 +25,15 @@ const useGridStyles = makeStyles(() => ({
       fontSize: "24px",
     },
   },
+  grid: {
+    padding: 0,
+  },
 }))
 
 export const AboutTextGrid = (): React.ReactElement => {
   const classes = useGridStyles()
   return (
-    <Grid item xs={12} sm={8}>
+    <Grid className={classes.grid} item xs={12} sm={7}>
       <Box lineHeight={3}>
         <Typography className={classes.div}>
           Em um contexto onde a única certeza é a mudança e sua velocidade,

@@ -20,7 +20,7 @@ const useGridStyles = makeStyles(() => ({
 export const AboutImageGrid = (): React.ReactElement => {
   const classes = useGridStyles()
   return (
-    <Grid item xs={12} sm={4} className={classes.grid}>
+    <Grid item xs={12} sm={5} className={classes.grid}>
       <img className={classes.image} src={aboutImage} alt="" />
     </Grid>
   )
