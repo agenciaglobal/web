@@ -28,8 +28,8 @@ const useStylesAccordion = makeStyles((theme) => ({
   },
   div: {
     width: "100%",
-    paddingBottom: 100,
-    paddingTop: 40,
+    paddingBottom: 40,
+    paddingTop: 30,
   },
   details: {
     "@media (min-width:600px)": {
