@@ -5,7 +5,7 @@ title: hey
 description: fe
 postType: news
 type: HALF
-image: ../assets/8-josué-orsolin.png
+image: ../assets/10-maria-dornelles.jpg
 tags:
   - yay!!
 author: João Paulo Rocha
