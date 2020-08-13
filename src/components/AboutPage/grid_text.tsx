@@ -9,7 +9,15 @@ const useGridStyles = makeStyles(() => ({
     fontFamily: "GSTwo",
     fontSize: "16px",
     lineHeight: "25px",
-    fontWeight: 500,
+    paddingBottom: 20,
+  },
+  div2: {
+    fontFamily: "GSThree",
+    fontSize: "20px",
+    lineHeight: "25px",
+    "@media (min-width:600px)": {
+      fontSize: "24px",
+    },
   },
 }))
 
@@ -46,8 +54,8 @@ export const AboutTextGrid = (): React.ReactElement => {
           criativamente procuram novos caminhos.
         </Box>
       </Typography>
-      <Typography className={classes.div}>
-        <Box lineHeight={3}>Change requires Creativity.</Box>
+      <Typography className={classes.div2}>
+        <Box lineHeight={1.5}>Change requires Creativity.</Box>
       </Typography>
     </Grid>
   )
