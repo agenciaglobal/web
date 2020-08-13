@@ -12,6 +12,15 @@ module.exports = {
     },
   },
   plugins: [
+    // filesystem
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/content`, name: `content` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/content/assets`, name: `assets` },
+    },
     {
       resolve: "gatsby-plugin-root-import",
       options: {
@@ -44,15 +53,6 @@ module.exports = {
           },
         ],
       },
-    },
-    // filesystem
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/content`, name: `content` },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/content/assets`, name: `assets` },
     },
     // components
     `gatsby-plugin-react-helmet`,
