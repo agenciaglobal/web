@@ -1,14 +1,14 @@
 import { graphql } from "gatsby"
 import React from "react"
-import { NewsContent } from "../components/NewsContent/newsContant"
-import { NewsPageList } from "../components/NewsPage/newsPageList"
-import { NewsRelatedContent } from "../components/NewsRelatedContent"
+import { NewsContent } from "components/NewsContent/newsContant"
+import { NewsPageList } from "components/NewsPage/newsPageList"
+import { NewsRelatedContent } from "components/NewsRelatedContent"
 import {
   Maybe,
   NewsPostBySlugQuery,
   SitePageContext,
   SitePageContextNews,
-} from "../global"
+} from "global"
 import "./scroll.css"
 
 interface Props {
@@ -16,15 +16,14 @@ interface Props {
   pageContext: SitePageContext
 }
 
-export type New = Maybe<SitePageContextNews>
-
 const NewsPostTemplate = (props: Props): React.ReactElement => {
   const post = props.data
-  const news: New[] | null | undefined = props.pageContext.news
-  console.log(post)
+  const news: Maybe<SitePageContextNews>[] | null | undefined =
+    props.pageContext.news
+  const body = post?.mdx?.body || ""
   return (
     <React.Fragment>
-      <NewsContent current={post} news={news} />
+      <NewsContent body={body} current={post} news={news} />
       <NewsRelatedContent news={news} />
       <NewsPageList news={news} />
     </React.Fragment>

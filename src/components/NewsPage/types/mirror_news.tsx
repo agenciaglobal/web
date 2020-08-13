@@ -1,10 +1,10 @@
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { ExpandTExt } from "../components/expand_text"
-import { SlugType } from "../types"
-import { useRequireNewImage } from "../shared/useRequireNewImage"
-import { SitePageContextNewsNodeFrontmatter } from "../../../global"
+import { ExpandTExt } from "components/NewsPage/components/expand_text"
+import { SlugType } from "components/NewsPage/types"
+import { SitePageContextNewsNodeFrontmatter } from "global"
+import { useDynamicImageImport } from "components/HomePage/grid"
 
 interface Props {
   current: SitePageContextNewsNodeFrontmatter & SlugType
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
   const props = x.current
   const classes = useStyles()
-  const imageSrc = useRequireNewImage(x.current.image || "")
+  const imageSrc = useDynamicImageImport(x.current.image || "")
   return props.type === "MIRROR" ? (
     <div>
       <Link

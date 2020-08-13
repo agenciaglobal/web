@@ -1,9 +1,12 @@
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React, { Fragment } from "react"
 import { Container } from "@material-ui/core"
-import { ThemeSwitch } from "../components/ThemeSwitch/switch"
-import { LightMode } from "src/shared/theme"
-import { LanguageSwitcher } from "../components/LanguageSwitcher/LanguageSwitcher"
+import { ThemeSwitch } from "components/ThemeSwitch/switch"
+import { LightMode } from "shared/theme"
+import {
+  LanguageSwitcher,
+  SuporttedLanguages,
+} from "components/LanguageSwitcher/LanguageSwitcher"
 
 interface Props {
   lightMode: LightMode
@@ -18,7 +21,10 @@ const componentes = ({
   return (
     <Fragment>
       <Container style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <LanguageSwitcher language={language} changeLanguage={changeLanguage} />
+        <LanguageSwitcher
+          language={language as SuporttedLanguages}
+          changeLanguage={changeLanguage}
+        />
         <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />
       </Container>
     </Fragment>

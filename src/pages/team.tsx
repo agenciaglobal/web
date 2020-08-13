@@ -2,12 +2,12 @@ import { WithWidthProps } from "@material-ui/core"
 import withWidth from "@material-ui/core/withWidth"
 import { graphql } from "gatsby"
 import * as React from "react"
-import { TeamPage } from "../components/TeamPage/teamPage"
-import { TeamQueryQuery } from "../global"
+import { TeamPage } from "components/TeamPage/teamPage"
+import { TeamQueryQuery } from "global"
 
 const Team = withWidth()(
   (props: { data?: TeamQueryQuery } & WithWidthProps): React.ReactElement => {
-    return <TeamPage employees={props.data.allMdx.edges} />
+    return <TeamPage employees={props.data?.allMdx.edges || []} />
   },
 )
 

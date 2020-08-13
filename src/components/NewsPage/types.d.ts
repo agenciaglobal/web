@@ -1,3 +1,3 @@
-import { MdxFields } from "../../global"
+import { MdxFields } from "global"
 
 export type SlugType = Pick<MdxFields, "slug">

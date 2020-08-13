@@ -1,6 +1,6 @@
 import { Hidden } from "@material-ui/core"
 import * as React from "react"
-import { alphabetically } from "../../shared/alphabetically"
+import { alphabetically } from "shared/alphabetically"
 import { HomeGrid } from "./grid"
 import "./index.css"
 import { DesktopTabs } from "./select_desktop"

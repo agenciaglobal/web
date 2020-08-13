@@ -1,22 +1,8 @@
 import Typography from "@material-ui/core/Typography"
 import React from "react"
 import Box from "@material-ui/core/Box"
-import { Fullmage } from "../../templates/portifolio-post"
-import { New } from "../../templates/news-post"
-import { NewsPostBySlugQuery } from "../../global"
-
-function useImage(image: string | null | undefined) {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  let result = ""
-  if (image !== null) {
-    if (image !== undefined) {
-      if (image !== "") {
-        result = require("../../../content/" + image)
-      }
-    }
-  }
-  return result
-}
+import { Maybe, NewsPostBySlugQuery, SitePageContextNews } from "global"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export function LongMontsetrratText(props: {
   post: string | null | undefined
@@ -28,7 +14,7 @@ export function LongMontsetrratText(props: {
         fontSize: 20,
         color: "#333333",
         lineHeight: "32px",
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat, sans-serif",
       }}
     >
       {props.post}
@@ -38,7 +24,8 @@ export function LongMontsetrratText(props: {
 
 export const NewsContent = (props: {
   current: NewsPostBySlugQuery | null | undefined
-  news: New[] | null | undefined
+  news: Maybe<SitePageContextNews>[] | null | undefined
+  body: string
 }): React.ReactElement => {
   const gutterVertical = 25
   const post = props.current?.mdx
@@ -47,20 +34,10 @@ export const NewsContent = (props: {
       <Typography style={{ display: `block` }}>
         {post?.frontmatter?.date + " | NOTICIA"}
       </Typography>
-      <Typography
-        style={{
-          fontSize: 30,
-        }}
-      >
+      <Typography style={{ fontSize: 30 }}>
         {post?.frontmatter?.title}
       </Typography>
-      <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <LongMontsetrratText post={post?.frontmatter?.text_1} />
-      </Box>
-      <Fullmage paddingTop={24} image={useImage(post?.frontmatter?.image)} />
-      <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <LongMontsetrratText post={post?.frontmatter?.text_2} />
-      </Box>
+      <MDXRenderer>{props.body}</MDXRenderer>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
         <Typography>{"Tags"}</Typography>
         {post?.frontmatter?.tags?.map((tag: string, index) => {

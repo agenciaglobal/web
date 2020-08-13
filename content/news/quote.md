@@ -7,6 +7,10 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: QUOTE
 
+author: article
+
+postType: article
+
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 image: assets/works/varanda.png
@@ -17,7 +21,15 @@ text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin. Fu
 
 text_2: Platea dictumst vestibulum rhoncus est pellentesque elit. Sed arcu non odio euismod lacinia at quis. In ante metus dictum at tempor. Sit amet purus gravida quis blandit turpis cursus in. Est placerat in egestas erat imperdiet. Nunc sed blandit libero volutpat. Diam volutpat commodo sed egestas egestas fringilla phasellus. Nullam ac tortor vitae purus faucibus ornare. Eu augue ut lectus arcu bibendum at varius. Tellus mauris a diam maecenas.
 
+body: dksdjfnsdjfkksd ksdjfnsdkf sdfsdfbb sdkfnjsdf
+
 tags:
   - sdfsd
   - df
 ---
+
+zdfkjnsdfkjnsdf
+
+zdfkjnsdfkjnsdf
+zdfkjnsdfkjnsdf
+zdfkjnsdfkjnsdf

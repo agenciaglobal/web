@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import classNames from "classnames"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { isCurrentHook } from "../../TabComponent/drawerItem"
+import { isCurrentHook } from "components/TabComponent/drawerItem"
 
 const useStylesMenu = makeStyles((theme: Theme) => ({
   current: {
