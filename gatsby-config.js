@@ -26,6 +26,9 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     {
@@ -107,7 +110,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        codegen: true,
+        codegen: false,
         fileName: `src/global.d.ts`,
       },
     },
