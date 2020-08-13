@@ -18,7 +18,7 @@ export const AboutPage = (): React.ReactElement => {
         <AboutTextGrid />
         <AboutImageGrid />
       </Grid>
-      <SVGAbout/>
+      <SVGAbout />
       <AboutAccordion />
     </div>
   )

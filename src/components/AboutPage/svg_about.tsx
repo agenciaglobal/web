@@ -5,7 +5,6 @@ import { useAboutSvgStyles } from "./about_styles"
 import video from "../../../static/videos/mov.mp4"
 import videoDark from "../../../static/videos/mov-dark.mp4"
 
-
 export const SVGAbout = (): React.ReactElement => {
   const classes = useAboutSvgStyles()
   const theme = useTheme()
