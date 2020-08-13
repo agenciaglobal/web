@@ -1,4 +1,4 @@
-import { Maybe, Mdx, MdxFields, MdxFrontmatter } from "../../global"
+import { Maybe, Mdx, MdxFields, MdxFrontmatter } from "global"
 
 export type Employees = Array<{
   node: Pick<Mdx, "excerpt"> & {

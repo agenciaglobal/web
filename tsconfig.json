@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "content/*": ["src/content/*"],
+      "shared/*": ["src/shared/*"],
+      "global": ["src/global.d.ts"],
+      "static/*": ["static/*"]
+    },
     "module": "commonjs",
     "target": "esnext",
     "jsx": "preserve",
@@ -13,6 +20,6 @@
     "noUnusedLocals": false,
     "allowJs": true
   },
-  "include": ["src"],
+  "include": ["src", "static", "content"],
   "exclude": ["node_modules", "public", ".cache"]
 }

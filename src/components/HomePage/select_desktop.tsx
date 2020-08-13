@@ -3,7 +3,7 @@ import Tab from "@material-ui/core/Tab"
 import Tabs from "@material-ui/core/Tabs"
 import * as React from "react"
 
-const a11yProps = (index) => ({
+const a11yProps = (index: number) => ({
   id: `simple-tab-${index}`,
   "aria-controls": `simple-tabpanel-${index}`,
 })
@@ -11,15 +11,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   wrapper: { color: theme.palette.primary.contrastText },
 }))
 
+type Props = {
+  setValue: (n: number) => void
+  value: number
+  categories: string[]
+}
 export const DesktopTabs = ({
   setValue,
   categories,
   value,
-}: {
-  setValue: (n: number) => void
-  value: number
-  categories: string[]
-}): React.ReactElement => {
+}: Props): React.ReactElement => {
   const classes = useStyles()
   return (
     <Tabs

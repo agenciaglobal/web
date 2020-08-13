@@ -1,6 +1,6 @@
 import { useI18next } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { GlobalPageTitle } from "../GlobalPageTitle/globalTitle"
+import { GlobalPageTitle } from "components/GlobalPageTitle/globalTitle"
 import { GridEmployees } from "./grid"
 import "./team.css"
 import { Employees } from "./types"

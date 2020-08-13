@@ -2,7 +2,7 @@ import { Box } from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { SitePageContextNext } from "../../global"
+import { SitePageContextNext } from "global"
 
 interface Props {
   next?: SitePageContextNext | null

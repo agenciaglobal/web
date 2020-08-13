@@ -5,7 +5,12 @@ import { GlobalPageTitle } from "../../../src/components/GlobalPageTitle/globalT
 export default {
   title: "GlobalPageTitle",
 }
-export const globalPageTitle = ({ label }) => {
+
+interface Props {
+  label: string
+}
+
+export const globalPageTitle = ({ label }: Props) => {
   return <GlobalPageTitle label={label} />
 }
 

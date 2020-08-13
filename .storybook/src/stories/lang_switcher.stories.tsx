@@ -1,14 +1,23 @@
 import { ControlTypes } from "@component-controls/core"
 import { ThemeProvider } from "@material-ui/core"
 import * as React from "react"
-import { LanguageSwitcher } from "../../../src/components/LanguageSwitcher/LanguageSwitcher"
+import {
+  LanguageSwitcher,
+  SuporttedLanguages,
+} from "../../../src/components/LanguageSwitcher/LanguageSwitcher"
 import { darkTheme } from "../../../src/shared/dark"
 import { lightTheme } from "../../../src/shared/light"
 
 export default {
   title: "Light Language Switcher",
 }
-export const portuguese = ({ language, mode }) => {
+
+interface Props {
+  language: SuporttedLanguages
+  mode: string
+}
+
+export const portuguese = ({ language, mode }: Props) => {
   let color = mode === "light" ? "white" : "black"
   return (
     <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
@@ -24,7 +33,6 @@ export const portuguese = ({ language, mode }) => {
       >
         <LanguageSwitcher
           language={language}
-          languages={["pt", "en"]}
           changeLanguage={(d: string) => {}}
         />
       </div>

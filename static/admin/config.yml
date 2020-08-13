@@ -12,8 +12,6 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: text_1, label: "Text Principal" }
-      - { name: text_2, label: "Text Secundário" }
       - name: type
         label: Tipo do box de exibição na lista
         widget: select

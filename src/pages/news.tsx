@@ -1,10 +1,10 @@
 import { graphql } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { GlobalPageTitle } from "../components/GlobalPageTitle/globalTitle"
-import { NewsPageList } from "../components/NewsPage/newsPageList"
-import { BlogQueryQuery } from "../global"
-import "../components/NewsPage/index.css"
+import { GlobalPageTitle } from "components/GlobalPageTitle/globalTitle"
+import { NewsPageList } from "components/NewsPage/newsPageList"
+import { BlogQueryQuery } from "global"
+import "components/NewsPage/index.css"
 
 const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
   const { data } = props

@@ -674,6 +674,17 @@ export type FileFieldsEnum =
   | "childMdx___frontmatter___type"
   | "childMdx___frontmatter___description"
   | "childMdx___frontmatter___image"
+  | "childMdx___frontmatter___image_1"
+  | "childMdx___frontmatter___text_1"
+  | "childMdx___frontmatter___text_2"
+  | "childMdx___frontmatter___tags"
+  | "childMdx___frontmatter___body"
+  | "childMdx___frontmatter___image_2"
+  | "childMdx___frontmatter___image_3"
+  | "childMdx___frontmatter___text_3"
+  | "childMdx___frontmatter___text_4"
+  | "childMdx___frontmatter___author"
+  | "childMdx___frontmatter___youtube"
   | "childMdx___frontmatter___categorie"
   | "childMdx___frontmatter___name"
   | "childMdx___frontmatter___job"
@@ -1395,6 +1406,17 @@ export type MdxFieldsEnum =
   | "frontmatter___type"
   | "frontmatter___description"
   | "frontmatter___image"
+  | "frontmatter___image_1"
+  | "frontmatter___text_1"
+  | "frontmatter___text_2"
+  | "frontmatter___tags"
+  | "frontmatter___body"
+  | "frontmatter___image_2"
+  | "frontmatter___image_3"
+  | "frontmatter___text_3"
+  | "frontmatter___text_4"
+  | "frontmatter___author"
+  | "frontmatter___youtube"
   | "frontmatter___categorie"
   | "frontmatter___name"
   | "frontmatter___job"
@@ -1526,21 +1548,22 @@ export type MdxFilterInput = {
 
 export type MdxFrontmatter = {
   title: Scalars["String"]
-  youtube?: Scalars["String"]
   path?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["Date"]>
   type?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
+  image?: Maybe<Scalars["String"]>
+  image_1?: Maybe<Scalars["String"]>
   text_1?: Maybe<Scalars["String"]>
   text_2?: Maybe<Scalars["String"]>
+  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
+  body?: Maybe<Scalars["String"]>
+  image_2?: Maybe<Scalars["String"]>
+  image_3?: Maybe<Scalars["String"]>
   text_3?: Maybe<Scalars["String"]>
   text_4?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
-  image?: Maybe<Scalars["String"]>
-  image_1?: Maybe<Scalars["String"]>
-  image_2?: Maybe<Scalars["String"]>
-  tags?: Maybe<Scalars["String"][]>
-  image_3?: Maybe<Scalars["String"]>
+  youtube?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   job?: Maybe<Scalars["String"]>
@@ -1561,6 +1584,17 @@ export type MdxFrontmatterFilterInput = {
   type?: Maybe<StringQueryOperatorInput>
   description?: Maybe<StringQueryOperatorInput>
   image?: Maybe<StringQueryOperatorInput>
+  image_1?: Maybe<StringQueryOperatorInput>
+  text_1?: Maybe<StringQueryOperatorInput>
+  text_2?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<StringQueryOperatorInput>
+  body?: Maybe<StringQueryOperatorInput>
+  image_2?: Maybe<StringQueryOperatorInput>
+  image_3?: Maybe<StringQueryOperatorInput>
+  text_3?: Maybe<StringQueryOperatorInput>
+  text_4?: Maybe<StringQueryOperatorInput>
+  author?: Maybe<StringQueryOperatorInput>
+  youtube?: Maybe<StringQueryOperatorInput>
   categorie?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   job?: Maybe<StringQueryOperatorInput>
@@ -2690,8 +2724,13 @@ export type SitePageFieldsEnum =
   | "pluginCreator___pluginOptions___plugins___browserAPIs"
   | "pluginCreator___pluginOptions___plugins___pluginFilepath"
   | "pluginCreator___pluginOptions___stylesProvider___injectFirst"
+  | "pluginCreator___pluginOptions___modulePath"
   | "pluginCreator___pluginOptions___src"
+  | "pluginCreator___pluginOptions___content"
   | "pluginCreator___pluginOptions___pages"
+  | "pluginCreator___pluginOptions___shared"
+  | "pluginCreator___pluginOptions___components"
+  | "pluginCreator___pluginOptions___static"
   | "pluginCreator___pluginOptions___cachePublic"
   | "pluginCreator___pluginOptions___path"
   | "pluginCreator___pluginOptions___name"
@@ -2913,8 +2952,13 @@ export type SitePluginFieldsEnum =
   | "pluginOptions___plugins___browserAPIs"
   | "pluginOptions___plugins___pluginFilepath"
   | "pluginOptions___stylesProvider___injectFirst"
+  | "pluginOptions___modulePath"
   | "pluginOptions___src"
+  | "pluginOptions___content"
   | "pluginOptions___pages"
+  | "pluginOptions___shared"
+  | "pluginOptions___components"
+  | "pluginOptions___static"
   | "pluginOptions___cachePublic"
   | "pluginOptions___path"
   | "pluginOptions___name"
@@ -3064,8 +3108,13 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>
   stylesProvider?: Maybe<SitePluginPluginOptionsStylesProvider>
+  modulePath?: Maybe<Scalars["String"]>
   src?: Maybe<Scalars["String"]>
+  content?: Maybe<Scalars["String"]>
   pages?: Maybe<Scalars["String"]>
+  shared?: Maybe<Scalars["String"]>
+  components?: Maybe<Scalars["String"]>
+  static?: Maybe<Scalars["String"]>
   cachePublic?: Maybe<Scalars["Boolean"]>
   path?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
@@ -3095,8 +3144,13 @@ export type SitePluginPluginOptions = {
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>
   stylesProvider?: Maybe<SitePluginPluginOptionsStylesProviderFilterInput>
+  modulePath?: Maybe<StringQueryOperatorInput>
   src?: Maybe<StringQueryOperatorInput>
+  content?: Maybe<StringQueryOperatorInput>
   pages?: Maybe<StringQueryOperatorInput>
+  shared?: Maybe<StringQueryOperatorInput>
+  components?: Maybe<StringQueryOperatorInput>
+  static?: Maybe<StringQueryOperatorInput>
   cachePublic?: Maybe<BooleanQueryOperatorInput>
   path?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
@@ -3361,17 +3415,17 @@ export type NewsPostBySlugQuery = {
   }>
   mdx?: Maybe<
     Pick<Mdx, "id" | "excerpt" | "body"> & {
+      fields?: Maybe<Pick<MdxFields, "slug">>
       frontmatter?: Maybe<
         Pick<
           MdxFrontmatter,
           | "title"
-          | "date"
           | "tags"
+          | "date"
+          | "description"
           | "text_1"
           | "text_2"
-          | "description"
           | "image"
-          | "image_1"
         >
       >
     }
@@ -3391,19 +3445,19 @@ export type PortifolioPostBySlugQuery = {
       frontmatter?: Maybe<
         Pick<
           MdxFrontmatter,
+          | "title"
+          | "date"
+          | "author"
+          | "description"
           | "image"
           | "image_1"
           | "image_2"
           | "image_3"
-          | "author"
-          | "title"
-          | "date"
-          | "description"
-          | "youtube"
           | "text_1"
           | "text_2"
           | "text_3"
           | "text_4"
+          | "youtube"
         >
       >
     }

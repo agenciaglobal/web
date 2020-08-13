@@ -5,13 +5,12 @@ import Toolbar from "@material-ui/core/Toolbar"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LightMode } from "shared/theme"
-import logoblack from "../../../static/logo-black.png"
-
-import logo from "../../../static/logo-white.png"
-import mapGlobal from "../../../static/map.png"
-import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher"
-import { TabComponent } from "../TabComponent/drawerItem"
-import { ThemeSwitch } from "../ThemeSwitch/switch"
+import logoblack from "static/logo-black.png"
+import logo from "static/logo-white.png"
+import mapGlobal from "static/map.png"
+import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher"
+import { TabComponent } from "components/TabComponent/drawerItem"
+import { ThemeSwitch } from "components/ThemeSwitch/switch"
 
 interface Props {
   lightMode: LightMode
