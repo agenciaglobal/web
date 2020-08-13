@@ -7,6 +7,10 @@ title: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 
 type: RIGHT
 
+author: article
+
+postType: article
+
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 image: assets/works/natal-iguatemi.png

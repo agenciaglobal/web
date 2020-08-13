@@ -7,6 +7,10 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: QUOTE
 
+author: article
+
+postType: article
+
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 image: assets/works/varanda.png

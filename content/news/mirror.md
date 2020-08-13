@@ -7,6 +7,10 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: MIRROR
 
+author: article
+
+postType: article
+
 description: mirror
 
 image: assets/works/empreendedorismo.png

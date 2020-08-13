@@ -7,6 +7,10 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: LEFT
 
+author: article
+
+postType: article
+
 description: lulinha paz e amor
 
 image: assets/works/natal-iguatemi.png

@@ -27,8 +27,8 @@ collections:
         label: Tipo de post
         widget: select
         options:
-          - { label: "Notícia", value: "News" }
-          - { label: "Artigo", value: "Article" }
+          - { label: "Notícia", value: "news" }
+          - { label: "Artigo", value: "article" }
       - { name: title, label: Título }
       - { name: description, label: Descrição }
       - name: "image"

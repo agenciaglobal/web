@@ -5,7 +5,11 @@ date: 2020-07-12T00:33:11.387Z
 
 title: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 
+author: article
+
 type: FULL
+
+postType: news
 
 description: Full
 
