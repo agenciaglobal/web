@@ -19,10 +19,7 @@ interface Props {
   uri: string
 }
 
-export const LayoutHeader = ({
-  lightMode,
-  uri,
-}: Props): React.ReactElement => {
+export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
   const { changeLanguage, language } = useI18next()
   const isContact = uri.includes("/contact")
   console.log(isContact)
