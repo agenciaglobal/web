@@ -12,6 +12,16 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
+      - { name: date, label: Data, widget: date }
+      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
+      - { name: title, label: Título }
+      - { name: description, label: Descrição }
+      - name: postType
+        label: Tipo de post
+        widget: select
+        options:
+          - { label: "Notícia", value: "news" }
+          - { label: "Artigo", value: "article" }
       - name: type
         label: Tipo do box de exibição na lista
         widget: select
@@ -22,20 +32,9 @@ collections:
           - { label: "Left", value: "LEFT" }
           - { label: "Right", value: "RIGHT" }
           - { label: "Quote", value: "QUOTE" }
-      - { name: date, label: Data, widget: date }
-      - name: postType
-        label: Tipo de post
-        widget: select
-        options:
-          - { label: "Notícia", value: "news" }
-          - { label: "Artigo", value: "article" }
-      - { name: title, label: Título }
-      - { name: description, label: Descrição }
       - name: "image"
         label: "Imagem de destaque"
         widget: "image"
-        default: "/content/assets/uma.png"
-      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -65,22 +64,14 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Data, widget: date }
       - { name: name, label: Cliente }
+      - { name: testimonial, label: Depoimento }
+      - { name: author, label: Autor }
       - label: "Logo"
         name: "image"
         widget: "image"
-        default: "/content/assets/uma.png"
-        media_library:
-          config:
-            multiple: true
-      - { name: testimonial, label: Depoimento }
-      - { name: author, label: Autor }
       - label: "Foto do autor"
         name: "author_image"
         widget: "image"
-        default: "/content/assets/uma.png"
-        media_library:
-          config:
-            multiple: true
   - name: portifolio
     label: Portifolio
     folder: content/portifolio
@@ -96,6 +87,15 @@ collections:
       - { name: text_4, label: "Quarto Text" }
       - { name: youtube, label: "Youtube ID" }
       - { name: description, label: Description }
+      - name: categorie
+        label: Categorie
+        widget: select
+        options:
+          - { label: "featured", value: "featured" }
+          - { label: "digital", value: "digital" }
+          - { label: "social", value: "social" }
+          - { label: "crm", value: "crm" }
+          - { label: "advertising", value: "advertising" }
       - label: "Autor do post"
         name: "author"
         widget: "relation"
@@ -106,28 +106,15 @@ collections:
       - label: "Image"
         name: "image"
         widget: "image"
-        default: "/content/assets/uma.png"
       - label: "Image 1"
         name: "image_1"
         widget: "image"
-        default: "/content/assets/uma.png"
       - label: "Image 2"
         name: "image_2"
         widget: "image"
-        default: "/content/assets/uma.png"
       - label: "Image 3"
         name: "image_3"
         widget: "image"
-        default: "/content/assets/uma.png"
-      - name: categorie
-        label: Categorie
-        widget: select
-        options:
-          - { label: "featured", value: "featured" }
-          - { label: "digital", value: "digital" }
-          - { label: "social", value: "social" }
-          - { label: "crm", value: "crm" }
-          - { label: "advertising", value: "advertising" }
   - name: team
     label: Team
     folder: content/team
@@ -141,14 +128,6 @@ collections:
       - label: "Foto P&B"
         name: "black_image"
         widget: "image"
-        default: "/content/assets/uma.png"
-        media_library:
-          config:
-            multiple: true
       - label: "Foto colorida"
         name: "image"
         widget: "image"
-        default: "/content/assets/uma.png"
-        media_library:
-          config:
-            multiple: true
