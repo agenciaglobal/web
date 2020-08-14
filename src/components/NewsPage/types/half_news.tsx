@@ -1,11 +1,10 @@
-import { Box } from "@material-ui/core"
-import { makeStyles, Theme } from "@material-ui/core/styles"
-import { Link } from "gatsby-plugin-react-i18next"
-import * as React from "react"
-import { ExpandTExt } from "components/NewsPage/components/expand_text"
-import { SlugType } from "components/NewsPage/types"
-import { SitePageContextNewsNodeFrontmatter } from "global"
-import { useDynamicImageImport } from "components/HomePage/grid"
+import { Box } from "@material-ui/core";
+import { makeStyles, Theme } from "@material-ui/core/styles";
+import { Link } from "gatsby-plugin-react-i18next";
+import * as React from "react";
+import { ExpandTExt } from "components/NewsPage/components/expand_text";
+import { SlugType } from "components/NewsPage/types";
+import { SitePageContextNewsNodeFrontmatter } from "global";
 
 interface Props {
   current: SitePageContextNewsNodeFrontmatter & SlugType
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
   const classes = useStyles()
-  let s = props.current?.image || ""
+  const s = props.current?.image || ""
   const imageSrc = "" + s
   const date = props.current.date + "| NOTÍCIAS"
   const test = props.current?.type === "HALF"
