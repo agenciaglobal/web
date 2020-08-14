@@ -28,7 +28,7 @@ export const QuoteNewsComponent = ({
       <Link
         className={"global-news-quote"}
         style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={"/news" + slug}
+        to={slug || ""}
       >
         <div className={classes.style}>
           <ExpandTExt

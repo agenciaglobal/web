@@ -20,7 +20,7 @@ export const FullNewsComponent = ({
         backgroundImage: `url(${imageSrc})`,
       }}
     >
-      <Link style={{ textDecoration: "none" }} to={"/news" + slug}>
+      <Link style={{ textDecoration: "none" }} to={slug || ""}>
         <ExpandTExt
           date={date || ""}
           title={title || ""}

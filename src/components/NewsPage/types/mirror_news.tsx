@@ -30,7 +30,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
       <Link
         className={"global-news-mirror"}
         style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={"/news" + props.slug}
+        to={props.slug || ""}
       >
         <div className={classes.lag}>
           <div
