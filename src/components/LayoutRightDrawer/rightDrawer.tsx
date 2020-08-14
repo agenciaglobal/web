@@ -6,10 +6,7 @@ import { TabComponent } from "components/TabComponent/drawerItem"
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
-      // zIndex: -2,
-      // background: theme.palette.primary.main,
       height: "100vh",
-      // marginBottom: 155,
       background: "transparent",
       width: 120,
       border: "none",

@@ -6,10 +6,9 @@ import { TalkWorkForm } from "./talkWorkForm"
 import mapLight from "static/map-light.png"
 import mapDark from "static/map-dark.png"
 
-
 export const ContactPage = (): React.ReactElement => {
-const theme = useTheme()
-const map = theme.themeName == "light" ? mapLight : mapDark
+  const theme = useTheme()
+  const map = theme.themeName == "light" ? mapLight : mapDark
   return (
     <Box>
       <Box style={{ position: "absolute", top: 0, left: 0, right: 0 }}>
@@ -17,12 +16,11 @@ const map = theme.themeName == "light" ? mapLight : mapDark
           style={{
             width: "100%",
             maxHeight: "auto",
-            // transform: "translateY(-50%)"
           }}
           src={map}
           alt="map"
         />
-      </Box>        
+      </Box>
       <Grid container>
         <AddressComponent />
         <TalkWorkForm />
