@@ -10,6 +10,7 @@ const useStyles = makeStyles(() =>
       // background: theme.palette.primary.main,
       height: "100vh",
       // marginBottom: 155,
+      background: "transparent",
       width: 120,
       border: "none",
       display: "flex",

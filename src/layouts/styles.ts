@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   contact: {
-    marginTop: `400px`,
+    marginTop: `260px`,
   },
   scrolled: {
     [theme.breakpoints.up("md")]: {

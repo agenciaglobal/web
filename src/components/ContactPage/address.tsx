@@ -29,7 +29,7 @@ export const AddressComponent = (): React.ReactElement => (
     </Box>
     <Box
       style={{
-        transform: "translate( 0px , -50% )",
+        transform: "translate( 0px , -80% )",
         display: "flex",
         justifyContent: "center",
       }}
