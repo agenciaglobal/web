@@ -17,10 +17,7 @@ const useGridStyles = makeStyles(() => ({
 function NewComponent(props: { tile: Portifolio }) {
   const path = props.tile?.image || ""
   return (
-    <Link
-      style={{ textDecoration: "none" }}
-      to={"/portifolio" + props.tile.slug}
-    >
+    <Link style={{ textDecoration: "none" }} to={props.tile.slug}>
       <div
         style={{
           height: 0,

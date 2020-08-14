@@ -19,7 +19,7 @@ export const desktop = ({ setValue, value, categories }: Props) => {
   return (
     <DesktopTabs
       setValue={setValue}
-      value={value === undefined ? 0 : value }
+      value={value === undefined ? 0 : value}
       categories={categories === undefined ? defaultItens : categories}
     />
   )

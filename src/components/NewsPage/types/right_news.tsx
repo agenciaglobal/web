@@ -17,7 +17,7 @@ export const RightNewsComponent = ({
       <Link
         className={"global-news-right"}
         style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={"/news" + slug}
+        to={slug || ""}
       >
         <div
           style={{

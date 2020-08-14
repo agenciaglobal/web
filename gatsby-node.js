@@ -48,13 +48,12 @@ let s = `
 
 const createNewsPages = (result, createPage) => {
   const newsTemplate = path.resolve(`./src/templates/news-post.tsx`)
-  const key = "news"
   const news = result.data.news.edges
   news.forEach((post, index) => {
     const previous = index === news.length - 1 ? null : news[index + 1].node
     const next = index === 0 ? null : news[index - 1].node
     createPage({
-      path: `${key}${post.node.fields.slug}`,
+      path: `${post.node.fields.slug}`,
       component: newsTemplate,
       context: {
         news,
@@ -68,14 +67,13 @@ const createNewsPages = (result, createPage) => {
 
 const createPortifolio = (result, createPage) => {
   const newsTemplate = path.resolve(`./src/templates/portifolio-post.tsx`)
-  const key = "portifolio"
   const projects = result.data.portifolio.edges
   projects.forEach((post, index) => {
     const previous =
       index === projects.length - 1 ? null : projects[index + 1].node
     const next = index === 0 ? null : projects[index - 1].node
     createPage({
-      path: `${key}${post.node.fields.slug}`,
+      path: `${post.node.fields.slug}`,
       component: newsTemplate,
       context: {
         slug: post.node.fields.slug,

@@ -38,7 +38,7 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
       <Link
         className={"global-news-half"}
         style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={"/news" + props.current?.slug}
+        to={props.current?.slug || ""}
       >
         <Box className={classes.lag}>
           <div className={classes.style}>
