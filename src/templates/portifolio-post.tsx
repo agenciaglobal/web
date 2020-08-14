@@ -1,14 +1,14 @@
-import { Typography } from "@material-ui/core";
-import { SizeMe } from "react-sizeme";
-import { graphql } from "gatsby";
-import React from "react";
-import { PortifolioSwitcher } from "components/PortifolioSwitcher/portifolioSwticher";
-import { PortifolioPostBySlugQuery, SitePageContext } from "global";
-import YouTube from "react-youtube";
-import Box from "@material-ui/core/Box";
-import { GridLocal } from "./grid_local";
-import ScrollMenu from "react-horizontal-scrolling-menu";
-import { LongMontsetrratText } from "components/NewsContent/newsContant";
+import { Typography } from "@material-ui/core"
+import { SizeMe } from "react-sizeme"
+import { graphql } from "gatsby"
+import React from "react"
+import { PortifolioSwitcher } from "components/PortifolioSwitcher/portifolioSwticher"
+import { PortifolioPostBySlugQuery, SitePageContext } from "global"
+import YouTube from "react-youtube"
+import Box from "@material-ui/core/Box"
+import { GridLocal } from "./grid_local"
+import ScrollMenu from "react-horizontal-scrolling-menu"
+import { LongMontsetrratText } from "components/NewsContent/newsContant"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
