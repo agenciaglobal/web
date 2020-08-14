@@ -7,13 +7,13 @@ text_2: Platea dictumst vestibulum rhoncus est pellentesque elit. Sed arcu non
   lectus arcu bibendum at varius. Tellus mauris a diam maecenas.
 path: full
 author: João Paulo Rocha
-image_1: assets/works/natal-iguatemi.png
+image_1: /assets/works/natal-iguatemi.png
 date: 2020-07-12T00:33:11.387Z
 title: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 description: Full
 postType: news
 type: FULL
-image: assets/works/varanda.png
+image: /assets/works/varanda.png
 tags:
   - yay!!
 text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
@@ -33,7 +33,7 @@ text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 
 sdfsdfds
 
-![cesco](../assets/10-maria-dornelles.jpg "cescp")
+![cesco](/assets/10-maria-dornelles.jpg "cescp")
 
 asddasasd
 ASDsad

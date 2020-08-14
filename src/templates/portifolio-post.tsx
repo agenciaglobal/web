@@ -9,7 +9,6 @@ import Box from "@material-ui/core/Box"
 import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
-import { useDynamicImageImport } from "components/HomePage/grid"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -141,11 +140,11 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-  const image = useDynamicImageImport(data?.mdx?.frontmatter?.image || "")
-  const image1 = useDynamicImageImport(data?.mdx?.frontmatter?.image_1 || "")
+  const image = data?.mdx?.frontmatter?.image || ""
+  const image1 = data?.mdx?.frontmatter?.image_1 || ""
 
-  const image2 = useDynamicImageImport(data?.mdx?.frontmatter?.image_2 || "")
-  const image3 = useDynamicImageImport(data?.mdx?.frontmatter?.image_3 || "")
+  const image2 = data?.mdx?.frontmatter?.image_2 || ""
+  const image3 = data?.mdx?.frontmatter?.image_3 || ""
   return (
     <React.Fragment>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>

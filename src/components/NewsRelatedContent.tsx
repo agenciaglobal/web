@@ -6,7 +6,6 @@ import React from "react"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { ExpandTExt } from "./NewsPage/components/expand_text"
 import { Maybe, SitePageContextNews, SitePageContextNewsNode } from "global"
-import { useDynamicImageImport } from "components/HomePage/grid"
 
 export const useStyles = makeStyles((theme: Theme) => ({
   type: {
@@ -22,7 +21,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 function NewComponent(props: {
   el: Maybe<SitePageContextNewsNode> | null | undefined
 }) {
-  const image = useDynamicImageImport(props.el?.frontmatter?.image || "")
+  const image = props.el?.frontmatter?.image || ""
   return (
     <Link
       style={{ textDecoration: "none" }}

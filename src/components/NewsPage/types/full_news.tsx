@@ -3,14 +3,13 @@ import * as React from "react"
 import { ExpandTExt } from "components/NewsPage/components/expand_text"
 import { SlugType } from "components/NewsPage/types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
-import { useDynamicImageImport } from "components/HomePage/grid"
 
 export const FullNewsComponent = ({
   current: { date, description, image, slug, title, type },
 }: {
   current: SitePageContextNewsNodeFrontmatter & SlugType
 }): React.ReactElement | null => {
-  const imageSrc = useDynamicImageImport(image || "")
+  const imageSrc = image || ""
   return type === "FULL" ? (
     <div
       className={"global-news-full"}

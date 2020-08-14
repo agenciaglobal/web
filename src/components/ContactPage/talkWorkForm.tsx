@@ -33,7 +33,7 @@ export const TalkWorkForm = (): React.ReactElement => {
   const [current, setCurrent] = React.useState<number>(0)
   return (
     <Grid className={classes.grid} item={true} spacing={0} sm={12} md={8}>
-      <Tabs indicatorColor={yellow} value={current} variant={"fullWidth"}>
+      <Tabs indicatorColor={"primary"} value={current} variant={"fullWidth"}>
         {["Fale com a gente", "Trabalhe aqui"].map((d, index) => (
           <Tab
             style={{ background: current === index ? yellow : "#E9E9E9" }}

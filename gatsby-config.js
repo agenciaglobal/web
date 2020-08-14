@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/content/assets`, name: `assets` },
+      options: { path: `${__dirname}/static/assets`, name: `assets` },
     },
     {
       resolve: "gatsby-plugin-root-import",
@@ -103,7 +103,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/assets/gatsby-icon.png`,
       },
     },
     // typescript codegen

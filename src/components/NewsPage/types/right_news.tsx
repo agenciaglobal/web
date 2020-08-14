@@ -3,7 +3,6 @@ import * as React from "react"
 import { ExpandTExt } from "components/NewsPage/components/expand_text"
 import { SlugType } from "../types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
-import { useDynamicImageImport } from "components/HomePage/grid"
 
 interface Props {
   current: SitePageContextNewsNodeFrontmatter & SlugType
@@ -12,7 +11,7 @@ interface Props {
 export const RightNewsComponent = ({
   current: { description, image, slug, title, type },
 }: Props): React.ReactElement | null => {
-  const imageSrc = useDynamicImageImport(image || "")
+  const imageSrc = image || ""
   return type === "RIGHT" ? (
     <div>
       <Link

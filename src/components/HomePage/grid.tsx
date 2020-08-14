@@ -4,7 +4,6 @@ import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
-import { useEffect, useState } from "react"
 
 interface Props {
   projects: { [key: string]: Portifolio[] }
@@ -15,22 +14,8 @@ const useGridStyles = makeStyles(() => ({
   box: { width: "100%", paddingBottom: 300, paddingTop: 30 },
 }))
 
-export const useDynamicImageImport = (path: string): string => {
-  const [image, setImage] = useState("")
-  useEffect(() => {
-    const asyncFunction = async () => {
-      if (path !== "") {
-        const hello = await import("content/" + path)
-        setImage(hello.default)
-      }
-    }
-    void asyncFunction()
-  }, [path])
-  return image
-}
-
 function NewComponent(props: { tile: Portifolio }) {
-  const require1 = useDynamicImageImport(props.tile?.image || "")
+  const path = props.tile?.image || ""
   return (
     <Link
       style={{ textDecoration: "none" }}
@@ -40,7 +25,7 @@ function NewComponent(props: { tile: Portifolio }) {
         style={{
           height: 0,
           paddingBottom: "75%",
-          backgroundImage: `url(${require1})`,
+          backgroundImage: `url(${path})`,
         }}
       >
         <Box style={{ padding: "15px" }}>

@@ -37,6 +37,7 @@ export const NewsContent = (props: {
       <Typography style={{ fontSize: 30 }}>
         {post?.frontmatter?.title}
       </Typography>
+      <img src={props.current?.mdx?.frontmatter?.image || ""} alt="" />
       <MDXRenderer>{props.body}</MDXRenderer>
       <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
         <Typography>{"Tags"}</Typography>
