@@ -13,3 +13,11 @@ author: João Paulo Rocha
 laõoo
 
 ![](/assets/1000x550.png)
+
+
+
+![](/assets/11-natália-ferraro.png)
+
+![](/assets/0-0-2.png)
+
+![sdf](/assets/profile-pic.jpg "sdfd")
