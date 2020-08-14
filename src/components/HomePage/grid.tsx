@@ -1,9 +1,9 @@
-import { Box, Typography } from "@material-ui/core";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import { Link } from "gatsby-plugin-react-i18next";
-import * as React from "react";
-import Masonry from "react-masonry-css";
-import { Portifolio } from "./types";
+import { Box, Typography } from "@material-ui/core"
+import makeStyles from "@material-ui/core/styles/makeStyles"
+import { Link } from "gatsby-plugin-react-i18next"
+import * as React from "react"
+import Masonry from "react-masonry-css"
+import { Portifolio } from "./types"
 
 interface Props {
   projects: { [key: string]: Portifolio[] }
