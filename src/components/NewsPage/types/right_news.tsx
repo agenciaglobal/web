@@ -12,7 +12,7 @@ interface Props {
 export const RightNewsComponent = ({
   current: { description, image, slug, title, type },
 }: Props): React.ReactElement | null => {
-  const imageSrc = useDynamicImageImport(image || "")
+  const imageSrc = image || ""
   return type === "RIGHT" ? (
     <div>
       <Link

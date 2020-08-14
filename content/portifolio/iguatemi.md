@@ -7,13 +7,13 @@ title: ALUGA FÁCIL
 
 description: CRÉDITO REAL
 
-image: assets/www-2.png
+image: /assets/www-2.png
 
-image_1: assets/great.jpg
+image_1: /assets/great.jpg
 
-image_2: assets/great2.jpg
+image_2: /assets/great2.jpg
 
-image_3: assets/ursinho.png
+image_3: /assets/ursinho.png
 
 text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin. Fusce ut placerat orci nulla pellentesque dignissim enim. Elementum eu facilisis sed odio. Purus in massa tempor nec feugiat nisl pretium fusce id. Placerat vestibulum lectus mauris ultrices. Hendrerit gravida rutrum quisque non. Quam quisque id diam vel quam elementum. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Molestie at elementum eu facilisis sed odio morbi quis. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Neque laoreet suspendisse interdum consectetur libero id. Lacinia at quis risus sed vulputate odio ut. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Semper eget duis at tellus at urna condimentum mattis pellentesque.
 

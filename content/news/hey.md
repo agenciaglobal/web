@@ -5,11 +5,11 @@ title: hey
 description: fe
 postType: news
 type: HALF
-image: ../assets/10-maria-dornelles.jpg
+image: /assets/10-maria-dornelles.jpg
 tags:
   - yay!!
 author: João Paulo Rocha
 ---
 laõoo
 
-![](../assets/1000x550.png)
+![](/assets/1000x550.png)

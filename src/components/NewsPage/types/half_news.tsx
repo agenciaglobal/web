@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
   const classes = useStyles()
-  const imageSrc = useDynamicImageImport(props.current?.image || "")
+  let s = props.current?.image || ""
+  const imageSrc = "" + s
   const date = props.current.date + "| NOTÍCIAS"
   const test = props.current?.type === "HALF"
   return test ? (

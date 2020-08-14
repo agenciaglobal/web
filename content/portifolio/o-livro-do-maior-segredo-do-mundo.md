@@ -16,8 +16,8 @@ youtube: .
 description: .
 categorie: featured
 author: Nicolas Skowronsky
-image: assets/1000x550.png
-image_1: assets/preview-2.png
-image_2: assets/preview.png
-image_3: assets/preview-2.png
+image: /assets/1000x550.png
+image_1: /assets/preview-2.png
+image_2: /assets/preview.png
+image_3: /assets/preview-2.png
 ---

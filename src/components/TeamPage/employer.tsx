@@ -1,6 +1,5 @@
 import { Typography } from "@material-ui/core"
 import React, { useState } from "react"
-import { useDynamicImageImport } from "components/HomePage/grid"
 
 interface Props {
   backgroundImage: string
@@ -16,8 +15,8 @@ export const EmployeeComponent = ({
   title,
 }: Props): React.ReactElement => {
   const [hover, setHover] = useState(false)
-  const image = useDynamicImageImport(backgroundImage || "")
-  const bwImage = useDynamicImageImport(blackBackgroundImage || "")
+  const image = backgroundImage || ""
+  const bwImage = blackBackgroundImage || ""
   return (
     <div
       onMouseLeave={() => setHover(false)}

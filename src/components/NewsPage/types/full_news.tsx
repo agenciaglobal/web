@@ -10,7 +10,7 @@ export const FullNewsComponent = ({
 }: {
   current: SitePageContextNewsNodeFrontmatter & SlugType
 }): React.ReactElement | null => {
-  const imageSrc = useDynamicImageImport(image || "")
+  const imageSrc = image || ""
   return type === "FULL" ? (
     <div
       className={"global-news-full"}

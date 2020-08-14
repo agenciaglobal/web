@@ -17,8 +17,8 @@ youtube: .
 description: "Shopping Iguatemi "
 categorie: digital
 author: Nicolas Skowronsky
-image: ../assets/preview-6.png
-image_1: ../assets/0-0-2.png
-image_2: ../assets/preview-10.png
-image_3: ../assets/preview-11.png
+image: /assets/preview-6.png
+image_1: /assets/0-0-2.png
+image_2: /assets/preview-10.png
+image_3: /assets/preview-11.png
 ---
