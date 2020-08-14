@@ -21,8 +21,10 @@ export const MobileToolbar = (props: Props): React.ReactElement => {
       <AppBar
         position="sticky"
         style={{
-          height: isContact ? 400 : 155,
-          backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
+          height: 155,
+          background: "transparent",
+          // height: isContact ? 400 : 155,
+          // backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
           boxShadow: "none",
         }}
       >

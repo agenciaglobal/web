@@ -15,13 +15,15 @@ export const AddressComponent = (): React.ReactElement => (
       justifyContent: "center",
       alignItems: "baseline",
       padding: 0,
+      // transform: "translate( 0px , -400px )",
+
     }}
   >
     <Box style={{ display: "flex", justifyContent: "center" }}>
       <img
         style={{
           zIndex: 10,
-          transform: "translate( 0px , -50% )",
+          // transform: "translate( 0px , -200px )",
         }}
         src={salaGlobal}
         alt=""
@@ -29,7 +31,7 @@ export const AddressComponent = (): React.ReactElement => (
     </Box>
     <Box
       style={{
-        transform: "translate( 0px , -50% )",
+        // transform: "translate( 0px , -50% )",
         display: "flex",
         justifyContent: "center",
       }}

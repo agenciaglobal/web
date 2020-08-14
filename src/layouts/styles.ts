@@ -17,9 +17,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
       paddingRight: 120,
     },
   },
-  contact: {
-    marginTop: `400px`,
-  },
   scrolled: {
     [theme.breakpoints.up("md")]: {
       paddingLeft: 120,

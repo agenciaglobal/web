@@ -11,7 +11,7 @@ const useStylesV2 = makeStyles((theme: Theme) => ({
     opacity: "0 !important",
   },
   box: {
-    height: "100%",
+    // height: "100%",
     flexDirection: "column",
     backgroundColor: theme.palette.background.default,
     display: "flex",
@@ -63,7 +63,7 @@ export const MobileDrawer = ({
   return (
     <React.Fragment>
       <Drawer
-        anchor={"bottom"}
+        anchor={"top"}
         classes={{ paper: classes.drawer }}
         onClose={close}
         BackdropProps={{ className: classes.backdrop }}

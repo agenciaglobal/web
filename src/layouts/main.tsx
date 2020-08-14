@@ -40,11 +40,12 @@ export const ActualLayout = ({
         uri={uri}
         toggleLightMode={toggleLightMode}
       />
-      <LayoutHeader
-        lightMode={lightMode}
-        uri={uri}
-        toggleLightMode={toggleLightMode}
-      />
+      <div style={{ zIndex: 200}}>
+        <LayoutHeader
+          lightMode={lightMode}
+          uri={uri}
+        />
+      </div>
       <Waypoint
         onEnter={() => setScrolled(false)}
         onLeave={() => setScrolled(true)}

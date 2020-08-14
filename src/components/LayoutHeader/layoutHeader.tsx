@@ -29,13 +29,14 @@ export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
         position="static"
         style={{
           zIndex: 222,
-          height: isContact ? 400 : 155,
-          backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
+          height: 155,
+          background: "transparent important!",
           boxShadow: "none",
         }}
       >
         <Toolbar
           style={{
+            zIndex: 222,
             display: "flex",
             padding: "0px 120px",
             justifyContent: "space-between",
