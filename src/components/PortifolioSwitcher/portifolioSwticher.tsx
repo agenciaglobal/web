@@ -1,4 +1,4 @@
-import { Box, isWidthUp, WithWidthProps } from "@material-ui/core"
+import { Box, WithWidthProps } from "@material-ui/core"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import React from "react"
 import { SitePageContextNext, SitePageContextPrevious } from "global"
@@ -28,7 +28,6 @@ const useStyles = makeStyles(() => ({
 export const PortifolioSwitcher = withWidth()(
   (props: Props & WithWidthProps): React.ReactElement => {
     const classes = useStyles()
-
     const margin = useExtrapolatedMargin({ width: props.width })
     return (
       <Box
