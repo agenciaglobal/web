@@ -5,6 +5,7 @@ import { lightTheme } from "shared/light"
 import { LightMode } from "shared/theme"
 import "./global.css"
 import { ActualLayout } from "./main"
+import { Helmet } from "react-helmet"
 
 interface Props {
   uri: string
@@ -14,15 +15,31 @@ interface Props {
 const Layout = ({ children, uri }: Props): React.ReactElement => {
   const [mode, setMode] = React.useState<LightMode>("light")
   return (
-    <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
-      <ActualLayout
-        uri={uri}
-        lightMode={mode}
-        toggleLightMode={() => setMode(mode === "light" ? "dark" : "light")}
-      >
-        {children}
-      </ActualLayout>
-    </ThemeProvider>
+    <div>
+      <Helmet>
+        <title>global.tt</title>
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+        />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function () { emailjs.init("user_XvcHLrQfd3bHgGYyGtdCm") })()',
+          }}
+        />
+      </Helmet>
+      <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
+        <ActualLayout
+          uri={uri}
+          lightMode={mode}
+          toggleLightMode={() => setMode(mode === "light" ? "dark" : "light")}
+        >
+          {children}
+        </ActualLayout>
+      </ThemeProvider>
+    </div>
   )
 }
 
