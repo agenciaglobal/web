@@ -1,4 +1,9 @@
-import { isWidthUp, Typography, WithWidthProps } from "@material-ui/core"
+import {
+  isWidthDown,
+  isWidthUp,
+  Typography,
+  WithWidthProps,
+} from "@material-ui/core"
 import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
 import React from "react"
@@ -136,37 +141,93 @@ const QuoteComponent = (props: {
   )
 }
 
+export const useExtrapolatedMargin = (props: WithWidthProps): number => {
+  const isDesktop = isWidthUp("md", props.width || "xs")
+  const isXS = isWidthDown("xs", props.width || "xs")
+  console.log(isXS)
+  return isDesktop ? 120 : isXS ? 16 : 24
+}
+
 export const MainTranslatedImage = withWidth()(
   (
     props: {
       image: string
+      title?: React.ReactElement
     } & WithWidthProps,
   ): React.ReactElement => {
-    const isDesktop = isWidthUp("md", props.width || "xs")
-    console.log(isDesktop)
-    const margin = isDesktop ? 120 : 24
+    const margin = useExtrapolatedMargin({ width: props.width })
     return (
       <Box
         css={{
           minHeight: 400,
+          display: "flex",
+          justifyContent: "center",
+          alignSelf: "center",
+          alignItems: "center",
           backgroundImage: `url(${props.image})`,
           backgroundSize: "cover",
           width: `calc( 100% + ${2 * margin}px)`,
           transform: `translate( -${margin}px , -${187}px )`,
         }}
-      />
+      >
+        {props.title}
+      </Box>
     )
   },
 )
 
+const MainText = withWidth()(
+  ({
+    width,
+    title,
+    subtitle,
+  }: { title: string; subtitle: string } & WithWidthProps) => {
+    const isDesktop = isWidthUp("md", width || "xs")
+    return (
+      <Box
+        style={{
+          width: `${isDesktop ? 50 : 100}%`,
+        }}
+      >
+        <Typography
+          style={{
+            fontSize: `${isDesktop ? 50 : 40}px`,
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          {title}
+        </Typography>
+        <Typography
+          style={{
+            fontSize: `${isDesktop ? 30 : 25}px`,
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+        >
+          {subtitle}
+        </Typography>
+      </Box>
+    )
+  },
+)
 const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
+
   return (
     <React.Fragment>
-      <MainTranslatedImage image={data?.mdx?.frontmatter?.image || ""} />
+      <MainTranslatedImage
+        title={
+          <MainText
+            title={data?.mdx?.frontmatter?.title || ""}
+            subtitle={data?.mdx?.frontmatter?.description || ""}
+          />
+        }
+        image={data?.mdx?.frontmatter?.image || ""}
+      />
       <div
         style={{
           transform: "translateY( -187px )",

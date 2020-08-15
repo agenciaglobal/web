@@ -81,8 +81,8 @@ export const isCurrentHook = (
 ): { isCurrent: boolean } => {
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + destination : destination
-  const isCurrent =
-    destination === "/" ? "/en" === uri || "/" === uri : uri.includes(s)
+  const isWork = "/en" === uri || "/" === uri || uri.includes("portifolio")
+  const isCurrent = destination === "/" ? isWork : uri.includes(s)
   return { isCurrent }
 }
 

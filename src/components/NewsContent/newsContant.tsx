@@ -25,6 +25,7 @@ export function LongMontsetrratText(props: {
 }
 const useGridStyles = makeStyles(() => ({
   div: {
+    overflowX: "hidden",
     transform: "translateY( -187px )",
     marginTop: 24,
     "& img": {

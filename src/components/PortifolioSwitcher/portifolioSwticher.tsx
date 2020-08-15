@@ -1,4 +1,4 @@
-import { Box, isWidthUp, WithWidthProps } from "@material-ui/core"
+import { Box, WithWidthProps } from "@material-ui/core"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import React from "react"
 import { SitePageContextNext, SitePageContextPrevious } from "global"
@@ -6,6 +6,7 @@ import { Center } from "./center"
 import { Next } from "./next"
 import { Previous } from "./previous"
 import withWidth from "@material-ui/core/withWidth"
+import { useExtrapolatedMargin } from "../../templates/portifolio-post"
 
 interface Props {
   previous?: SitePageContextPrevious | null
@@ -27,9 +28,7 @@ const useStyles = makeStyles(() => ({
 export const PortifolioSwitcher = withWidth()(
   (props: Props & WithWidthProps): React.ReactElement => {
     const classes = useStyles()
-    const isDesktop = isWidthUp("md", props.width || "xs")
-    console.log(isDesktop)
-    const margin = isDesktop ? 120 : 24
+    const margin = useExtrapolatedMargin({ width: props.width })
     return (
       <Box
         className={classes.style}

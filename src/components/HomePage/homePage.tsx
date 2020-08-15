@@ -28,7 +28,7 @@ export const HomePage = ({
       <Hidden smDown>
         <DesktopTabs setValue={setVal} value={val} categories={categories} />
       </Hidden>
-      <Hidden smUp>
+      <Hidden mdUp>
         <MobileSelect setValue={setVal} value={val} categories={categories} />
       </Hidden>
       <HomeGrid projects={projects} value={categories[val]} />
