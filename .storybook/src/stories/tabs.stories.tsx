@@ -31,7 +31,7 @@ export const mobile = (x: Props) => {
     <MobileSelect
       setValue={x.setValue}
       value={x.value}
-      categories={x.categories.map((d) => d.label)}
+      categories={(x.categories || []).map((d) => d.label)}
     />
   )
 }
