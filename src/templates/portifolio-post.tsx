@@ -141,7 +141,7 @@ const QuoteComponent = (props: {
   )
 }
 
-export function useExtrapolatedMargin(props: WithWidthProps) {
+export const useExtrapolatedMargin = (props: WithWidthProps): number => {
   const isDesktop = isWidthUp("md", props.width || "xs")
   const isXS = isWidthDown("xs", props.width || "xs")
   console.log(isXS)
@@ -176,35 +176,55 @@ export const MainTranslatedImage = withWidth()(
   },
 )
 
+const MainText = withWidth()(
+  ({
+    width,
+    title,
+    subtitle,
+  }: { title: string; subtitle: string } & WithWidthProps) => {
+    const isDesktop = isWidthUp("md", width || "xs")
+    return (
+      <Box
+        style={{
+          width: `${isDesktop ? 50 : 100}%`,
+        }}
+      >
+        <Typography
+          style={{
+            fontSize: `${isDesktop ? 50 : 40}px`,
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          {title}
+        </Typography>
+        <Typography
+          style={{
+            fontSize: `${isDesktop ? 30 : 25}px`,
+            textAlign: "center",
+            fontWeight: 500,
+          }}
+        >
+          {subtitle}
+        </Typography>
+      </Box>
+    )
+  },
+)
 const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
+
   return (
     <React.Fragment>
       <MainTranslatedImage
         title={
-          <Box>
-            <Typography
-              style={{
-                fontSize: 50,
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              {data?.mdx?.frontmatter?.title || ""}
-            </Typography>
-            <Typography
-              style={{
-                fontSize: 30,
-                textAlign: "center",
-                fontWeight: 500,
-              }}
-            >
-              {data?.mdx?.frontmatter?.description || ""}
-            </Typography>
-          </Box>
+          <MainText
+            title={data?.mdx?.frontmatter?.title || ""}
+            subtitle={data?.mdx?.frontmatter?.description || ""}
+          />
         }
         image={data?.mdx?.frontmatter?.image || ""}
       />
