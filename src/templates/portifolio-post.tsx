@@ -1,4 +1,9 @@
-import { isWidthUp, Typography, WithWidthProps } from "@material-ui/core"
+import {
+  isWidthDown,
+  isWidthUp,
+  Typography,
+  WithWidthProps,
+} from "@material-ui/core"
 import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
 import React from "react"
@@ -136,25 +141,37 @@ const QuoteComponent = (props: {
   )
 }
 
+export function useExtrapolatedMargin(props: WithWidthProps) {
+  const isDesktop = isWidthUp("md", props.width || "xs")
+  const isXS = isWidthDown("xs", props.width || "xs")
+  console.log(isXS)
+  return isDesktop ? 120 : isXS ? 16 : 24
+}
+
 export const MainTranslatedImage = withWidth()(
   (
     props: {
       image: string
+      title?: React.ReactElement
     } & WithWidthProps,
   ): React.ReactElement => {
-    const isDesktop = isWidthUp("md", props.width || "xs")
-    console.log(isDesktop)
-    const margin = isDesktop ? 120 : 24
+    const margin = useExtrapolatedMargin({ width: props.width })
     return (
       <Box
         css={{
           minHeight: 400,
+          display: "flex",
+          justifyContent: "center",
+          alignSelf: "center",
+          alignItems: "center",
           backgroundImage: `url(${props.image})`,
           backgroundSize: "cover",
           width: `calc( 100% + ${2 * margin}px)`,
           transform: `translate( -${margin}px , -${187}px )`,
         }}
-      />
+      >
+        {props.title}
+      </Box>
     )
   },
 )
@@ -166,7 +183,31 @@ const PortifolioPostTemplate = ({
   const gutterVertical = 16
   return (
     <React.Fragment>
-      <MainTranslatedImage image={data?.mdx?.frontmatter?.image || ""} />
+      <MainTranslatedImage
+        title={
+          <Box>
+            <Typography
+              style={{
+                fontSize: 50,
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              {data?.mdx?.frontmatter?.title || ""}
+            </Typography>
+            <Typography
+              style={{
+                fontSize: 30,
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              {data?.mdx?.frontmatter?.description || ""}
+            </Typography>
+          </Box>
+        }
+        image={data?.mdx?.frontmatter?.image || ""}
+      />
       <div
         style={{
           transform: "translateY( -187px )",

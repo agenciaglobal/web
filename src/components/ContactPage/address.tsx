@@ -15,6 +15,7 @@ export const AddressComponent = (): React.ReactElement => (
       justifyContent: "center",
       alignItems: "baseline",
       padding: 0,
+      marginBottom: -90,
     }}
   >
     <Box style={{ display: "flex", justifyContent: "center" }}>
