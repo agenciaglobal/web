@@ -80,22 +80,16 @@ export const ActualLayout = ({
   uri,
 }: Props): React.ReactElement => {
   const classes = useStyles()
-  console.log(uri)
-  console.log(uri)
-  const isContact = uri.includes("/contact")
-  const test = useScrollDirection({
+  const scrollDirection = useScrollDirection({
     initialDirection: "down",
     thresholdPixels: 0,
     off: false,
   })
-  // const [scrolled, setScrolled] = React.useState(false)
-  const scrolled = test === "up"
-  console.log(uri)
-  console.log(test)
+  const isScrollingUp = scrollDirection === "up"
   return (
     <div className={classes.wrapper}>
-      <RightDrawer scrolled={scrolled} uri={uri} />
-      <LeftDrawer scrolled={scrolled} />
+      <RightDrawer scrolled={isScrollingUp} uri={uri} />
+      <LeftDrawer scrolled={isScrollingUp} />
       <LayoutHeaderMobile
         lightMode={lightMode}
         uri={uri}
@@ -104,8 +98,7 @@ export const ActualLayout = ({
       <LayoutHeader lightMode={lightMode} uri={uri} />
       <Container
         className={classNames(classes.root, {
-          [classes.scrolled]: scrolled,
-          // [classes.contact]: isContact,
+          [classes.scrolled]: isScrollingUp,
         })}
       >
         <Box>{children}</Box>
