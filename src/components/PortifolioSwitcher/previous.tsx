@@ -15,13 +15,14 @@ export const Previous = (props: Props): React.ReactElement => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "35%",
+        minWidth: "33%",
+        maxWidth: "33%",
       }}
     >
       {props.previous && (
         <Link
           style={{ textDecoration: "none" }}
-          to={`/portifolio${props.previous.fields?.slug}`}
+          to={`${props.previous.fields?.slug}`}
         >
           <Box
             style={{

@@ -7,7 +7,6 @@ import React from "react"
 import { LightMode } from "shared/theme"
 import logoblack from "static/logo-black.png"
 import logo from "static/logo-white.png"
-import mapGlobal from "static/map.png"
 import {
   LanguageSwitcher,
   SuporttedLanguages,
@@ -28,14 +27,14 @@ export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
       <AppBar
         position="static"
         style={{
-          zIndex: 222,
-          height: isContact ? 400 : 155,
-          backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
+          // height: isContact ? 400 : 155,
+          backgroundColor: "transparent",
           boxShadow: "none",
         }}
       >
         <Toolbar
           style={{
+            zIndex: 1,
             display: "flex",
             padding: "0px 120px",
             justifyContent: "space-between",
@@ -78,10 +77,6 @@ export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
                 style={{ paddingLeft: 24 }}
               />
             </ul>
-            {/* <ThemeSwitch
-              lightMode={lightMode}
-              toggleLightMode={toggleLightMode}
-            /> */}
           </Box>
         </Toolbar>
       </AppBar>

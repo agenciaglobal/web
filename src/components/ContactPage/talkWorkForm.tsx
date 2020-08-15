@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { marginTop: 20 },
+  grid: { marginTop: 20, padding: 24 },
 }))
 
 export const TalkWorkForm = (): React.ReactElement => {
