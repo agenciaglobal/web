@@ -8,6 +8,8 @@ type: HALF
 image: /assets/10-maria-dornelles.jpg
 tags:
   - yay!!
+  - yay!!
+  - yay!!
 author: João Paulo Rocha
 ---
 laõoo

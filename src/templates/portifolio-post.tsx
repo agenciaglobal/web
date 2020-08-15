@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core"
+import { isWidthUp, Typography, WithWidthProps } from "@material-ui/core"
 import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
 import React from "react"
@@ -9,6 +9,7 @@ import Box from "@material-ui/core/Box"
 import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
+import withWidth from "@material-ui/core/withWidth"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -135,43 +136,84 @@ const QuoteComponent = (props: {
   )
 }
 
+export const MainTranslatedImage = withWidth()(
+  (
+    props: {
+      image: string
+    } & WithWidthProps,
+  ): React.ReactElement => {
+    const isDesktop = isWidthUp("md", props.width || "xs")
+    console.log(isDesktop)
+    const margin = isDesktop ? 120 : 24
+    return (
+      <Box
+        css={{
+          minHeight: 400,
+          backgroundImage: `url(${props.image})`,
+          backgroundSize: "cover",
+          width: `calc( 100% + ${2 * margin}px)`,
+          transform: `translate( -${margin}px , -${187}px )`,
+        }}
+      />
+    )
+  },
+)
+
 const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-  const image = data?.mdx?.frontmatter?.image || ""
-  const image1 = data?.mdx?.frontmatter?.image_1 || ""
-
-  const image2 = data?.mdx?.frontmatter?.image_2 || ""
-  const image3 = data?.mdx?.frontmatter?.image_3 || ""
   return (
     <React.Fragment>
-      <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
-      </Box>
-      <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
-      <GridLocal
-        left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
-        right={<GridImage src={image} />}
-      />
-      <GridLocal
-        left={<GridImage src={image1} />}
-        right={<GridImage src={image2} />}
-      />
-      <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
-      </Box>
-      <Fullmage paddingTop={gutterVertical} image={image2} />
-      <Box css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}>
-        <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
-      </Box>
-      <ImageScroller images={[image, image1, image2, image3]} />
-      <QuoteComponent
-        quote={data?.mdx?.frontmatter?.text_4}
-        author={data?.mdx?.frontmatter?.author}
-      />
-      <PortifolioSwitcher previous={previous} next={next} />
+      <MainTranslatedImage image={data?.mdx?.frontmatter?.image || ""} />
+      <div
+        style={{
+          transform: "translateY( -187px )",
+        }}
+      >
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
+        </Box>
+        <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
+        <GridLocal
+          left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
+          right={<GridImage src={data?.mdx?.frontmatter?.image || ""} />}
+        />
+        <GridLocal
+          left={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
+          right={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
+        />
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
+        </Box>
+        <Fullmage
+          paddingTop={gutterVertical}
+          image={data?.mdx?.frontmatter?.image_2 || ""}
+        />
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
+        </Box>
+        <ImageScroller
+          images={[
+            data?.mdx?.frontmatter?.image || "",
+            data?.mdx?.frontmatter?.image_1 || "",
+            data?.mdx?.frontmatter?.image_2 || "",
+            data?.mdx?.frontmatter?.image_3 || "",
+          ]}
+        />
+        <QuoteComponent
+          quote={data?.mdx?.frontmatter?.text_4}
+          author={data?.mdx?.frontmatter?.author}
+        />
+        <PortifolioSwitcher previous={previous} next={next} />
+      </div>
     </React.Fragment>
   )
 }

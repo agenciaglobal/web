@@ -4,7 +4,6 @@ import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import logoBlack from "static/logo-black.png"
 import logo from "static/logo-white.png"
-import mapGlobal from "static/map.png"
 import { CloseButton } from "./close"
 
 interface Props {
@@ -22,7 +21,8 @@ export const MobileToolbar = (props: Props): React.ReactElement => {
         position="sticky"
         style={{
           height: isContact ? 400 : 155,
-          backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
+          backgroundColor: "transparent",
+          // backgroundImage: isContact ? `url(${mapGlobal})` : "unset",
           boxShadow: "none",
         }}
       >

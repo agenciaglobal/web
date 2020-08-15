@@ -23,10 +23,7 @@ function NewComponent(props: {
 }) {
   const image = props.el?.frontmatter?.image || ""
   return (
-    <Link
-      style={{ textDecoration: "none" }}
-      to={"/news" + props.el?.fields?.slug}
-    >
+    <Link style={{ textDecoration: "none" }} to={props.el?.fields?.slug || ""}>
       <div className={`menu-item`} style={{ background: `url(${image})` }}>
         <ExpandTExt
           date={props.el?.frontmatter?.date || ""}

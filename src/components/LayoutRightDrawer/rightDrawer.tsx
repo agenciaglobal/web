@@ -1,13 +1,13 @@
 import { Container, Drawer, Hidden } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
-import React, { Fragment } from "react"
+import React from "react"
 import { TabComponent } from "components/TabComponent/drawerItem"
 
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
       // zIndex: -2,
-      // background: theme.palette.primary.main,
+      background: "transparent",
       height: "100vh",
       // marginBottom: 155,
       width: 120,
@@ -32,35 +32,31 @@ const useStyles = makeStyles(() =>
   }),
 )
 
-const RightDrawer = ({
+export const RightDrawer = ({
   uri,
   scrolled,
 }: {
   uri: string
   scrolled: boolean
-}): React.ReactElement => {
+}): React.ReactElement | null => {
   const classes = useStyles()
   const drawerClasses = { paper: classes.drawerPaper }
-  return (
-    scrolled && (
-      <Fragment>
-        <Hidden smDown>
-          <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
-            <Container className={classes.container}>
-              <ul className={classes.list}>
-                <TabComponent page={"/"} uri={uri} label={"WORKS"} />
-                <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
-                <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
-                <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
-                <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
-                <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
-              </ul>
-            </Container>
-          </Drawer>
-        </Hidden>
-      </Fragment>
-    )
-  )
+  return scrolled ? (
+    <React.Fragment>
+      <Hidden smDown>
+        <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
+          <Container className={classes.container}>
+            <ul className={classes.list}>
+              <TabComponent page={"/"} uri={uri} label={"WORKS"} />
+              <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
+              <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
+              <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
+              <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
+              <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
+            </ul>
+          </Container>
+        </Drawer>
+      </Hidden>
+    </React.Fragment>
+  ) : null
 }
-
-export default RightDrawer

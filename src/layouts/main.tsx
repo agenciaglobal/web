@@ -1,12 +1,11 @@
 import { Container, Hidden } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import * as React from "react"
-import * as classNames from "classnames"
-import { Waypoint } from "react-waypoint"
+import classNames from "classnames"
 import { LayoutHeader } from "components/LayoutHeader/layoutHeader"
 import { LayoutHeaderMobile } from "components/LayoutHeader/layoutHeaderMobile"
 import LeftDrawer from "components/LayoutLeftDrawer/leftDrawer"
-import RightDrawer from "components/LayoutRightDrawer/rightDrawer"
+import { RightDrawer } from "components/LayoutRightDrawer/rightDrawer"
 import { useStyles } from "./styles"
 import Footer from "../components/LayoutFooter/footer"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
@@ -18,6 +17,61 @@ interface Props {
   toggleLightMode: () => void
   children: React.ReactElement
 }
+const SCROLL_UP = "up"
+const SCROLL_DOWN = "down"
+
+type Directions = "up" | "down"
+
+const useScrollDirection = ({
+  initialDirection,
+  thresholdPixels,
+  off,
+}: {
+  initialDirection: Directions
+  thresholdPixels: number
+  off: boolean
+}) => {
+  const [scrollDir, setScrollDir] = React.useState(initialDirection)
+
+  React.useEffect(() => {
+    const threshold = thresholdPixels || 0
+    let lastScrollY = window.pageYOffset
+    let ticking = false
+
+    const updateScrollDir = () => {
+      const scrollY = window.pageYOffset
+
+      if (Math.abs(scrollY - lastScrollY) < threshold) {
+        // We haven't exceeded the threshold
+        ticking = false
+        return
+      }
+
+      setScrollDir(scrollY > lastScrollY ? SCROLL_DOWN : SCROLL_UP)
+      lastScrollY = scrollY > 0 ? scrollY : 0
+      ticking = false
+    }
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollDir)
+        ticking = true
+      }
+    }
+
+    /**
+     * Bind the scroll handler if `off` is set to false.
+     * If `off` is set to true reset the scroll direction.
+     */
+    !off
+      ? window.addEventListener("scroll", onScroll)
+      : setScrollDir(initialDirection)
+
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [initialDirection, thresholdPixels, off])
+
+  return scrollDir
+}
 
 export const ActualLayout = ({
   children,
@@ -25,34 +79,26 @@ export const ActualLayout = ({
   toggleLightMode,
   uri,
 }: Props): React.ReactElement => {
-  const [scrolled, setScrolled] = React.useState(false)
   const classes = useStyles()
-  console.log(uri)
-  console.log(uri)
-  const isContact = uri.includes("/contact")
-  console.log(uri)
+  const scrollDirection = useScrollDirection({
+    initialDirection: "down",
+    thresholdPixels: 0,
+    off: false,
+  })
+  const isScrollingUp = scrollDirection === "up"
   return (
     <div className={classes.wrapper}>
-      <RightDrawer scrolled={scrolled} uri={uri} />
-      <LeftDrawer scrolled={scrolled} uri={uri} />
+      <RightDrawer scrolled={isScrollingUp} uri={uri} />
+      <LeftDrawer scrolled={isScrollingUp} />
       <LayoutHeaderMobile
         lightMode={lightMode}
         uri={uri}
         toggleLightMode={toggleLightMode}
       />
-      <LayoutHeader
-        lightMode={lightMode}
-        uri={uri}
-        toggleLightMode={toggleLightMode}
-      />
-      <Waypoint
-        onEnter={() => setScrolled(false)}
-        onLeave={() => setScrolled(true)}
-      />
+      <LayoutHeader lightMode={lightMode} uri={uri} />
       <Container
         className={classNames(classes.root, {
-          [classes.scrolled]: scrolled,
-          [classes.contact]: isContact,
+          [classes.scrolled]: isScrollingUp,
         })}
       >
         <Box>{children}</Box>

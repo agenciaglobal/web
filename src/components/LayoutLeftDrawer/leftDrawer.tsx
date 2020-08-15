@@ -22,19 +22,16 @@ const LeftDrawer = ({
   scrolled,
 }: {
   scrolled: boolean
-}): React.ReactElement => {
+}): React.ReactElement | null => {
   const classes = useStyles()
-
-  return (
-    scrolled && (
-      <Fragment>
-        <Hidden smDown>
-          <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
-            <div>??</div>
-          </Drawer>
-        </Hidden>
-      </Fragment>
-    )
-  )
+  return scrolled ? (
+    <Fragment>
+      <Hidden smDown>
+        <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
+          <div>??</div>
+        </Drawer>
+      </Hidden>
+    </Fragment>
+  ) : null
 }
 export default LeftDrawer

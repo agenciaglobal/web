@@ -6,6 +6,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import Tabs from "@material-ui/core/Tabs"
 import TextField from "@material-ui/core/TextField"
 import * as React from "react"
+import { ChangeEvent } from "react"
+import { Field, Formik } from "formik"
 
 const yellow = "#FFCC00"
 
@@ -25,8 +27,25 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { marginTop: 20 },
+  grid: { marginTop: 20, padding: 24 },
 }))
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const emailjs: any
+
+type FormValues = {
+  msg: string
+  phone: string
+  name: string
+  email: string
+}
+
+const initialValues: FormValues = {
+  email: "",
+  name: "",
+  phone: "",
+  msg: "",
+}
 
 export const TalkWorkForm = (): React.ReactElement => {
   const classes = useStyles()
@@ -43,38 +62,85 @@ export const TalkWorkForm = (): React.ReactElement => {
           />
         ))}
       </Tabs>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          console.log("hello")
+      <Formik<FormValues>
+        initialValues={initialValues}
+        onSubmit={async (values, { resetForm }) => {
+          if (
+            values.name !== "" &&
+            values.email !== "" &&
+            values.phone !== "" &&
+            values.msg !== ""
+          ) {
+            await emailjs.send(
+              "gmail",
+              "template_IMAOpHqW",
+              { ...values, type: current === 0 ? "talk" : "work" },
+              "user_XvcHLrQfd3bHgGYyGtdCm",
+            )
+            console.log("hello")
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            resetForm(initialValues as any)
+          }
         }}
       >
-        <Box className={classes.box}>
-          <TextField fullWidth={true} label={"Nome"} />
-          <TextField
-            className={classes.email}
-            fullWidth={true}
-            label={"Email"}
-          />
-          <TextField fullWidth={true} label={"telefone"} />
-        </Box>
-        <TextField
-          className={classes.margin}
-          label={"Mensagem"}
-          fullWidth={true}
-          rows={5}
-          multiline={true}
-        />
-        <Box className={classes.bcontainer}>
-          <Button
-            className={classes.button}
-            type={"submit"}
-            variant={"contained"}
-          >
-            ENVIAR
-          </Button>
-        </Box>
-      </form>
+        {({ values, setFieldValue, handleSubmit }) => {
+          return (
+            <form onSubmit={handleSubmit}>
+              <Box className={classes.box}>
+                <Field
+                  value={values.name}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                    setFieldValue("name", e.target.value)
+                  }}
+                  as={TextField}
+                  fullWidth={true}
+                  label={"Nome"}
+                />
+                <Field
+                  as={TextField}
+                  className={classes.email}
+                  fullWidth={true}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                    setFieldValue("email", e.target.value)
+                  }}
+                  value={values.email}
+                  label={"Email"}
+                />
+                <Field
+                  value={values.phone}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                    setFieldValue("phone", e.target.value)
+                  }}
+                  as={TextField}
+                  fullWidth={true}
+                  label={"telefone"}
+                />
+              </Box>
+              <Field
+                as={TextField}
+                className={classes.margin}
+                value={values.msg}
+                label={"Mensagem"}
+                fullWidth={true}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  setFieldValue("msg", e.target.value)
+                }}
+                rows={5}
+                multiline={true}
+              />
+              <Box className={classes.bcontainer}>
+                <Button
+                  className={classes.button}
+                  type={"submit"}
+                  variant={"contained"}
+                >
+                  ENVIAR
+                </Button>
+              </Box>
+            </form>
+          )
+        }}
+      </Formik>
     </Grid>
   )
 }

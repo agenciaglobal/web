@@ -17,13 +17,14 @@ export const Next = (props: Props): React.ReactElement => {
           justifyContent: "center",
           alignItems: "center",
         },
-        width: "35%",
+        minWidth: "33%",
+        maxWidth: "33%",
       }}
     >
       {props.next && (
         <Link
           style={{ textDecoration: "none" }}
-          to={`/portifolio${props.next.fields?.slug}`}
+          to={`${props.next.fields?.slug}`}
         >
           <Box
             style={{

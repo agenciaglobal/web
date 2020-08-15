@@ -5,6 +5,7 @@ import { MobileToolbar } from "./mobile/toolbar"
 
 interface Props {
   lightMode: LightMode
+  uri: string
   toggleLightMode: () => void
 }
 
