@@ -13,9 +13,6 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Data, widget: date }
-      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
-      - { name: title, label: Título }
-      - { name: description, label: Descrição }
       - name: postType
         label: Tipo de post
         widget: select
@@ -32,9 +29,12 @@ collections:
           - { label: "Left", value: "LEFT" }
           - { label: "Right", value: "RIGHT" }
           - { label: "Quote", value: "QUOTE" }
+      - { name: title, label: Título }
+      - { name: description, label: Descrição }
       - name: "image"
         label: "Imagem de destaque"
         widget: "image"
+      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -50,6 +50,7 @@ collections:
         searchFields: ["name", "about", "image"]
         valueField: "name"
         displayFields: ["name"]
+        required: false
   - name: tags
     label: Tags
     folder: content/tags
@@ -64,14 +65,25 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Data, widget: date }
       - { name: name, label: Cliente }
-      - { name: testimonial, label: Depoimento }
-      - { name: author, label: Autor }
       - label: "Logo"
         name: "image"
         widget: "image"
+      - { name: testimonial, label: Depoimento, required: false }
+      - { name: author, label: Autor, required: false }
       - label: "Foto do autor"
         name: "author_image"
         widget: "image"
+        required: false
+#
+#     Todos os campos estão criados e na ordem correta.
+#     Comentei em cada campo novo pra facilitar.
+#     Deixei quase todos os campos com required=false, em geral,
+#     se não tiver o campo, é só não exibir o componente, mas tem alguns casos especiais:
+#       GridLocal: no caso dos conteúdos que são exibidos em grid, se um não vier,
+#       precisa omitir o grid inteiro. 
+#       Depoimento do cliente: são 3 campos opcionais, mas se tiver algum faltando,
+#       o componente inteiro do depoimento deve ser omitido
+#
   - name: portifolio
     label: Portifolio
     folder: content/portifolio
@@ -80,15 +92,8 @@ collections:
       - { name: path, label: Path }
       - { name: creation date, label: Data publicação, widget: date }
       - { name: job date, label: Data do job, widget: date }
-      - { name: title, label: Title }
-      - { name: text_1, label: "Text Principal" }
-      - { name: text_2, label: "Text Secundário" }
-      - { name: text_3, label: "Terceiro Text" }
-      - { name: text_4, label: "Quarto Text" }
-      - { name: youtube, label: "Youtube ID" }
-      - { name: description, label: Description }
       - name: categorie
-        label: Categorie
+        label: Categoria
         widget: select
         options:
           - { label: "featured", value: "featured" }
@@ -96,25 +101,54 @@ collections:
           - { label: "social", value: "social" }
           - { label: "crm", value: "crm" }
           - { label: "advertising", value: "advertising" }
-      - label: "Autor do post"
-        name: "author"
-        widget: "relation"
-        collection: "team"
-        searchFields: ["name", "about", "image"]
-        valueField: "name"
-        displayFields: ["name"]
-      - label: "Image"
+      - { name: title, label: Título }
+      - { name: description, label: Cliente }
+# imagem de capa é a header do post.. mesmo quando houver um vídeo exibido no grid
+      - label: "Imagem de capa (wide)"
         name: "image"
         widget: "image"
-      - label: "Image 1"
+# video para ser exibido no grid. É opcional e quando não for inserido, a imagem de capa deve ficar no grid.
+      - label: "Vídeo de capa"
+        name: "video"
+        widget: "file"
+        required: false
+      - { name: text_1, label: "Texto 1" }
+      - { name: youtube, label: "Id do vídeo (youtube)", required: false }
+      - label: "Imagem 1 (1:1)"
         name: "image_1"
         widget: "image"
-      - label: "Image 2"
+        required: false
+      - { name: text_2, label: "Texto 2", required: false }
+# inclui o markdown aqui como conteúdo adicional pra ser exibido nessa posição (entre os 2 "GridLocal")
+      - { name: "body", label: "Conteúdo adicional", widget: "markdown", required: false }
+      - label: "Imagem 2 (1:1)"
         name: "image_2"
         widget: "image"
-      - label: "Image 3"
+        required: false
+      - label: "Imagem 3 (1:1)"
         name: "image_3"
         widget: "image"
+        required: false
+      - { name: text_3, label: "Texto 3", required: false }
+# imagem nova... tava faltando inserir uma imagem... tem que parar de reutilizar a "image" na cover e no conteúdo
+      - label: "imagem 4 (wide)"
+        name: "image_4"
+        widget: "image"
+        required: false
+      - { name: text_4, label: "Texto 4", required: false }
+# novos campos pro componente do depoimento do cliente.
+      - { name: testimonial, label: "Depoimento do cliente", required: false }
+      - { name: author, label: "Autor do depoimento", required: false }
+      - { name: role, label: "Cargo do autor do depoimento", required: false }
+# esse campo de author comentado deve ser removido... deixei comentado por enquanto pra evitar que quebre algo no front
+      # - label: "Autor do post"
+      #   name: "author"
+      #   widget: "relation"
+      #   collection: "team"
+      #   searchFields: ["name", "about", "image"]
+      #   valueField: "name"
+      #   displayFields: ["name"]
+
   - name: team
     label: Team
     folder: content/team

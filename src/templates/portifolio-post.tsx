@@ -240,12 +240,12 @@ const PortifolioPostTemplate = ({
         </Box>
         <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
         <GridLocal
+          right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
           left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
-          right={<GridImage src={data?.mdx?.frontmatter?.image || ""} />}
         />
         <GridLocal
-          left={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
-          right={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
+          left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
+          right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
         />
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
@@ -254,7 +254,7 @@ const PortifolioPostTemplate = ({
         </Box>
         <Fullmage
           paddingTop={gutterVertical}
-          image={data?.mdx?.frontmatter?.image_2 || ""}
+          image={data?.mdx?.frontmatter?.image_3 || ""}
         />
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
@@ -263,9 +263,9 @@ const PortifolioPostTemplate = ({
         </Box>
         <ImageScroller
           images={[
-            data?.mdx?.frontmatter?.image || "",
             data?.mdx?.frontmatter?.image_1 || "",
             data?.mdx?.frontmatter?.image_2 || "",
+            data?.mdx?.frontmatter?.image_3 || "",
             data?.mdx?.frontmatter?.image_3 || "",
           ]}
         />
