@@ -16,7 +16,7 @@ const useStylesV2 = makeStyles((theme: Theme) => ({
   box: {
     height: "100%",
     flexDirection: "column",
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.custom.greyAlpha2,
     display: "flex",
     justifyContent: "space-between",
   },
