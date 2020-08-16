@@ -68,7 +68,21 @@ export const AboutAccordion = (): React.ReactElement => {
       <div className={classes.div}>
         {accordionData.map((d, index) => (
           <Accordion key={index}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionSummary
+              expandIcon={
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0.5" y="0.5" width="15" height="15" stroke="black" />
+                  <rect x="7" y="3" width="2" height="10" fill="black" />
+                  <rect x="3" y="7" width="10" height="2" fill="black" />
+                </svg>
+              }
+            >
               <Typography className={classes.heading}>{d.title}</Typography>
             </AccordionSummary>
             <AccordionDetails className={classes.details}>
