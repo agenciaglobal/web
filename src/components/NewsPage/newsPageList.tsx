@@ -12,9 +12,6 @@ interface Props {
   news?: Array<Maybe<SitePageContextNews>> | null | undefined
 }
 
-const notEmpty = <TValue extends unknown>(
-  value: TValue | null | undefined,
-): value is TValue => value !== null && value !== undefined
 export const NewsPageList = withWidth()(
   ({ news, width }: Props & WithWidthProps): React.ReactElement => {
     const pace = 2
