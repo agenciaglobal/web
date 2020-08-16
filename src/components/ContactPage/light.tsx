@@ -1,5 +1,8 @@
 export const lightMap = {
-  featureType: "landscape",
+  mapTypeControl: false,
+  streetViewControl: false,
+  disableDefaultUI: true,
+  fullscreenControl: false,
   styles: [
     { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
     {

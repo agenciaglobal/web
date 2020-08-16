@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 @font-face {
   font-family: "GSOne";
   src: url("../static/GlobalSans/GlobalSansOne/GlobalSansOne.otf")
@@ -17,10 +19,6 @@
   font-family: "GSStreet";
   src: url("../static/GlobalSans/GlobalSansStreet/GlobalSansStreet.otf")
     format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 }
 
 body::-webkit-scrollbar {

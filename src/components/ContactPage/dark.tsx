@@ -1,4 +1,8 @@
 export const darkMap = {
+  mapTypeControl: false,
+  streetViewControl: false,
+  disableDefaultUI: true,
+  fullscreenControl: false,
   styles: [
     { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
     {
