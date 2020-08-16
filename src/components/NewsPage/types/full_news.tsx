@@ -5,12 +5,14 @@ import { SlugType } from "components/NewsPage/types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
 
 export const FullNewsComponent = ({
+  force = false,
   current: { date, description, image, slug, title, type },
 }: {
+  force?: boolean
   current: SitePageContextNewsNodeFrontmatter & SlugType
 }): React.ReactElement | null => {
   const imageSrc = image || ""
-  return type === "FULL" ? (
+  return type === "FULL" || force ? (
     <div
       className={"global-news-full"}
       style={{

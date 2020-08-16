@@ -2,7 +2,10 @@ import { Container, Drawer } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher"
+import {
+  LanguageSwitcher,
+  SuporttedLanguages,
+} from "components/LanguageSwitcher/LanguageSwitcher"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
 
@@ -75,8 +78,8 @@ export const MobileDrawer = ({
           <Container>
             {menus.map(({ label, to }, index) => (
               <LinkMobileComponent
-                uri={uri}
                 key={index}
+                uri={uri}
                 to={to}
                 label={label}
                 close={close}
@@ -85,7 +88,7 @@ export const MobileDrawer = ({
           </Container>
           <Container className={classes.lower}>
             <LanguageSwitcher
-              language={language}
+              language={language as SuporttedLanguages}
               changeLanguage={changeLanguage}
             />
             <ThemeSwitch

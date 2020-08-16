@@ -14,7 +14,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
       <Grid container>
         <Grid
           item={true}
-          spacing={0}
           sm={12}
           md={6}
           style={{
@@ -38,7 +37,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
         </Grid>
         <Grid
           item={true}
-          spacing={0}
           sm={12}
           md={6}
           style={{

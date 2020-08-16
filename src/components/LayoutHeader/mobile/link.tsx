@@ -27,6 +27,7 @@ const useStylesMenu = makeStyles((theme: Theme) => ({
 interface Props {
   close: () => void
   label: string
+  uri: string
   to: string
 }
 

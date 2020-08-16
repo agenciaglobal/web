@@ -47,7 +47,7 @@ export const RightDrawer = ({
         <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
           <Container className={classes.container}>
             <ul className={classes.list}>
-              <TabComponent page={"/"} uri={uri} label={"WORKS"} />
+              <TabComponent page={"/"} uri={uri} label={"WORK"} />
               <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
               <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
               <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
