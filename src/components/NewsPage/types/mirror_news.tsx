@@ -41,7 +41,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
           >
             <ExpandTExt
               date={props.type}
-              title={"cesco dominator" + (props.title || "")}
+              title={props.title || ""}
               description={props.description || ""}
             />
           </div>

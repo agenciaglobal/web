@@ -81,7 +81,7 @@ const useIsAtTop = (): boolean => {
     return () => {
       window.onscroll = null
     }
-  }, [window.pageYOffset])
+  }, [])
   return top
 }
 

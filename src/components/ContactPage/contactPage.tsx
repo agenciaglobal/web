@@ -39,6 +39,7 @@ const Cesco = withWidth()(
               transform: `translate( -${margin}px , -${187}px )`,
               width: `calc( 100% + ${2 * margin}px)`,
               height: `500px`,
+              maxHeight: `50vh`,
             }}
           />
         }

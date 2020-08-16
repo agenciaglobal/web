@@ -39,7 +39,7 @@ export const LeftNewsComponent = ({
           >
             <ExpandTExt
               date={type}
-              title={"cesco dominator" + title}
+              title={title || ""}
               description={description || ""}
             />
           </div>

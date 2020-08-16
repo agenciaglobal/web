@@ -28,21 +28,23 @@ export const NewsPageList = ({ news }: Props): React.ReactElement => {
       >
         {map.map(callBackFN)}
       </Masonry>
-      <Box style={{ padding: 20, display: "flex", justifyContent: "center" }}>
-        <Button
-          style={{ background: "#FFCC00" }}
-          onClick={() => {
-            const result =
-              total + pace < (news?.length || 0)
-                ? total + pace
-                : news?.length || 0
-            console.log(result)
-            setTotal(result)
-          }}
-        >
-          Ver Mais Notícias
-        </Button>
-      </Box>
+      {total !== (news?.length || 0) && (
+        <Box style={{ padding: 20, display: "flex", justifyContent: "center" }}>
+          <Button
+            style={{ background: "#FFCC00" }}
+            onClick={() => {
+              const result =
+                total + pace < (news?.length || 0)
+                  ? total + pace
+                  : news?.length || 0
+              console.log(result)
+              setTotal(result)
+            }}
+          >
+            Ver Mais Notícias
+          </Button>
+        </Box>
+      )}
     </React.Fragment>
   )
 }

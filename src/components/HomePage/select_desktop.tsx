@@ -1,4 +1,4 @@
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import Tab from "@material-ui/core/Tab"
 import Tabs from "@material-ui/core/Tabs"
 import * as React from "react"
@@ -9,7 +9,7 @@ const a11yProps = (index: number) => ({
   "aria-controls": `simple-tabpanel-${index}`,
 })
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   wrapper: {
     // background: "red",
     // color: theme.palette.primary.contrastText,

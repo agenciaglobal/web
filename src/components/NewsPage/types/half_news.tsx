@@ -49,7 +49,7 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
             >
               <ExpandTExt
                 date={date}
-                title={"cesco dominator" + (props.current?.title || "")}
+                title={props.current?.title || ""}
                 description={props.current?.description || ""}
               />
             </div>
