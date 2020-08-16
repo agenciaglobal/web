@@ -25,8 +25,6 @@ export const LayoutHeader = ({
   uri,
 }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
-  const isContact = uri.includes("/contact")
-  console.log(isContact)
   return (
     <Hidden smDown>
       <AppBar

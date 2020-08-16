@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
+    backgroundColor: "transparent",
     padding: 0,
   },
   div: {

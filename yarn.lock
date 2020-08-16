@@ -19340,6 +19340,15 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
+react-on-screen@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-on-screen/-/react-on-screen-2.1.1.tgz#c66d78a8187457262d57f71766d1733f875e727a"
+  integrity sha512-mV2Ntd61ncJ9nBsXF/p5Y6lMDGTTwXTGvHaal4b7O1eX3GwSwDXKAe7KKXTf/4Oc1BuYc7j5Sy0XdT89w/MjDA==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
+    shallowequal "^1.0.2"
+
 react-onclickoutside@^6.5.0:
   version "6.9.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.9.0.tgz#a54bc317ae8cf6131a5d78acea55a11067f37a1f"
@@ -19665,6 +19674,13 @@ react-transition-group@^4.4.0:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-use-visibility@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-use-visibility/-/react-use-visibility-0.3.0.tgz#1bf967dbde36a61af47d785156e5988c4c807e8e"
+  integrity sha512-CYlC/YngQ//IDdwO0tWw2p64tFAKBmjDAhxztX7K7aYn2Bme/GSUq8fExekCQ8vBvNK0+JJ9I0NCI3qprCwLkw==
+  dependencies:
+    lodash.throttle "^4.1.1"
 
 react-virtualized-auto-sizer@^1.0.2:
   version "1.0.2"
@@ -20988,7 +21004,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-shallowequal@^1.1.0:
+shallowequal@^1.0.2, shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==

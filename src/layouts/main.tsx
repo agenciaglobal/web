@@ -88,6 +88,7 @@ export const ActualLayout = ({
   })
   const top = useIsAtTop()
   const isScrollingUp = scrollDirection === "up" && !top
+
   return (
     <div className={classes.wrapper}>
       <RightDrawer scrolled={isScrollingUp} uri={uri} />
@@ -131,8 +132,9 @@ export const ActualLayout = ({
             display: "block",
             position: "fixed",
             bottom: 16,
+            background: "transparent",
             left: 33,
-            zIndex: 1500,
+            zIndex: 0,
           }}
         >
           <SideFooter />
