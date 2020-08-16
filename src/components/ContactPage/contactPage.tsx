@@ -3,11 +3,7 @@ import Grid from "@material-ui/core/Grid"
 import * as React from "react"
 import { AddressComponent } from "./address"
 import { TalkWorkForm } from "./talkWorkForm"
-import mapGlobal from "static/map.png"
-import {
-  MainTranslatedImage,
-  useExtrapolatedMargin,
-} from "../../templates/portifolio-post"
+import { useExtrapolatedMargin } from "../../templates/portifolio-post"
 import {
   GoogleMap,
   Marker,
