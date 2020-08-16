@@ -16,9 +16,14 @@ import { TabComponent } from "components/TabComponent/drawerItem"
 interface Props {
   lightMode: LightMode
   uri: string
+  hide: boolean
 }
 
-export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
+export const LayoutHeader = ({
+  hide,
+  lightMode,
+  uri,
+}: Props): React.ReactElement => {
   const { changeLanguage, language } = useI18next()
   const isContact = uri.includes("/contact")
   console.log(isContact)
@@ -55,28 +60,30 @@ export const LayoutHeader = ({ lightMode, uri }: Props): React.ReactElement => {
               height: "100%",
             }}
           >
-            <ul
-              style={{
-                color: "#AAA",
-                listStyle: "none",
-                display: "flex",
-                justifyContent: "space-evenly",
-                padding: 8,
-              }}
-            >
-              <TabComponent page={"/"} uri={uri} label={"WORKS"} />
-              <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
-              <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
-              <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
-              <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
-              <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
-              <br />
-              <LanguageSwitcher
-                language={language as SuporttedLanguages}
-                changeLanguage={changeLanguage}
-                style={{ paddingLeft: 24 }}
-              />
-            </ul>
+            {!hide && (
+              <ul
+                style={{
+                  color: "#AAA",
+                  listStyle: "none",
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  padding: 8,
+                }}
+              >
+                <TabComponent page={"/"} uri={uri} label={"WORKS"} />
+                <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
+                <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
+                <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
+                <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
+                <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
+                <br />
+                <LanguageSwitcher
+                  language={language as SuporttedLanguages}
+                  changeLanguage={changeLanguage}
+                  style={{ paddingLeft: 24 }}
+                />
+              </ul>
+            )}
           </Box>
         </Toolbar>
       </AppBar>

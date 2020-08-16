@@ -51,7 +51,7 @@ export const TalkWorkForm = (): React.ReactElement => {
   const classes = useStyles()
   const [current, setCurrent] = React.useState<number>(0)
   return (
-    <Grid className={classes.grid} item={true} spacing={0} sm={12} md={8}>
+    <Grid className={classes.grid} item={true} sm={12} md={8}>
       <Tabs indicatorColor={"primary"} value={current} variant={"fullWidth"}>
         {["Fale com a gente", "Trabalhe aqui"].map((d, index) => (
           <Tab

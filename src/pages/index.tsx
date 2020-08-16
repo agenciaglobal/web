@@ -30,10 +30,6 @@ const usePortifolio = (
 }
 
 const IndexPage = ({ data }: Props): React.ReactElement => {
-  console.log(data)
-  // return (
-  //   <h2>sdkjfn</h2>
-  // )
   const { projects, categories, all } = usePortifolio(data)
   return <HomePage all={all} projects={projects} categories={categories} />
 }

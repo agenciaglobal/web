@@ -55,10 +55,7 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
             </div>
           </div>
           <div className={classes.style2}>
-            <div
-              className={classes.border}
-              style={{ height: "80%", display: "grid" }}
-            >
+            <div className={classes.border} style={{ height: "80%" }}>
               <ExpandTExt
                 date={date}
                 title={props.current?.title || ""}

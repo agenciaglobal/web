@@ -10,6 +10,7 @@ import { useStyles } from "./styles"
 import Footer from "../components/LayoutFooter/footer"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import SideFooter from "components/LayoutFooter/side-footer"
+import { useEffect, useState } from "react"
 
 interface Props {
   uri: string
@@ -73,6 +74,17 @@ const useScrollDirection = ({
   return scrollDir
 }
 
+const useIsAtTop = (): boolean => {
+  const [top, setTop] = useState(true)
+  useEffect(() => {
+    window.onscroll = () => setTop(window.pageYOffset === 0)
+    return () => {
+      window.onscroll = null
+    }
+  }, [])
+  return top
+}
+
 export const ActualLayout = ({
   children,
   lightMode,
@@ -85,7 +97,8 @@ export const ActualLayout = ({
     thresholdPixels: 0,
     off: false,
   })
-  const isScrollingUp = scrollDirection === "up"
+  const top = useIsAtTop()
+  const isScrollingUp = scrollDirection === "up" && !top
   return (
     <div className={classes.wrapper}>
       <RightDrawer scrolled={isScrollingUp} uri={uri} />
@@ -95,7 +108,11 @@ export const ActualLayout = ({
         uri={uri}
         toggleLightMode={toggleLightMode}
       />
-      <LayoutHeader lightMode={lightMode} uri={uri} />
+      <LayoutHeader
+        hide={!top && scrollDirection !== "down"}
+        lightMode={lightMode}
+        uri={uri}
+      />
       <Container
         className={classNames(classes.root, {
           [classes.scrolled]: isScrollingUp,

@@ -35,7 +35,6 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
         <div className={classes.lag}>
           <div
             style={{
-              display: "grid",
               backgroundImage: `url(${imageSrc})`,
             }}
             className={classes.style}
@@ -46,12 +45,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
               description={props.description || ""}
             />
           </div>
-          <div
-            style={{
-              display: "grid",
-            }}
-            className={classes.style}
-          >
+          <div style={{}} className={classes.style}>
             <ExpandTExt
               date={props.type}
               title={props.title || ""}
