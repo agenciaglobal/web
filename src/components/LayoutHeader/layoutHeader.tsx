@@ -24,7 +24,7 @@ export const LayoutHeader = ({
   lightMode,
   uri,
 }: Props): React.ReactElement => {
-  const { changeLanguage, language } = useI18next()
+  const { changeLanguage, language, t } = useI18next()
   const isContact = uri.includes("/contact")
   console.log(isContact)
   return (
@@ -70,11 +70,15 @@ export const LayoutHeader = ({
                   padding: 8,
                 }}
               >
-                <TabComponent page={"/"} uri={uri} label={"WORKS"} />
+                <TabComponent page={"/"} uri={uri} label={"WORK"} />
                 <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
                 <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
                 <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
-                <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
+                <TabComponent
+                  page={"/clients"}
+                  uri={uri}
+                  label={t("sidebar.client")}
+                />
                 <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
                 <br />
                 <LanguageSwitcher

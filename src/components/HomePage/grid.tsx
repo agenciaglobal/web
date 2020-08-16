@@ -4,6 +4,7 @@ import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
+import { useVisibility } from "shared/useVisibility"
 
 interface Props {
   projects: { [key: string]: Portifolio[] }
@@ -15,14 +16,19 @@ const useGridStyles = makeStyles(() => ({
 }))
 
 function NewComponent(props: { tile: Portifolio }) {
+  const [isFirstVisible, firstRef] = useVisibility<HTMLDivElement>(0)
+
   const path = props.tile?.image || ""
+  console.log(isFirstVisible)
   return (
     <Link style={{ textDecoration: "none" }} to={props.tile.slug}>
       <div
+        ref={firstRef}
         style={{
           height: 0,
           paddingBottom: "75%",
           backgroundImage: `url(${path})`,
+          filter: `blur(${isFirstVisible ? 0 : 5}px)`,
         }}
       >
         <Box style={{ padding: "15px" }}>
@@ -32,7 +38,7 @@ function NewComponent(props: { tile: Portifolio }) {
               fontFamily: "GSThree",
             }}
           >
-            {props.tile.title}
+            {(isFirstVisible ? "yay" : "sad") + props.tile.title}
           </Typography>
           <Typography style={{}}>{props.tile.description}</Typography>
         </Box>
