@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   withScriptjs,
   withGoogleMap,
@@ -30,21 +30,21 @@ export const ActualGoogleMapsComponent = withScriptjs(
       markers[index] = { ...markers[index], position: { lat, lng } }
       setPosition({ markers })
     }
-    // @ts-ignore
+    const dragend = (index: number) => (t: any, map: any, coordinates: any) =>
+      onMarkerDragEnd(coordinates, index)
+    const options = theme.themeName === "light" ? lightMap : darkMap
     return (
       <GoogleMap
         defaultZoom={15}
         defaultCenter={{ lat: -30.0185442, lng: -51.209478 }}
-        options={theme.themeName === "light" ? lightMap : darkMap}
+        options={options as any}
       >
         {position.markers.map((marker, index) => (
           <Marker
             key={index}
             position={marker.position}
             draggable={true}
-            onDragend={(t: any, map: any, coordinates: any) =>
-              onMarkerDragEnd(coordinates, index)
-            }
+            onDragend={dragend(index) as any}
             name={marker.name}
           />
         ))}

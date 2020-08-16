@@ -72,9 +72,11 @@ export const AboutTextGrid = (): React.ReactElement => {
             criativamente procuram novos caminhos.
           </Typography>
         </Box>
-        <Typography className={classes.div2}>
-          <Box lineHeight={1.5}>Change requires Creativity.</Box>
-        </Typography>
+        <Box lineHeight={1.5}>
+          <Typography className={classes.div2}>
+            Change requires Creativity.
+          </Typography>
+        </Box>
       </Box>
     </Grid>
   )
