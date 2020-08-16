@@ -39,11 +39,12 @@ function NewComponent(props: { index: number; tile: Portifolio }) {
                   style={{
                     fontSize: "20px",
                     fontFamily: "GSThree",
+                    color: "#FFF"
                   }}
                 >
                   {(isVisible ? "yay" : "sad") + props.tile.title}
                 </Typography>
-                <Typography style={{}}>{props.tile.description}</Typography>
+                <Typography style={{ color: "#FFF" }}>{props.tile.description}</Typography>
               </Box>
             </div>
           </Link>
