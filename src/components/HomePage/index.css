@@ -8,7 +8,6 @@
   background-clip: padding-box;
 }
 
-.global-home-grid-column > div {
-  background: grey;
+.global-home-grid-column  div {
   height: 390px;
 }

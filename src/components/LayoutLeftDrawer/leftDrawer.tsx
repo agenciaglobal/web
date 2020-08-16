@@ -1,14 +1,14 @@
-import { Drawer, Hidden } from "@material-ui/core"
+import { Drawer, Hidden, Box } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
+import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
-      height: "calc( 100vh - 155px )",
-      marginTop: 155,
-      zIndex: -2,
-      // background: theme.palette.primary.main,
+      height: `calc( 100vh - ${400 + 155}px)`,
+      zIndex: 0,
+      background: "transparent",
       width: 120,
       border: "none",
       display: "flex",
@@ -28,7 +28,21 @@ const LeftDrawer = ({
     <Fragment>
       <Hidden smDown>
         <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
-          <div>??</div>
+          <Box
+            style={{
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <Box
+              style={{
+                width: 300,
+              }}
+            >
+              <Typography variant={"caption"} noWrap={false} style={{}}>
+                ESTRATEGICAMENTE CRIATIVOS--------------------------
+              </Typography>
+            </Box>
+          </Box>
         </Drawer>
       </Hidden>
     </Fragment>

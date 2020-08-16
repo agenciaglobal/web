@@ -8,6 +8,7 @@ import TextField from "@material-ui/core/TextField"
 import * as React from "react"
 import { ChangeEvent } from "react"
 import { Field, Formik } from "formik"
+import Typography from "@material-ui/core/Typography"
 
 const yellow = "#FFCC00"
 
@@ -65,6 +66,10 @@ export const TalkWorkForm = (): React.ReactElement => {
       <Formik<FormValues>
         initialValues={initialValues}
         onSubmit={async (values, { resetForm }) => {
+          if (current === 1) {
+            window.location.href = `mailto:${"global@gmail.com"}?subject=${"work with global"}`
+            return
+          }
           if (
             values.name !== "" &&
             values.email !== "" &&
@@ -86,48 +91,64 @@ export const TalkWorkForm = (): React.ReactElement => {
         {({ values, setFieldValue, handleSubmit }) => {
           return (
             <form onSubmit={handleSubmit}>
-              <Box className={classes.box}>
-                <Field
-                  value={values.name}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                    setFieldValue("name", e.target.value)
-                  }}
-                  as={TextField}
-                  fullWidth={true}
-                  label={"Nome"}
-                />
-                <Field
-                  as={TextField}
-                  className={classes.email}
-                  fullWidth={true}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                    setFieldValue("email", e.target.value)
-                  }}
-                  value={values.email}
-                  label={"Email"}
-                />
-                <Field
-                  value={values.phone}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                    setFieldValue("phone", e.target.value)
-                  }}
-                  as={TextField}
-                  fullWidth={true}
-                  label={"telefone"}
-                />
-              </Box>
-              <Field
-                as={TextField}
-                className={classes.margin}
-                value={values.msg}
-                label={"Mensagem"}
-                fullWidth={true}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                  setFieldValue("msg", e.target.value)
-                }}
-                rows={5}
-                multiline={true}
-              />
+              {current === 1 && (
+                <Box style={{ paddingTop: 24 }}>
+                  <Typography>
+                    Estamos sempre prontos para conhecer novos rostos e ideias.
+                    Caso tenha interesse em trabalhar com a gente, mande o seu
+                    currículo, em formato pdf, e portfólio, se tiver, para o
+                    nosso e-mail. Se quiser, pode aproveitar o espaço para nos
+                    contar um pouquinho sobre você. Assim que recebermos,
+                    avaliaremos as possibilidades e retornaremos em seguida.
+                  </Typography>
+                </Box>
+              )}
+              {current === 0 && (
+                <React.Fragment>
+                  <Box className={classes.box}>
+                    <Field
+                      value={values.name}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        setFieldValue("name", e.target.value)
+                      }}
+                      as={TextField}
+                      fullWidth={true}
+                      label={"Nome"}
+                    />
+                    <Field
+                      as={TextField}
+                      className={classes.email}
+                      fullWidth={true}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        setFieldValue("email", e.target.value)
+                      }}
+                      value={values.email}
+                      label={"Email"}
+                    />
+                    <Field
+                      value={values.phone}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        setFieldValue("phone", e.target.value)
+                      }}
+                      as={TextField}
+                      fullWidth={true}
+                      label={"telefone"}
+                    />
+                  </Box>
+                  <Field
+                    as={TextField}
+                    className={classes.margin}
+                    value={values.msg}
+                    label={"Mensagem"}
+                    fullWidth={true}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                      setFieldValue("msg", e.target.value)
+                    }}
+                    rows={5}
+                    multiline={true}
+                  />
+                </React.Fragment>
+              )}
               <Box className={classes.bcontainer}>
                 <Button
                   className={classes.button}
