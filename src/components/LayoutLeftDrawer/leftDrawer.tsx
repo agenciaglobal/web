@@ -36,7 +36,7 @@ const LeftDrawer = ({
             <img
               src={theme.themeName === "light" ? logoblack : logo}
               alt="logo-black"
-              style={{ margin: "32px 18px", height: 100 }}
+              style={{ margin: "32px 22px", height: 100 }}
             />
           </Link>
           <Box
@@ -49,7 +49,6 @@ const LeftDrawer = ({
                 width: 300,
                 margin: "0px 200px 26px",
                 display: "flex",
-
               }}
             >
               <Typography variant={"caption"} noWrap={false} style={{}}>
@@ -60,7 +59,7 @@ const LeftDrawer = ({
                   margin: "9px",
                   height: 1,
                   width: 100,
-                  background: theme.palette.primary.contrastText
+                  background: theme.palette.primary.contrastText,
                 }}
               />
             </Box>

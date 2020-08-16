@@ -48,7 +48,7 @@ export const LayoutHeader = ({
               src={lightMode === "light" ? logoblack : logo}
               alt="logo-black"
               style={{ margin: "32px 32px 0px 0px", height: 100 }}
-            />
+            /> 
           </Link>
           <Box
             style={{
