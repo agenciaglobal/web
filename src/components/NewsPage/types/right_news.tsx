@@ -21,17 +21,24 @@ export const RightNewsComponent = ({
       >
         <div
           style={{
-            display: "block",
-            width: "40%",
-            marginLeft: "auto",
-            backgroundImage: `url(${imageSrc})`,
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          <ExpandTExt
-            date={type}
-            title={title || ""}
-            description={description || ""}
-          />
+          <div style={{ width: "40%" }} />
+          <div
+            style={{
+              width: "40%",
+              // marginLeft: "auto",
+              backgroundImage: `url(${imageSrc})`,
+            }}
+          >
+            <ExpandTExt
+              date={type}
+              title={title || ""}
+              description={description || ""}
+            />
+          </div>
         </div>
       </Link>
     </div>

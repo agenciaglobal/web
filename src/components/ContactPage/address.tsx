@@ -7,7 +7,6 @@ import salaGlobal from "static/sala_global.png"
 export const AddressComponent = (): React.ReactElement => (
   <Grid
     item={true}
-    spacing={0}
     sm={12}
     md={4}
     style={{

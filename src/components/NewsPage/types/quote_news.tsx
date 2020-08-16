@@ -13,9 +13,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   style: {
     border: "3px solid",
     borderColor: theme.palette.primary.contrastText,
-    height: "100%",
-    width: "40%",
-    marginLeft: "auto",
+    width: "45%",
+  },
+  lag: {
+    display: "flex",
+    justifyContent: "space-between",
   },
 }))
 
@@ -30,12 +32,14 @@ export const QuoteNewsComponent = ({
         style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
         to={slug || ""}
       >
-        <div className={classes.style}>
-          <ExpandTExt
-            date={type}
-            title={title || ""}
-            description={description || ""}
-          />
+        <div className={classes.lag}>
+          <div style={{}} className={classes.style}>
+            <ExpandTExt
+              date={type}
+              title={title || ""}
+              description={description || ""}
+            />
+          </div>
         </div>
       </Link>
     </div>

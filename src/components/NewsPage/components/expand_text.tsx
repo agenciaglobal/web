@@ -11,12 +11,13 @@ export const ExpandTExt = (props: {
       padding: "15px",
       display: "flex",
       flexDirection: "column",
-      height: "-webkit-fill-available",
+      height: "calc( 100% - 30px )",
       justifyContent: "space-between",
       position: "relative",
     }}
   >
     <Typography
+      noWrap={true}
       style={{
         fontSize: "12px",
         fontFamily: "GSTwo",
@@ -26,6 +27,7 @@ export const ExpandTExt = (props: {
     </Typography>
     <div>
       <Typography
+        noWrap={true}
         style={{
           fontSize: "20px",
           lineHeight: "36px",
@@ -35,6 +37,7 @@ export const ExpandTExt = (props: {
         {props.title}
       </Typography>
       <Typography
+        noWrap={true}
         style={{
           fontSize: "16px",
           fontFamily: "Montserrat, sans-serif",

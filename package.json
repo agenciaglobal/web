@@ -59,6 +59,7 @@
     "netlify-cms-app": "2.12.19",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-google-maps": "9.4.5",
     "react-horizontal-scrolling-menu": "0.7.7",
     "react-i18next": "11.7.0",
     "react-masonry-css": "1.0.14",
