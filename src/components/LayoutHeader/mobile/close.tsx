@@ -4,13 +4,13 @@ import React from "react"
 
 const useStylesClose = makeStyles((theme: Theme) => ({
   divIconCommon: {
-    background: theme.palette.grey.A100,
+    background: theme.custom.greyAlpha,
     width: 24,
     height: 3,
     transition: "transform 500ms",
   },
   divIconOpen: {
-    // background: theme.palette.secondary.main,
+    background: theme.palette.primary.contrastText,
     width: 24,
     height: 3,
     "&:first-child": {

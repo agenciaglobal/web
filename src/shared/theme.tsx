@@ -10,6 +10,7 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       grey1: CSSProperties["color"]
       grey2: CSSProperties["color"]
       greyAlpha: CSSProperties["color"]
+      greyAlpha2: CSSProperties["color"]
     }
   }
   interface Theme {
@@ -18,6 +19,7 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       grey1: CSSProperties["color"]
       grey2: CSSProperties["color"]
       greyAlpha: CSSProperties["color"]
+      greyAlpha2: CSSProperties["color"]
     }
   }
 }
