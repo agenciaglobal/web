@@ -21,25 +21,21 @@ export const darkMap = {
     {
       featureType: "poi",
       elementType: "geometry",
-      stylers: [
-        { visibility: "off" }
-      ],
+      stylers: [{ visibility: "off" }],
     },
     {
       featureType: "poi",
       elementType: "labels.icon",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          visibility: "off",
+        },
+      ],
     },
     {
       featureType: "poi",
       elementType: "labels.text.fill",
-      stylers: [
-        { visibility: "off" }
-      ],
+      stylers: [{ visibility: "off" }],
     },
     {
       featureType: "poi.park",

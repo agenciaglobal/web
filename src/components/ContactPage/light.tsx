@@ -4,21 +4,17 @@ export const lightMap = {
   disableDefaultUI: true,
   fullscreenControl: false,
   styles: [
-    { 
-      elementType: "geometry", 
-      stylers: [{ color: "#f5f5f5" }] 
+    {
+      elementType: "geometry",
+      stylers: [{ color: "#f5f5f5" }],
     },
     {
       elementType: "labels.text.fill",
-      stylers: [
-        { color: "#523735" },
-      ],
+      stylers: [{ color: "#523735" }],
     },
     {
       elementType: "labels.text.stroke",
-      stylers: [
-        { color: "#f5f1e6" },
-      ],
+      stylers: [{ color: "#f5f1e6" }],
     },
     {
       featureType: "administrative",
@@ -43,25 +39,21 @@ export const lightMap = {
     {
       featureType: "poi",
       elementType: "geometry",
-      stylers: [
-        { visibility: "off" }
-      ],
+      stylers: [{ visibility: "off" }],
     },
     {
       featureType: "poi",
       elementType: "labels.icon",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          visibility: "off",
+        },
+      ],
     },
     {
       featureType: "poi",
       elementType: "labels.text.fill",
-      stylers: [
-        { visibility: "off" }
-      ],
+      stylers: [{ visibility: "off" }],
     },
     {
       featureType: "poi.park",
