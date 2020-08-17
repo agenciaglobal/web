@@ -4,10 +4,10 @@ export const darkMap = {
   disableDefaultUI: true,
   fullscreenControl: false,
   styles: [
-    { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+    { elementType: "geometry", stylers: [{ color: "#212121" }] },
     {
       elementType: "labels.text.stroke",
-      stylers: [{ color: "#242f3e" }],
+      stylers: [{ color: "#212121" }],
     },
     {
       elementType: "labels.text.fill",
@@ -20,13 +20,31 @@ export const darkMap = {
     },
     {
       featureType: "poi",
+      elementType: "geometry",
+      stylers: [
+        { visibility: "off" }
+      ],
+    },
+    {
+      featureType: "poi",
+      elementType: "labels.icon",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+    {
+      featureType: "poi",
       elementType: "labels.text.fill",
-      stylers: [{ color: "#d59563" }],
+      stylers: [
+        { visibility: "off" }
+      ],
     },
     {
       featureType: "poi.park",
       elementType: "geometry",
-      stylers: [{ color: "#263c3f" }],
+      stylers: [{ color: "#212121" }],
     },
     {
       featureType: "poi.park",
@@ -36,27 +54,27 @@ export const darkMap = {
     {
       featureType: "road",
       elementType: "geometry",
-      stylers: [{ color: "#38414e" }],
+      stylers: [{ color: "#373737" }],
     },
     {
       featureType: "road",
       elementType: "geometry.stroke",
-      stylers: [{ color: "#212a37" }],
+      stylers: [{ color: "#373737" }],
     },
     {
       featureType: "road",
       elementType: "labels.text.fill",
-      stylers: [{ color: "#9ca5b3" }],
+      stylers: [{ color: "#909090" }],
     },
     {
       featureType: "road.highway",
       elementType: "geometry",
-      stylers: [{ color: "#746855" }],
+      stylers: [{ color: "#373737" }],
     },
     {
       featureType: "road.highway",
       elementType: "geometry.stroke",
-      stylers: [{ color: "#1f2835" }],
+      stylers: [{ color: "#373737" }],
     },
     {
       featureType: "road.highway",
@@ -66,7 +84,7 @@ export const darkMap = {
     {
       featureType: "transit",
       elementType: "geometry",
-      stylers: [{ color: "#2f3948" }],
+      stylers: [{ color: "#373737" }],
     },
     {
       featureType: "transit.station",
