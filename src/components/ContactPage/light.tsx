@@ -10,7 +10,7 @@ export const lightMap = {
     },
     {
       elementType: "labels.text.fill",
-      stylers: [{ color: "#523735" }],
+      stylers: [{ color: "#7D7D7D" }],
     },
     {
       elementType: "labels.text.stroke",
@@ -98,7 +98,12 @@ export const lightMap = {
     {
       featureType: "road.local",
       elementType: "labels.text.fill",
-      stylers: [{ color: "#FFFFFF" }],
+      stylers: [{ color: "#A5A5A5" }],
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels.text.stroke",
+      stylers: [{ color: "#f5f1e6" }],
     },
     {
       featureType: "transit.line",
