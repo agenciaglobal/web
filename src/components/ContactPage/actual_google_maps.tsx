@@ -11,6 +11,7 @@ import * as React from "react"
 import { useState } from "react"
 import { lightMap } from "components/ContactPage/light"
 import { darkMap } from "components/ContactPage/dark"
+import pin from "static/pin.png"
 
 export const ActualGoogleMapsComponent = withScriptjs(
   withGoogleMap((props: WithGoogleMapProps) => {
@@ -18,7 +19,7 @@ export const ActualGoogleMapsComponent = withScriptjs(
     const theme = useTheme()
     const initialState = {
       markers: [
-        { name: "global", position: { lat: -30.0185442, lng: -51.209478 } },
+        { name: "global", position: { lat: -30.018545, lng: -51.207305 } },
       ],
     }
     const [position, setPosition] = useState(initialState)
@@ -35,8 +36,8 @@ export const ActualGoogleMapsComponent = withScriptjs(
     const options = theme.themeName === "light" ? lightMap : darkMap
     return (
       <GoogleMap
-        defaultZoom={15}
-        defaultCenter={{ lat: -30.0185442, lng: -51.209478 }}
+        defaultZoom={18}
+        defaultCenter={{ lat: -30.018545, lng: -51.207305 }}
         options={options as any}
       >
         {position.markers.map((marker, index) => (
@@ -44,8 +45,9 @@ export const ActualGoogleMapsComponent = withScriptjs(
             key={index}
             position={marker.position}
             draggable={true}
-            onDragend={dragend(index) as any}
-            name={marker.name}
+            onDragEnd={dragend(index) as any}
+            icon={pin}
+            // label={marker.name}
           />
         ))}
       </GoogleMap>
