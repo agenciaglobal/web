@@ -9,13 +9,14 @@ path: full
 author: João Paulo Rocha
 image_1: /assets/works/natal-iguatemi.png
 date: 2020-07-12T00:33:11.387Z
+postType: article
+type: FULL
 title: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 description: Full
-postType: news
-type: FULL
 image: /assets/works/varanda.png
 tags:
   - yay!!
+  - realstate
 text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
   Fusce ut placerat orci nulla pellentesque dignissim enim. Elementum eu
   facilisis sed odio. Purus in massa tempor nec feugiat nisl pretium fusce id.
@@ -29,9 +30,7 @@ text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
   Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Semper eget
   duis at tellus at urna condimentum mattis pellentesque.
 ---
-
-
-sdfsdfds
+effefe
 
 ![cesco](/assets/10-maria-dornelles.jpg "cescp")
 
