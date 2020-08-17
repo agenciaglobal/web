@@ -17,7 +17,24 @@ const useStyles = makeStyles((theme: Theme) => ({
   margin: {
     marginTop: 10,
   },
-  button: { backgroundColor: theme.palette.secondary.main },
+  button: {
+    borderRadius: 0,
+    boxShadow: "none",
+    height: 44,
+    padding: "0px 32px",
+    fontFamily: "GSThree",
+    fontSize: 18,
+    color: "#000",
+    backgroundColor: theme.palette.secondary.main,
+    "&:hover": {
+      boxShadow: `0px 0px 0px 1px ${theme.palette.primary.contrastText} inset`,
+      backgroundColor: theme.palette.secondary.main,
+    },
+    "&:active": {
+      backgroundColor: theme.palette.primary.contrastText,
+      color: yellow,
+    },
+  },
   box: {
     marginTop: 24,
     display: "flex",
@@ -67,7 +84,10 @@ export const TalkWorkForm = (): React.ReactElement => {
         initialValues={initialValues}
         onSubmit={async (values, { resetForm }) => {
           if (current === 1) {
-            window.location.href = `mailto:${"global@gmail.com"}?subject=${"work with global"}`
+            window.open(
+              `mailto:${"work@global.tt"}?subject=${"work with global"}`,
+              "_blank",
+            )
             return
           }
           if (
@@ -155,7 +175,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                   type={"submit"}
                   variant={"contained"}
                 >
-                  ENVIAR
+                  {current === 1 ? "FALE COM A GENTE" : "ENVIAR"}
                 </Button>
               </Box>
             </form>

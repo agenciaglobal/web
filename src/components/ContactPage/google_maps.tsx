@@ -7,7 +7,8 @@ export const GoogleMaps = withWidth()(
   (props: WithWidthProps): React.ReactElement => {
     const margin = useExtrapolatedMargin({ width: props.width })
     // noinspection SpellCheckingInspection
-    const token = "AIzaSyCtMJUB8zK6Thy4FPgGNCzDrgR0_IEcbmQ"
+    // key global
+    const token = "AIzaSyBiygZFJYhD2KViFDBWQAO_6Ndys86xAys"
     return (
       <ActualGoogleMapsComponent
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${token}&v=3.exp&libraries=geometry,drawing,places`}

@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core"
+import { Typography, Hidden } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import * as React from "react"
@@ -17,16 +17,18 @@ export const AddressComponent = (): React.ReactElement => (
       marginBottom: -90,
     }}
   >
-    <Box style={{ display: "flex", justifyContent: "center" }}>
-      <img
-        style={{
-          zIndex: 10,
-          transform: "translate( 0px , -50% )",
-        }}
-        src={salaGlobal}
-        alt=""
-      />
-    </Box>
+    <Hidden smDown>
+      <Box style={{ display: "flex", justifyContent: "center" }}>
+        <img
+          style={{
+            zIndex: 10,
+            transform: "translate( 0px , -50% )",
+          }}
+          src={salaGlobal}
+          alt="global"
+        />
+      </Box>
+    </Hidden>
     <Box
       style={{
         transform: "translate( 0px , -50% )",
