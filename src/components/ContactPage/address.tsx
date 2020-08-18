@@ -1,9 +1,4 @@
-import {
-  Typography,
-  Hidden,
-  makeStyles,
-  Theme,
-} from "@material-ui/core"
+import { Typography, Hidden, makeStyles, Theme } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import * as React from "react"
