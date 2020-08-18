@@ -28,6 +28,12 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
   >
     <p
       className="MuiTypography-root MuiTypography-body1"
+      style={
+        Object {
+          "fontFamily": "Montserrat, sans-serif",
+          "fontWeight": 500,
+        }
+      }
     >
       Filtrando por:
     </p>
