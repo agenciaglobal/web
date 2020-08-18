@@ -8,9 +8,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   style: {
     display: "flex",
     justifyContent: "left",
+    marginLeft: 24,
     "@media (min-width:950px)": {
+      marginLeft: 0,
       justifyContent: "center",
-      transform: "translate( 0px , -75% )",
+      transform: "translate( -24px , -75% )",
     },
   },
   flex: {

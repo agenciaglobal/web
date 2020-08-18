@@ -14,7 +14,11 @@ const yellow = "#FFCC00"
 
 const useStyles = makeStyles((theme: Theme) => ({
   textField: {
-    margin: 8,
+    flexGrow: 1,
+    margin: "16px 8px",
+    "& label": {
+      fontFamily: "Montserrat, sans-serif"
+    },
     "& label.Mui-focused": {
       color: theme.palette.primary.contrastText,
     },
@@ -56,7 +60,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { marginTop: 80, padding: 0, width: "100%" },
+  grid: { 
+    marginTop: 80, 
+    padding: 0, 
+    width: "100%",
+  },
 }))
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -170,7 +178,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                         setFieldValue("phone", e.target.value)
                       }}
                       as={TextField}
-                      label={"telefone"}
+                      label={"Telefone"}
                     />
                   </Box>
                   <Field
