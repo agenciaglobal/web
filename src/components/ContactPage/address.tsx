@@ -1,10 +1,22 @@
-import { Typography, Hidden } from "@material-ui/core"
+import { Typography, Hidden, makeStyles } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import * as React from "react"
 import salaGlobal from "static/sala_global.png"
 
-export const AddressComponent = (): React.ReactElement => (
+const useStyles = makeStyles(() => ({
+  style: {
+    display: "flex",
+    justifyContent: "center",
+    "@media (min-width:950px)": {
+      transform: "translate( 0px , -75% )",
+    },
+  },
+}))
+
+export const AddressComponent = (): React.ReactElement => {
+const classes = useStyles()
+  return (
   <Grid
     item={true}
     sm={12}
@@ -30,11 +42,7 @@ export const AddressComponent = (): React.ReactElement => (
       </Box>
     </Hidden>
     <Box
-      style={{
-        transform: "translate( 0px , -50% )",
-        display: "flex",
-        justifyContent: "center",
-      }}
+      className={classes.style}
     >
       <Box style={{ paddingTop: 32, paddingBottom: 32 }}>
         <Typography>Rua Câncio Gomes, 609</Typography>
@@ -45,4 +53,4 @@ export const AddressComponent = (): React.ReactElement => (
       </Box>
     </Box>
   </Grid>
-)
+)}

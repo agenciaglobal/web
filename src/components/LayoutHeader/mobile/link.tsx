@@ -15,8 +15,8 @@ const useStylesMenu = makeStyles((theme: Theme) => ({
     textAlign: "left",
     marginTop: 16,
     marginBottom: 16,
-    fontSize: "30px",
-    lineHeight: "32px",
+    fontSize: "25px",
+    lineHeight: "25px",
   },
   link: {
     color: `white`,
