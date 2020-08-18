@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core"
+import { Box, Typography, useTheme } from "@material-ui/core"
 import Accordion from "@material-ui/core/Accordion"
 import AccordionDetails from "@material-ui/core/AccordionDetails"
 import AccordionSummary from "@material-ui/core/AccordionSummary"
@@ -59,6 +59,7 @@ const useStylesAccordion = makeStyles((theme) => ({
 
 export const AboutAccordion = (): React.ReactElement => {
   const classes = useStylesAccordion()
+  const theme = useTheme()
   return (
     <React.Fragment>
       <Box lineHeight={3}>
@@ -76,9 +77,27 @@ export const AboutAccordion = (): React.ReactElement => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect x="0.5" y="0.5" width="15" height="15" stroke="black" />
-                  <rect x="7" y="3" width="2" height="10" fill="black" />
-                  <rect x="3" y="7" width="10" height="2" fill="black" />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="15"
+                    height="15"
+                    stroke={theme.palette.primary.contrastText}
+                  />
+                  <rect
+                    x="7"
+                    y="3"
+                    width="2"
+                    height="10"
+                    fill={theme.palette.primary.contrastText}
+                  />
+                  <rect
+                    x="3"
+                    y="7"
+                    width="10"
+                    height="2"
+                    fill={theme.palette.primary.contrastText}
+                  />
                 </svg>
               }
             >

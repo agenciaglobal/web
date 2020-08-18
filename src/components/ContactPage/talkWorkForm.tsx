@@ -13,9 +13,18 @@ import Typography from "@material-ui/core/Typography"
 const yellow = "#FFCC00"
 
 const useStyles = makeStyles((theme: Theme) => ({
-  email: { paddingLeft: 8, paddingRight: 8 },
-  margin: {
-    marginTop: 10,
+  textField: {
+    flexGrow: 1,
+    margin: "16px 8px",
+    "& label": {
+      fontFamily: "Montserrat, sans-serif",
+    },
+    "& label.Mui-focused": {
+      color: theme.palette.primary.contrastText,
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: theme.palette.primary.contrastText,
+    },
   },
   button: {
     borderRadius: 0,
@@ -34,18 +43,28 @@ const useStyles = makeStyles((theme: Theme) => ({
       backgroundColor: theme.palette.primary.contrastText,
       color: yellow,
     },
+    "@media (max-width:600px)": {
+      width: "100%",
+    },
   },
   box: {
     marginTop: 24,
     display: "flex",
     justifyContent: "space-between",
+    "@media (max-width:600px)": {
+      flexDirection: "column",
+    },
   },
   bcontainer: {
     paddingTop: 24,
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { marginTop: 20, padding: 24 },
+  grid: {
+    marginTop: 80,
+    padding: 0,
+    width: "100%",
+  },
 }))
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -112,8 +131,13 @@ export const TalkWorkForm = (): React.ReactElement => {
           return (
             <form onSubmit={handleSubmit}>
               {current === 1 && (
-                <Box style={{ paddingTop: 24 }}>
-                  <Typography>
+                <Box style={{ padding: "24px 16px 0px" }}>
+                  <Typography
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      textAlign: "justify",
+                    }}
+                  >
                     Estamos sempre prontos para conhecer novos rostos e ideias.
                     Caso tenha interesse em trabalhar com a gente, mande o seu
                     currículo, em formato pdf, e portfólio, se tiver, para o
@@ -124,21 +148,22 @@ export const TalkWorkForm = (): React.ReactElement => {
                 </Box>
               )}
               {current === 0 && (
-                <React.Fragment>
+                <Box style={{ display: "flex", flexDirection: "column" }}>
                   <Box className={classes.box}>
                     <Field
+                      className={classes.textField}
+                      required={true}
                       value={values.name}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("name", e.target.value)
                       }}
                       as={TextField}
-                      fullWidth={true}
                       label={"Nome"}
                     />
                     <Field
                       as={TextField}
-                      className={classes.email}
-                      fullWidth={true}
+                      required={true}
+                      className={classes.textField}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("email", e.target.value)
                       }}
@@ -146,28 +171,29 @@ export const TalkWorkForm = (): React.ReactElement => {
                       label={"Email"}
                     />
                     <Field
+                      className={classes.textField}
+                      required={true}
                       value={values.phone}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("phone", e.target.value)
                       }}
                       as={TextField}
-                      fullWidth={true}
-                      label={"telefone"}
+                      label={"Telefone"}
                     />
                   </Box>
                   <Field
+                    className={classes.textField}
+                    required={true}
                     as={TextField}
-                    className={classes.margin}
                     value={values.msg}
                     label={"Mensagem"}
-                    fullWidth={true}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       setFieldValue("msg", e.target.value)
                     }}
                     rows={5}
                     multiline={true}
                   />
-                </React.Fragment>
+                </Box>
               )}
               <Box className={classes.bcontainer}>
                 <Button
