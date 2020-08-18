@@ -1,8 +1,8 @@
-import { Tab, Theme, InputBase } from "@material-ui/core"
+import { Tab, Theme } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Button from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
-import { makeStyles, withStyles, createStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import Tabs from "@material-ui/core/Tabs"
 import TextField from "@material-ui/core/TextField"
 import * as React from "react"
@@ -12,46 +12,15 @@ import Typography from "@material-ui/core/Typography"
 
 const yellow = "#FFCC00"
 
-// const CustomInput = withStyles((theme: Theme) =>
-//   createStyles({
-//     root: {
-//       '& .MuiInput-input': {
-//         fontFamili: "Montserrat, sans-serif",
-//       },
-//       '& label.Mui-focused': {
-//         color: theme.palette.primary.contrastText,
-//       },
-//       '& .MuiInput-underline:after': {
-//         borderBottomColor: theme.palette.primary.contrastText,
-//       },
-//     },
-//     input: {
-//       position: 'relative',
-//       fontSize: 16,
-//       // width: 'auto',
-//       // padding: '10px 12px',
-//       fontFamily: "Montserrat, sans-serif",
-//     },
-//   }),
-// )(InputBase);
-
-
 const useStyles = makeStyles((theme: Theme) => ({
   textField: {
     margin: 8,
-    '& .MuiInputBase-root': {
-      fontFamily: "Montserrat, sans-serif",
-    },
-    '& label.Mui-focused': {
+    "& label.Mui-focused": {
       color: theme.palette.primary.contrastText,
     },
-    '& .MuiInput-underline:after': {
+    "& .MuiInput-underline:after": {
       borderBottomColor: theme.palette.primary.contrastText,
     },
-  },
-  email: { marginLeft: 16, marginRight: 16 },
-  margin: {
-    marginTop: 10,
   },
   button: {
     borderRadius: 0,
@@ -71,16 +40,16 @@ const useStyles = makeStyles((theme: Theme) => ({
       color: yellow,
     },
     "@media (max-width:600px)": {
-      width: "100%"
-    }
+      width: "100%",
+    },
   },
   box: {
     marginTop: 24,
     display: "flex",
     justifyContent: "space-between",
     "@media (max-width:600px)": {
-      flexDirection: "column"
-    }
+      flexDirection: "column",
+    },
   },
   bcontainer: {
     paddingTop: 24,
@@ -155,10 +124,12 @@ export const TalkWorkForm = (): React.ReactElement => {
             <form onSubmit={handleSubmit}>
               {current === 1 && (
                 <Box style={{ padding: "24px 16px 0px" }}>
-                  <Typography style={{ 
+                  <Typography
+                    style={{
                       fontFamily: "Montserrat, sans-serif",
-                      textAlign: "justify"  
-                    }}>
+                      textAlign: "justify",
+                    }}
+                  >
                     Estamos sempre prontos para conhecer novos rostos e ideias.
                     Caso tenha interesse em trabalhar com a gente, mande o seu
                     currículo, em formato pdf, e portfólio, se tiver, para o
@@ -169,7 +140,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                 </Box>
               )}
               {current === 0 && (
-                <Box style={{ display: "flex", flexDirection: "column"}}>
+                <Box style={{ display: "flex", flexDirection: "column" }}>
                   <Box className={classes.box}>
                     <Field
                       className={classes.textField}
