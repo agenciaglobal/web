@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography"
 const yellow = "#FFCC00"
 
 const useStyles = makeStyles((theme: Theme) => ({
-  email: { paddingLeft: 8, paddingRight: 8 },
+  email: { marginLeft: 16, marginRight: 16 },
   margin: {
     marginTop: 10,
   },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { marginTop: 20, padding: 24 },
+  grid: { marginTop: 20, padding: 0 },
 }))
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -113,7 +113,7 @@ export const TalkWorkForm = (): React.ReactElement => {
             <form onSubmit={handleSubmit}>
               {current === 1 && (
                 <Box style={{ paddingTop: 24 }}>
-                  <Typography>
+                  <Typography style={{ fontFamily: "Montserrat, sans-serif" }}>
                     Estamos sempre prontos para conhecer novos rostos e ideias.
                     Caso tenha interesse em trabalhar com a gente, mande o seu
                     currículo, em formato pdf, e portfólio, se tiver, para o
