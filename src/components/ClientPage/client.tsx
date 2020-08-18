@@ -68,7 +68,7 @@ export const ClientComponent = ({
                 fontSize: 14,
                 fontWeight: "bold",
                 textAlign: "left",
-                paddingBottom: 10
+                paddingBottom: 10,
               }}
             >
               {/* {testimonial} */}
