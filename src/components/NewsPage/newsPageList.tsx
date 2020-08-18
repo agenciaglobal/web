@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-
 export const NewsPageList = withWidth()(
   ({ news, width }: Props & WithWidthProps): React.ReactElement => {
     const classes = useStyles()
@@ -74,7 +73,11 @@ export const NewsPageList = withWidth()(
         </Masonry>
         {total !== (news?.length || 0) && (
           <Box
-            style={{ padding: "32px 0px 56px", display: "flex", justifyContent: "center" }}
+            style={{
+              padding: "32px 0px 56px",
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <Button
               className={classes.button}
