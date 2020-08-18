@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     margin: "16px 8px",
     "& label": {
-      fontFamily: "Montserrat, sans-serif"
+      fontFamily: "Montserrat, sans-serif",
     },
     "& label.Mui-focused": {
       color: theme.palette.primary.contrastText,
@@ -60,9 +60,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  grid: { 
-    marginTop: 80, 
-    padding: 0, 
+  grid: {
+    marginTop: 80,
+    padding: 0,
     width: "100%",
   },
 }))
