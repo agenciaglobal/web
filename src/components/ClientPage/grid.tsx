@@ -1,6 +1,6 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
-import { EmployeeComponent } from "./employer"
+import { ClientComponent } from "./client"
 import "./index.css"
 
 interface Props {
@@ -16,7 +16,7 @@ export const ClientGrid = ({ clients }: Props): React.ReactElement => {
       <div className={"grid-client"}>
         {clients.map((client, index: number) => {
           return (
-            <EmployeeComponent
+            <ClientComponent
               backgroundImage={client.image}
               key={index}
               title={client.name}

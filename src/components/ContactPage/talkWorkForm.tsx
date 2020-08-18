@@ -89,7 +89,7 @@ export const TalkWorkForm = (): React.ReactElement => {
   const [current, setCurrent] = React.useState<number>(0)
   return (
     <Grid className={classes.grid} item={true} sm={12} md={8}>
-      <Tabs indicatorColor={"primary"} value={current} variant={"fullWidth"}>
+      <Tabs value={current} variant={"fullWidth"}>
         {["Fale com a gente", "Trabalhe aqui"].map((d, index) => (
           <Tab
             style={{ background: current === index ? yellow : "#E9E9E9" }}
@@ -99,6 +99,7 @@ export const TalkWorkForm = (): React.ReactElement => {
           />
         ))}
       </Tabs>
+      <div style={{ height: 2, background: yellow }}></div>
       <Formik<FormValues>
         initialValues={initialValues}
         onSubmit={async (values, { resetForm }) => {
