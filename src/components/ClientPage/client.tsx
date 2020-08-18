@@ -1,4 +1,4 @@
-import { Typography, useTheme } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import React, { useState } from "react"
 import image from "static/ramarim.png"
 
@@ -15,7 +15,7 @@ export const ClientComponent = ({
   const [hover, setHover] = useState(false)
   const [active, setActive] = useState(false)
   const require1 = active ? image : backgroundImage || ""
-  const theme = useTheme()
+  // const theme = useTheme()
   return (
     <div
       onMouseLeave={() => setHover(false)}
@@ -46,7 +46,7 @@ export const ClientComponent = ({
               zIndex: 11,
               filter: "unset",
               textAlign: "center",
-              paddingTop: 200
+              paddingTop: 200,
             }}
           >
             <svg
@@ -61,16 +61,30 @@ export const ClientComponent = ({
                 fill="#FFF"
               />
             </svg>
-            <Typography style={{ 
-              color: "white", 
-              fontFamily: "Montserrat, sans-serif", 
-              fontSize: 14, 
-              fontWeight: "bold", 
-              textAlign: "left" 
-            }}>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+            <Typography
+              style={{
+                color: "white",
+                fontFamily: "Montserrat, sans-serif",
+                fontSize: 14,
+                fontWeight: "bold",
+                textAlign: "left",
+                paddingBottom: 10
+              }}
+            >
+              {/* {testimonial} */}
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium.
             </Typography>
-            <Typography style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontSize: 14, fontWeight: "normal", textAlign: "left" }}>
+            <Typography
+              style={{
+                color: "white",
+                fontFamily: "Montserrat, sans-serif",
+                fontSize: 14,
+                fontWeight: "normal",
+                textAlign: "left",
+              }}
+            >
+              {/* {author} | {role}, {title} */}
               Alam Pim | CMO, {title}
             </Typography>
           </div>
