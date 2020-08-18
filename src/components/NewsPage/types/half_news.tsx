@@ -31,7 +31,7 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
   const classes = useStyles()
   const s = props.current?.image || ""
   const imageSrc = "" + s
-  const date = props.current.date + "| NOTÍCIAS"
+  const date = props.current.date || ""
   const test = props.current?.type === "HALF"
   return test ? (
     <div>

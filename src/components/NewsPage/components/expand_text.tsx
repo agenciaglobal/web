@@ -1,8 +1,10 @@
 import { Box, Typography } from "@material-ui/core"
 import * as React from "react"
 
+
 export const ExpandTExt = (props: {
   date: string
+  type: string
   // postType: string
   title: string
   description: string
@@ -34,9 +36,10 @@ export const ExpandTExt = (props: {
       <Typography
         // noWrap={true}
         style={{
-          fontSize: "30px",
+          // something like that
+          fontSize: props.type == "Full" ? "30px" : "16px",
           color: "#FFF",
-          lineHeight: "36px",
+          lineHeight: "1.3em",
           fontFamily: "GSThree",
           paddingBottom: 16,
         }}
@@ -48,6 +51,7 @@ export const ExpandTExt = (props: {
         style={{
           fontSize: "16px",
           color: "#FFF",
+          lineHeight: "1.3em",
           fontFamily: "Montserrat, sans-serif",
           fontWeight: 500,
           paddingBottom: 16,
@@ -84,12 +88,12 @@ export const ExpandTExt = (props: {
             cy="17.5"
             r="16.5"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             d="M15.0711 11.0002L21.7886 17.7177L14.7175 24.7888"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </Box>
