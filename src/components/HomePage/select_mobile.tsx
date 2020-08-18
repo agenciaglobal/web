@@ -42,11 +42,16 @@ const MyIcon = () => {
 }
 
 const useGridStyles = makeStyles((theme: Theme) => ({
-  text: {},
+  text: {
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: 500,
+    textTransform: "capitalize",
+  },
   menu: {
     backgroundColor: "transparent !important",
     "& p": {
-      fontFamily: "GSTwo",
+      fontFamily: "Montserrat, sans-serif",
+      fontWeight: 500,
       color: theme.palette.primary.main,
       paddingLeft: 13,
       paddingRight: 8,
@@ -72,7 +77,11 @@ export const MobileSelect = ({
           paddingRight: 16,
         }}
       >
-        <Typography>Filtrando por:</Typography>
+        <Typography
+          style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 500 }}
+        >
+          Filtrando por:
+        </Typography>
       </Box>
       <FormControl>
         <Select

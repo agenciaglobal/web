@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import Tab from "@material-ui/core/Tab"
 import Tabs from "@material-ui/core/Tabs"
 import * as React from "react"
@@ -14,9 +14,16 @@ const useStyles = makeStyles(() => ({
     // background: "red",
     // color: theme.palette.primary.contrastText,
   },
-  indicator: { color: "red" },
+  tabs: {
+    minWidth: 0,
+    "& button": {
+      minWidth: 0,
+      padding: "0px 24px 0px 0px",
+    },
+  },
   active: {
     "& span": {
+      color: "red",
       // background: "red",
     },
   },
@@ -32,10 +39,11 @@ export const DesktopTabs = ({
   categories,
   value,
 }: Props): React.ReactElement => {
+  const theme = useTheme()
   const classes = useStyles()
   return (
     <Tabs
-      classes={{ indicator: classes.indicator }}
+      className={classes.tabs}
       TabIndicatorProps={{
         style: { background: "transparent" },
       }}
@@ -54,9 +62,13 @@ export const DesktopTabs = ({
             label={
               <Typography
                 style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  textTransform: "capitalize",
+                  fontWeight: 500,
+                  color: index === value ? "#000" : theme.custom.grey1,
                   background: index === value ? "#FFCC00" : "transparent",
-                  paddingRight: 10,
-                  paddingLeft: 10,
+                  paddingRight: 2,
+                  paddingLeft: 2,
                 }}
               >
                 {d}
