@@ -1,5 +1,6 @@
 import { Container, Drawer, Hidden } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { TabComponent } from "components/TabComponent/drawerItem"
 
@@ -40,6 +41,7 @@ export const RightDrawer = ({
   scrolled: boolean
 }): React.ReactElement | null => {
   const classes = useStyles()
+  const { t } = useI18next()
   const drawerClasses = { paper: classes.drawerPaper }
   return scrolled ? (
     <React.Fragment>
@@ -47,12 +49,32 @@ export const RightDrawer = ({
         <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
           <Container className={classes.container}>
             <ul className={classes.list}>
-              <TabComponent page={"/"} uri={uri} label={"WORK"} />
-              <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
-              <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
-              <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
-              <TabComponent page={"/clients"} uri={uri} label={"CLIENTES"} />
-              <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
+              <TabComponent page={"/"} uri={uri} label={t("sidebar.main")} />
+              <TabComponent
+                page={"/about"}
+                uri={uri}
+                label={t("sidebar.about")}
+              />
+              <TabComponent
+                page={"/news"}
+                uri={uri}
+                label={t("sidebar.news")}
+              />
+              <TabComponent
+                page={"/team"}
+                uri={uri}
+                label={t("sidebar.team")}
+              />
+              <TabComponent
+                page={"/clients"}
+                uri={uri}
+                label={t("sidebar.client")}
+              />
+              <TabComponent
+                page={"/contact"}
+                uri={uri}
+                label={t("sidebar.contact")}
+              />
             </ul>
           </Container>
         </Drawer>

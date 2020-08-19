@@ -26,7 +26,7 @@ const itemStyles = makeStyles((theme: Theme) => {
     contactCommon: {
       fontFamily: "GSTwo",
       color: theme.custom.greyAlpha,
-      fontSize: 15,
+      fontSize: 13,
       lineHeight: "18px",
       border: "1px solid #FFCC00",
       margin: "0px 2px",
@@ -51,7 +51,7 @@ const itemStyles = makeStyles((theme: Theme) => {
     labelCommon: {
       fontFamily: "GSTwo",
       color: theme.custom.greyAlpha,
-      fontSize: 15,
+      fontSize: 13,
       lineHeight: "18px",
       "&:hover": {
         color: color,
@@ -81,7 +81,7 @@ export const isCurrentHook = (
 ): { isCurrent: boolean } => {
   const { language } = useI18next()
   const s = language === "en" ? "/" + language + destination : destination
-  const isWork = "/en" === uri || "/" === uri || uri.includes("portifolio")
+  const isWork = "/en" === uri || "/" === uri || uri.includes("trabalhos")
   const isCurrent = destination === "/" ? isWork : uri.includes(s)
   return { isCurrent }
 }
@@ -100,7 +100,7 @@ export const TabComponent = ({
     labelSelected,
     labelContactSelected,
   } = itemStyles()
-  const isContact = label === "CONTACT"
+  const isContact = page === "/contact"
   const { isCurrent } = isCurrentHook(page, uri)
   const className = cs({
     [common]: !isContact,
