@@ -29,6 +29,7 @@ collections:
           - { label: "Left", value: "LEFT" }
           - { label: "Right", value: "RIGHT" }
           - { label: "Quote", value: "QUOTE" }
+      - { name: quote, label: Quote (exibido se tipo for hallf, mirror ou quote), required: false }
       - { name: title, label: Título }
       - { name: description, label: Descrição }
       - name: "image"
@@ -112,42 +113,101 @@ collections:
         name: "video"
         widget: "file"
         required: false
+
       - { name: text_1, label: "Texto 1" }
+
       - { name: youtube, label: "Id do vídeo (youtube)", required: false }
-      - label: "Imagem 1 (1:1)"
+
+      # Grid 1
+      - label: "Grid 1: Imagem (1:1)"
         name: "image_1"
         widget: "image"
         required: false
-      - { name: text_2, label: "Texto 2", required: false }
-# inclui o markdown aqui como conteúdo adicional pra ser exibido nessa posição (entre os 2 "GridLocal")
+      - { name: text_2, label: "Grid 1: Texto", required: false }
+
+      # coloquei o markdown aqui como conteúdo adicional pra ser exibido nessa posição (entre os 2 "GridLocal")
       - { name: "body", label: "Conteúdo adicional", widget: "markdown", required: false }
-      - label: "Imagem 2 (1:1)"
+
+      #Grid 2
+      - label: "Grid 2: Imagem 1 (1:1)"
         name: "image_2"
         widget: "image"
         required: false
-      - label: "Imagem 3 (1:1)"
+      - label: "Grid 2: Imagem 2 (1:1)"
         name: "image_3"
         widget: "image"
         required: false
-      - { name: text_3, label: "Texto 3", required: false }
-# imagem nova... tava faltando inserir uma imagem... tem que parar de reutilizar a "image" na cover e no conteúdo
-      - label: "imagem 4 (wide)"
+
+      - { name: text_3, label: "Texto 2", required: false }
+
+      #Grid 3
+      - label: "Grid 3: Imagem 1 (1:1)"
         name: "image_4"
         widget: "image"
         required: false
-      - { name: text_4, label: "Texto 4", required: false }
-# novos campos pro componente do depoimento do cliente.
-      - { name: testimonial, label: "Depoimento do cliente", required: false }
-      - { name: author, label: "Autor do depoimento", required: false }
-      - { name: role, label: "Cargo do autor do depoimento", required: false }
-# esse campo de author comentado deve ser removido... deixei comentado por enquanto pra evitar que quebre algo no front
-      # - label: "Autor do post"
-      #   name: "author"
-      #   widget: "relation"
-      #   collection: "team"
-      #   searchFields: ["name", "about", "image"]
-      #   valueField: "name"
-      #   displayFields: ["name"]
+      - label: "Grid 3: Imagem 2 (1:1)"
+        name: "image_5"
+        widget: "image"
+        required: false 
+
+      - { name: text_4, label: "Texto 3", required: false }
+
+      # imagem nova... tava faltando inserir uma imagem... tem que parar de reutilizar a "image" na cover e no conteúdo
+      - label: "imagem 6 (wide)"
+        name: "image_6"
+        widget: "image"
+        required: false
+
+      - { name: text_5, label: "Texto 4", required: false }
+
+      #Carrossel
+      - label: "Carrossel: Imagem 1 (1:1)"
+        name: "image_7"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 2 (1:1)"
+        name: "image_8"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 3 (1:1)"
+        name: "image_9"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 4 (1:1)"
+        name: "image_10"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 5 (1:1)"
+        name: "image_11"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 6 (1:1)"
+        name: "image_12"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 7 (1:1)"
+        name: "image_13"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 8 (1:1)"
+        name: "image_14"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 9 (1:1)"
+        name: "image_15"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 10 (1:1)"
+        name: "image_16"
+        widget: "image"
+        required: false
+
+      - { name: text_6, label: "Texto 5", required: false }
+
+      # Componente de depoimento
+      - { name: testimonial, label: "Quote: Depoimento", required: false }
+      - { name: author, label: "Quote: Autor", required: false }
+      - { name: role, label: "Quote: Cargo", required: false }
 
   - name: team
     label: Team
