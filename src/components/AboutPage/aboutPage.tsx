@@ -8,14 +8,14 @@ import { SVGAbout } from "./svg_about"
 
 const useGridStyles = makeStyles(() => ({
   div: { flexGrow: 1, paddingTop: 30 },
-  grid: { padding: 0, alignItems: "stretch" },
+  grid: { padding: 0, alignItems: "space-between" },
 }))
 
 export const AboutPage = (): React.ReactElement => {
   const classes = useGridStyles()
   return (
     <div className={classes.div}>
-      <Grid className={classes.grid} alignItems="center" container>
+      <Grid className={classes.grid} spacing={4} alignItems="center" container>
         <AboutTextGrid />
         <AboutImageGrid />
       </Grid>

@@ -44,7 +44,7 @@ export const ActualGoogleMapsComponent = withScriptjs(
           <Marker
             key={index}
             position={marker.position}
-            draggable={true}
+            draggable={false}
             onDragEnd={dragend(index) as any}
             icon={pin}
             // label={marker.name}

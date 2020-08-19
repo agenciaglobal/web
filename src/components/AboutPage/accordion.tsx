@@ -22,6 +22,7 @@ const useStylesAccordion = makeStyles((theme) => ({
     paddingTop: 100,
     "@media (min-width:600px)": {
       fontSize: "50px",
+      textAlign: "left",
       lineHeight: "50px",
     },
   },
@@ -46,7 +47,7 @@ const useStylesAccordion = makeStyles((theme) => ({
     },
   },
   li: {
-    fontFamily: "Montserrat, sans-serif",
+    fontFamily: "GSTwo",
     fontWeight: 600,
     lineHeight: "2.2em",
     fontSize: "14px",

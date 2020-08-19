@@ -15,6 +15,7 @@ const useStylesV2 = makeStyles((theme: Theme) => ({
   },
   box: {
     height: "100%",
+    paddingTop: 30,
     flexDirection: "column",
     backgroundColor: theme.custom.greyAlpha2,
     display: "flex",
@@ -57,10 +58,10 @@ export const MobileDrawer = ({
   const menus = [
     { to: "/", label: t("sidebar.main") },
     { to: "/about", label: t("sidebar.about") },
-    { to: "/contact", label: t("sidebar.contact") },
+    { to: "/news", label: t("sidebar.news") },
     { to: "/team", label: t("sidebar.team") },
     { to: "/clients", label: t("sidebar.client") },
-    { to: "/news", label: t("sidebar.news") },
+    { to: "/contact", label: t("sidebar.contact") },
   ]
   const { changeLanguage, language } = useI18next()
   return (

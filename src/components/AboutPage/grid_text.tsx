@@ -29,11 +29,11 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     padding: 0,
   },
   box: {
-    padding: 24,
-    paddingTop: 0,
+    padding: 0,
     [theme.breakpoints.down("xs")]: {
       padding: 0,
       paddingTop: 0,
+      paddingBottom: 24,
     },
   },
 }))

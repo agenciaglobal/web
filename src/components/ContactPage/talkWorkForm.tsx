@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   bcontainer: {
     paddingTop: 24,
     display: "flex",
-    justifyContent: "flex-end",
+    // justifyContent: "flex-end",
   },
   grid: {
     marginTop: 80,
@@ -89,16 +89,20 @@ export const TalkWorkForm = (): React.ReactElement => {
   const [current, setCurrent] = React.useState<number>(0)
   return (
     <Grid className={classes.grid} item={true} sm={12} md={8}>
-      <Tabs indicatorColor={"primary"} value={current} variant={"fullWidth"}>
+      <Tabs value={current} variant={"fullWidth"}>
         {["Fale com a gente", "Trabalhe aqui"].map((d, index) => (
           <Tab
-            style={{ background: current === index ? yellow : "#E9E9E9" }}
+            style={{
+              background: current === index ? yellow : "#E9E9E9",
+              fontFamily: "GSThree",
+            }}
             onClick={() => setCurrent(index)}
             key={index}
             label={d}
           />
         ))}
       </Tabs>
+      <div style={{ height: 2, background: yellow }}></div>
       <Formik<FormValues>
         initialValues={initialValues}
         onSubmit={async (values, { resetForm }) => {
