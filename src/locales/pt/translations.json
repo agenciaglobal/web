@@ -1,6 +1,6 @@
 {
   "sidebar": {
-    "main": "Portifolio",
+    "main": "Trabalhos",
     "team": "Equipe",
     "news": "Notícias",
     "about": "Sobre",
@@ -12,7 +12,7 @@
     "subtitle": "Somos uma Agência para marcas em constante transformação."
   },
   "news": "News",
-  "projects": "Projects",
+  "projects": "Projetos",
   "client": "Clientes",
-  "team": "Pessoas"
+  "team": "Equipe"
 }

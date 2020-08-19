@@ -19,6 +19,8 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     padding: 0,
     [theme.breakpoints.down("xs")]: {
       width: "100%",
+      height: 400,
+      objectFit: "fill",
     },
   },
 }))
@@ -27,7 +29,7 @@ export const AboutImageGrid = (): React.ReactElement => {
   const classes = useGridStyles()
   return (
     <Grid item xs={12} sm={5} className={classes.grid}>
-      <img className={classes.image} src={aboutImage} alt="" />
+      <img className={classes.image} src={aboutImage} alt="about" />
     </Grid>
   )
 }

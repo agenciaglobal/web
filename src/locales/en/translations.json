@@ -1,6 +1,6 @@
 {
   "sidebar": {
-    "main": "Works",
+    "main": "Work",
     "team": "Team",
     "news": "News",
     "about": "About",
@@ -9,7 +9,7 @@
   },
   "home": {
     "title": "Change requires creativity",
-    "subtitle": "We are a Agency for constantly evolving brands"
+    "subtitle": "We are an Agency for constantly evolving brands"
   },
   "news": "News",
   "projects": "Projects",

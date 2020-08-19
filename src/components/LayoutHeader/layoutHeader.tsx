@@ -65,19 +65,36 @@ export const LayoutHeader = ({
                   listStyle: "none",
                   display: "flex",
                   justifyContent: "space-evenly",
-                  padding: 8,
+                  paddingTop: 16,
+                  margin: "18px 0px 0px",
                 }}
               >
-                <TabComponent page={"/"} uri={uri} label={"WORK"} />
-                <TabComponent page={"/about"} uri={uri} label={"ABOUT"} />
-                <TabComponent page={"/news"} uri={uri} label={"NEWS"} />
-                <TabComponent page={"/team"} uri={uri} label={"TEAM"} />
+                <TabComponent page={"/"} uri={uri} label={t("sidebar.main")} />
+                <TabComponent
+                  page={"/about"}
+                  uri={uri}
+                  label={t("sidebar.about")}
+                />
+                <TabComponent
+                  page={"/news"}
+                  uri={uri}
+                  label={t("sidebar.news")}
+                />
+                <TabComponent
+                  page={"/team"}
+                  uri={uri}
+                  label={t("sidebar.team")}
+                />
                 <TabComponent
                   page={"/clients"}
                   uri={uri}
                   label={t("sidebar.client")}
                 />
-                <TabComponent page={"/contact"} uri={uri} label={"CONTACT"} />
+                <TabComponent
+                  page={"/contact"}
+                  uri={uri}
+                  label={t("sidebar.contact")}
+                />
                 <br />
                 <LanguageSwitcher
                   language={language as SuporttedLanguages}
