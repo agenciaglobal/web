@@ -9,7 +9,6 @@ import { WithWidthProps } from "@material-ui/core"
 import { useExtrapolatedMargin } from "src/templates/portifolio-post"
 import image from "static/ramarim.png"
 
-
 export function LongMontsetrratText(props: {
   post: string | null | undefined
 }): JSX.Element {
@@ -69,7 +68,7 @@ const useGridStyles = makeStyles((theme: Theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%',
+    paddingTop: "56.25%",
     // marginTop:'30'
   },
   other: {
@@ -133,9 +132,7 @@ export const NewsContent = (props: {
   const post = props.current?.mdx
   return (
     <React.Fragment>
-      <TranslatedImage
-        image={props.current?.mdx?.frontmatter?.image || ""}
-      />
+      <TranslatedImage image={props.current?.mdx?.frontmatter?.image || ""} />
 
       <div className={classes.div}>
         <Typography className={classes.dateText}>
@@ -160,17 +157,33 @@ export const NewsContent = (props: {
               return <Typography key={index}>{tag + " "}</Typography>
             })}
         </Box>
-    
+
         {/* TEM QUE PUXAR OS CAMPOS DO CMS: IMAGE, AUTHOR E ABOUT */}
         {/* ESSE COMPONENTE SÓ DEVE SER EXIBIDO SE O postType = "artigo" */}
-        <Box style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <Box
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Box style={{ maxHeight: 290, maxWidth: 290, margin: 8 }}>
             <img src={image} alt="about" />
           </Box>
-          <Box style={{ display: "flex", flexDirection: "column", maxWidth: 400, marginLeft: 8}}>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              maxWidth: 400,
+              marginLeft: 8,
+            }}
+          >
             <Typography className={classes.other}>Escrito por</Typography>
             <Typography className={classes.other2}>Nome do autor</Typography>
-            <Typography className={classes.authorText}>About o autor. um textinho curto falando que o autor do artigo é gente boa.</Typography>
+            <Typography className={classes.authorText}>
+              About o autor. um textinho curto falando que o autor do artigo é
+              gente boa.
+            </Typography>
           </Box>
         </Box>
       </div>
