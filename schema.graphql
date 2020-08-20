@@ -569,6 +569,7 @@ type MdxFrontmatter {
   image_3: String
   job: String
   name: String
+  video: String
   path: String
   text_1: String
   tags: [String]

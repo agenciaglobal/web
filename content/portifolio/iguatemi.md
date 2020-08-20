@@ -21,6 +21,8 @@ text_2: Platea dictumst vestibulum rhoncus est pellentesque elit. Sed arcu non o
 
 text_3: Augue interdum velit euismod in pellentesque massa. At elementum eu facilisis sed odio morbi quis commodo. Urna porttitor rhoncus dolor purus non enim praesent elementum. Arcu cursus euismod quis viverra nibh. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Vitae proin sagittis nisl rhoncus mattis rhoncus. Volutpat lacus laoreet non curabitur gravida arcu. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque viverra mauris in aliquam sem. Enim sit amet venenatis urna. Volutpat consequat mauris nunc congue nisi vitae. Fermentum dui faucibus in ornare quam viverra orci sagittis. Arcu cursus vitae congue mauris rhoncus aenean vel. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus vitae congue mauris rhoncus.
 
+video: /assets/cesco.mp4
+
 text_4: Augue interdum velit euismod in pellentesque massa. At elementum eu facilisis sed odio morbi quis commodo. Urna porttitor rhoncus dolor purus non enim praesent elementum. Arcu cursus euismod quis viverra nibh. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Vitae proin sagittis nisl rhoncus mattis rhoncus. Volutpat lacus laoreet non curabitur gravida arcu. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque viverra mauris in aliquam sem. Enim sit amet venenatis urna. Volutpat consequat mauris nunc congue nisi vitae. Fermentum dui faucibus in ornare quam viverra orci sagittis. Arcu cursus vitae congue mauris rhoncus aenean vel. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus vitae congue mauris rhoncus.
 
 author: Dora

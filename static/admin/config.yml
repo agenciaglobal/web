@@ -91,7 +91,7 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: creation date, label: Data publicação, widget: date }
+      - { name: date, label: Data publicação, widget: date }
       - { name: job date, label: Data do job, widget: date }
       - name: categorie
         label: Categoria

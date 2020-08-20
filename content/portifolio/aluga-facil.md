@@ -1,12 +1,12 @@
 ---
 path: aluga-facil
-creation date: 2020-08-20T02:16:05.046Z
+date: 2020-08-20T02:16:05.046Z
 job date: 2020-08-20T02:16:05.069Z
 categorie: featured
 title: ALUGA FÁCIL
 description: CRÉDITO REAL
 image: /assets/www-2.png
-video: /assets/samplevideo_1280x720_1mb.mp4
+video: /assets/cesco.mp4
 text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
   Fusce ut placerat orci nulla pellentesque dignissim enim. Elementum eu
   facilisis sed odio. Purus in massa tempor nec feugiat nisl pretium fusce id.
@@ -52,7 +52,6 @@ text_4: Augue interdum velit euismod in pellentesque massa. At elementum eu
   Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus
   vitae congue mauris rhoncus.
 author: Dora
-date: 2020-07-12T00:14:01.690Z
 ---
 effefe
 

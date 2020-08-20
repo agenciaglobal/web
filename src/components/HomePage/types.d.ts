@@ -1,5 +1,8 @@
 import { Maybe, MdxFrontmatter } from "global"
 
 export type Portifolio = { slug: string } & Maybe<
-  Pick<MdxFrontmatter, "image" | "date" | "title" | "description" | "categorie">
+  Pick<
+    MdxFrontmatter,
+    "video" | "image" | "date" | "title" | "description" | "categorie"
+  >
 >

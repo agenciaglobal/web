@@ -16,6 +16,7 @@ import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import video from "static/videos/mov-white.mp4"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -217,7 +218,6 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-
   return (
     <React.Fragment>
       <MainTranslatedImage
@@ -302,6 +302,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        video
         description
         image
         image_1
