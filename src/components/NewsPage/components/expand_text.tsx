@@ -5,12 +5,9 @@ export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
   full?: boolean
-  // type: string
-  // postType: string
   title: string
   description: string
 }): React.ReactElement => {
-  console.log(props.date)
   return (
     <Box
       style={{
