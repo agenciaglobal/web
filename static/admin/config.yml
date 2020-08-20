@@ -164,15 +164,12 @@ collections:
       - label: "Carrossel: Imagem 1 (1:1)"
         name: "image_7"
         widget: "image"
-        required: false
       - label: "Carrossel: Imagem 2 (1:1)"
         name: "image_8"
         widget: "image"
-        required: false
       - label: "Carrossel: Imagem 3 (1:1)"
         name: "image_9"
         widget: "image"
-        required: false
       - label: "Carrossel: Imagem 4 (1:1)"
         name: "image_10"
         widget: "image"
