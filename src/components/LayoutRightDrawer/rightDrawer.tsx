@@ -49,30 +49,22 @@ export const RightDrawer = ({
         <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
           <Container className={classes.container}>
             <ul className={classes.list}>
-              <TabComponent page={"/"} uri={uri} label={t("sidebar.main")} />
+              <TabComponent uri={uri} to={"/"} label={t("sidebar.main")} />
               <TabComponent
-                page={"/about"}
                 uri={uri}
+                to={"/about"}
                 label={t("sidebar.about")}
               />
+              <TabComponent uri={uri} to={"/news"} label={t("sidebar.news")} />
+              <TabComponent uri={uri} to={"/team"} label={t("sidebar.team")} />
               <TabComponent
-                page={"/news"}
                 uri={uri}
-                label={t("sidebar.news")}
-              />
-              <TabComponent
-                page={"/team"}
-                uri={uri}
-                label={t("sidebar.team")}
-              />
-              <TabComponent
-                page={"/clients"}
-                uri={uri}
+                to={"/clients"}
                 label={t("sidebar.client")}
               />
               <TabComponent
-                page={"/contact"}
                 uri={uri}
+                to={"/contact"}
                 label={t("sidebar.contact")}
               />
             </ul>

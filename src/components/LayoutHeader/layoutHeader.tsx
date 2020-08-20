@@ -12,6 +12,7 @@ import {
   SuporttedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
+import useTheme from "@material-ui/core/styles/useTheme"
 
 interface Props {
   lightMode: LightMode
@@ -25,6 +26,7 @@ export const LayoutHeader = ({
   uri,
 }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
+  const theme = useTheme()
   return (
     <Hidden smDown>
       <AppBar
@@ -69,30 +71,31 @@ export const LayoutHeader = ({
                   margin: "18px 0px 0px",
                 }}
               >
-                <TabComponent page={"/"} uri={uri} label={t("sidebar.main")} />
+                <TabComponent uri={uri} to={"/"} label={t("sidebar.main")} />
                 <TabComponent
-                  page={"/about"}
                   uri={uri}
+                  to={"/about"}
                   label={t("sidebar.about")}
                 />
                 <TabComponent
-                  page={"/news"}
                   uri={uri}
+                  to={"/news"}
                   label={t("sidebar.news")}
                 />
                 <TabComponent
-                  page={"/team"}
                   uri={uri}
+                  to={"/team"}
                   label={t("sidebar.team")}
                 />
                 <TabComponent
-                  page={"/clients"}
                   uri={uri}
+                  to={"/clients"}
                   label={t("sidebar.client")}
                 />
                 <TabComponent
-                  page={"/contact"}
                   uri={uri}
+                  mode={theme.themeName === "light" ? "dark" : "light"}
+                  to={"/contact"}
                   label={t("sidebar.contact")}
                 />
                 <br />

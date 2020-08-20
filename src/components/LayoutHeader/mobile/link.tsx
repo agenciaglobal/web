@@ -38,7 +38,7 @@ export const LinkMobileComponent = ({
   to,
 }: Props): React.ReactElement => {
   const classes = useStylesMenu()
-  const { isCurrent } = isCurrentHook(to, uri)
+  const isCurrent = isCurrentHook(to, uri)
   console.log(isCurrent)
   return (
     <Link to={to} onClick={close} className={classes.link}>
