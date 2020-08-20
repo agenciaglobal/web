@@ -244,7 +244,7 @@ const PortifolioPostTemplate = ({
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
         <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
-{/* GRID 1 */}
+        {/* GRID 1 */}
         <GridLocal
           right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
           left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
@@ -252,23 +252,23 @@ const PortifolioPostTemplate = ({
         <Box>
           <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
         </Box>
-{/* GRID 2 */}
+        {/* GRID 2 */}
         <GridLocal
           left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
           right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
         />
-{/* TEXT 3 */}
+        {/* TEXT 3 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
         </Box>
-{/* GRID 3 */}
+        {/* GRID 3 */}
         <GridLocal
           left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
           right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
         />
-{/* TEXT 4 */}
+        {/* TEXT 4 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
@@ -283,7 +283,7 @@ const PortifolioPostTemplate = ({
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_5} />
         </Box>
-{/* CARROSSEL */}
+        {/* CARROSSEL */}
         <ImageScroller
           images={[
             data?.mdx?.frontmatter?.image_7 || "",
