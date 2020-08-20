@@ -31,7 +31,7 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
             {inner
               .filter((tile) => tile.categorie === value)
               .map((tile, idx) => (
-                <GridItem key={idx} tile={tile} index={idx} />
+                <GridItem key={idx} portifolio={tile} index={idx} />
               ))}
           </Masonry>
         )

@@ -4,6 +4,7 @@ import * as React from "react"
 export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
+  full?: boolean
   // type: string
   // postType: string
   title: string
@@ -32,15 +33,12 @@ export const ExpandTExt = (props: {
           textTransform: "uppercase",
         }}
       >
-        {/* {props.date} | {props.postType} */}
         {props.date} | notícia
       </Typography>
       <div>
         <Typography
-          // noWrap={true}
           style={{
-            // something like that
-            // fontSize: props.type == "Full" ? "30px" : "16px",
+            fontSize: props.full ? "30px" : "16px",
             color: "#FFF",
             lineHeight: "1.3em",
             fontFamily: "GSThree",
