@@ -27,7 +27,6 @@ export const NewsRelatedContent = withWidth()(
     const isXS = isWidthDown("xs", props.width || "xs")
     const classes = useStyles()
     const margin = useExtrapolatedMargin({ width: props.width })
-    const isDesktop = isWidthUp("md", props.width || "xs")
     const newVar = props.news || []
     return (
       <Box
