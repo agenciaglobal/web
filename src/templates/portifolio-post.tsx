@@ -88,6 +88,8 @@ const ImageScroller = (props: { images: string[] }): React.ReactElement => (
 const QuoteComponent = (props: {
   quote: string | undefined | null
   author: string | undefined | null
+  client: string | undefined | null
+  role: string | undefined | null
 }): React.ReactElement => {
   const gutter = 24
   return (
@@ -134,7 +136,10 @@ const QuoteComponent = (props: {
         </Typography>
         <Box css={{ paddingTop: 26, paddingBottom: gutter }}>
           <Typography style={{ textAlign: "center" }}>
-            {props.author}
+            {props.author} | {props.role}
+          </Typography>
+          <Typography style={{ textAlign: "center" }}>
+            {props.client}
           </Typography>
         </Box>
       </Box>
@@ -239,43 +244,70 @@ const PortifolioPostTemplate = ({
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
         <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
+{/* GRID 1 */}
         <GridLocal
           right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
           left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
         />
+        <Box>
+          <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
+        </Box>
+{/* GRID 2 */}
         <GridLocal
           left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
           right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
         />
+{/* TEXT 3 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
         </Box>
-        <FullImage
-          paddingTop={gutterVertical}
-          image={data?.mdx?.frontmatter?.image_3 || ""}
+{/* GRID 3 */}
+        <GridLocal
+          left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
+          right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
         />
-
-        <Box>
-          <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
-        </Box>
+{/* TEXT 4 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
         </Box>
+        <FullImage
+          paddingTop={gutterVertical}
+          image={data?.mdx?.frontmatter?.image_3 || ""}
+        />
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_5} />
+        </Box>
+{/* CARROSSEL */}
         <ImageScroller
           images={[
-            data?.mdx?.frontmatter?.image_1 || "",
-            data?.mdx?.frontmatter?.image_2 || "",
-            data?.mdx?.frontmatter?.image_3 || "",
-            data?.mdx?.frontmatter?.image_3 || "",
+            data?.mdx?.frontmatter?.image_7 || "",
+            data?.mdx?.frontmatter?.image_8 || "",
+            data?.mdx?.frontmatter?.image_9 || "",
+            data?.mdx?.frontmatter?.image_10 || "",
+            data?.mdx?.frontmatter?.image_11 || "",
+            data?.mdx?.frontmatter?.image_12 || "",
+            data?.mdx?.frontmatter?.image_13 || "",
+            data?.mdx?.frontmatter?.image_14 || "",
+            data?.mdx?.frontmatter?.image_15 || "",
+            data?.mdx?.frontmatter?.image_16 || "",
           ]}
         />
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_6} />
+        </Box>
         <QuoteComponent
-          quote={data?.mdx?.frontmatter?.text_4}
+          quote={data?.mdx?.frontmatter?.testimonial}
           author={data?.mdx?.frontmatter?.author}
+          role={data?.mdx?.frontmatter?.role}
+          client={data?.mdx?.frontmatter?.description}
         />
         <PortifolioSwitcher previous={previous} next={next} />
       </div>
@@ -299,19 +331,37 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        author
-        video
         description
+        date(formatString: "MMMM DD, YYYY")
+        categorie
         image
+        video
+        text_1
+        youtube
         image_1
+        text_2
         image_2
         image_3
-        text_1
-        text_2
         text_3
+        image_4
+        image_5
         text_4
-        youtube
+        image_6
+        text_5
+        image_7
+        image_8
+        image_9
+        image_10
+        image_11
+        image_12
+        image_13
+        image_14
+        image_15
+        image_16
+        text_6
+        testimonial
+        author
+        role
       }
     }
   }

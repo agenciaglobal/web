@@ -33,7 +33,7 @@ export const ActualGoogleMapsComponent = withScriptjs(
     }
     const dragend = (index: number) => (t: any, map: any, coordinates: any) =>
       onMarkerDragEnd(coordinates, index)
-    const options = theme.themeName === "light" ? lightMap : darkMap
+    const options = theme.themeName === "dark" ? lightMap : darkMap
     return (
       <GoogleMap
         defaultZoom={18}

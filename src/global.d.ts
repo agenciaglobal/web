@@ -1568,11 +1568,26 @@ export type MdxFrontmatter = {
   image_1?: Maybe<Scalars["String"]>
   image_2?: Maybe<Scalars["String"]>
   image_3?: Maybe<Scalars["String"]>
+  image_4?: Maybe<Scalars["String"]>
+  image_5?: Maybe<Scalars["String"]>
+  image_6?: Maybe<Scalars["String"]>
+  image_7?: Maybe<Scalars["String"]>
+  image_8?: Maybe<Scalars["String"]>
+  image_9?: Maybe<Scalars["String"]>
+  image_10?: Maybe<Scalars["String"]>
+  image_11?: Maybe<Scalars["String"]>
+  image_12?: Maybe<Scalars["String"]>
+  image_13?: Maybe<Scalars["String"]>
+  image_14?: Maybe<Scalars["String"]>
+  image_15?: Maybe<Scalars["String"]>
+  image_16?: Maybe<Scalars["String"]>
   text_1?: Maybe<Scalars["String"]>
   video?: Maybe<Scalars["String"]>
   text_2?: Maybe<Scalars["String"]>
   text_3?: Maybe<Scalars["String"]>
   text_4?: Maybe<Scalars["String"]>
+  text_5?: Maybe<Scalars["String"]>
+  text_6?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
   youtube?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
@@ -1582,6 +1597,7 @@ export type MdxFrontmatter = {
   tags?: Maybe<Array<Maybe<Scalars["String"]>>>
   body?: Maybe<Scalars["String"]>
   testimonial?: Maybe<Scalars["String"]>
+  role?: Maybe<Scalars["String"]>
   author_image?: Maybe<Scalars["String"]>
 }
 
@@ -3451,15 +3467,32 @@ export type PortifolioPostBySlugQuery = {
           | "date"
           | "author"
           | "description"
+          | "testimonial"
+          | "role"
           | "image"
           | "video"
           | "image_1"
           | "image_2"
           | "image_3"
+          | "image_4"
+          | "image_5"
+          | "image_6"
+          | "image_7"
+          | "image_8"
+          | "image_9"
+          | "image_10"
+          | "image_11"
+          | "image_12"
+          | "image_13"
+          | "image_14"
+          | "image_15"
+          | "image_16"
           | "text_1"
           | "text_2"
           | "text_3"
           | "text_4"
+          | "text_5"
+          | "text_6"
           | "youtube"
         >
       >

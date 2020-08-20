@@ -550,6 +550,8 @@ type MdxFields {
 
 type MdxFrontmatter {
   author: String
+  role: String
+  testimonial: String
   black_image: String
   categorie: String
   date(
@@ -567,6 +569,19 @@ type MdxFrontmatter {
   image_1: String
   image_2: String
   image_3: String
+  image_4: String
+  image_5: String
+  image_6: String
+  image_7: String
+  image_8: String
+  image_9: String
+  image_10: String
+  image_11: String
+  image_12: String
+  image_13: String
+  image_14: String
+  image_15: String
+  image_16: String
   job: String
   name: String
   video: String
@@ -576,6 +591,8 @@ type MdxFrontmatter {
   text_2: String
   text_3: String
   text_4: String
+  text_5: String
+  text_6: String
   title: String!
   type: String
   youtube: String
