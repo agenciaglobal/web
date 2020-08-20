@@ -12,7 +12,7 @@ const lightOptions: ThemeOptions = {
     },
   },
   custom: {
-    grey1: "#666",
+    grey1: "#333",
     grey2: "#F2F2F2",
     greyAlpha: "rgba(0, 0, 0, 0.6)",
     greyAlpha2: "rgba(255, 255, 255, 0.95)",

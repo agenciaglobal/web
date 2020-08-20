@@ -55,20 +55,24 @@ export const Previous = (props: Props): React.ReactElement => {
               }}
             >
               <Box style={{ zIndex: 2 }}>
-                <Typography style={{ 
-                  textAlign: "start",
-                  color: theme.custom.grey1,
-                  fontSize: 15
-                  }}>
+                <Typography
+                  style={{
+                    textAlign: "start",
+                    color: theme.custom.grey1,
+                    fontSize: 15,
+                  }}
+                >
                   {"TRABALHO ANTERIOR"}
                 </Typography>
                 <Hidden smDown>
-                  <Typography style={{ 
-                    textAlign: "start",
-                    color: theme.custom.grey1,
-                    fontFamily: "GSThree",
-                    fontSize: 30
-                    }}>
+                  <Typography
+                    style={{
+                      textAlign: "start",
+                      color: theme.custom.grey1,
+                      fontFamily: "GSThree",
+                      fontSize: 30,
+                    }}
+                  >
                     {props.previous.frontmatter?.title}
                   </Typography>
                 </Hidden>

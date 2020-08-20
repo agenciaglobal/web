@@ -159,7 +159,7 @@ export const MainTranslatedImage = withWidth()(
     return (
       <Box
         css={{
-          minHeight: 400,
+          minHeight: "100vh",
           display: "flex",
           justifyContent: "center",
           alignSelf: "center",

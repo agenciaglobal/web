@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Next = (props: Props): React.ReactElement => {
-const theme = useTheme()
+  const theme = useTheme()
   return (
     <Box
       style={{
@@ -44,20 +44,24 @@ const theme = useTheme()
               }}
             >
               <Box style={{ zIndex: 2 }}>
-                <Typography style={{
-                  textAlign: "end",
-                  color: theme.custom.grey1,
-                  fontSize: 15
-                  }}>
+                <Typography
+                  style={{
+                    textAlign: "end",
+                    color: theme.custom.grey1,
+                    fontSize: 15,
+                  }}
+                >
                   {"PRÓXIMO TRABALHO"}
                 </Typography>
                 <Hidden smDown>
-                  <Typography style={{ 
-                    textAlign: "end",
-                    color: theme.custom.grey1,
-                    fontFamily: "GSThree",
-                    fontSize: 30
-                    }}>
+                  <Typography
+                    style={{
+                      textAlign: "end",
+                      color: theme.custom.grey1,
+                      fontFamily: "GSThree",
+                      fontSize: 30,
+                    }}
+                  >
                     {props.next.frontmatter?.title}
                   </Typography>
                 </Hidden>
