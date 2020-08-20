@@ -1,4 +1,5 @@
 import { Tab, Theme } from "@material-ui/core"
+import NumberFormat from "react-number-format"
 import Box from "@material-ui/core/Box"
 import Button from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
@@ -6,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Tabs from "@material-ui/core/Tabs"
 import TextField from "@material-ui/core/TextField"
 import * as React from "react"
+import * as Yup from "yup"
 import { ChangeEvent } from "react"
 import { Field, Formik } from "formik"
 import Typography from "@material-ui/core/Typography"
@@ -102,9 +104,15 @@ export const TalkWorkForm = (): React.ReactElement => {
           />
         ))}
       </Tabs>
-      <div style={{ height: 2, background: yellow }}></div>
+      <div style={{ height: 2, background: yellow }} />
       <Formik<FormValues>
         initialValues={initialValues}
+        validationSchema={Yup.object({
+          name: Yup.string().required(),
+          email: Yup.string().email().required(),
+          phone: Yup.string().required(),
+          msg: Yup.string().required(),
+        })}
         onSubmit={async (values, { resetForm }) => {
           if (current === 1) {
             window.open(
@@ -128,10 +136,32 @@ export const TalkWorkForm = (): React.ReactElement => {
             console.log("hello")
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             resetForm(initialValues as any)
+            return
           }
+          console.log("outside")
         }}
       >
-        {({ values, setFieldValue, handleSubmit }) => {
+        {({
+          values,
+          setFieldValue,
+          isValid,
+          dirty,
+          initialTouched,
+          handleSubmit,
+          errors,
+        }) => {
+          console.log(errors, isValid, initialTouched)
+          const s = values.phone
+            .split(" ")
+            .join("")
+            .split(")")
+            .join("")
+            .split("(")
+            .join("")
+            .split("-")
+            .join("")
+            .split("_")
+            .join("")
           return (
             <form onSubmit={handleSubmit}>
               {current === 1 && (
@@ -158,15 +188,19 @@ export const TalkWorkForm = (): React.ReactElement => {
                       className={classes.textField}
                       required={true}
                       value={values.name}
+                      error={Boolean(errors.name)}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("name", e.target.value)
                       }}
                       as={TextField}
+                      name={"name"}
                       label={"Nome"}
                     />
                     <Field
                       as={TextField}
+                      name={"email"}
                       required={true}
+                      error={Boolean(errors.email)}
                       className={classes.textField}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("email", e.target.value)
@@ -174,18 +208,30 @@ export const TalkWorkForm = (): React.ReactElement => {
                       value={values.email}
                       label={"Email"}
                     />
-                    <Field
+                    <NumberFormat
                       className={classes.textField}
+                      format={
+                        s.length < 11 ? "(##) ####-#####" : "(##) #####-####"
+                      }
+                      mask={s.length < 10 ? "_" : ""}
+                      customInput={TextField}
+                      max={11}
                       required={true}
+                      placeholder={"Phone"}
+                      label={"Phone"}
+                      error={Boolean(errors.phone)}
+                      fullWidth={true}
+                      isNumericString={false}
                       value={values.phone}
+                      name={"phone"}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         setFieldValue("phone", e.target.value)
                       }}
-                      as={TextField}
-                      label={"Telefone"}
                     />
                   </Box>
                   <Field
+                    name={"msg"}
+                    error={Boolean(errors.msg)}
                     className={classes.textField}
                     required={true}
                     as={TextField}
@@ -201,6 +247,7 @@ export const TalkWorkForm = (): React.ReactElement => {
               )}
               <Box className={classes.bcontainer}>
                 <Button
+                  disabled={!isValid || !dirty}
                   className={classes.button}
                   type={"submit"}
                   variant={"contained"}

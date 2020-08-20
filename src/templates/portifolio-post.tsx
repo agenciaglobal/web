@@ -15,6 +15,7 @@ import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -256,6 +257,10 @@ const PortifolioPostTemplate = ({
           paddingTop={gutterVertical}
           image={data?.mdx?.frontmatter?.image_3 || ""}
         />
+
+        <Box>
+          <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
+        </Box>
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
