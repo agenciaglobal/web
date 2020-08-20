@@ -12,6 +12,8 @@ import { PortifolioPostBySlugQuery, SitePageContext } from "global"
 import YouTube from "react-youtube"
 import Box from "@material-ui/core/Box"
 import { GridLocal } from "./grid_local"
+import { GridSix } from "./grid_six"
+import { GridFour } from "./grid_four"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
@@ -79,7 +81,9 @@ const ImageScroller = (props: { images: string[] }): React.ReactElement => (
       <div
         key={index}
         className={`menu-item`}
-        style={{ background: `url(${el})` }}
+        style={{ 
+          background: `url(${el})`,
+        }}
       />
     ))}
   />
@@ -107,7 +111,7 @@ const QuoteComponent = (props: {
           style={{
             position: "absolute",
             marginTop: "30px",
-            zIndex: 2,
+            zIndex: 0,
             marginBottom: "auto",
             marginLeft: "auto",
             marginRight: "auto",
@@ -128,7 +132,7 @@ const QuoteComponent = (props: {
         </svg>
         <Typography
           style={{
-            zIndex: 3,
+            zIndex: 99,
             display: "flex",
           }}
         >
@@ -238,26 +242,29 @@ const PortifolioPostTemplate = ({
           transform: "translateY( -187px )",
         }}
       >
+        {/* TEXT 1 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
-        <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
+        {/* YOUTUBE */}
+        <YoutubePreview url=  {data?.mdx?.frontmatter?.youtube} />
         {/* GRID 1 */}
         <GridLocal
           right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
           left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
         />
-        <Box>
+        {/* MARKDOWN */}
+        {/* <Box style={{ maxWidth: "100vw"}}>
           <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
-        </Box>
+        </Box> */}
         {/* GRID 2 */}
         <GridLocal
           left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
           right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
         />
-        {/* TEXT 3 */}
+        {/* TEXT 2 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
@@ -268,16 +275,18 @@ const PortifolioPostTemplate = ({
           left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
           right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
         />
-        {/* TEXT 4 */}
+        {/* TEXT 3 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
         </Box>
+        {/* IMAGE WIDE */}
         <FullImage
           paddingTop={gutterVertical}
           image={data?.mdx?.frontmatter?.image_3 || ""}
         />
+        {/* TEXT 4 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
@@ -298,11 +307,35 @@ const PortifolioPostTemplate = ({
             data?.mdx?.frontmatter?.image_16 || "",
           ]}
         />
+        {/* TEXTO 5 */}
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_6} />
         </Box>
+        {/* GRID 4 : 6 IMAGENS*/}
+        <GridSix
+          leftTop={<GridImage src={data?.mdx?.frontmatter?.image_17 || ""} />}
+          middleTop={<GridImage src={data?.mdx?.frontmatter?.image_18 || ""} />}
+          rightTop={<GridImage src={data?.mdx?.frontmatter?.image_19 || ""} />}
+          leftBottom={<GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />}
+          middleBottom={<GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />}
+          rightBottom={<GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />}
+        />
+        {/* TEXTO 6 */}
+        <Box
+          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
+        >
+          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_7} />
+        </Box>
+        {/* GRID 5 : 4 IMAGENS*/}
+        <GridFour
+          left={<GridImage src={data?.mdx?.frontmatter?.image_23 || ""} />}
+          centerLeft={<GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />}
+          centerRight={<GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />}
+          right={<GridImage src={data?.mdx?.frontmatter?.image_26 || ""} />}
+        />
+        {/* QUOTE */}
         <QuoteComponent
           quote={data?.mdx?.frontmatter?.testimonial}
           author={data?.mdx?.frontmatter?.author}
@@ -358,7 +391,18 @@ export const pageQuery = graphql`
         image_14
         image_15
         image_16
+        image_17
+        image_18
+        image_19
+        image_20
+        image_21
+        image_22
+        image_23
+        image_24
+        image_25
+        image_26
         text_6
+        text_7
         testimonial
         author
         role

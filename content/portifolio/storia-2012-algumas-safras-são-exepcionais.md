@@ -51,12 +51,33 @@ image_8: /assets/mask-group-1.png
 image_9: /assets/group-12.png
 image_10: /assets/mask-group-1.png
 image_11: /assets/group-12.png
+image_12: /assets/mask-group.png
+image_13: /assets/mask-group-1.png
+image_14: /assets/group-12.png
+image_15: /assets/mask-group-1.png
+image_16: /assets/group-12.png
 text_6: "Também fez parte do projeto de lançamento a curadoria de playlists com
   as melhores safras que a música já produziu. Foi criado um canal da Casa
   Valduga no Spotify que contempla 4 playlists: Jazz (Safra 1930), Bossa Nova
   (Safra 1958), Tropicália (Safra 1968) e Nova MPB (Safra 2009). Todas com
   músicas que harmonizam com um vinho excepcional, como o Storia Merlot da Casa
   Valduga."
+image_17: /assets/mask-group.png
+image_18: /assets/mask-group-1.png
+image_19: /assets/group-12.png
+image_20: /assets/mask-group-1.png
+image_21: /assets/group-12.png
+image_22: /assets/mask-group.png
+text_7: "Também fez parte do projeto de lançamento a curadoria de playlists com
+  as melhores safras que a música já produziu. Foi criado um canal da Casa
+  Valduga no Spotify que contempla 4 playlists: Jazz (Safra 1930), Bossa Nova
+  (Safra 1958), Tropicália (Safra 1968) e Nova MPB (Safra 2009). Todas com
+  músicas que harmonizam com um vinho excepcional, como o Storia Merlot da Casa
+  Valduga."
+image_23: /assets/mask-group-1.png
+image_24: /assets/group-12.png
+image_25: /assets/mask-group-1.png
+image_26: /assets/group-12.png
 testimonial: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

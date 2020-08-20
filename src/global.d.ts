@@ -1581,6 +1581,16 @@ export type MdxFrontmatter = {
   image_14?: Maybe<Scalars["String"]>
   image_15?: Maybe<Scalars["String"]>
   image_16?: Maybe<Scalars["String"]>
+  image_17?: Maybe<Scalars["String"]>
+  image_18?: Maybe<Scalars["String"]>
+  image_19?: Maybe<Scalars["String"]>
+  image_20?: Maybe<Scalars["String"]>
+  image_21?: Maybe<Scalars["String"]>
+  image_22?: Maybe<Scalars["String"]>
+  image_23?: Maybe<Scalars["String"]>
+  image_24?: Maybe<Scalars["String"]>
+  image_25?: Maybe<Scalars["String"]>
+  image_26?: Maybe<Scalars["String"]>
   text_1?: Maybe<Scalars["String"]>
   video?: Maybe<Scalars["String"]>
   text_2?: Maybe<Scalars["String"]>
@@ -1588,6 +1598,7 @@ export type MdxFrontmatter = {
   text_4?: Maybe<Scalars["String"]>
   text_5?: Maybe<Scalars["String"]>
   text_6?: Maybe<Scalars["String"]>
+  text_7?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
   youtube?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
@@ -3487,12 +3498,23 @@ export type PortifolioPostBySlugQuery = {
           | "image_14"
           | "image_15"
           | "image_16"
+          | "image_17"
+          | "image_18"
+          | "image_19"
+          | "image_20"
+          | "image_21"
+          | "image_22"
+          | "image_23"
+          | "image_24"
+          | "image_25"
+          | "image_26"
           | "text_1"
           | "text_2"
           | "text_3"
           | "text_4"
           | "text_5"
           | "text_6"
+          | "text_7"
           | "youtube"
         >
       >

@@ -19,6 +19,7 @@ export function LongMontsetrratText(props: {
         fontSize: 20,
         color: "#333333",
         lineHeight: "32px",
+        margin: 60,
         fontFamily: "Montserrat, sans-serif",
       }}
     >
