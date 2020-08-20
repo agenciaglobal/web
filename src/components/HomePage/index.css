@@ -8,6 +8,9 @@
   background-clip: padding-box;
 }
 
-.global-home-grid-column  div {
+.global-home-grid-column > div {
+  height: 390px;
+}
+.global-home-grid-column > div > a > div > div{
   height: 390px;
 }

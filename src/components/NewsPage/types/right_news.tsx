@@ -34,6 +34,7 @@ export const RightNewsComponent = ({
             }}
           >
             <ExpandTExt
+              type={"Full"}
               date={type}
               title={title || ""}
               description={description || ""}

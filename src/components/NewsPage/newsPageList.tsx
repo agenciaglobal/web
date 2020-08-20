@@ -58,6 +58,10 @@ export const NewsPageList = withWidth()(
           breakpointCols={{ default: 3, 700: 1, 1500: 2 }}
           className="global-news-grid"
           columnClassName="global-news-grid-column"
+          style={{
+            marginTop: 24,
+            transform: `translate( -${0}px , -${187}px )`,
+          }}
         >
           {isXS
             ? map.map((current, index) => {

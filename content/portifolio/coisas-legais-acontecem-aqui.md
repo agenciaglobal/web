@@ -1,6 +1,6 @@
 ---
 path: Coisas Legais Acontecem Aqui
-creation date: 2020-08-14T12:31:29.920Z
+date: 2020-08-20T02:16:05.046Z
 job date: 2020-08-14T12:31:29.939Z
 title: Coisas Legais Acontecem Aqui
 text_1: 'Que o Iguatemi tem o melhor mix de lojas, restaurantes e serviços de
@@ -22,3 +22,9 @@ image_1: /assets/0-0-2.png
 image_2: /assets/preview-10.png
 image_3: /assets/preview-11.png
 ---
+effefe
+
+![cesco](/assets/10-maria-dornelles.jpg "cescp")
+
+asddasasd
+ASDsad

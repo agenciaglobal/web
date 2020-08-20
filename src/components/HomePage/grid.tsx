@@ -1,10 +1,9 @@
-import { Box, Typography } from "@material-ui/core"
-import TrackVisibility from "react-on-screen"
+import { Box } from "@material-ui/core"
 import makeStyles from "@material-ui/core/styles/makeStyles"
-import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
+import { GridItem } from "components/HomePage/grid_item"
 
 interface Props {
   projects: { [key: string]: Portifolio[] }
@@ -14,47 +13,6 @@ interface Props {
 const useGridStyles = makeStyles(() => ({
   box: { width: "100%", paddingBottom: 300, paddingTop: 30 },
 }))
-
-function NewComponent(props: { index: number; tile: Portifolio }) {
-  // const [isFirstVisible, firstRef] = useVisibility<HTMLDivElement>(0)
-
-  // const firstRef = useRef(null)
-  // const isFirstVisible = useVisibility(firstRef.current)
-  const path = props.tile?.image || ""
-  return (
-    <TrackVisibility offset={props.index === 0 ? 300 : 200}>
-      {({ isVisible }: { isVisible: boolean }) => {
-        console.log(isVisible)
-        return (
-          <Link style={{ textDecoration: "none" }} to={props.tile.slug}>
-            <div style={{}}>
-              <Box
-                style={{
-                  backgroundImage: `url(${path})`,
-                  filter: `blur(${isVisible ? 0 : 3}px)`,
-                  padding: "15px",
-                }}
-              >
-                <Typography
-                  style={{
-                    fontSize: "20px",
-                    fontFamily: "GSThree",
-                    color: "#FFF",
-                  }}
-                >
-                  {(isVisible ? "yay" : "sad") + props.tile.title}
-                </Typography>
-                <Typography style={{ color: "#FFF" }}>
-                  {props.tile.description}
-                </Typography>
-              </Box>
-            </div>
-          </Link>
-        )
-      }}
-    </TrackVisibility>
-  )
-}
 
 export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
   const classes = useGridStyles()
@@ -72,9 +30,9 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
           >
             {inner
               .filter((tile) => tile.categorie === value)
-              .map((tile, idx) => {
-                return <NewComponent key={idx} tile={tile} index={idx} />
-              })}
+              .map((tile, idx) => (
+                <GridItem key={idx} portifolio={tile} index={idx} />
+              ))}
           </Masonry>
         )
       })}

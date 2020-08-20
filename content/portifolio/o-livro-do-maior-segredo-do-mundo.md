@@ -1,6 +1,6 @@
 ---
 path: O livro do maior segredo do mundo
-creation date: 2020-08-13T13:51:22.086Z
+date: 2020-08-13T13:51:22.086Z
 job date: 2018-08-13T03:00:00.000Z
 title: O Livro do Maior Segredo do Mundo
 text_1: No ano da expansão do Iguatemi, a Global desenvolveu um projeto especial
@@ -20,4 +20,11 @@ image: /assets/1000x550.png
 image_1: /assets/preview-2.png
 image_2: /assets/preview.png
 image_3: /assets/preview-2.png
+video: /assets/cesco.mp4
 ---
+effefe
+
+![cesco](/assets/10-maria-dornelles.jpg "cescp")
+
+asddasasd
+ASDsad

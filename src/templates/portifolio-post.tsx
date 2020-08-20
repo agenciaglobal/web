@@ -15,6 +15,7 @@ import { GridLocal } from "./grid_local"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -56,7 +57,7 @@ const GridImage = (props: { src: string }): React.ReactElement => (
   />
 )
 
-export const Fullmage = (props: {
+export const FullImage = (props: {
   paddingTop: number
   image: string
 }): React.ReactElement => (
@@ -216,7 +217,6 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-
   return (
     <React.Fragment>
       <MainTranslatedImage
@@ -252,10 +252,14 @@ const PortifolioPostTemplate = ({
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
         </Box>
-        <Fullmage
+        <FullImage
           paddingTop={gutterVertical}
           image={data?.mdx?.frontmatter?.image_3 || ""}
         />
+
+        <Box>
+          <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
+        </Box>
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
@@ -297,6 +301,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        video
         description
         image
         image_1

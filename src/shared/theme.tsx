@@ -14,7 +14,7 @@ declare module "@material-ui/core/styles/createMuiTheme" {
     }
   }
   interface Theme {
-    themeName?: LightMode
+    themeName: LightMode
     custom: {
       grey1: CSSProperties["color"]
       grey2: CSSProperties["color"]
