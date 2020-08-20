@@ -1,5 +1,5 @@
 import { Paper, Switch } from "@material-ui/core"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React from "react"
 import { LightMode } from "shared/theme"
 
@@ -63,7 +63,7 @@ const YellowSwitch = ({
   )
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   switchPaper: {
     width: 50,
     height: 90,
