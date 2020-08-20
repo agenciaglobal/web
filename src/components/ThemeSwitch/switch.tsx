@@ -1,12 +1,12 @@
 import { Paper, Switch } from "@material-ui/core"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import React from "react"
 import { LightMode } from "shared/theme"
 
 const stylesYellowSwitch = {
   root: {
-    width: 30,
-    height: 19,
+    width: 32,
+    height: 20,
     padding: 0,
     display: "flex",
     transform: "rotate(-90deg)",
@@ -27,7 +27,6 @@ const stylesYellowSwitch = {
     width: 17,
     height: 17,
     border: "1px solid #E8E8E8",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.15)",
   },
   track: {
     margin: 2,
@@ -35,7 +34,6 @@ const stylesYellowSwitch = {
     height: 15,
     backgroundColor: "#FFCC00",
     border: `none`,
-    boxShadow: "inset 0px 0px 3px rgba(0, 0, 0, 0.25)",
     borderRadius: 16 / 2,
     opacity: 1,
   },
@@ -65,12 +63,12 @@ const YellowSwitch = ({
   )
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   switchPaper: {
     width: 50,
     height: 90,
     borderRadius: 0,
-    background: theme.palette.primary.main,
+    background: "transparent",
     boxShadow: "none",
     display: "flex",
     flexWrap: "wrap",
