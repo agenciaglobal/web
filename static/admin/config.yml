@@ -92,7 +92,7 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Data publicação, widget: date }
-      - { name: job date, label: Data do job, widget: date }
+      - { name: jobDate, label: Data do job, widget: date }
       - name: categorie
         label: Categoria
         widget: select

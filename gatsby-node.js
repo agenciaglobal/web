@@ -19,6 +19,7 @@ let s = `
               description
               image
               categorie
+              role
             }
           }
         }

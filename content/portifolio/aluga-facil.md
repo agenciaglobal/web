@@ -3,6 +3,7 @@ path: aluga-facil
 date: 2020-08-20T02:16:05.046Z
 job date: 2020-08-20T02:16:05.069Z
 categorie: featured
+role: PRESIDENTE
 title: ALUGA FÁCIL
 description: CRÉDITO REAL
 image: /assets/www-2.png
@@ -21,6 +22,19 @@ text_1: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
   duis at tellus at urna condimentum mattis pellentesque.
 youtube: j1j1uYuTXSk
 image_1: /assets/great.jpg
+image_4: /assets/great.jpg
+image_5: /assets/great.jpg
+image_6: /assets/great.jpg
+image_7: /assets/great.jpg
+image_8: /assets/great.jpg
+image_9: /assets/great.jpg
+image_10: /assets/great.jpg
+image_11: /assets/great.jpg
+image_12: /assets/great.jpg
+image_13: /assets/great.jpg
+image_14: /assets/great.jpg
+image_15: /assets/great.jpg
+image_16: /assets/great.jpg
 text_2: Platea dictumst vestibulum rhoncus est pellentesque elit. Sed arcu non
   odio euismod lacinia at quis. In ante metus dictum at tempor. Sit amet purus
   gravida quis blandit turpis cursus in. Est placerat in egestas erat imperdiet.
@@ -41,6 +55,28 @@ text_3: Augue interdum velit euismod in pellentesque massa. At elementum eu
   Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus
   vitae congue mauris rhoncus.
 text_4: Augue interdum velit euismod in pellentesque massa. At elementum eu
+  facilisis sed odio morbi quis commodo. Urna porttitor rhoncus dolor purus non
+  enim praesent elementum. Arcu cursus euismod quis viverra nibh. Lectus urna
+  duis convallis convallis tellus id interdum velit laoreet. Vitae proin
+  sagittis nisl rhoncus mattis rhoncus. Volutpat lacus laoreet non curabitur
+  gravida arcu. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque
+  viverra mauris in aliquam sem. Enim sit amet venenatis urna. Volutpat
+  consequat mauris nunc congue nisi vitae. Fermentum dui faucibus in ornare quam
+  viverra orci sagittis. Arcu cursus vitae congue mauris rhoncus aenean vel.
+  Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus
+  vitae congue mauris rhoncus.
+text_5: Augue interdum velit euismod in pellentesque massa. At elementum eu
+  facilisis sed odio morbi quis commodo. Urna porttitor rhoncus dolor purus non
+  enim praesent elementum. Arcu cursus euismod quis viverra nibh. Lectus urna
+  duis convallis convallis tellus id interdum velit laoreet. Vitae proin
+  sagittis nisl rhoncus mattis rhoncus. Volutpat lacus laoreet non curabitur
+  gravida arcu. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque
+  viverra mauris in aliquam sem. Enim sit amet venenatis urna. Volutpat
+  consequat mauris nunc congue nisi vitae. Fermentum dui faucibus in ornare quam
+  viverra orci sagittis. Arcu cursus vitae congue mauris rhoncus aenean vel.
+  Metus vulputate eu scelerisque felis imperdiet proin fermentum. Arcu cursus
+  vitae congue mauris rhoncus.
+text_6: Augue interdum velit euismod in pellentesque massa. At elementum eu
   facilisis sed odio morbi quis commodo. Urna porttitor rhoncus dolor purus non
   enim praesent elementum. Arcu cursus euismod quis viverra nibh. Lectus urna
   duis convallis convallis tellus id interdum velit laoreet. Vitae proin
