@@ -11,7 +11,10 @@ const useStyles = makeStyles(() => ({
     fontSize: 40,
     paddingTop: 26,
     paddingBottom: 26,
-    fontFamily: "GSThree",
+    fontFamily: "GSTwo",
+    "@media (min-width:600px)": {
+      fontSize: 50,
+    },
   },
 }))
 

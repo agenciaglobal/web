@@ -1,10 +1,13 @@
-import Typography from "@material-ui/core/Typography"
+import { Typography, Theme } from "@material-ui/core"
 import React from "react"
 import Box from "@material-ui/core/Box"
 import { Maybe, NewsPostBySlugQuery, SitePageContextNews } from "global"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MainTranslatedImage } from "../../templates/portifolio-post"
 import makeStyles from "@material-ui/core/styles/makeStyles"
+import withWidth from "@material-ui/core/withWidth"
+import { WithWidthProps } from "@material-ui/core"
+import { useExtrapolatedMargin } from "src/templates/portifolio-post"
+import image from "static/ramarim.png"
 
 export function LongMontsetrratText(props: {
   post: string | null | undefined
@@ -23,7 +26,8 @@ export function LongMontsetrratText(props: {
     </Typography>
   )
 }
-const useGridStyles = makeStyles(() => ({
+
+const useGridStyles = makeStyles((theme: Theme) => ({
   div: {
     overflowX: "hidden",
     transform: "translateY( -187px )",
@@ -32,10 +36,91 @@ const useGridStyles = makeStyles(() => ({
       maxWidth: "100%",
     },
   },
+  dateText: {
+    color: theme.custom.grey1,
+    display: "block",
+    fontFamily: "GSThree",
+    fontSize: 14,
+    paddingBottom: 0,
+    "@media (min-width:600px)": {
+      fontSize: 16,
+      paddingBottom: 4,
+    },
+  },
+  authorText: {
+    color: theme.custom.grey1,
+    fontFamily: "Montserrat, sans-serif",
+    fontWeight: 300,
+    fontSize: 12,
+    "@media (min-width:600px)": {
+      fontSize: 14,
+    },
+  },
+  titleText: {
+    color: theme.custom.grey1,
+    fontFamily: "GSThree",
+    fontSize: 20,
+    paddingTop: 13,
+    "@media (min-width:600px)": {
+      fontSize: 30,
+      paddingTop: 32,
+    },
+  },
+  media: {
+    height: 0,
+    paddingTop: "56.25%",
+    // marginTop:'30'
+  },
+  other: {
+    color: theme.custom.grey1,
+    fontFamily: "GSThree",
+    fontWeight: 300,
+    fontSize: 12,
+    "@media (min-width:600px)": {
+      fontSize: 14,
+    },
+  },
+  other2: {
+    color: theme.custom.grey1,
+    fontFamily: "GSThree",
+    fontSize: 16,
+    "@media (min-width:600px)": {
+      fontSize: 30,
+    },
+  },
 }))
+
 const notEmpty = <TValue extends unknown>(
   value: TValue | null | undefined,
 ): value is TValue => value !== null && value !== undefined
+
+const TranslatedImage = withWidth()(
+  (
+    props: {
+      image: string
+      title?: React.ReactElement
+    } & WithWidthProps,
+  ): React.ReactElement => {
+    const margin = useExtrapolatedMargin({ width: props.width })
+    return (
+      <Box
+        css={{
+          minHeight: 250,
+          display: "flex",
+          justifyContent: "center",
+          alignSelf: "center",
+          alignItems: "center",
+          backgroundImage: `url(${props.image})`,
+          backgroundSize: "cover",
+          width: `calc( 100% + ${2 * margin}px)`,
+          transform: `translate( -${margin}px , -${187}px )`,
+        }}
+      >
+        {props.title}
+      </Box>
+    )
+  },
+)
 
 export const NewsContent = (props: {
   current: NewsPostBySlugQuery | null | undefined
@@ -47,15 +132,16 @@ export const NewsContent = (props: {
   const post = props.current?.mdx
   return (
     <React.Fragment>
-      <MainTranslatedImage
-        image={props.current?.mdx?.frontmatter?.image || ""}
-      />
+      <TranslatedImage image={props.current?.mdx?.frontmatter?.image || ""} />
 
       <div className={classes.div}>
-        <Typography style={{ display: `block` }}>
+        <Typography className={classes.dateText}>
           {post?.frontmatter?.date + " | NOTICIA"}
         </Typography>
-        <Typography style={{ fontSize: 30 }}>
+        <Typography className={classes.authorText}>
+          {"Por João da Silva"}
+        </Typography>
+        <Typography className={classes.titleText}>
           {post?.frontmatter?.title}
         </Typography>
         <Box>
@@ -70,6 +156,35 @@ export const NewsContent = (props: {
             .map((tag: string, index) => {
               return <Typography key={index}>{tag + " "}</Typography>
             })}
+        </Box>
+
+        {/* TEM QUE PUXAR OS CAMPOS DO CMS: IMAGE, AUTHOR E ABOUT */}
+        {/* ESSE COMPONENTE SÓ DEVE SER EXIBIDO SE O postType = "artigo" */}
+        <Box
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box style={{ maxHeight: 290, maxWidth: 290, margin: 8 }}>
+            <img src={image} alt="about" />
+          </Box>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              maxWidth: 400,
+              marginLeft: 8,
+            }}
+          >
+            <Typography className={classes.other}>Escrito por</Typography>
+            <Typography className={classes.other2}>Nome do autor</Typography>
+            <Typography className={classes.authorText}>
+              About o autor. um textinho curto falando que o autor do artigo é
+              gente boa.
+            </Typography>
+          </Box>
         </Box>
       </div>
     </React.Fragment>

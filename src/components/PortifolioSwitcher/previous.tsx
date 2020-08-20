@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core"
+import { Box, useTheme, Hidden } from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const Previous = (props: Props): React.ReactElement => {
+  const theme = useTheme()
   return (
     <Box
       style={{
@@ -54,12 +55,27 @@ export const Previous = (props: Props): React.ReactElement => {
               }}
             >
               <Box style={{ zIndex: 2 }}>
-                <Typography style={{ textAlign: "start" }}>
+                <Typography
+                  style={{
+                    textAlign: "start",
+                    color: theme.custom.grey1,
+                    fontSize: 15,
+                  }}
+                >
                   {"TRABALHO ANTERIOR"}
                 </Typography>
-                <Typography style={{ textAlign: "start" }}>
-                  {props.previous.frontmatter?.title}
-                </Typography>
+                <Hidden smDown>
+                  <Typography
+                    style={{
+                      textAlign: "start",
+                      color: theme.custom.grey1,
+                      fontFamily: "GSThree",
+                      fontSize: 30,
+                    }}
+                  >
+                    {props.previous.frontmatter?.title}
+                  </Typography>
+                </Hidden>
               </Box>
             </Box>
           </Box>

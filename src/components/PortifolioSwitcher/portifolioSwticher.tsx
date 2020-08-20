@@ -1,5 +1,5 @@
 import { Box, WithWidthProps } from "@material-ui/core"
-import makeStyles from "@material-ui/core/styles/makeStyles"
+import { makeStyles, Theme } from "@material-ui/core/styles"
 import React from "react"
 import { SitePageContextNext, SitePageContextPrevious } from "global"
 import { Center } from "./center"
@@ -13,10 +13,10 @@ interface Props {
   next?: SitePageContextNext | null
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme: Theme) => ({
   style: {
     display: `flex`,
-    backgroundColor: "#F1F1F1",
+    backgroundColor: theme.custom.grey2,
     flexWrap: `wrap`,
     height: 155,
     justifyContent: `space-around`,
