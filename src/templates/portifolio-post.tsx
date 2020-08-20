@@ -16,7 +16,6 @@ import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import video from "static/videos/mov-white.mp4"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -58,7 +57,7 @@ const GridImage = (props: { src: string }): React.ReactElement => (
   />
 )
 
-export const Fullmage = (props: {
+export const FullImage = (props: {
   paddingTop: number
   image: string
 }): React.ReactElement => (
@@ -253,7 +252,7 @@ const PortifolioPostTemplate = ({
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
         </Box>
-        <Fullmage
+        <FullImage
           paddingTop={gutterVertical}
           image={data?.mdx?.frontmatter?.image_3 || ""}
         />
