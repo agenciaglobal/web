@@ -8,10 +8,9 @@ interface Props {
 }
 
 export const GridLocal = ({ left, right }: Props): React.ReactElement => {
-  const gutters = 10
   return (
     <Box css={{ paddingTop: 16, paddingBottom: 16 }}>
-      <Grid container>
+      <Grid spacing={2} container>
         <Grid
           item={true}
           sm={12}
@@ -20,7 +19,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
             width: "100%",
             justifyContent: "center",
             alignItems: "center",
-            padding: 0,
           }}
         >
           <Box
@@ -29,7 +27,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              paddingRight: gutters,
             }}
           >
             {left}
@@ -43,7 +40,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
             width: "100%",
             justifyContent: "center",
             alignItems: "baseline",
-            padding: 0,
           }}
         >
           <Box
@@ -51,7 +47,6 @@ export const GridLocal = ({ left, right }: Props): React.ReactElement => {
               height: "100%",
               display: "flex",
               justifyContent: "center",
-              paddingLeft: gutters,
               alignItems: "center",
             }}
           >

@@ -1,4 +1,4 @@
-import { Box, isWidthDown, WithWidthProps, isWidthUp } from "@material-ui/core"
+import { Box, isWidthDown, WithWidthProps } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"

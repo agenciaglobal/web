@@ -16,9 +16,10 @@ export function LongMontsetrratText(props: {
     <Typography
       style={{
         fontWeight: 300,
-        fontSize: 20,
+        fontSize: 16,
         color: "#333333",
         lineHeight: "32px",
+        margin: 60,
         fontFamily: "Montserrat, sans-serif",
       }}
     >
