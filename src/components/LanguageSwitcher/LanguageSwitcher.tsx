@@ -1,5 +1,5 @@
 import { Box } from "@material-ui/core"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 
 import React, { Fragment } from "react"
@@ -68,7 +68,7 @@ export const LanguageSwitcher = ({
   style,
   mode,
 }: Props): React.ReactElement => {
-  const classes = useStylesClasses(mode)
+  const classes = useStylesClasses(mode)()
   const { inactive, active } = useStylesClasses(mode)()
   const isEnglish = language === "en"
   const isPortuguese = language === "pt"
