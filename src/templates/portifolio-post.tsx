@@ -269,49 +269,74 @@ const PortifolioPostTemplate = ({
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
         {/* YOUTUBE */}
-        <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
+        {data?.mdx?.frontmatter?.youtube && (
+          <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
+        )}
         {/* GRID 1 */}
-        <GridLocal
-          right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
-          left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
-        />
+        {data?.mdx?.frontmatter?.image_1 && data?.mdx?.frontmatter?.text_2 && (
+          <GridLocal
+            right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
+            left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
+          />
+        )}
         {/* MARKDOWN */}
         {/* <Box style={{ maxWidth: "100vw"}}>
           <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
         </Box> */}
         {/* GRID 2 */}
-        <GridLocal
-          left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
-          right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
-        />
+        {data?.mdx?.frontmatter?.image_2 && data?.mdx?.frontmatter?.image_3 && (
+          <GridLocal
+            left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
+            right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
+          />
+        )}
         {/* TEXT 2 */}
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
-        </Box>
+        {data?.mdx?.frontmatter?.text_3 && (
+          <Box
+            css={{
+              paddingTop: gutterVertical,
+              paddingBottom: gutterVertical,
+            }}
+          >
+            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
+          </Box>
+        )}
         {/* GRID 3 */}
-        <GridLocal
-          left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
-          right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
-        />
+        {data?.mdx?.frontmatter?.image_4 && data?.mdx?.frontmatter?.image_5 && (
+          <GridLocal
+            left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
+            right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
+          />
+        )}
         {/* TEXT 3 */}
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
-        </Box>
+        {data?.mdx?.frontmatter?.text_4 && (
+          <Box
+            css={{
+              paddingTop: gutterVertical,
+              paddingBottom: gutterVertical,
+            }}
+          >
+            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
+          </Box>
+        )}
         {/* IMAGE WIDE */}
-        <FullImage
-          paddingTop={gutterVertical}
-          image={data?.mdx?.frontmatter?.image_3 || ""}
-        />
+        {data?.mdx?.frontmatter?.image_3 && (
+          <FullImage
+            paddingTop={gutterVertical}
+            image={data?.mdx?.frontmatter?.image_3 || ""}
+          />
+        )}
         {/* TEXT 4 */}
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_5} />
-        </Box>
+        {data?.mdx?.frontmatter?.text_5 && (
+          <Box
+            css={{
+              paddingTop: gutterVertical,
+              paddingBottom: gutterVertical,
+            }}
+          >
+            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_5} />
+          </Box>
+        )}
         {/* CARROSSEL */}
         <ImageScroller
           images={[
@@ -328,50 +353,82 @@ const PortifolioPostTemplate = ({
           ]}
         />
         {/* TEXTO 5 */}
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_6} />
-        </Box>
+        {data?.mdx?.frontmatter?.text_6 && (
+          <Box
+            css={{
+              paddingTop: gutterVertical,
+              paddingBottom: gutterVertical,
+            }}
+          >
+            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_6} />
+          </Box>
+        )}
         {/* GRID 4 : 6 IMAGENS*/}
-        <GridSix
-          leftTop={<GridImage src={data?.mdx?.frontmatter?.image_17 || ""} />}
-          middleTop={<GridImage src={data?.mdx?.frontmatter?.image_18 || ""} />}
-          rightTop={<GridImage src={data?.mdx?.frontmatter?.image_19 || ""} />}
-          leftBottom={
-            <GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />
-          }
-          middleBottom={
-            <GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />
-          }
-          rightBottom={
-            <GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />
-          }
-        />
+        {data?.mdx?.frontmatter?.image_17 &&
+          data?.mdx?.frontmatter?.image_18 &&
+          data?.mdx?.frontmatter?.image_19 &&
+          data?.mdx?.frontmatter?.image_20 &&
+          data?.mdx?.frontmatter?.image_21 &&
+          data?.mdx?.frontmatter?.image_22 && (
+            <GridSix
+              leftTop={
+                <GridImage src={data?.mdx?.frontmatter?.image_17 || ""} />
+              }
+              middleTop={
+                <GridImage src={data?.mdx?.frontmatter?.image_18 || ""} />
+              }
+              rightTop={
+                <GridImage src={data?.mdx?.frontmatter?.image_19 || ""} />
+              }
+              leftBottom={
+                <GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />
+              }
+              middleBottom={
+                <GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />
+              }
+              rightBottom={
+                <GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />
+              }
+            />
+          )}
         {/* TEXTO 6 */}
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_7} />
-        </Box>
+        {data?.mdx?.frontmatter?.text_7 && (
+          <Box
+            css={{
+              paddingTop: gutterVertical,
+              paddingBottom: gutterVertical,
+            }}
+          >
+            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_7} />
+          </Box>
+        )}
         {/* GRID 5 : 4 IMAGENS*/}
-        <GridFour
-          left={<GridImage src={data?.mdx?.frontmatter?.image_23 || ""} />}
-          centerLeft={
-            <GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />
-          }
-          centerRight={
-            <GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />
-          }
-          right={<GridImage src={data?.mdx?.frontmatter?.image_26 || ""} />}
-        />
+        {data?.mdx?.frontmatter?.image_23 &&
+          data?.mdx?.frontmatter?.image_24 &&
+          data?.mdx?.frontmatter?.image_25 &&
+          data?.mdx?.frontmatter?.image_26 && (
+            <GridFour
+              left={<GridImage src={data?.mdx?.frontmatter?.image_23 || ""} />}
+              centerLeft={
+                <GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />
+              }
+              centerRight={
+                <GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />
+              }
+              right={<GridImage src={data?.mdx?.frontmatter?.image_26 || ""} />}
+            />
+          )}
         {/* QUOTE */}
-        <QuoteComponent
-          quote={data?.mdx?.frontmatter?.testimonial}
-          author={data?.mdx?.frontmatter?.author}
-          role={data?.mdx?.frontmatter?.role}
-          client={data?.mdx?.frontmatter?.description}
-        />
+        {data?.mdx?.frontmatter?.testimonial &&
+          data?.mdx?.frontmatter?.author &&
+          data?.mdx?.frontmatter?.role && (
+            <QuoteComponent
+              quote={data?.mdx?.frontmatter?.testimonial}
+              author={data?.mdx?.frontmatter?.author}
+              role={data?.mdx?.frontmatter?.role}
+              client={data?.mdx?.frontmatter?.description}
+            />
+          )}
         <PortifolioSwitcher previous={previous} next={next} />
       </div>
     </React.Fragment>
