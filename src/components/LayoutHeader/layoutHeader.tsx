@@ -27,6 +27,7 @@ export const LayoutHeader = ({
 }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
   const theme = useTheme()
+  const mode = uri.includes("/contact") || uri.includes("/portifolio") || uri.includes("/news/") ? theme.themeName === "light" ? "dark" : "light" : theme.themeName
   return (
     <Hidden smDown>
       <AppBar
@@ -47,7 +48,7 @@ export const LayoutHeader = ({
         >
           <Link style={{ boxShadow: "none" }} to="/">
             <img
-              src={lightMode === "light" ? logoblack : logo}
+              src={mode === "light" ? logoblack : logo}
               alt="logo-black"
               style={{ margin: "32px 32px 0px 0px", height: 100 }}
             />
@@ -75,35 +76,35 @@ export const LayoutHeader = ({
                   uri={uri}
                   to={"/"}
                   label={t("sidebar.main")}
-                  mode={
-                    uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
+                  // mode={
+                  //   uri.includes("/contact")
+                  //     ? theme.themeName === "light"
+                  //       ? "dark"
+                  //       : "light"
+                  //     : theme.themeName
+                  // }
                 />
                 <TabComponent
                   uri={uri}
-                  mode={
-                    uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
+                  // mode={
+                  //   uri.includes("/contact")
+                  //     ? theme.themeName === "light"
+                  //       ? "dark"
+                  //       : "light"
+                  //     : theme.themeName
+                  // }
                   to={"/about"}
                   label={t("sidebar.about")}
                 />
                 <TabComponent
                   uri={uri}
-                  mode={
-                    uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
+                  // mode={
+                  //   uri.includes("/contact")
+                  //     ? theme.themeName === "light"
+                  //       ? "dark"
+                  //       : "light"
+                  //     : theme.themeName
+                  // }
                   to={"/news"}
                   label={t("sidebar.news")}
                 />
@@ -121,13 +122,13 @@ export const LayoutHeader = ({
                 />
                 <TabComponent
                   uri={uri}
-                  mode={
-                    uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
+                  // mode={
+                  //   uri.includes("/contact")
+                  //     ? theme.themeName === "light"
+                  //       ? "dark"
+                  //       : "light"
+                  //     : theme.themeName
+                  // }
                   to={"/clients"}
                   label={t("sidebar.client")}
                 />

@@ -1,4 +1,4 @@
-import { AppBar, Hidden, Fade } from "@material-ui/core"
+import { AppBar, Hidden, Fade, useTheme } from "@material-ui/core"
 import Toolbar from "@material-ui/core/Toolbar"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
@@ -15,6 +15,8 @@ interface Props {
 }
 
 export const MobileToolbar = (props: Props): React.ReactElement => {
+  const theme = useTheme()
+  const mode = props.uri.includes("/contact") || props.uri.includes("/portifolio") || props.uri.includes("/news/") ? theme.themeName === "light" ? "dark" : "light" : theme.themeName
   return (
     <Hidden mdUp>
       <AppBar
@@ -35,7 +37,7 @@ export const MobileToolbar = (props: Props): React.ReactElement => {
           <Fade in={!props.onTop} timeout={600}>
             <Link style={{ boxShadow: "none" }} to="/">
               <img
-                src={props.lightMode === "light" ? logoBlack : logo}
+                src={mode === "light" ? logoBlack : logo}
                 alt="logo-black"
                 style={{ margin: 16, height: 100 }}
               />
