@@ -16,7 +16,14 @@ interface Props {
 
 export const MobileToolbar = (props: Props): React.ReactElement => {
   const theme = useTheme()
-  const mode = props.uri.includes("/contact") || props.uri.includes("/portifolio") || props.uri.includes("/news/") ? theme.themeName === "light" ? "dark" : "light" : theme.themeName
+  const mode =
+    props.uri.includes("/contact") ||
+    props.uri.includes("/portifolio") ||
+    props.uri.includes("/news/")
+      ? theme.themeName === "light"
+        ? "dark"
+        : "light"
+      : theme.themeName
   return (
     <Hidden mdUp>
       <AppBar

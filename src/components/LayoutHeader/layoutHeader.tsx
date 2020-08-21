@@ -12,6 +12,7 @@ import {
   SuporttedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
+import { CustomTabComponent } from "components/TabComponent/drawerItemHeaderDesktop"
 import useTheme from "@material-ui/core/styles/useTheme"
 
 interface Props {
@@ -27,7 +28,14 @@ export const LayoutHeader = ({
 }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
   const theme = useTheme()
-  const mode = uri.includes("/contact") || uri.includes("/portifolio") || uri.includes("/news/") ? theme.themeName === "light" ? "dark" : "light" : theme.themeName
+  const mode =
+    uri.includes("/contact") ||
+    uri.includes("/portifolio") ||
+    uri.includes("/news/")
+      ? theme.themeName === "light"
+        ? "dark"
+        : "light"
+      : theme.themeName
   return (
     <Hidden smDown>
       <AppBar
@@ -76,59 +84,54 @@ export const LayoutHeader = ({
                   uri={uri}
                   to={"/"}
                   label={t("sidebar.main")}
-                  // mode={
-                  //   uri.includes("/contact")
-                  //     ? theme.themeName === "light"
-                  //       ? "dark"
-                  //       : "light"
-                  //     : theme.themeName
-                  // }
+                  mode={
+                    uri.includes("/contact") ||
+                    uri.includes("/portifolio") ||
+                    uri.includes("/news/")
+                      ? "dark" : theme.themeName
+                  }
                 />
                 <TabComponent
                   uri={uri}
-                  // mode={
-                  //   uri.includes("/contact")
-                  //     ? theme.themeName === "light"
-                  //       ? "dark"
-                  //       : "light"
-                  //     : theme.themeName
-                  // }
+                  mode={
+                    uri.includes("/contact") ||
+                    uri.includes("/portifolio") ||
+                    uri.includes("/news/")
+                      ? "dark" : theme.themeName
+                  }
                   to={"/about"}
                   label={t("sidebar.about")}
                 />
                 <TabComponent
                   uri={uri}
-                  // mode={
-                  //   uri.includes("/contact")
-                  //     ? theme.themeName === "light"
-                  //       ? "dark"
-                  //       : "light"
-                  //     : theme.themeName
-                  // }
+                  mode={
+                    uri.includes("/contact") ||
+                    uri.includes("/portifolio") ||
+                    uri.includes("/news/")
+                      ? "dark" : theme.themeName
+                  }
                   to={"/news"}
                   label={t("sidebar.news")}
                 />
                 <TabComponent
                   uri={uri}
                   mode={
-                    uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
+                    uri.includes("/contact") ||
+                    uri.includes("/portifolio") ||
+                    uri.includes("/news/")
+                      ? "dark" : theme.themeName
                   }
                   to={"/team"}
                   label={t("sidebar.team")}
                 />
                 <TabComponent
                   uri={uri}
-                  // mode={
-                  //   uri.includes("/contact")
-                  //     ? theme.themeName === "light"
-                  //       ? "dark"
-                  //       : "light"
-                  //     : theme.themeName
-                  // }
+                  mode={
+                    uri.includes("/contact") ||
+                    uri.includes("/portifolio") ||
+                    uri.includes("/news/")
+                      ? "dark" : theme.themeName
+                  }
                   to={"/clients"}
                   label={t("sidebar.client")}
                 />

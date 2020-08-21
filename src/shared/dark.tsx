@@ -1,7 +1,7 @@
 import { createMuiTheme, ThemeOptions } from "@material-ui/core"
 import { LightMode } from "./theme"
 
-const darkOptions = {
+export const darkOptions: ThemeOptions = {
   themeName: "dark" as LightMode,
   palette: {
     type: "dark",
@@ -25,4 +25,4 @@ const darkOptions = {
     },
   },
 }
-export const darkTheme = createMuiTheme(darkOptions as ThemeOptions)
+export const darkTheme = createMuiTheme(darkOptions)
