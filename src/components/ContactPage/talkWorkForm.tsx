@@ -87,37 +87,41 @@ const initialValues: FormValues = {
 }
 
 const WorkHere = (
-  <div  style={{ alignSelf: "flex-start"}}>
-    <Typography 
+  <div style={{ alignSelf: "flex-start" }}>
+    <Typography
       style={{
         textAlign: "left",
         fontFamily: "GSThree",
         fontSize: 16,
         lineHeight: "1em",
-        marginTop: 4
+        marginTop: 4,
       }}
-    >Trabalhe aqui</Typography>
+    >
+      Trabalhe aqui
+    </Typography>
     <Typography
       style={{
         textAlign: "left",
         textTransform: "none",
         fontFamily: "Montserrat, sans-serif",
         fontSize: 12,
-        fontWeight: 500
+        fontWeight: 500,
       }}
-    >work@global.tt</Typography>
+    >
+      work@global.tt
+    </Typography>
   </div>
 )
 
 const TalkToUs = (
-  <div  style={{ alignSelf: "flex-start"}}>
-    <Typography 
+  <div style={{ alignSelf: "flex-start" }}>
+    <Typography
       style={{
         textAlign: "left",
         fontFamily: "GSThree",
         fontSize: 16,
         lineHeight: "1em",
-        marginTop: 4
+        marginTop: 4,
       }}
     >
       Fale com a gente
@@ -128,7 +132,7 @@ const TalkToUs = (
         textTransform: "none",
         fontFamily: "Montserrat, sans-serif",
         fontSize: 12,
-        fontWeight: 500
+        fontWeight: 500,
       }}
     >
       contact@global.tt
@@ -297,7 +301,9 @@ export const TalkWorkForm = (): React.ReactElement => {
               )}
               <Box className={classes.bcontainer}>
                 <Button
-                  disabled={current === 0 && !isValid || current === 0 && !dirty}
+                  disabled={
+                    (current === 0 && !isValid) || (current === 0 && !dirty)
+                  }
                   className={classes.button}
                   type={"submit"}
                   variant={"contained"}
