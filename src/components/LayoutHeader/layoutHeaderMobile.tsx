@@ -7,12 +7,14 @@ interface Props {
   lightMode: LightMode
   uri: string
   toggleLightMode: () => void
+  onTop: boolean
 }
 
 export const LayoutHeaderMobile = ({
   lightMode,
   uri,
   toggleLightMode,
+  onTop,
 }: Props): React.ReactElement => {
   const [open, showNav] = useState(false)
   return (
@@ -22,6 +24,7 @@ export const LayoutHeaderMobile = ({
         lightMode={lightMode}
         onClick={() => showNav(!open)}
         open={open}
+        onTop={onTop}
       />
       <MobileDrawer
         uri={uri}

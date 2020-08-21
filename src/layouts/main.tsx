@@ -97,6 +97,7 @@ export const ActualLayout = ({
         lightMode={lightMode}
         uri={uri}
         toggleLightMode={toggleLightMode}
+        onTop={!top}
       />
       <LayoutHeader
         hide={!top && scrollDirection !== "down"}

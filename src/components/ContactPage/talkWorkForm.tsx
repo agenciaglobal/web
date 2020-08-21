@@ -86,13 +86,67 @@ const initialValues: FormValues = {
   msg: "",
 }
 
+const WorkHere = (
+  <div style={{ alignSelf: "flex-start" }}>
+    <Typography
+      style={{
+        textAlign: "left",
+        fontFamily: "GSThree",
+        fontSize: 16,
+        lineHeight: "1em",
+        marginTop: 4,
+      }}
+    >
+      Trabalhe aqui
+    </Typography>
+    <Typography
+      style={{
+        textAlign: "left",
+        textTransform: "none",
+        fontFamily: "Montserrat, sans-serif",
+        fontSize: 12,
+        fontWeight: 500,
+      }}
+    >
+      work@global.tt
+    </Typography>
+  </div>
+)
+
+const TalkToUs = (
+  <div style={{ alignSelf: "flex-start" }}>
+    <Typography
+      style={{
+        textAlign: "left",
+        fontFamily: "GSThree",
+        fontSize: 16,
+        lineHeight: "1em",
+        marginTop: 4,
+      }}
+    >
+      Fale com a gente
+    </Typography>
+    <Typography
+      style={{
+        textAlign: "left",
+        textTransform: "none",
+        fontFamily: "Montserrat, sans-serif",
+        fontSize: 12,
+        fontWeight: 500,
+      }}
+    >
+      contact@global.tt
+    </Typography>
+  </div>
+)
+
 export const TalkWorkForm = (): React.ReactElement => {
   const classes = useStyles()
   const [current, setCurrent] = React.useState<number>(0)
   return (
     <Grid className={classes.grid} item={true} sm={12} md={8}>
       <Tabs value={current} variant={"fullWidth"}>
-        {["Fale com a gente", "Trabalhe aqui"].map((d, index) => (
+        {[TalkToUs, WorkHere].map((d, index) => (
           <Tab
             style={{
               background: current === index ? yellow : "#E9E9E9",
@@ -247,7 +301,9 @@ export const TalkWorkForm = (): React.ReactElement => {
               )}
               <Box className={classes.bcontainer}>
                 <Button
-                  disabled={!isValid || !dirty}
+                  disabled={
+                    (current === 0 && !isValid) || (current === 0 && !dirty)
+                  }
                   className={classes.button}
                   type={"submit"}
                   variant={"contained"}
