@@ -56,8 +56,16 @@ export const RightDrawer = ({
                   to={"/about"}
                   label={t("sidebar.about")}
                 />
-                <TabComponent uri={uri} to={"/news"} label={t("sidebar.news")} />
-                <TabComponent uri={uri} to={"/team"} label={t("sidebar.team")} />
+                <TabComponent
+                  uri={uri}
+                  to={"/news"}
+                  label={t("sidebar.news")}
+                />
+                <TabComponent
+                  uri={uri}
+                  to={"/team"}
+                  label={t("sidebar.team")}
+                />
                 <TabComponent
                   uri={uri}
                   to={"/clients"}

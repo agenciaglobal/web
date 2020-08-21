@@ -14,7 +14,7 @@ export const LayoutHeaderMobile = ({
   lightMode,
   uri,
   toggleLightMode,
-  onTop
+  onTop,
 }: Props): React.ReactElement => {
   const [open, showNav] = useState(false)
   return (
