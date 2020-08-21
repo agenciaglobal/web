@@ -8,10 +8,9 @@ import useTheme from "@material-ui/core/styles/useTheme"
 import { darkOptions } from "src/shared/dark"
 import { lightOptions } from "src/shared/light"
 
-
 const itemStyles = (mode: LightMode) =>
-  makeStyles((theme: Theme) => {
-  const actualTheme = mode === "light" ? lightOptions : darkOptions
+  makeStyles(() => {
+    const actualTheme = mode === "light" ? lightOptions : darkOptions
     return createStyles({
       common: {
         fontFamily: "GSTwo",

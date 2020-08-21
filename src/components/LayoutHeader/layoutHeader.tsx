@@ -12,7 +12,6 @@ import {
   SuporttedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
-import { CustomTabComponent } from "components/TabComponent/drawerItemHeaderDesktop"
 import useTheme from "@material-ui/core/styles/useTheme"
 
 interface Props {
@@ -21,11 +20,7 @@ interface Props {
   hide: boolean
 }
 
-export const LayoutHeader = ({
-  hide,
-  lightMode,
-  uri,
-}: Props): React.ReactElement => {
+export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
   const theme = useTheme()
   const mode =
@@ -88,7 +83,8 @@ export const LayoutHeader = ({
                     uri.includes("/contact") ||
                     uri.includes("/portifolio") ||
                     uri.includes("/news/")
-                      ? "dark" : theme.themeName
+                      ? "dark"
+                      : theme.themeName
                   }
                 />
                 <TabComponent
@@ -97,7 +93,8 @@ export const LayoutHeader = ({
                     uri.includes("/contact") ||
                     uri.includes("/portifolio") ||
                     uri.includes("/news/")
-                      ? "dark" : theme.themeName
+                      ? "dark"
+                      : theme.themeName
                   }
                   to={"/about"}
                   label={t("sidebar.about")}
@@ -108,7 +105,8 @@ export const LayoutHeader = ({
                     uri.includes("/contact") ||
                     uri.includes("/portifolio") ||
                     uri.includes("/news/")
-                      ? "dark" : theme.themeName
+                      ? "dark"
+                      : theme.themeName
                   }
                   to={"/news"}
                   label={t("sidebar.news")}
@@ -119,7 +117,8 @@ export const LayoutHeader = ({
                     uri.includes("/contact") ||
                     uri.includes("/portifolio") ||
                     uri.includes("/news/")
-                      ? "dark" : theme.themeName
+                      ? "dark"
+                      : theme.themeName
                   }
                   to={"/team"}
                   label={t("sidebar.team")}
@@ -130,7 +129,8 @@ export const LayoutHeader = ({
                     uri.includes("/contact") ||
                     uri.includes("/portifolio") ||
                     uri.includes("/news/")
-                      ? "dark" : theme.themeName
+                      ? "dark"
+                      : theme.themeName
                   }
                   to={"/clients"}
                   label={t("sidebar.client")}
