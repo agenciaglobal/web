@@ -90,6 +90,7 @@ const WorkHere = (
   <div style={{ alignSelf: "flex-start" }}>
     <Typography
       style={{
+        color: "#000",
         textAlign: "left",
         fontFamily: "GSThree",
         fontSize: 16,
@@ -101,6 +102,7 @@ const WorkHere = (
     </Typography>
     <Typography
       style={{
+        color: "#000",
         textAlign: "left",
         textTransform: "none",
         fontFamily: "Montserrat, sans-serif",
@@ -117,6 +119,7 @@ const TalkToUs = (
   <div style={{ alignSelf: "flex-start" }}>
     <Typography
       style={{
+        color: "#000",
         textAlign: "left",
         fontFamily: "GSThree",
         fontSize: 16,
@@ -128,6 +131,7 @@ const TalkToUs = (
     </Typography>
     <Typography
       style={{
+        color: "#000",
         textAlign: "left",
         textTransform: "none",
         fontFamily: "Montserrat, sans-serif",

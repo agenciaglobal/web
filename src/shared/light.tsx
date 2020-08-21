@@ -1,7 +1,7 @@
 import { createMuiTheme, ThemeOptions } from "@material-ui/core"
 import { LightMode } from "./theme"
 
-const lightOptions: ThemeOptions = {
+export const lightOptions: ThemeOptions = {
   themeName: "light" as LightMode,
   palette: {
     primary: { main: "#FFF", contrastText: "#000" },
