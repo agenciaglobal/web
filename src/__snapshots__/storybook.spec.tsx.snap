@@ -2,13 +2,13 @@
 
 exports[`Storyshots GlobalPageTitle Global Page Title 1`] = `
 <p
-  className="MuiTypography-root makeStyles-civ-5 MuiTypography-body1"
+  className="MuiTypography-root makeStyles-civ-1 MuiTypography-body1"
 />
 `;
 
 exports[`Storyshots Home Categories Selector Mobile 1`] = `
 <div
-  className="MuiBox-root MuiBox-root-8"
+  className="MuiBox-root MuiBox-root-4"
   style={
     Object {
       "display": "flex",
@@ -16,7 +16,7 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
   }
 >
   <div
-    className="MuiBox-root MuiBox-root-9"
+    className="MuiBox-root MuiBox-root-5"
     style={
       Object {
         "alignItems": "center",
@@ -48,7 +48,7 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
       <div
         aria-haspopup="listbox"
         aria-labelledby="demo-simple-select-label demo-simple-select"
-        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu makeStyles-menu-7 MuiInputBase-input MuiInput-input"
+        className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu makeStyles-menu-3 MuiInputBase-input MuiInput-input"
         id="demo-simple-select"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -98,38 +98,6 @@ exports[`Storyshots Home Categories Selector Mobile 1`] = `
         />
       </svg>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Light Language Switcher Portuguese 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "black",
-      "display": "flex",
-      "height": 60,
-      "justifyContent": "center",
-      "width": 150,
-    }
-  }
->
-  <div
-    className="MuiBox-root MuiBox-root-4 makeStyles-box-1"
-  >
-    <button
-      className=""
-      onClick={[Function]}
-    >
-      PT
-    </button>
-    <button
-      className="makeStyles-inactive-2 makeStyles-active-3"
-      onClick={[Function]}
-    >
-      EN
-    </button>
   </div>
 </div>
 `;
