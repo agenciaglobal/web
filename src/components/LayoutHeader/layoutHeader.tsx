@@ -24,9 +24,9 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
   const theme = useTheme()
   const mode =
-    uri.includes("/contact") ||
-    uri.includes("/portifolio") ||
-    uri.includes("/news/")
+    uri.includes("/portifolio") || uri.includes("/news/")
+      ? "dark"
+      : uri.includes("/contact")
       ? theme.themeName === "light"
         ? "dark"
         : "light"
@@ -80,20 +80,24 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                   to={"/"}
                   label={t("sidebar.main")}
                   mode={
-                    uri.includes("/contact") ||
-                    uri.includes("/portifolio") ||
-                    uri.includes("/news/")
+                    uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
                       : theme.themeName
                   }
                 />
                 <TabComponent
                   uri={uri}
                   mode={
-                    uri.includes("/contact") ||
-                    uri.includes("/portifolio") ||
-                    uri.includes("/news/")
+                    uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
                       : theme.themeName
                   }
                   to={"/about"}
@@ -102,10 +106,12 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                 <TabComponent
                   uri={uri}
                   mode={
-                    uri.includes("/contact") ||
-                    uri.includes("/portifolio") ||
-                    uri.includes("/news/")
+                    uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
                       : theme.themeName
                   }
                   to={"/news"}
@@ -114,10 +120,12 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                 <TabComponent
                   uri={uri}
                   mode={
-                    uri.includes("/contact") ||
-                    uri.includes("/portifolio") ||
-                    uri.includes("/news/")
+                    uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
                       : theme.themeName
                   }
                   to={"/team"}
@@ -126,10 +134,12 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                 <TabComponent
                   uri={uri}
                   mode={
-                    uri.includes("/contact") ||
-                    uri.includes("/portifolio") ||
-                    uri.includes("/news/")
+                    uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
                       : theme.themeName
                   }
                   to={"/clients"}
@@ -139,12 +149,30 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                   uri={uri}
                   to={"/contact"}
                   label={t("sidebar.contact")}
+                  mode={
+                    uri.includes("/portifolio") || uri.includes("/news/")
+                      ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
+                      : theme.themeName
+                  }
                 />
                 <br />
                 <LanguageSwitcher
                   language={language as SuporttedLanguages}
                   changeLanguage={changeLanguage}
                   style={{ paddingLeft: 24 }}
+                  mode={
+                    uri.includes("/portifolio") || uri.includes("/news/")
+                      ? "dark"
+                      : uri.includes("/contact")
+                      ? theme.themeName === "light"
+                        ? "dark"
+                        : "light"
+                      : theme.themeName
+                  }
                 />
               </ul>
             )}

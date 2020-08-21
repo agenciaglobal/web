@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import className from "classnames"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"

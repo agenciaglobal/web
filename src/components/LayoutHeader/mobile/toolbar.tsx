@@ -17,9 +17,9 @@ interface Props {
 export const MobileToolbar = (props: Props): React.ReactElement => {
   const theme = useTheme()
   const mode =
-    props.uri.includes("/contact") ||
-    props.uri.includes("/portifolio") ||
-    props.uri.includes("/news/")
+    props.uri.includes("/portifolio") || props.uri.includes("/news/")
+      ? "dark"
+      : props.uri.includes("/contact")
       ? theme.themeName === "light"
         ? "dark"
         : "light"
