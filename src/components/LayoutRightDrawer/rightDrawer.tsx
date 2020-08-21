@@ -1,4 +1,4 @@
-import { Container, Drawer, Hidden } from "@material-ui/core"
+import { Container, Drawer, Hidden, Fade } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
@@ -48,26 +48,28 @@ export const RightDrawer = ({
       <Hidden smDown>
         <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
           <Container className={classes.container}>
-            <ul className={classes.list}>
-              <TabComponent uri={uri} to={"/"} label={t("sidebar.main")} />
-              <TabComponent
-                uri={uri}
-                to={"/about"}
-                label={t("sidebar.about")}
-              />
-              <TabComponent uri={uri} to={"/news"} label={t("sidebar.news")} />
-              <TabComponent uri={uri} to={"/team"} label={t("sidebar.team")} />
-              <TabComponent
-                uri={uri}
-                to={"/clients"}
-                label={t("sidebar.client")}
-              />
-              <TabComponent
-                uri={uri}
-                to={"/contact"}
-                label={t("sidebar.contact")}
-              />
-            </ul>
+            <Fade in={scrolled} timeout={1000}>
+              <ul className={classes.list}>
+                <TabComponent uri={uri} to={"/"} label={t("sidebar.main")} />
+                <TabComponent
+                  uri={uri}
+                  to={"/about"}
+                  label={t("sidebar.about")}
+                />
+                <TabComponent uri={uri} to={"/news"} label={t("sidebar.news")} />
+                <TabComponent uri={uri} to={"/team"} label={t("sidebar.team")} />
+                <TabComponent
+                  uri={uri}
+                  to={"/clients"}
+                  label={t("sidebar.client")}
+                />
+                <TabComponent
+                  uri={uri}
+                  to={"/contact"}
+                  label={t("sidebar.contact")}
+                />
+              </ul>
+            </Fade>
           </Container>
         </Drawer>
       </Hidden>

@@ -94,9 +94,10 @@ export const ActualLayout = ({
       <RightDrawer scrolled={isScrollingUp} uri={uri} />
       <LeftDrawer scrolled={isScrollingUp} />
       <LayoutHeaderMobile
-        lightMode={lightMode}
+        lightMode={lightMode} 
         uri={uri}
         toggleLightMode={toggleLightMode}
+        onTop={!top}
       />
       <LayoutHeader
         hide={!top && scrollDirection !== "down"}
