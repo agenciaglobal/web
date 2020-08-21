@@ -11,7 +11,14 @@ interface Props {
   rightBottom: React.ReactElement
 }
 
-export const GridSix = ({ leftTop, middleTop,rightTop, leftBottom, middleBottom, rightBottom }: Props): React.ReactElement => {
+export const GridSix = ({
+  leftTop,
+  middleTop,
+  rightTop,
+  leftBottom,
+  middleBottom,
+  rightBottom,
+}: Props): React.ReactElement => {
   return (
     <Box css={{ paddingTop: 16, paddingBottom: 16 }}>
       <Grid spacing={2} container>

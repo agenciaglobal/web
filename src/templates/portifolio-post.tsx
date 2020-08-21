@@ -81,7 +81,7 @@ const ImageScroller = (props: { images: string[] }): React.ReactElement => (
       <div
         key={index}
         className={`menu-item`}
-        style={{ 
+        style={{
           background: `url(${el})`,
         }}
       />
@@ -111,7 +111,7 @@ const QuoteComponent = (props: {
           style={{
             position: "absolute",
             marginTop: "30px",
-            zIndex: 0,
+            zIndex: -1,
             marginBottom: "auto",
             marginLeft: "auto",
             marginRight: "auto",
@@ -134,15 +134,35 @@ const QuoteComponent = (props: {
           style={{
             zIndex: 99,
             display: "flex",
+            fontStyle: "italic",
+            fontWeight: 200,
+            lineHeight: "32px",
+            textAlign: "center",
+            fontFamily: "Montserrat, sans-serif",
           }}
         >
           {props.quote}
         </Typography>
-        <Box css={{ paddingTop: 26, paddingBottom: gutter }}>
-          <Typography style={{ textAlign: "center" }}>
+
+        <Box css={{ paddingTop: 16, paddingBottom: gutter }}>
+          <Typography
+            style={{
+              textAlign: "center",
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 600,
+              fontSize: 14,
+            }}
+          >
             {props.author} | {props.role}
           </Typography>
-          <Typography style={{ textAlign: "center" }}>
+          <Typography
+            style={{
+              textAlign: "center",
+              fontFamily: "GSThree",
+              fontSize: 14,
+              lineHeight: "32px",
+            }}
+          >
             {props.client}
           </Typography>
         </Box>
@@ -249,7 +269,7 @@ const PortifolioPostTemplate = ({
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
         {/* YOUTUBE */}
-        <YoutubePreview url=  {data?.mdx?.frontmatter?.youtube} />
+        <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
         {/* GRID 1 */}
         <GridLocal
           right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
@@ -318,9 +338,15 @@ const PortifolioPostTemplate = ({
           leftTop={<GridImage src={data?.mdx?.frontmatter?.image_17 || ""} />}
           middleTop={<GridImage src={data?.mdx?.frontmatter?.image_18 || ""} />}
           rightTop={<GridImage src={data?.mdx?.frontmatter?.image_19 || ""} />}
-          leftBottom={<GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />}
-          middleBottom={<GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />}
-          rightBottom={<GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />}
+          leftBottom={
+            <GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />
+          }
+          middleBottom={
+            <GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />
+          }
+          rightBottom={
+            <GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />
+          }
         />
         {/* TEXTO 6 */}
         <Box
@@ -331,8 +357,12 @@ const PortifolioPostTemplate = ({
         {/* GRID 5 : 4 IMAGENS*/}
         <GridFour
           left={<GridImage src={data?.mdx?.frontmatter?.image_23 || ""} />}
-          centerLeft={<GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />}
-          centerRight={<GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />}
+          centerLeft={
+            <GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />
+          }
+          centerRight={
+            <GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />
+          }
           right={<GridImage src={data?.mdx?.frontmatter?.image_26 || ""} />}
         />
         {/* QUOTE */}

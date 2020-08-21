@@ -9,7 +9,12 @@ interface Props {
   left: React.ReactElement
 }
 
-export const GridFour = ({ left, centerLeft, centerRight, right }: Props): React.ReactElement => {
+export const GridFour = ({
+  left,
+  centerLeft,
+  centerRight,
+  right,
+}: Props): React.ReactElement => {
   const gutters = 10
   return (
     <Box css={{ paddingTop: 16, paddingBottom: 16 }}>
