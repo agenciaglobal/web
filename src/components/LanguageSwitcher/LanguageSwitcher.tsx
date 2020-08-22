@@ -1,15 +1,14 @@
 import { Box, Button } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import * as classNames from "classnames"
-
 import React, { Fragment } from "react"
 import { LightMode } from "shared/theme"
-import { darkOptions } from "src/shared/dark"
-import { lightOptions } from "src/shared/light"
+import { ClassNameMap } from "@material-ui/styles/withStyles"
 
-export const useStylesClasses = (mode: LightMode) =>
+export const useStylesClasses = (
+  mode: LightMode,
+): (() => ClassNameMap<"box" | "inactive" | "active">) =>
   makeStyles(() => {
-    const actualTheme = mode === "light" ? lightOptions : darkOptions
     return createStyles({
       box: {
         width: 60,
@@ -17,8 +16,7 @@ export const useStylesClasses = (mode: LightMode) =>
         display: "flex",
       },
       inactive: {
-        minWidth: 30,
-        color: actualTheme.palette?.primary?.contrastText,
+        color: mode === "light" ? "#000" : "#FFF",
         fontFamily: "GSTwo",
         fontSize: 12,
         height: 30,
@@ -53,12 +51,12 @@ export const useStylesClasses = (mode: LightMode) =>
     })
   })
 
-export type SuporttedLanguages = "pt" | "en"
+export type SupportedLanguages = "pt" | "en"
 
 interface Props {
   style?: React.CSSProperties
-  language: SuporttedLanguages
-  changeLanguage: (lang: SuporttedLanguages) => void
+  language: SupportedLanguages
+  changeLanguage: (lang: SupportedLanguages) => void
   mode: LightMode
 }
 

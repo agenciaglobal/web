@@ -31,6 +31,8 @@ export const clientQueryV2 = graphql`
           frontmatter {
             date(formatString: "MMMM DD YYYY")
             name
+            testimonial
+            author_image
             description
             image
           }

@@ -5,7 +5,7 @@ import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { LightMode } from "shared/theme"
 import {
   LanguageSwitcher,
-  SuporttedLanguages,
+  SupportedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 
 interface Props {
@@ -22,7 +22,7 @@ const componentes = ({
     <Fragment>
       <Container style={{ display: "flex", justifyContent: "space-evenly" }}>
         <LanguageSwitcher
-          language={language as SuporttedLanguages}
+          language={language as SupportedLanguages}
           changeLanguage={changeLanguage}
         />
         <ThemeSwitch lightMode={lightMode} toggleLightMode={toggleLightMode} />

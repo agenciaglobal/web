@@ -9,20 +9,21 @@ export const GoogleMaps = withWidth()(
     // noinspection SpellCheckingInspection
     // key global
     const token = "AIzaSyBiygZFJYhD2KViFDBWQAO_6Ndys86xAys"
+    const containerElement = (
+      <div
+        style={{
+          transform: `translate( -${margin}px , -${187}px )`,
+          width: `calc( 100% + ${2 * margin}px)`,
+          height: `500px`,
+          maxHeight: `50vh`,
+        }}
+      />
+    )
     return (
       <ActualGoogleMapsComponent
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${token}&v=3.exp&libraries=geometry,drawing,places`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={
-          <div
-            style={{
-              transform: `translate( -${margin}px , -${187}px )`,
-              width: `calc( 100% + ${2 * margin}px)`,
-              height: `500px`,
-              maxHeight: `50vh`,
-            }}
-          />
-        }
+        loadingElement={containerElement}
+        containerElement={containerElement}
         mapElement={<div style={{ height: `100%` }} />}
       />
     )

@@ -7,7 +7,6 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: QUOTE
 
-author: article
 
 postType: article
 
