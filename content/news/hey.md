@@ -10,7 +10,6 @@ tags:
   - yay!!
   - yay!!
   - yay!!
-author: João Paulo Rocha
 ---
 laõoo
 

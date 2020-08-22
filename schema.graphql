@@ -550,6 +550,7 @@ type MdxFields {
 
 type MdxFrontmatter {
   author: String
+  postType: String
   role: String
   testimonial: String
   black_image: String

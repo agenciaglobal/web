@@ -17,7 +17,7 @@ import { GridFour } from "./grid_four"
 import ScrollMenu from "react-horizontal-scrolling-menu"
 import { LongMontsetrratText } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -186,6 +186,7 @@ export const MainTranslatedImage = withWidth()(
     } & WithWidthProps,
   ): React.ReactElement => {
     const margin = useExtrapolatedMargin({ width: props.width })
+    const isDesktop = isWidthUp("md", props.width || "md")
     return (
       <Box
         css={{
@@ -197,7 +198,7 @@ export const MainTranslatedImage = withWidth()(
           backgroundImage: `url(${props.image})`,
           backgroundSize: "cover",
           width: `calc( 100% + ${2 * margin}px)`,
-          transform: `translate( -${margin}px , -${187}px )`,
+          transform: `translate( -${margin}px , -${isDesktop ? 168 : 187}px )`,
         }}
       >
         {props.title}
@@ -241,37 +242,32 @@ const MainText = withWidth()(
     )
   },
 )
+
 const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
+  const youtube = data?.mdx?.frontmatter?.youtube
+  console.log(youtube)
+  const body = data?.mdx?.body || ""
+  const title = data?.mdx?.frontmatter?.title || ""
+  const description = data?.mdx?.frontmatter?.description || ""
+  let image = data?.mdx?.frontmatter?.image || ""
   return (
     <React.Fragment>
       <MainTranslatedImage
-        title={
-          <MainText
-            title={data?.mdx?.frontmatter?.title || ""}
-            subtitle={data?.mdx?.frontmatter?.description || ""}
-          />
-        }
-        image={data?.mdx?.frontmatter?.image || ""}
+        title={<MainText title={title} subtitle={description} />}
+        image={image}
       />
-      <div
-        style={{
-          transform: "translateY( -187px )",
-        }}
-      >
-        {/* TEXT 1 */}
+      <div style={{ transform: "translateY( -187px )" }}>
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
           <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
         </Box>
         {/* YOUTUBE */}
-        {data?.mdx?.frontmatter?.youtube && (
-          <YoutubePreview url={data?.mdx?.frontmatter?.youtube} />
-        )}
+        {youtube && youtube !== "" && <YoutubePreview url={youtube} />}
         {/* GRID 1 */}
         {data?.mdx?.frontmatter?.image_1 && data?.mdx?.frontmatter?.text_2 && (
           <GridLocal
@@ -280,9 +276,7 @@ const PortifolioPostTemplate = ({
           />
         )}
         {/* MARKDOWN */}
-        {/* <Box style={{ maxWidth: "100vw"}}>
-          <MDXRenderer>{data?.mdx?.body || ""}</MDXRenderer>
-        </Box> */}
+        <MarkDownRenderer body={body} />
         {/* GRID 2 */}
         {data?.mdx?.frontmatter?.image_2 && data?.mdx?.frontmatter?.image_3 && (
           <GridLocal
@@ -420,8 +414,11 @@ const PortifolioPostTemplate = ({
           )}
         {/* QUOTE */}
         {data?.mdx?.frontmatter?.testimonial &&
+          data?.mdx?.frontmatter?.testimonial !== "" &&
           data?.mdx?.frontmatter?.author &&
-          data?.mdx?.frontmatter?.role && (
+          data?.mdx?.frontmatter?.author !== "" &&
+          data?.mdx?.frontmatter?.role &&
+          data?.mdx?.frontmatter?.role !== "" && (
             <QuoteComponent
               quote={data?.mdx?.frontmatter?.testimonial}
               author={data?.mdx?.frontmatter?.author}

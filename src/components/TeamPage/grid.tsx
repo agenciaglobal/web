@@ -20,11 +20,11 @@ export const GridEmployees = ({ employees }: Props): React.ReactElement => {
           console.log(node)
           return (
             <EmployeeComponent
-              backgroundImage={node.frontmatter.image}
-              blackBackgroundImage={node.frontmatter.black_image}
+              backgroundImage={node.frontmatter?.image || ""}
+              blackBackgroundImage={node.frontmatter?.black_image || ""}
               key={index}
-              title={node.frontmatter.name}
-              job={node.frontmatter.job}
+              title={node.frontmatter?.name || ""}
+              job={node.frontmatter?.job || ""}
             />
           )
         })}

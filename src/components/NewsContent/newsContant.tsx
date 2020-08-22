@@ -8,6 +8,7 @@ import withWidth from "@material-ui/core/withWidth"
 import { WithWidthProps } from "@material-ui/core"
 import { useExtrapolatedMargin } from "src/templates/portifolio-post"
 import image from "static/ramarim.png"
+import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
 
 export function LongMontsetrratText(props: {
   post: string | null | undefined
@@ -131,6 +132,7 @@ export const NewsContent = (props: {
   const classes = useGridStyles()
   const gutterVertical = 25
   const post = props.current?.mdx
+  const author = props.current?.mdx?.frontmatter?.author
   return (
     <React.Fragment>
       <TranslatedImage image={props.current?.mdx?.frontmatter?.image || ""} />
@@ -145,9 +147,7 @@ export const NewsContent = (props: {
         <Typography className={classes.titleText}>
           {post?.frontmatter?.title}
         </Typography>
-        <Box>
-          <MDXRenderer>{props.body}</MDXRenderer>
-        </Box>
+        <MarkDownRenderer body={props.body} />
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
@@ -161,32 +161,38 @@ export const NewsContent = (props: {
 
         {/* TEM QUE PUXAR OS CAMPOS DO CMS: IMAGE, AUTHOR E ABOUT */}
         {/* ESSE COMPONENTE SÓ DEVE SER EXIBIDO SE O postType = "artigo" */}
-        <Box
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box style={{ maxHeight: 290, maxWidth: 290, margin: 8 }}>
-            <img src={image} alt="about" />
-          </Box>
-          <Box
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              maxWidth: 400,
-              marginLeft: 8,
-            }}
-          >
-            <Typography className={classes.other}>Escrito por</Typography>
-            <Typography className={classes.other2}>Nome do autor</Typography>
-            <Typography className={classes.authorText}>
-              About o autor. um textinho curto falando que o autor do artigo é
-              gente boa.
-            </Typography>
-          </Box>
-        </Box>
+        {props.current?.mdx?.frontmatter?.postType === "article" &&
+          author &&
+          author !== "" && (
+            <Box
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box style={{ maxHeight: 290, maxWidth: 290, margin: 8 }}>
+                <img src={image} alt="about" />
+              </Box>
+              <Box
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: 400,
+                  marginLeft: 8,
+                }}
+              >
+                <Typography className={classes.other}>Escrito por</Typography>
+                <Typography className={classes.other2}>
+                  {author || ""}
+                </Typography>
+                <Typography className={classes.authorText}>
+                  About o autor. um textinho curto falando que o autor do artigo
+                  é gente boa.
+                </Typography>
+              </Box>
+            </Box>
+          )}
       </div>
     </React.Fragment>
   )

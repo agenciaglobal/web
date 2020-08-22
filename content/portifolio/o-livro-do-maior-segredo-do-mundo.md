@@ -9,11 +9,6 @@ text_1: No ano da expansão do Iguatemi, a Global desenvolveu um projeto especia
   gráfico especial da capa ao miolo. O livro também inspira a história do
   tradicional Desfile de Natal do shopping, criando convergência entre as
   diversas ações da campanha.
-text_2: .
-text_3: .
-text_4: .
-youtube: .
-description: .
 categorie: featured
 author: Nicolas Skowronsky
 image: /assets/1000x550.png

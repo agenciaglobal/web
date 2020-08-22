@@ -54,7 +54,10 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         description
         text_1
+        postType
+        author
         text_2
+        author
         image
       }
     }

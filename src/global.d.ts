@@ -1556,6 +1556,7 @@ export type MdxFilterInput = {
 }
 
 export type MdxFrontmatter = {
+  postType?: Scalars["String"]
   title: Scalars["String"]
   path?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["Date"]>
@@ -1603,7 +1604,6 @@ export type MdxFrontmatter = {
   youtube?: Maybe<Scalars["String"]>
   categorie?: Maybe<Scalars["String"]>
   job_date?: Maybe<Scalars["Date"]>
-  postType?: Maybe<Scalars["String"]>
   type?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Maybe<Scalars["String"]>>>
   body?: Maybe<Scalars["String"]>
@@ -2536,6 +2536,7 @@ export type SitePageContextNewsNodeFilterInput = {
 }
 
 export type SitePageContextNewsNodeFrontmatter = {
+  postType?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
@@ -3448,7 +3449,9 @@ export type NewsPostBySlugQuery = {
       frontmatter?: Maybe<
         Pick<
           MdxFrontmatter,
+          | "postType"
           | "title"
+          | "author"
           | "tags"
           | "date"
           | "description"
