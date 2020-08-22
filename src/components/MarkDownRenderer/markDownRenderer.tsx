@@ -15,7 +15,9 @@ const useGridStyles = makeStyles(() => ({
   },
 }))
 
-export const MarkDownRenderer = (props: { body: string }) => {
+export const MarkDownRenderer = (props: {
+  body: string
+}): React.ReactElement => {
   const classes = useGridStyles()
   return (
     <Box className={classes.div}>

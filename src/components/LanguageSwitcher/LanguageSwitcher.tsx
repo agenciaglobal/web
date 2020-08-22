@@ -3,8 +3,11 @@ import { createStyles, makeStyles } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 import React, { Fragment } from "react"
 import { LightMode } from "shared/theme"
+import { ClassNameMap } from "@material-ui/styles/withStyles"
 
-export const useStylesClasses = (mode: LightMode) =>
+export const useStylesClasses = (
+  mode: LightMode,
+): (() => ClassNameMap<"box" | "inactive" | "active">) =>
   makeStyles(() => {
     return createStyles({
       box: {
@@ -49,12 +52,12 @@ export const useStylesClasses = (mode: LightMode) =>
     })
   })
 
-export type SuporttedLanguages = "pt" | "en"
+export type SupportedLanguages = "pt" | "en"
 
 interface Props {
   style?: React.CSSProperties
-  language: SuporttedLanguages
-  changeLanguage: (lang: SuporttedLanguages) => void
+  language: SupportedLanguages
+  changeLanguage: (lang: SupportedLanguages) => void
   mode: LightMode
 }
 
@@ -80,13 +83,13 @@ export const LanguageSwitcher = ({
     <Fragment>
       <Box style={style} className={classes.box}>
         <button
-          onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
+          onClick={() => void changeLanguage("pt" as SupportedLanguages)}
           className={PTButtonClass}
         >
           PT
         </button>
         <button
-          onClick={() => void changeLanguage("en" as SuporttedLanguages)}
+          onClick={() => void changeLanguage("en" as SupportedLanguages)}
           className={ENButtonClass}
         >
           EN

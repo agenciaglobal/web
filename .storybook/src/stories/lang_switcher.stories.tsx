@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-ui/core"
 import * as React from "react"
 import {
   LanguageSwitcher,
-  SuporttedLanguages,
+  SupportedLanguages,
 } from "../../../src/components/LanguageSwitcher/LanguageSwitcher"
 import { darkTheme } from "../../../src/shared/dark"
 import { lightTheme } from "../../../src/shared/light"
@@ -13,7 +13,7 @@ export default {
 }
 
 interface Props {
-  language: SuporttedLanguages
+  language: SupportedLanguages
   mode: string
 }
 
