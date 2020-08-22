@@ -119,16 +119,52 @@ exports[`Storyshots Light Language Switcher Portuguese 1`] = `
     className="MuiBox-root MuiBox-root-7 makeStyles-box-1"
   >
     <button
-      className=""
+      className="MuiButtonBase-root MuiButton-root MuiButton-text"
+      disabled={false}
+      onBlur={[Function]}
       onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
     >
-      PT
+      <span
+        className="MuiButton-label"
+      >
+        PT
+      </span>
     </button>
     <button
-      className="makeStyles-inactive-5 makeStyles-active-6"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-inactive-5 makeStyles-active-6"
+      disabled={false}
+      onBlur={[Function]}
       onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
     >
-      EN
+      <span
+        className="MuiButton-label"
+      >
+        EN
+      </span>
     </button>
   </div>
 </div>
