@@ -1,5 +1,5 @@
 import { Container, Drawer } from "@material-ui/core"
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme, useTheme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import {
@@ -64,6 +64,7 @@ export const MobileDrawer = ({
     { to: "/contact", label: t("sidebar.contact") },
   ]
   const { changeLanguage, language } = useI18next()
+  const theme = useTheme()
   return (
     <React.Fragment>
       <Drawer
@@ -89,6 +90,7 @@ export const MobileDrawer = ({
           </Container>
           <Container className={classes.lower}>
             <LanguageSwitcher
+              mode={theme.themeName}
               language={language as SupportedLanguages}
               changeLanguage={changeLanguage}
             />
