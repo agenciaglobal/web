@@ -6,9 +6,9 @@ import { TeamPage } from "components/TeamPage/teamPage"
 import { TeamQueryQuery } from "global"
 
 const Team = withWidth()(
-  (props: { data?: TeamQueryQuery } & WithWidthProps): React.ReactElement => {
-    return <TeamPage employees={props.data?.allMdx.edges || []} />
-  },
+  (props: { data?: TeamQueryQuery } & WithWidthProps): React.ReactElement => (
+    <TeamPage employees={props.data?.allMdx.edges || []} />
+  ),
 )
 
 export default Team

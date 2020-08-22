@@ -9,7 +9,7 @@ import logoblack from "static/logo-black.png"
 import logo from "static/logo-white.png"
 import {
   LanguageSwitcher,
-  SuporttedLanguages,
+  SupportedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
 import useTheme from "@material-ui/core/styles/useTheme"
@@ -161,7 +161,7 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
                 />
                 <br />
                 <LanguageSwitcher
-                  language={language as SuporttedLanguages}
+                  language={language as SupportedLanguages}
                   changeLanguage={changeLanguage}
                   style={{ paddingLeft: 24 }}
                   mode={

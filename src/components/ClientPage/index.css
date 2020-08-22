@@ -1,25 +1,40 @@
-.grid-client {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  grid-auto-rows: 1fr;
+.global-clients-grid {
+  z-index: -1;
+  display: flex;
+  width: auto;
 }
 
-.grid-client::before {
-  content: "";
-  width: 0;
-  padding-bottom: 100%;
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
+.global-clients-grid-column {
+  background-clip: padding-box;
 }
 
-.grid-client > *:first-child {
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
+.global-clients-grid-column > div {
+  /*margin-bottom: 20px;*/
 }
 
-/* Just to make the grid visible */
+.global-clients-grid > div:nth-child(2) {
+  /*margin-left: 20px;*/
+}
 
-.grid-client > * {
-  background: rgba(0, 0, 0, 0.1);
-  border: grey 1px solid;
+.global-clients-grid > div:nth-child(3) {
+  /*margin-left: 20px;*/
+}
+
+.global-clients-grid-column > div > .global-clients-right > div {
+  min-height: 300px;
+}
+.global-clients-grid-column > div > .global-clients-left > div {
+  min-height: 300px;
+}
+.global-clients-grid-column > div > .global-clients-half > div {
+  min-height: 350px;
+}
+.global-clients-grid-column > .global-clients-full > a > div {
+  min-height: 350px;
+}
+.global-clients-grid-column > div > .global-clients-mirror > div {
+  min-height: 330px;
+}
+.global-clients-grid-column > div > .global-clients-quote > div {
+  min-height: 320px;
 }

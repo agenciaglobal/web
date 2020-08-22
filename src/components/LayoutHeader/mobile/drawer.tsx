@@ -4,7 +4,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import {
   LanguageSwitcher,
-  SuporttedLanguages,
+  SupportedLanguages,
 } from "components/LanguageSwitcher/LanguageSwitcher"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
@@ -89,7 +89,7 @@ export const MobileDrawer = ({
           </Container>
           <Container className={classes.lower}>
             <LanguageSwitcher
-              language={language as SuporttedLanguages}
+              language={language as SupportedLanguages}
               changeLanguage={changeLanguage}
             />
             <ThemeSwitch
