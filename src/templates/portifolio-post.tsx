@@ -226,7 +226,7 @@ const MainText = withWidth()(
             textAlign: "center",
             fontFamily: "GSThree",
             fontWeight: "bold",
-            color: "#fff"
+            color: "#fff",
           }}
         >
           {title}
@@ -236,7 +236,7 @@ const MainText = withWidth()(
             fontSize: `${isDesktop ? 30 : 24}px`,
             textAlign: "center",
             fontFamily: "GSTwo",
-            color: "#fff"
+            color: "#fff",
           }}
         >
           {subtitle}

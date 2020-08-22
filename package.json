@@ -14,7 +14,7 @@
     "prettier": "prettier 'src/**/*.{ts,tsx}'",
     "lint": "eslint . --ext tsx",
     "checkup": "yarn prettier --check && yarn lint",
-    "format": "yarn prettier --write && yarn lint --fix",
+    "format": "yarn lint --fix && yarn prettier --write",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
