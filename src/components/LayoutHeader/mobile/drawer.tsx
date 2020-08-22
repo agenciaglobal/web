@@ -1,5 +1,5 @@
 import { Container, Drawer } from "@material-ui/core"
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme, useTheme } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import {
@@ -55,6 +55,7 @@ export const MobileDrawer = ({
 }: Props): React.ReactElement => {
   const { t } = useI18next()
   const classes = useStylesV2()
+  const theme = useTheme()
   const menus = [
     { to: "/", label: t("sidebar.main") },
     { to: "/about", label: t("sidebar.about") },
@@ -89,6 +90,7 @@ export const MobileDrawer = ({
           </Container>
           <Container className={classes.lower}>
             <LanguageSwitcher
+              mode={theme.themeName}
               language={language as SuporttedLanguages}
               changeLanguage={changeLanguage}
             />

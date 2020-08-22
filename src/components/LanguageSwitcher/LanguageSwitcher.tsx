@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core"
+import { Box, Button } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import * as classNames from "classnames"
 
@@ -17,11 +17,11 @@ export const useStylesClasses = (mode: LightMode) =>
         display: "flex",
       },
       inactive: {
+        minWidth: 30,
         color: actualTheme.palette?.primary?.contrastText,
         fontFamily: "GSTwo",
         fontSize: 12,
         height: 30,
-        width: 30,
         background: "transparent",
         borderRadius: 0,
         border: "none",
@@ -32,12 +32,12 @@ export const useStylesClasses = (mode: LightMode) =>
         },
       },
       active: {
+        minWidth: 30,
         fontFamily: "GSThree",
         fontSize: 12,
         fontWeight: "bold",
         height: 30,
         color: "#000",
-        width: 30,
         background: "#FFCC00",
         borderRadius: 0,
         border: "none",
@@ -83,18 +83,18 @@ export const LanguageSwitcher = ({
   return (
     <Fragment>
       <Box style={style} className={classes.box}>
-        <button
+        <Button
           onClick={() => void changeLanguage("pt" as SuporttedLanguages)}
           className={PTButtonClass}
         >
           PT
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => void changeLanguage("en" as SuporttedLanguages)}
           className={ENButtonClass}
         >
           EN
-        </button>
+        </Button>
       </Box>
     </Fragment>
   )
