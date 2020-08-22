@@ -6,7 +6,6 @@ import logoblack from "static/logo-black.png"
 import logo from "static/logo-white.png"
 import SideFooter from "components/LayoutFooter/side-footer"
 
-
 const useStyles = makeStyles(() =>
   createStyles({
     drawerPaper: {
@@ -41,7 +40,7 @@ const LeftDrawer = ({
                 style={{ margin: "32px 22px", height: 100 }}
               />
             </Link>
-            <SideFooter/>
+            <SideFooter />
           </Drawer>
         </Fade>
       </Hidden>

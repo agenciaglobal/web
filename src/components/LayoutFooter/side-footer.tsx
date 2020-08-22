@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     backgroundColor: "transparent",
     paddingRight: 50,
-    paddingBottom: 16
+    paddingBottom: 16,
   },
   div: {
     margin: 2,

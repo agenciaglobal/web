@@ -1,5 +1,5 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
-import {Box, Theme } from "@material-ui/core"
+import { Box, Theme } from "@material-ui/core"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 
@@ -8,7 +8,7 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     maxWidth: "100%",
     "& img": {
       width: "100%",
-      margin: 0
+      margin: 0,
     },
     "& *": {
       fontWeight: 300,
@@ -16,8 +16,8 @@ const useGridStyles = makeStyles((theme: Theme) => ({
       color: theme.custom.grey1,
       lineHeight: "32px",
       margin: "16px 0px",
-      fontFamily: "Montserrat, sans-serif"
-    },  
+      fontFamily: "Montserrat, sans-serif",
+    },
   },
 }))
 

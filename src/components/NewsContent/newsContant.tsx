@@ -11,12 +11,8 @@ import { MarkDownRendererNews } from "components/MarkDownRenderer/markDownRender
 export function LongMontsetrratText(props: {
   post: string | null | undefined
 }): JSX.Element {
-const classes = useGridStyles()
-  return (
-    <Typography className={classes.longText} >
-      {props.post}
-    </Typography>
-  )
+  const classes = useGridStyles()
+  return <Typography className={classes.longText}>{props.post}</Typography>
 }
 
 const useGridStyles = makeStyles((theme: Theme) => ({
@@ -66,7 +62,7 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     margin: "16px 0px",
     fontFamily: "Montserrat, sans-serif",
     "@media (min-width:600px)": {
-      margin: 60
+      margin: 60,
     },
   },
   media: {

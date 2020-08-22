@@ -303,9 +303,7 @@ const PortifolioPostTemplate = ({
           </Box>
         )}
         {/* IMAGE WIDE */}
-        {x?.image_3 && (
-          <FullImage paddingTop={0} image={x?.image_6 || ""} />
-        )}
+        {x?.image_3 && <FullImage paddingTop={0} image={x?.image_6 || ""} />}
         {/* TEXT 4 */}
         {x?.text_5 && (
           <Box>
