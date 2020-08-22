@@ -248,181 +248,130 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const gutterVertical = 16
-  const youtube = data?.mdx?.frontmatter?.youtube
-  console.log(youtube)
-  const body = data?.mdx?.body || ""
-  const title = data?.mdx?.frontmatter?.title || ""
-  const description = data?.mdx?.frontmatter?.description || ""
-  let image = data?.mdx?.frontmatter?.image || ""
+  const css = { paddingTop: gutterVertical, paddingBottom: gutterVertical }
+  const x = data?.mdx?.frontmatter
   return (
     <React.Fragment>
       <MainTranslatedImage
-        title={<MainText title={title} subtitle={description} />}
-        image={image}
+        title={
+          <MainText title={x?.title || ""} subtitle={x?.description || ""} />
+        }
+        image={x?.image || ""}
       />
       <div style={{ transform: "translateY( -187px )" }}>
-        <Box
-          css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
-        >
-          <LongMontsetrratText post={data?.mdx?.frontmatter?.text_1} />
+        <Box css={css}>
+          <LongMontsetrratText post={x?.text_1} />
         </Box>
         {/* YOUTUBE */}
-        {youtube && youtube !== "" && <YoutubePreview url={youtube} />}
+        {x?.youtube && x?.youtube !== "" && <YoutubePreview url={x?.youtube} />}
         {/* GRID 1 */}
-        {data?.mdx?.frontmatter?.image_1 && data?.mdx?.frontmatter?.text_2 && (
+        {x?.image_1 && x?.text_2 && x?.image_1 !== "" && x?.text_2 !== "" && (
           <GridLocal
-            right={<GridImage src={data?.mdx?.frontmatter?.image_1 || ""} />}
-            left={<LongMontsetrratText post={data?.mdx?.frontmatter?.text_2} />}
+            right={<GridImage src={x?.image_1 || ""} />}
+            left={<LongMontsetrratText post={x?.text_2} />}
           />
         )}
         {/* MARKDOWN */}
-        <MarkDownRenderer body={body} />
+        <MarkDownRenderer body={data?.mdx?.body || ""} />
         {/* GRID 2 */}
-        {data?.mdx?.frontmatter?.image_2 && data?.mdx?.frontmatter?.image_3 && (
+        {x?.image_2 && x?.image_3 && x?.image_2 !== "" && x?.image_3 !== "" && (
           <GridLocal
-            left={<GridImage src={data?.mdx?.frontmatter?.image_2 || ""} />}
-            right={<GridImage src={data?.mdx?.frontmatter?.image_3 || ""} />}
+            left={<GridImage src={x?.image_2 || ""} />}
+            right={<GridImage src={x?.image_3 || ""} />}
           />
         )}
         {/* TEXT 2 */}
-        {data?.mdx?.frontmatter?.text_3 && (
-          <Box
-            css={{
-              paddingTop: gutterVertical,
-              paddingBottom: gutterVertical,
-            }}
-          >
-            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_3} />
+        {x?.text_3 && (
+          <Box css={css}>
+            <LongMontsetrratText post={x?.text_3} />
           </Box>
         )}
         {/* GRID 3 */}
-        {data?.mdx?.frontmatter?.image_4 && data?.mdx?.frontmatter?.image_5 && (
+        {x?.image_4 && x?.image_5 && (
           <GridLocal
-            left={<GridImage src={data?.mdx?.frontmatter?.image_4 || ""} />}
-            right={<GridImage src={data?.mdx?.frontmatter?.image_5 || ""} />}
+            left={<GridImage src={x?.image_4 || ""} />}
+            right={<GridImage src={x?.image_5 || ""} />}
           />
         )}
         {/* TEXT 3 */}
-        {data?.mdx?.frontmatter?.text_4 && (
-          <Box
-            css={{
-              paddingTop: gutterVertical,
-              paddingBottom: gutterVertical,
-            }}
-          >
-            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_4} />
+        {x?.text_4 !== "" && x?.text_4 && (
+          <Box css={css}>
+            <LongMontsetrratText post={x?.text_4} />
           </Box>
         )}
         {/* IMAGE WIDE */}
-        {data?.mdx?.frontmatter?.image_3 && (
-          <FullImage
-            paddingTop={gutterVertical}
-            image={data?.mdx?.frontmatter?.image_3 || ""}
-          />
+        {x?.image_3 && (
+          <FullImage paddingTop={gutterVertical} image={x?.image_3 || ""} />
         )}
         {/* TEXT 4 */}
-        {data?.mdx?.frontmatter?.text_5 && (
-          <Box
-            css={{
-              paddingTop: gutterVertical,
-              paddingBottom: gutterVertical,
-            }}
-          >
-            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_5} />
+        {x?.text_5 && (
+          <Box css={css}>
+            <LongMontsetrratText post={x?.text_5} />
           </Box>
         )}
         {/* CARROSSEL */}
         <ImageScroller
           images={[
-            data?.mdx?.frontmatter?.image_7 || "",
-            data?.mdx?.frontmatter?.image_8 || "",
-            data?.mdx?.frontmatter?.image_9 || "",
-            data?.mdx?.frontmatter?.image_10 || "",
-            data?.mdx?.frontmatter?.image_11 || "",
-            data?.mdx?.frontmatter?.image_12 || "",
-            data?.mdx?.frontmatter?.image_13 || "",
-            data?.mdx?.frontmatter?.image_14 || "",
-            data?.mdx?.frontmatter?.image_15 || "",
-            data?.mdx?.frontmatter?.image_16 || "",
+            x?.image_7 || "",
+            x?.image_8 || "",
+            x?.image_9 || "",
+            x?.image_10 || "",
+            x?.image_11 || "",
+            x?.image_12 || "",
+            x?.image_13 || "",
+            x?.image_14 || "",
+            x?.image_15 || "",
+            x?.image_16 || "",
           ]}
         />
         {/* TEXTO 5 */}
-        {data?.mdx?.frontmatter?.text_6 && (
-          <Box
-            css={{
-              paddingTop: gutterVertical,
-              paddingBottom: gutterVertical,
-            }}
-          >
-            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_6} />
+        {x?.text_6 && x?.text_6 !== "" && (
+          <Box css={css}>
+            <LongMontsetrratText post={x?.text_6} />
           </Box>
         )}
         {/* GRID 4 : 6 IMAGENS*/}
-        {data?.mdx?.frontmatter?.image_17 &&
-          data?.mdx?.frontmatter?.image_18 &&
-          data?.mdx?.frontmatter?.image_19 &&
-          data?.mdx?.frontmatter?.image_20 &&
-          data?.mdx?.frontmatter?.image_21 &&
-          data?.mdx?.frontmatter?.image_22 && (
+        {x?.image_17 &&
+          x?.image_18 &&
+          x?.image_19 &&
+          x?.image_20 &&
+          x?.image_21 &&
+          x?.image_22 && (
             <GridSix
-              leftTop={
-                <GridImage src={data?.mdx?.frontmatter?.image_17 || ""} />
-              }
-              middleTop={
-                <GridImage src={data?.mdx?.frontmatter?.image_18 || ""} />
-              }
-              rightTop={
-                <GridImage src={data?.mdx?.frontmatter?.image_19 || ""} />
-              }
-              leftBottom={
-                <GridImage src={data?.mdx?.frontmatter?.image_20 || ""} />
-              }
-              middleBottom={
-                <GridImage src={data?.mdx?.frontmatter?.image_21 || ""} />
-              }
-              rightBottom={
-                <GridImage src={data?.mdx?.frontmatter?.image_22 || ""} />
-              }
+              leftTop={<GridImage src={x?.image_17 || ""} />}
+              middleTop={<GridImage src={x?.image_18 || ""} />}
+              rightTop={<GridImage src={x?.image_19 || ""} />}
+              leftBottom={<GridImage src={x?.image_20 || ""} />}
+              middleBottom={<GridImage src={x?.image_21 || ""} />}
+              rightBottom={<GridImage src={x?.image_22 || ""} />}
             />
           )}
         {/* TEXTO 6 */}
-        {data?.mdx?.frontmatter?.text_7 && (
-          <Box
-            css={{
-              paddingTop: gutterVertical,
-              paddingBottom: gutterVertical,
-            }}
-          >
-            <LongMontsetrratText post={data?.mdx?.frontmatter?.text_7} />
+        {x?.text_7 && (
+          <Box css={css}>
+            <LongMontsetrratText post={x?.text_7} />
           </Box>
         )}
         {/* GRID 5 : 4 IMAGENS*/}
-        {data?.mdx?.frontmatter?.image_23 &&
-          data?.mdx?.frontmatter?.image_24 &&
-          data?.mdx?.frontmatter?.image_25 &&
-          data?.mdx?.frontmatter?.image_26 && (
-            <GridFour
-              left={<GridImage src={data?.mdx?.frontmatter?.image_23 || ""} />}
-              centerLeft={
-                <GridImage src={data?.mdx?.frontmatter?.image_24 || ""} />
-              }
-              centerRight={
-                <GridImage src={data?.mdx?.frontmatter?.image_25 || ""} />
-              }
-              right={<GridImage src={data?.mdx?.frontmatter?.image_26 || ""} />}
-            />
-          )}
+        {x?.image_23 && x?.image_24 && x?.image_25 && x?.image_26 && (
+          <GridFour
+            left={<GridImage src={x?.image_23 || ""} />}
+            centerLeft={<GridImage src={x?.image_24 || ""} />}
+            centerRight={<GridImage src={x?.image_25 || ""} />}
+            right={<GridImage src={x?.image_26 || ""} />}
+          />
+        )}
         {/* QUOTE */}
-        {data?.mdx?.frontmatter?.testimonial &&
-          data?.mdx?.frontmatter?.testimonial !== "" &&
-          data?.mdx?.frontmatter?.author &&
-          data?.mdx?.frontmatter?.author !== "" &&
-          data?.mdx?.frontmatter?.role &&
-          data?.mdx?.frontmatter?.role !== "" && (
+        {x?.testimonial &&
+          x?.testimonial !== "" &&
+          x?.author &&
+          x?.author !== "" &&
+          x?.role &&
+          x?.role !== "" && (
             <QuoteComponent
-              quote={data?.mdx?.frontmatter?.testimonial}
-              author={data?.mdx?.frontmatter?.author}
-              role={data?.mdx?.frontmatter?.role}
+              quote={x?.testimonial}
+              author={x?.author}
+              role={x?.role}
               client={data?.mdx?.frontmatter?.description}
             />
           )}

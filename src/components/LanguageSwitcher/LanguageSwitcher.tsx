@@ -1,15 +1,11 @@
 import { Box } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import * as classNames from "classnames"
-
 import React, { Fragment } from "react"
 import { LightMode } from "shared/theme"
-import { darkOptions } from "src/shared/dark"
-import { lightOptions } from "src/shared/light"
 
 export const useStylesClasses = (mode: LightMode) =>
   makeStyles(() => {
-    const actualTheme = mode === "light" ? lightOptions : darkOptions
     return createStyles({
       box: {
         width: 60,
@@ -17,7 +13,7 @@ export const useStylesClasses = (mode: LightMode) =>
         display: "flex",
       },
       inactive: {
-        color: actualTheme.palette?.primary?.contrastText,
+        color: mode === "light" ? "#000" : "#FFF",
         fontFamily: "GSTwo",
         fontSize: 12,
         height: 30,

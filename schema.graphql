@@ -553,6 +553,7 @@ type MdxFrontmatter {
   postType: String
   role: String
   testimonial: String
+  author_image: String
   black_image: String
   categorie: String
   date(
@@ -583,6 +584,16 @@ type MdxFrontmatter {
   image_14: String
   image_15: String
   image_16: String
+  image_17: String
+  image_18: String
+  image_19: String
+  image_20: String
+  image_21: String
+  image_22: String
+  image_23: String
+  image_24: String
+  image_25: String
+  image_26: String
   job: String
   name: String
   video: String
@@ -594,6 +605,7 @@ type MdxFrontmatter {
   text_4: String
   text_5: String
   text_6: String
+  text_7: String
   title: String!
   type: String
   youtube: String
