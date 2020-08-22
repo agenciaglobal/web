@@ -4,8 +4,7 @@ import { Portifolio } from "components/HomePage/types"
 import { Box } from "@material-ui/core"
 import TrackVisibility from "react-on-screen"
 import { Link } from "gatsby-plugin-react-i18next"
-import { ExpandTExt } from "components/NewsPage/components/expand_text"
-import video from "static/videos/mov-white.mp4"
+import { ExpandTextHome } from "./expand_text_home"
 import * as React from "react"
 
 interface Props {
@@ -27,24 +26,25 @@ export const GridItem = withWidth()(
                 {src === "" && (
                   <React.Fragment>
                     <Box
+                      id="image"
                       style={{
                         backgroundImage: `url(${
                           props.portifolio?.image || ""
                         })`,
-                        filter: `blur(${isVisible ? 0 : 3}px)`,
-                        // height: height,
+                        filter: `blur(${isVisible ? 0 : 0}px)`,
                       }}
                     >
-                      <ExpandTExt
+                      <ExpandTextHome
                         full={true}
                         style={{
                           position: "absolute",
                           top: 0,
-                          width: "calc( 100% - 30px )",
+                          width: "calc( 100% - 44px )",
                         }}
                         date={date}
                         title={props.portifolio.title || ""}
                         description={props.portifolio.description || ""}
+                        categorie={props.portifolio.categorie || ""}
                       />
                     </Box>
                   </React.Fragment>
@@ -53,15 +53,16 @@ export const GridItem = withWidth()(
                   <Box
                     style={{
                       display: "flex",
-                      filter: `blur(${isVisible ? 0 : 3}px)`,
+                      filter: `blur(${isVisible ? 0 : 0}px)`,
+                      width: "100%",
                     }}
                   >
                     <video
                       style={{
                         objectFit: "cover",
-                        maxWidth: "100%",
+                        // maxWidth: "100%",
                         width: "100%",
-                        // height,
+                        height: "100%"
                       }}
                       src={src}
                       muted
@@ -69,16 +70,17 @@ export const GridItem = withWidth()(
                       autoPlay
                       loop
                     />
-                    <ExpandTExt
+                    <ExpandTextHome
                       full={true}
                       style={{
                         position: "absolute",
                         top: 0,
-                        width: "calc( 100% - 30px )",
+                        width: "calc( 100% - 44px )",
                       }}
                       date={date}
                       title={props.portifolio.title || ""}
                       description={props.portifolio.description || ""}
+                      categorie={props.portifolio.categorie || ""}
                     />
                   </Box>
                 )}

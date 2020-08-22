@@ -11,7 +11,7 @@ interface Props {
 }
 
 const useGridStyles = makeStyles(() => ({
-  box: { width: "100%", paddingBottom: 300, paddingTop: 30 },
+  box: { width: "100%", paddingBottom: 100, paddingTop: 30 },
 }))
 
 export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
