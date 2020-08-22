@@ -262,7 +262,7 @@ const PortifolioPostTemplate = ({
         image={x?.image || ""}
       />
       <div style={{ transform: "translateY( -187px )" }}>
-        <Box css={css}>
+        <Box>
           <LongMontsetrratText post={x?.text_1} />
         </Box>
         {/* YOUTUBE */}
@@ -285,7 +285,7 @@ const PortifolioPostTemplate = ({
         )}
         {/* TEXT 2 */}
         {x?.text_3 && (
-          <Box css={css}>
+          <Box>
             <LongMontsetrratText post={x?.text_3} />
           </Box>
         )}
@@ -298,17 +298,15 @@ const PortifolioPostTemplate = ({
         )}
         {/* TEXT 3 */}
         {x?.text_4 !== "" && x?.text_4 && (
-          <Box css={css}>
+          <Box>
             <LongMontsetrratText post={x?.text_4} />
           </Box>
         )}
         {/* IMAGE WIDE */}
-        {x?.image_3 && (
-          <FullImage paddingTop={gutterVertical} image={x?.image_3 || ""} />
-        )}
+        {x?.image_3 && <FullImage paddingTop={0} image={x?.image_6 || ""} />}
         {/* TEXT 4 */}
         {x?.text_5 && (
-          <Box css={css}>
+          <Box>
             <LongMontsetrratText post={x?.text_5} />
           </Box>
         )}
@@ -329,7 +327,7 @@ const PortifolioPostTemplate = ({
         />
         {/* TEXTO 5 */}
         {x?.text_6 && x?.text_6 !== "" && (
-          <Box css={css}>
+          <Box>
             <LongMontsetrratText post={x?.text_6} />
           </Box>
         )}
@@ -351,7 +349,7 @@ const PortifolioPostTemplate = ({
           )}
         {/* TEXTO 6 */}
         {x?.text_7 && (
-          <Box css={css}>
+          <Box>
             <LongMontsetrratText post={x?.text_7} />
           </Box>
         )}

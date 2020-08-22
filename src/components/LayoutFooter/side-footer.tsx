@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   container: {
     justifyContent: "center",
+    alignItems: "center",
     display: "flex",
     flexDirection: "column",
     backgroundColor: "transparent",
-    padding: 0,
+    paddingRight: 50,
+    paddingBottom: 16,
   },
   div: {
     margin: 2,

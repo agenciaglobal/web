@@ -1,4 +1,4 @@
-import { Typography, Theme, WithWidthProps } from "@material-ui/core"
+import { Typography, Theme, WithWidthProps, useTheme } from "@material-ui/core"
 import React from "react"
 import Box from "@material-ui/core/Box"
 import { Maybe, NewsPostBySlugQuery, SitePageContextNews } from "global"
@@ -6,25 +6,13 @@ import makeStyles from "@material-ui/core/styles/makeStyles"
 import withWidth from "@material-ui/core/withWidth"
 import { useExtrapolatedMargin } from "src/templates/portifolio-post"
 import image from "static/ramarim.png"
-import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
+import { MarkDownRendererNews } from "components/MarkDownRenderer/markDownRendererNews"
 
 export function LongMontsetrratText(props: {
   post: string | null | undefined
 }): JSX.Element {
-  return (
-    <Typography
-      style={{
-        fontWeight: 300,
-        fontSize: 16,
-        color: "#333333",
-        lineHeight: "32px",
-        margin: 60,
-        fontFamily: "Montserrat, sans-serif",
-      }}
-    >
-      {props.post}
-    </Typography>
-  )
+  const classes = useGridStyles()
+  return <Typography className={classes.longText}>{props.post}</Typography>
 }
 
 const useGridStyles = makeStyles((theme: Theme) => ({
@@ -64,6 +52,17 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     "@media (min-width:600px)": {
       fontSize: 30,
       paddingTop: 32,
+    },
+  },
+  longText: {
+    fontWeight: 300,
+    fontSize: 16,
+    color: theme.custom.grey1,
+    lineHeight: "32px",
+    margin: "16px 0px",
+    fontFamily: "Montserrat, sans-serif",
+    "@media (min-width:600px)": {
+      margin: 60,
     },
   },
   media: {
@@ -137,15 +136,15 @@ export const NewsContent = (props: {
 
       <div className={classes.div}>
         <Typography className={classes.dateText}>
-          {post?.frontmatter?.date + " | NOTICIA"}
+          {post?.frontmatter?.date + " | " + post?.frontmatter?.postType}
         </Typography>
         <Typography className={classes.authorText}>
-          {"Por João da Silva"}
+          {"Por " + author}
         </Typography>
         <Typography className={classes.titleText}>
           {post?.frontmatter?.title}
         </Typography>
-        <MarkDownRenderer body={props.body} />
+        <MarkDownRendererNews body={props.body} />
         <Box
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
