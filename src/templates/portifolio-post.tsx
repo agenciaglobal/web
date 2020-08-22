@@ -222,18 +222,21 @@ const MainText = withWidth()(
       >
         <Typography
           style={{
-            fontSize: `${isDesktop ? 50 : 40}px`,
+            fontSize: `${isDesktop ? 50 : 36}px`,
             textAlign: "center",
+            fontFamily: "GSThree",
             fontWeight: "bold",
+            color: "#fff",
           }}
         >
           {title}
         </Typography>
         <Typography
           style={{
-            fontSize: `${isDesktop ? 30 : 25}px`,
+            fontSize: `${isDesktop ? 30 : 24}px`,
             textAlign: "center",
-            fontWeight: 500,
+            fontFamily: "GSTwo",
+            color: "#fff",
           }}
         >
           {subtitle}
