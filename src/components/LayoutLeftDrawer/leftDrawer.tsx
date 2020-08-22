@@ -1,10 +1,11 @@
 import { Drawer, Hidden, Box, Fade } from "@material-ui/core"
 import { createStyles, makeStyles, useTheme } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
-import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"
 import logoblack from "static/logo-black.png"
 import logo from "static/logo-white.png"
+import SideFooter from "components/LayoutFooter/side-footer"
+
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -40,31 +41,7 @@ const LeftDrawer = ({
                 style={{ margin: "32px 22px", height: 100 }}
               />
             </Link>
-            <Box
-              style={{
-                transform: "rotate(-90deg)",
-              }}
-            >
-              <Box
-                style={{
-                  width: 300,
-                  margin: "0px 200px 26px",
-                  display: "flex",
-                }}
-              >
-                <Typography variant={"caption"} noWrap={false} style={{}}>
-                  ESTRATEGICAMENTE CRIATIVOS
-                </Typography>
-                <div
-                  style={{
-                    margin: "9px",
-                    height: 1,
-                    width: 100,
-                    background: theme.palette.primary.contrastText,
-                  }}
-                />
-              </Box>
-            </Box>
+            <SideFooter/>
           </Drawer>
         </Fade>
       </Hidden>

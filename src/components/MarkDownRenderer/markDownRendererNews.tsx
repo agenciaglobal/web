@@ -16,15 +16,12 @@ const useGridStyles = makeStyles((theme: Theme) => ({
       color: theme.custom.grey1,
       lineHeight: "32px",
       margin: "16px 0px",
-      fontFamily: "Montserrat, sans-serif",
-      "@media (min-width:600px)": {
-        margin: 60
-      },
+      fontFamily: "Montserrat, sans-serif"
     },  
   },
 }))
 
-export const MarkDownRenderer = (props: {
+export const MarkDownRendererNews = (props: {
   body: string
 }): React.ReactElement => {
   const classes = useGridStyles()
