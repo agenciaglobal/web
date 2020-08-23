@@ -1,4 +1,4 @@
-import { Drawer, Hidden, Box, Fade } from "@material-ui/core"
+import { Drawer, Hidden, Fade } from "@material-ui/core"
 import { createStyles, makeStyles, useTheme } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
