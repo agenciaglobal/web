@@ -250,8 +250,6 @@ const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
-  const gutterVertical = 16
-  const css = { paddingTop: gutterVertical, paddingBottom: gutterVertical }
   const x = data?.mdx?.frontmatter
   return (
     <React.Fragment>

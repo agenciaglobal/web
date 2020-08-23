@@ -1,8 +1,8 @@
-import { Drawer, Hidden, Box, Fade } from "@material-ui/core"
+import { Drawer, Hidden, Fade } from "@material-ui/core"
 import { createStyles, makeStyles, useTheme } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
-import logoblack from "static/logo-black.png"
+import logoBlack from "static/logo-black.png"
 import logo from "static/logo-white.png"
 import SideFooter from "components/LayoutFooter/side-footer"
 
@@ -35,7 +35,7 @@ const LeftDrawer = ({
           <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
             <Link style={{ boxShadow: "none" }} to="/">
               <img
-                src={theme.themeName === "light" ? logoblack : logo}
+                src={theme.themeName === "light" ? logoBlack : logo}
                 alt="logo-black"
                 style={{ margin: "32px 22px", height: 100 }}
               />
