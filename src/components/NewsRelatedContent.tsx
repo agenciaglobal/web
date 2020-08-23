@@ -58,7 +58,7 @@ export const NewsRelatedContent = withWidth()(
             paddingLeft: margin,
             paddingRight: margin,
             width: `calc( 100% - ${2 * margin}px)`,
-            justifyContent: "space-around",
+            justifyContent: isXS ? "unset" : "space-around",
           }}
         >
           {newVar
@@ -72,25 +72,50 @@ export const NewsRelatedContent = withWidth()(
                   style={{
                     height: 450,
                     width: isXS ? "100%" : "30%",
+                    marginBottom: 20,
                   }}
                 >
                   <Link
-                    style={{ textDecoration: "none" }}
+                    style={{
+                      textDecoration: "none",
+                      display: isXS ? "flex" : "block",
+                      height: 450,
+                      flexDirection: "row",
+                      marginBottom: 20,
+                    }}
                     to={el?.fields?.slug || ""}
                   >
                     <div
                       style={{
                         height: "100%",
+                        width: !isXS ? "100%" : "50%",
                         background: `url(${image})`,
                         backgroundSize: "cover",
                       }}
                     >
-                      <ExpandTExt
-                        date={el?.frontmatter?.date || ""}
-                        title={el?.frontmatter?.title || ""}
-                        description={el?.frontmatter?.description || ""}
-                      />
+                      {!isXS && (
+                        <ExpandTExt
+                          date={el?.frontmatter?.date || ""}
+                          title={el?.frontmatter?.title || ""}
+                          description={el?.frontmatter?.description || ""}
+                        />
+                      )}
                     </div>
+                    {isXS && (
+                      <div
+                        style={{
+                          height: "100%",
+                          width: !isXS ? "100%" : "50%",
+                          backgroundSize: "cover",
+                        }}
+                      >
+                        <ExpandTExt
+                          date={el?.frontmatter?.date || ""}
+                          title={el?.frontmatter?.title || ""}
+                          description={el?.frontmatter?.description || ""}
+                        />
+                      </div>
+                    )}
                   </Link>
                 </Box>
               )
