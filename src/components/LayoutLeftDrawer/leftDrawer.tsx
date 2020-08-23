@@ -1,10 +1,11 @@
-import { Drawer } from "@material-ui/core"
+import { Drawer, isWidthUp, WithWidthProps } from "@material-ui/core"
 import { createStyles, makeStyles, useTheme } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 import logoBlack from "static/logo-black.png"
 import logo from "static/logo-white.png"
 import SideFooter from "components/LayoutFooter/side-footer"
+import withWidth from "@material-ui/core/withWidth"
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -26,44 +27,48 @@ type Props = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
   scrolled: boolean
 }
-const LeftDrawer = ({
-  scrolled,
-  open,
-  setOpen,
-}: Props): React.ReactElement | null => {
-  const classes = useStyles()
-  const theme = useTheme()
-  const isVisible = open || scrolled
-  return (
-    <Fragment>
-      <Drawer
-        onMouseEnter={() => {
-          console.log("enter")
-          setOpen(true)
-        }}
-        onMouseLeave={() => {
-          console.log("leave")
-          setOpen(false)
-        }}
-        variant="permanent"
-        classes={{ paper: classes.drawerPaper }}
-      >
-        <Link
-          style={{
-            visibility: isVisible ? "unset" : "hidden",
-            boxShadow: "none",
+const LeftDrawer = withWidth()(
+  ({
+    scrolled,
+    open,
+    width,
+    setOpen,
+  }: Props & WithWidthProps): React.ReactElement | null => {
+    const classes = useStyles()
+    const isDesktop = isWidthUp("md", width || "xs")
+    const theme = useTheme()
+    const isVisible = open || scrolled
+    return isDesktop ? (
+      <Fragment>
+        <Drawer
+          onMouseEnter={() => {
+            console.log("enter")
+            setOpen(true)
           }}
-          to="/"
+          onMouseLeave={() => {
+            console.log("leave")
+            setOpen(false)
+          }}
+          variant="permanent"
+          classes={{ paper: classes.drawerPaper }}
         >
-          <img
-            src={theme.themeName === "light" ? logoBlack : logo}
-            alt="logo-black"
-            style={{ margin: "32px 22px", height: 100 }}
-          />
-        </Link>
-        <SideFooter isVisible={isVisible} />
-      </Drawer>
-    </Fragment>
-  )
-}
+          <Link
+            style={{
+              visibility: isVisible ? "unset" : "hidden",
+              boxShadow: "none",
+            }}
+            to="/"
+          >
+            <img
+              src={theme.themeName === "light" ? logoBlack : logo}
+              alt="logo-black"
+              style={{ margin: "32px 22px", height: 100 }}
+            />
+          </Link>
+          <SideFooter isVisible={isVisible} />
+        </Drawer>
+      </Fragment>
+    ) : null
+  },
+)
 export default LeftDrawer

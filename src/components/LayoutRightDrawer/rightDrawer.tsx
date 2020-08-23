@@ -60,7 +60,7 @@ export const RightDrawer = withWidth()(
     const drawerClasses = { paper: classes.drawerPaper }
     const isDesktop = isWidthUp("md", width || "xs")
     const visible = open || (isDesktop && scrolled)
-    return (
+    return isDesktop ? (
       <React.Fragment>
         <Drawer
           onMouseEnter={() => setOpen(true)}
@@ -108,6 +108,6 @@ export const RightDrawer = withWidth()(
           </Container>
         </Drawer>
       </React.Fragment>
-    )
+    ) : null
   },
 )

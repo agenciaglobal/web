@@ -70,7 +70,7 @@ export const NewsRelatedContent = withWidth()(
                 <Box
                   key={index}
                   style={{
-                    height: 450,
+                    height: !isXS ? 450 : 200,
                     width: isXS ? "100%" : "30%",
                     marginBottom: 20,
                   }}
@@ -79,7 +79,7 @@ export const NewsRelatedContent = withWidth()(
                     style={{
                       textDecoration: "none",
                       display: isXS ? "flex" : "block",
-                      height: 450,
+                      height: !isXS ? 450 : 200,
                       flexDirection: "row",
                       marginBottom: 20,
                     }}
@@ -87,7 +87,6 @@ export const NewsRelatedContent = withWidth()(
                   >
                     <div
                       style={{
-                        height: "100%",
                         width: !isXS ? "100%" : "50%",
                         background: `url(${image})`,
                         backgroundSize: "cover",
