@@ -1,8 +1,15 @@
-import { Container, Drawer, Hidden, Fade } from "@material-ui/core"
+import {
+  Container,
+  Drawer,
+  Fade,
+  isWidthUp,
+  WithWidthProps,
+} from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { TabComponent } from "components/TabComponent/drawerItem"
+import withWidth from "@material-ui/core/withWidth"
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -33,23 +40,43 @@ const useStyles = makeStyles(() =>
   }),
 )
 
-export const RightDrawer = ({
-  uri,
-  scrolled,
-}: {
+interface Props {
+  open: boolean
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
   uri: string
   scrolled: boolean
-}): React.ReactElement | null => {
-  const classes = useStyles()
-  const { t } = useI18next()
-  const drawerClasses = { paper: classes.drawerPaper }
-  return scrolled ? (
-    <React.Fragment>
-      <Hidden smDown>
-        <Drawer variant="permanent" anchor="right" classes={drawerClasses}>
+}
+
+export const RightDrawer = withWidth()(
+  ({
+    open,
+    setOpen,
+    uri,
+    width,
+    scrolled,
+  }: Props & WithWidthProps): React.ReactElement | null => {
+    const classes = useStyles()
+    const { t } = useI18next()
+    const drawerClasses = { paper: classes.drawerPaper }
+    const isDesktop = isWidthUp("md", width || "xs")
+    const visible = open || (isDesktop && scrolled)
+    return (
+      <React.Fragment>
+        <Drawer
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+          variant="permanent"
+          anchor="right"
+          classes={drawerClasses}
+        >
           <Container className={classes.container}>
-            <Fade in={scrolled} timeout={1000}>
-              <ul className={classes.list}>
+            <Fade in={visible}>
+              <ul
+                className={classes.list}
+                style={{
+                  visibility: visible ? "unset" : "hidden",
+                }}
+              >
                 <TabComponent uri={uri} to={"/"} label={t("sidebar.main")} />
                 <TabComponent
                   uri={uri}
@@ -80,7 +107,7 @@ export const RightDrawer = ({
             </Fade>
           </Container>
         </Drawer>
-      </Hidden>
-    </React.Fragment>
-  ) : null
-}
+      </React.Fragment>
+    )
+  },
+)

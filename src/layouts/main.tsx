@@ -10,6 +10,7 @@ import { useStyles } from "./styles"
 import Footer from "../components/LayoutFooter/footer"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { useEffect, useState } from "react"
+import _ from "lodash"
 
 interface Props {
   uri: string
@@ -65,7 +66,14 @@ const useScrollDirection = ({
 const useIsAtTop = (): boolean => {
   const [top, setTop] = useState(true)
   useEffect(() => {
-    window.onscroll = () => setTop(window.pageYOffset === 0)
+    window.onscroll = () => {
+      const pageYOffset = window.pageYOffset
+      console.log(pageYOffset)
+      const condition = pageYOffset < 155
+      _.debounce(() => {
+        setTop(condition)
+      }, 300)()
+    }
     return () => {
       window.onscroll = null
     }
@@ -87,11 +95,21 @@ export const ActualLayout = ({
   })
   const top = useIsAtTop()
   const isScrollingUp = scrollDirection === "up" && !top
-
+  const [leftHover, leftSetOpen] = useState(false)
+  const [rightHover, rightSetOpen] = useState(false)
   return (
     <div className={classes.wrapper}>
-      <RightDrawer scrolled={isScrollingUp} uri={uri} />
-      <LeftDrawer scrolled={isScrollingUp} />
+      <RightDrawer
+        open={rightHover}
+        setOpen={rightSetOpen}
+        scrolled={isScrollingUp}
+        uri={uri}
+      />
+      <LeftDrawer
+        open={leftHover}
+        setOpen={leftSetOpen}
+        scrolled={isScrollingUp}
+      />
       <LayoutHeaderMobile
         lightMode={lightMode}
         uri={uri}
@@ -99,6 +117,8 @@ export const ActualLayout = ({
         onTop={!top}
       />
       <LayoutHeader
+        leftHover={leftHover}
+        rightHover={rightHover}
         hide={!top && scrollDirection !== "down"}
         lightMode={lightMode}
         uri={uri}
