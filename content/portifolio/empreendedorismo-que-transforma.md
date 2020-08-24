@@ -1,5 +1,5 @@
 ---
-path: Empreendedorismo Que Transforma
+path: Empreendedorismo-que-transforma
 date: 2020-08-24T13:19:27.324Z
 jobDate: 2020-08-24T13:19:27.348Z
 categorie: featured
