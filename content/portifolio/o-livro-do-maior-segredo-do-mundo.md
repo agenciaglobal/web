@@ -5,8 +5,9 @@ jobDate: 2020-08-24T16:46:22.103Z
 categorie: featured
 title: O Livro do Maior Segredo do Mundo
 description: Shopping Iguatemi Porto Alegre
-image: /assets/1000x550.png
+cover_image: /assets/1000x550.png
 video: ""
+image: /assets/1000x550.png
 text_1: No ano da expansão do Iguatemi, a Global desenvolveu um projeto especial
   para expandir também o espírito natalino. O Livro do Maior Segredo do Mundo
   traz frases inspiracionais, criadas especialmente para a obra, com um projeto
