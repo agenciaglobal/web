@@ -1564,6 +1564,7 @@ export type MdxFrontmatter = {
   job?: Maybe<Scalars["String"]>
   black_image?: Maybe<Scalars["String"]>
   image?: Maybe<Scalars["String"]>
+  cover_image?: Maybe<Scalars["String"]>
   tag?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
   image_1?: Maybe<Scalars["String"]>
@@ -3483,6 +3484,7 @@ export type PortifolioPostBySlugQuery = {
           | "description"
           | "testimonial"
           | "role"
+          | "cover_image"
           | "image"
           | "video"
           | "image_1"
