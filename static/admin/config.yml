@@ -44,13 +44,11 @@ collections:
         searchFields: ["tag"]
         valueField: "tag"
         displayFields: ["tag"]
-      - label: "Autor do post"
-        name: "author"
-        widget: "relation"
-        collection: "team"
-        searchFields: ["name", "about", "image"]
-        valueField: "name"
-        displayFields: ["name"]
+      - { name: author, label: Autor do post, required: false }
+      - { name: about, label: Sobre o autor, required: false }
+      - name: "author_image"
+        label: "Foto do autor (1:1)"
+        widget: "image"
         required: false
   - name: tags
     label: Tags

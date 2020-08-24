@@ -1561,6 +1561,7 @@ export type MdxFrontmatter = {
   path?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["Date"]>
   name?: Maybe<Scalars["String"]>
+  about?: Maybe<Scalars["String"]>
   job?: Maybe<Scalars["String"]>
   black_image?: Maybe<Scalars["String"]>
   image?: Maybe<Scalars["String"]>
@@ -3453,6 +3454,8 @@ export type NewsPostBySlugQuery = {
           | "postType"
           | "title"
           | "author"
+          | "author_image"
+          | "about"
           | "tags"
           | "date"
           | "description"
