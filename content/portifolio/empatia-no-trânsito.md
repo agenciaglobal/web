@@ -5,8 +5,9 @@ jobDate: 2019-01-09T02:00:00.000Z
 categorie: featured
 title: Empatia no Trânsito
 description: Governo do RS
-image: /assets/captura-de-tela-2020-08-24-às-13.43.25.png
+cover_image: /assets/emprrrr.png
 video: /assets/teste-gov.mp4
+image: /assets/captura-de-tela-2020-08-24-às-13.43.25.png
 text_1: "Com o número de mortes crescendo a cada ano, o Governo do Estado do Rio
   Grande do Sul nos solicitou que encontrássemos uma solução para incentivar uma
   neste cenário. "
