@@ -29,7 +29,7 @@ export const GridItem = withWidth()(
                       id="image"
                       style={{
                         backgroundImage: `url(${
-                          props.portifolio?.image || ""
+                          props.portifolio?.cover_image || ""
                         })`,
                         filter: `blur(${isVisible ? 0 : 0}px)`,
                       }}
