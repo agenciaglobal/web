@@ -5,7 +5,7 @@ jobDate: 2020-08-24T13:19:27.348Z
 categorie: featured
 title: Empreendedorismo Que Transforma
 description: Sebrae RS
-image: /assets/1000x550.png
+image: /assets/preview-12.png
 video: /assets/sebrae-teste.mp4
 text_1: A partir do novo posicionamento do Sebrae O Empreendedorismo que
   Transforma, a Global lançou uma campanha para mostrar que todo o dia é dia de
