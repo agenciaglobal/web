@@ -98,6 +98,7 @@ collections:
         widget: select
         options:
           - { label: "featured", value: "featured" }
+          - { label: "branding e estratégia", value: "branding" }
           - { label: "digital", value: "digital" }
           - { label: "social", value: "social" }
           - { label: "crm", value: "crm" }
@@ -105,14 +106,17 @@ collections:
       - { name: title, label: Título }
       - { name: description, label: Cliente }
 # imagem de capa é a header do post.. mesmo quando houver um vídeo exibido no grid
-      - label: "Imagem de capa (wide)"
-        name: "image"
+      - label: "Featured image (home)"
+        name: "cover_image"
         widget: "image"
 # video para ser exibido no grid. É opcional e quando não for inserido, a imagem de capa deve ficar no grid.
-      - label: "Vídeo de capa"
+      - label: "Featured video (home)"
         name: "video"
         widget: "file"
         required: false
+      - label: "Imagem de capa (wide)"
+        name: "image"
+        widget: "image"
 
       - { name: text_1, label: "Texto 1" }
 
@@ -164,12 +168,15 @@ collections:
       - label: "Carrossel: Imagem 1 (1:1)"
         name: "image_7"
         widget: "image"
+        required: false
       - label: "Carrossel: Imagem 2 (1:1)"
         name: "image_8"
         widget: "image"
+        required: false
       - label: "Carrossel: Imagem 3 (1:1)"
         name: "image_9"
         widget: "image"
+        required: false
       - label: "Carrossel: Imagem 4 (1:1)"
         name: "image_10"
         widget: "image"

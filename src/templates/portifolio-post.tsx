@@ -413,6 +413,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         categorie
         image
+        cover_image
         video
         text_1
         youtube

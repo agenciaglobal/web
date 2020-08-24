@@ -5,6 +5,7 @@ job date: 2020-08-20T19:42:46.078Z
 categorie: featured
 title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
 description: CASA VALDUGA
+cover_image: /assets/imagem-topo.png
 image: /assets/imagem-topo.png
 video: /assets/file_example_mp4_480_1_5mg.mp4
 text_1: "Em 2018, um dos vinhos mais icônicos da Casa Valduga completou 10 anos
