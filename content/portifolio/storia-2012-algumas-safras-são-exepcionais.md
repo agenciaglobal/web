@@ -1,19 +1,7 @@
 ---
 path: portfolio-completo
 date: 2020-08-20T19:42:46.015Z
-job date: 2020-08-20T19:42:46.078Z
-categorie: featured
-title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
-description: CASA VALDUGA
-image: /assets/imagem-topo.png
-video: /assets/file_example_mp4_480_1_5mg.mp4
-text_1: "Em 2018, um dos vinhos mais icônicos da Casa Valduga completou 10 anos
-  do seu lançamento: o Storia Merlot, produzido apenas em safras
-  extraordinárias, com tiragem limitada. Sua venda é realizada apenas mediante
-  reserva, oficializada por um certificado com o número da garrafa e do lote,
-  que é assinado a punho pelo presidente da vinícola, João Valduga, garantindo a
-  exclusividade do produto. A safra selecionada para marcar os 10 anos do Storia
-  foi uma das melhores safras dos últimos tempos, a de 2012."
+jobDate: 2020-08-24T16:50:53.315Z
 youtube: btWhxr1ktMU
 image_1: /assets/group-12.png
 text_2: O desafio do projeto era traduzir toda essa exclusividade na
@@ -32,23 +20,18 @@ text_3: "Também fez parte do projeto de lançamento a curadoria de playlists co
   músicas que harmonizam com um vinho excepcional, como o Storia Merlot da Casa
   Valduga."
 image_4: /assets/group-12.png
-image_5: /assets/mask-group.png
 text_4: "Também fez parte do projeto de lançamento a curadoria de playlists com
   as melhores safras que a música já produziu. Foi criado um canal da Casa
   Valduga no Spotify que contempla 4 playlists: Jazz (Safra 1930), Bossa Nova
   (Safra 1958), Tropicália (Safra 1968) e Nova MPB (Safra 2009). Todas com
   músicas que harmonizam com um vinho excepcional, como o Storia Merlot da Casa
   Valduga."
-image_6: /assets/mock-1.png
 text_5: "Também fez parte do projeto de lançamento a curadoria de playlists com
   as melhores safras que a música já produziu. Foi criado um canal da Casa
   Valduga no Spotify que contempla 4 playlists: Jazz (Safra 1930), Bossa Nova
   (Safra 1958), Tropicália (Safra 1968) e Nova MPB (Safra 2009). Todas com
   músicas que harmonizam com um vinho excepcional, como o Storia Merlot da Casa
   Valduga."
-image_7: /assets/mask-group.png
-image_8: /assets/mask-group-1.png
-image_9: /assets/group-12.png
 image_10: /assets/mask-group-1.png
 image_11: /assets/group-12.png
 image_12: /assets/mask-group.png
@@ -78,10 +61,28 @@ image_23: /assets/mask-group-1.png
 image_24: /assets/group-12.png
 image_25: /assets/mask-group-1.png
 image_26: /assets/group-12.png
+author: Tom Hanks
+job date: 2020-08-20T19:42:46.078Z
+categorie: featured
+title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
+description: CASA VALDUGA
+image: /assets/imagem-topo.png
+video: ""
+text_1: "Em 2018, um dos vinhos mais icônicos da Casa Valduga completou 10 anos
+  do seu lançamento: o Storia Merlot, produzido apenas em safras
+  extraordinárias, com tiragem limitada. Sua venda é realizada apenas mediante
+  reserva, oficializada por um certificado com o número da garrafa e do lote,
+  que é assinado a punho pelo presidente da vinícola, João Valduga, garantindo a
+  exclusividade do produto. A safra selecionada para marcar os 10 anos do Storia
+  foi uma das melhores safras dos últimos tempos, a de 2012."
+image_5: /assets/mask-group.png
+image_6: /assets/mock-1.png
+image_7: /assets/mask-group.png
+image_8: /assets/mask-group-1.png
+image_9: /assets/group-12.png
 testimonial: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-author: Tom Hanks
 role: VP Sênior Jr.
 ---
 AQUI COMEÇA O MARKDOWN
