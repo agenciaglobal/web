@@ -12,6 +12,7 @@ export const ExpandTExt = (props: {
     <Box
       style={{
         padding: "15px",
+        maxHeight: "100%",
         display: "flex",
         flexDirection: "column",
         height: "calc( 100% - 30px )",
@@ -45,7 +46,7 @@ export const ExpandTExt = (props: {
           {props.title}
         </Typography>
         <Typography
-          // noWrap={true}
+          noWrap={true}
           style={{
             fontSize: "16px",
             color: "#FFF",

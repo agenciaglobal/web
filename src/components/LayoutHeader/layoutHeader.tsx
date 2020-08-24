@@ -18,9 +18,22 @@ interface Props {
   lightMode: LightMode
   uri: string
   hide: boolean
+  leftHover: boolean
+  rightHover: boolean
 }
 
-export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
+function extracted(hide: boolean, leftHover: boolean) {
+  if (leftHover) return false
+  // let newVar = !hide && leftHover
+  return !hide
+}
+
+export const LayoutHeader = ({
+  leftHover,
+  rightHover,
+  hide,
+  uri,
+}: Props): React.ReactElement => {
   const { changeLanguage, language, t } = useI18next()
   const theme = useTheme()
   const mode =
@@ -31,12 +44,15 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
         ? "dark"
         : "light"
       : theme.themeName
+  console.log(hide, leftHover)
+  const isLogoVisible = extracted(hide, leftHover)
+  const isTabsVisible = extracted(hide, rightHover)
   return (
     <Hidden smDown>
       <AppBar
         position="static"
         style={{
-          // height: isContact ? 400 : 155,
+          height: 155,
           backgroundColor: "transparent",
           boxShadow: "none",
         }}
@@ -44,34 +60,36 @@ export const LayoutHeader = ({ hide, uri }: Props): React.ReactElement => {
         <Toolbar
           style={{
             zIndex: 1,
+            height: 155,
             display: "flex",
             padding: "0px 120px",
             justifyContent: "space-between",
           }}
         >
           <Link style={{ boxShadow: "none" }} to="/">
-            <img
-              src={mode === "light" ? logoblack : logo}
-              alt="logo-black"
-              style={{ margin: "32px 32px 0px 0px", height: 100 }}
-            />
+            {isLogoVisible && (
+              <img
+                src={mode === "light" ? logoblack : logo}
+                alt="logo-black"
+                style={{ margin: "32px 32px 0px 0px", height: 100 }}
+              />
+            )}
           </Link>
           <Box
             style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "flex-end",
+              alignItems: "center",
               height: "100%",
             }}
           >
-            {!hide && (
+            {isTabsVisible && (
               <ul
                 style={{
                   color: "#AAA",
                   listStyle: "none",
                   display: "flex",
                   justifyContent: "space-evenly",
-                  paddingTop: 16,
                   margin: "18px 0px 0px",
                 }}
               >

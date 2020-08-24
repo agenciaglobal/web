@@ -250,7 +250,6 @@ const PortifolioPostTemplate = ({
   data,
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
-  const gutterVertical = 16
   const x = data?.mdx?.frontmatter
   return (
     <React.Fragment>
@@ -310,20 +309,33 @@ const PortifolioPostTemplate = ({
           </Box>
         )}
         {/* CARROSSEL */}
-        <ImageScroller
-          images={[
-            x?.image_7 || "",
-            x?.image_8 || "",
-            x?.image_9 || "",
-            x?.image_10 || "",
-            x?.image_11 || "",
-            x?.image_12 || "",
-            x?.image_13 || "",
-            x?.image_14 || "",
-            x?.image_15 || "",
-            x?.image_16 || "",
-          ]}
-        />
+        {[
+          x?.image_7,
+          x?.image_8,
+          x?.image_9,
+          x?.image_10,
+          x?.image_11,
+          x?.image_12,
+          x?.image_13,
+          x?.image_14,
+          x?.image_15,
+          x?.image_16,
+        ].filter((imge) => imge && imge !== "").length >= 3 && (
+          <ImageScroller
+            images={[
+              x?.image_7 || "",
+              x?.image_8 || "",
+              x?.image_9 || "",
+              x?.image_10 || "",
+              x?.image_11 || "",
+              x?.image_12 || "",
+              x?.image_13 || "",
+              x?.image_14 || "",
+              x?.image_15 || "",
+              x?.image_16 || "",
+            ]}
+          />
+        )}
         {/* TEXTO 5 */}
         {x?.text_6 && x?.text_6 !== "" && (
           <Box>

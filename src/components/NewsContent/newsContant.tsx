@@ -10,7 +10,7 @@ import { MarkDownRendererNews } from "components/MarkDownRenderer/markDownRender
 
 export function LongMontsetrratText(props: {
   post: string | null | undefined
-}): JSX.Element {
+}): React.ReactElement {
   const classes = useGridStyles()
   return <Typography className={classes.longText}>{props.post}</Typography>
 }
