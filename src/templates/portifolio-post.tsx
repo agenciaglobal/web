@@ -198,7 +198,7 @@ export const MainTranslatedImage = withWidth()(
           backgroundImage: `url(${props.image})`,
           backgroundSize: "cover",
           width: `calc( 100% + ${2 * margin}px)`,
-          transform: `translate( -${margin}px , -${isDesktop ? 168 : 187}px )`,
+          transform: `translate( -${margin}px , -${isDesktop ? 187 : 187}px )`,
         }}
       >
         {props.title}
@@ -320,7 +320,7 @@ const PortifolioPostTemplate = ({
           x?.image_14,
           x?.image_15,
           x?.image_16,
-        ].filter((imge) => imge && imge !== "").length >= 3 && (
+        ].filter((imge) => imge && imge !== "").length >= 4 && (
           <ImageScroller
             images={[
               x?.image_7 || "",
