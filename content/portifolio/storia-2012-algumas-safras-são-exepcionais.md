@@ -1,7 +1,20 @@
 ---
 path: portfolio-completo
 date: 2020-08-20T19:42:46.015Z
-jobDate: 2020-08-24T16:50:53.315Z
+job date: 2020-08-20T19:42:46.078Z
+categorie: featured
+title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
+description: CASA VALDUGA
+cover_image: /assets/imagem-topo.png
+image: /assets/imagem-topo.png
+video: /assets/file_example_mp4_480_1_5mg.mp4
+text_1: "Em 2018, um dos vinhos mais icônicos da Casa Valduga completou 10 anos
+  do seu lançamento: o Storia Merlot, produzido apenas em safras
+  extraordinárias, com tiragem limitada. Sua venda é realizada apenas mediante
+  reserva, oficializada por um certificado com o número da garrafa e do lote,
+  que é assinado a punho pelo presidente da vinícola, João Valduga, garantindo a
+  exclusividade do produto. A safra selecionada para marcar os 10 anos do Storia
+  foi uma das melhores safras dos últimos tempos, a de 2012."
 youtube: btWhxr1ktMU
 image_1: /assets/group-12.png
 text_2: O desafio do projeto era traduzir toda essa exclusividade na
@@ -62,19 +75,6 @@ image_24: /assets/group-12.png
 image_25: /assets/mask-group-1.png
 image_26: /assets/group-12.png
 author: Tom Hanks
-job date: 2020-08-20T19:42:46.078Z
-categorie: featured
-title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
-description: CASA VALDUGA
-image: /assets/imagem-topo.png
-video: ""
-text_1: "Em 2018, um dos vinhos mais icônicos da Casa Valduga completou 10 anos
-  do seu lançamento: o Storia Merlot, produzido apenas em safras
-  extraordinárias, com tiragem limitada. Sua venda é realizada apenas mediante
-  reserva, oficializada por um certificado com o número da garrafa e do lote,
-  que é assinado a punho pelo presidente da vinícola, João Valduga, garantindo a
-  exclusividade do produto. A safra selecionada para marcar os 10 anos do Storia
-  foi uma das melhores safras dos últimos tempos, a de 2012."
 image_5: /assets/mask-group.png
 image_6: /assets/mock-1.png
 image_7: /assets/mask-group.png
