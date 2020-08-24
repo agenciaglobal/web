@@ -7,6 +7,8 @@ text_2: Platea dictumst vestibulum rhoncus est pellentesque elit. Sed arcu non
   lectus arcu bibendum at varius. Tellus mauris a diam maecenas.
 path: full
 author: João Paulo Rocha
+about: texto sobre o autor
+author_image: /assets/works/natal-iguatemi.png
 image_1: /assets/works/natal-iguatemi.png
 date: 2020-07-12T00:33:11.387Z
 postType: article

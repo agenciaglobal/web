@@ -183,7 +183,7 @@ export const NewsContent = (props: {
               }}
             >
               <Box style={{ maxHeight: 290, maxWidth: 290, margin: 8 }}>
-                <img src={image} alt="about" />
+                <img src={post?.frontmatter?.author_image} alt="about" />
               </Box>
               <Box
                 style={{
@@ -198,8 +198,7 @@ export const NewsContent = (props: {
                   {author || ""}
                 </Typography>
                 <Typography className={classes.authorText}>
-                  About o autor. um textinho curto falando que o autor do artigo
-                  é gente boa.
+                  {post?.frontmatter?.about}
                 </Typography>
               </Box>
             </Box>

@@ -56,8 +56,9 @@ export const pageQuery = graphql`
         text_1
         postType
         author
+        about
+        author_image
         text_2
-        author
         image
       }
     }
