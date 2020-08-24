@@ -88,12 +88,12 @@ const useGridStyles = makeStyles((theme: Theme) => ({
     },
   },
   tag: {
-    paddingRight: 6, 
-    fontFamily: "Montserrat, sans-serif", 
+    paddingRight: 6,
+    fontFamily: "Montserrat, sans-serif",
     fontStyle: "italic",
     color: theme.custom.greyAlpha,
-    textDecorationLine: "underline" 
-  }
+    textDecorationLine: "underline",
+  },
 }))
 
 const notEmpty = <TValue extends unknown>(
@@ -156,11 +156,17 @@ export const NewsContent = (props: {
           style={{ display: "flex" }}
           css={{ paddingTop: gutterVertical, paddingBottom: gutterVertical }}
         >
-          <Typography style={{ paddingRight: 6, fontFamily: "GSThree"}}>{"Tags: "}</Typography>
+          <Typography style={{ paddingRight: 6, fontFamily: "GSThree" }}>
+            {"Tags: "}
+          </Typography>
           {(post?.frontmatter?.tags || [])
             .filter(notEmpty)
             .map((tag: string, index) => {
-              return <Typography className={classes.tag} key={index}>{tag}</Typography>
+              return (
+                <Typography className={classes.tag} key={index}>
+                  {tag}
+                </Typography>
+              )
             })}
         </Box>
 
