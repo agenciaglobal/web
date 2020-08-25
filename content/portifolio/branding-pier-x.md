@@ -5,7 +5,8 @@ jobDate: 2017-01-12T02:00:00.000Z
 categorie: branding
 title: BRANDING PIER X
 description: PIER X
-cover_image: /assets/pier.001.jpeg
+cover_image: /assets/43-pier.001.jpeg
+video: /assets/43-pier.001.jpeg
 image: /assets/branding-pier-x.001.jpeg
 text_1: "O Pier X é um movimento. Não é uma loja, mas sim uma cultura. Uma
   maneira de se pensar fluída e integrada. São percursos de um modelo de varejo
