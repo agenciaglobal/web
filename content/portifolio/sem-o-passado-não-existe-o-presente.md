@@ -6,8 +6,8 @@ categorie: advertising
 title: Sem o passado não existe o presente
 description: Uma Incorporadora
 cover_image: /assets/preview-3.png
-video: /assets/paco-santo-inacio.mp4
-image: /assets/preview-5.png
+video: ""
+image: /assets/preview-3.png
 text_1: "Como criar a campanha de lançamento de um projeto imobiliário que
   combina a restauração de uma casa histórica e a construção de um edifício
   residencial contemporâneo? E ao mesmo tempo, como demonstrar todo o respeito
