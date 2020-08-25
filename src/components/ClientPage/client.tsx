@@ -110,8 +110,8 @@ export const ClientComponent = withSize()(
                   textAlign: "left",
                 }}
               >
-                {/* {author} | {role}, {title} */}
-                Alam Pim | CMO, {title}
+                {author} | {role}, {title}
+                {/* Alam Pim | CMO, {title} */}
               </Typography>
             </div>
           </div>

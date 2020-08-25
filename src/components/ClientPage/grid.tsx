@@ -28,8 +28,8 @@ export const ClientGrid = ({ clients }: Props): React.ReactElement => {
           console.log(client)
           return (
             <ClientComponent
-              // author={author}
-              // role={role}
+              author={client.author}
+              role={client.role}
               backgroundImage={client.image}
               author_image={client.author_image}
               key={index}
