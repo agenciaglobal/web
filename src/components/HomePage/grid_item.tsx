@@ -34,6 +34,7 @@ export const GridItem = withWidth()(
                         filter: `blur(${isVisible ? 0 : 0}px)`,
                         width: "100%",
                         backgroundSize: "cover",
+                        backgroundPosition: "center",
                         height: 0,
                         paddingBottom: "75%",
                       }}

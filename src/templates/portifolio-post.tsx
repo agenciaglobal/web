@@ -197,6 +197,7 @@ export const MainTranslatedImage = withWidth()(
           alignItems: "center",
           backgroundImage: `url(${props.image})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
           width: `calc( 100% + ${2 * margin}px)`,
           transform: `translate( -${margin}px , -${isDesktop ? 187 : 187}px )`,
         }}
