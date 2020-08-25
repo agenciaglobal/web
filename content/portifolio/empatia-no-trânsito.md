@@ -5,9 +5,9 @@ jobDate: 2019-01-09T02:00:00.000Z
 categorie: advertising
 title: Empatia no Trânsito
 description: Governo do RS
-cover_image: /assets/emprrrr.png
+cover_image: /assets/banner-empatia.png
 video: /assets/teste-gov.mp4
-image: /assets/emprrrr.png
+image: /assets/banner-empatia.png
 text_1: "Com o número de mortes crescendo a cada ano, o Governo do Estado do Rio
   Grande do Sul nos solicitou que encontrássemos uma solução para incentivar uma
   neste cenário. "
