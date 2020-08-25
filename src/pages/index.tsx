@@ -58,6 +58,7 @@ export const pageQuery = graphql`
             title
             description
             image
+            cover_image
             video
             categorie
           }

@@ -1643,6 +1643,7 @@ export type MdxFrontmatterFilterInput = {
   job?: Maybe<StringQueryOperatorInput>
   black_image?: Maybe<StringQueryOperatorInput>
   image?: Maybe<StringQueryOperatorInput>
+  cover_image?: Maybe<StringQueryOperatorInput>
   tag?: Maybe<StringQueryOperatorInput>
   description?: Maybe<StringQueryOperatorInput>
   image_1?: Maybe<StringQueryOperatorInput>
