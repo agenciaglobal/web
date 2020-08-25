@@ -48,7 +48,6 @@ export const ExpandTextHome = (props: {
         flexDirection: "column",
         height: "calc( 100% - 44px )",
         justifyContent: "space-between",
-        position: "relative",
         background: "transparent",
         ...props.style,
       }}
