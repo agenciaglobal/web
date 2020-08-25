@@ -1,9 +1,8 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import * as React from "react"
-import { EmployeeComponent } from "./employer"
+import { ClientComponent } from "./client"
 import "./index.css"
 import Masonry from "react-masonry-css"
-import { useState } from "react"
 
 interface Props {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -13,7 +12,6 @@ const useGridStyles = makeStyles(() => ({ div: { margin: "20px 0 40px" } }))
 
 export const ClientGrid = ({ clients }: Props): React.ReactElement => {
   const classes = useGridStyles()
-  const [expanded, setExpanded] = useState(-1)
   return (
     <div className={classes.div}>
       <Masonry
@@ -22,18 +20,18 @@ export const ClientGrid = ({ clients }: Props): React.ReactElement => {
         columnClassName="global-clients-grid-column"
         style={{
           marginTop: 24,
+          paddingBottom: 120,
           // transform: `translate( -${0}px , -${187}px )`,
         }}
       >
         {clients.map((client, index: number) => {
           console.log(client)
           return (
-            <EmployeeComponent
+            <ClientComponent
+              // author={author}
+              // role={role}
               backgroundImage={client.image}
               author_image={client.author_image}
-              index={index}
-              expanded={expanded}
-              setExpanded={setExpanded}
               key={index}
               title={client.name}
               testimonial={client.testimonial}

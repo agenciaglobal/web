@@ -5,17 +5,19 @@ import { withSize, SizeMeProps } from "react-sizeme"
 interface Props {
   backgroundImage: string
   author_image: string
+  author: string
+  role: string
   title: string
   job: string
-  index: number
-  expanded: number
   testimonial: string
 }
 
-export const EmployeeComponent = withSize()(
+export const ClientComponent = withSize()(
   ({
     author_image,
     testimonial,
+    author,
+    role,
     backgroundImage,
     size,
     title,
