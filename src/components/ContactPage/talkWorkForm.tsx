@@ -278,7 +278,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                       customInput={TextField}
                       max={11}
                       required={true}
-                      placeholder={"Phone"}
+                      // placeholder={"Phone"}
                       label={"Telefone"}
                       error={Boolean(errors.phone)}
                       fullWidth={true}
