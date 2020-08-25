@@ -32,6 +32,10 @@ export const GridItem = withWidth()(
                           props.portifolio?.cover_image || ""
                         })`,
                         filter: `blur(${isVisible ? 0 : 0}px)`,
+                        width: "100%",
+                        backgroundSize: "cover",
+                        height: 0,
+                        paddingBottom: "75%",
                       }}
                     >
                       <ExpandTextHome
@@ -52,36 +56,48 @@ export const GridItem = withWidth()(
                 {src !== "" && (
                   <Box
                     style={{
-                      display: "flex",
-                      filter: `blur(${isVisible ? 0 : 0}px)`,
                       width: "100%",
+                      height: 0,
+                      paddingBottom: "75%",
+                      position: "relative",
                     }}
                   >
-                    <video
+                    <Box
                       style={{
-                        objectFit: "cover",
-                        // maxWidth: "100%",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                      src={src}
-                      muted
-                      playsInline
-                      autoPlay
-                      loop
-                    />
-                    <ExpandTextHome
-                      full={true}
-                      style={{
+                        display: "flex",
+                        filter: `blur(${isVisible ? 0 : 0}px)`,
                         position: "absolute",
                         top: 0,
-                        width: "calc( 100% - 44px )",
+                        right: 0,
+                        bottom: 0,
+                        left: 0,
                       }}
-                      date={date}
-                      title={props.portifolio.title || ""}
-                      description={props.portifolio.description || ""}
-                      categorie={props.portifolio.categorie || ""}
-                    />
+                    >
+                      <video
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                        }}
+                        src={src}
+                        muted
+                        playsInline
+                        autoPlay
+                        loop
+                      />
+                      <ExpandTextHome
+                        full={true}
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          width: "calc( 100% - 44px )",
+                        }}
+                        date={date}
+                        title={props.portifolio.title || ""}
+                        description={props.portifolio.description || ""}
+                        categorie={props.portifolio.categorie || ""}
+                      />
+                    </Box>
                   </Box>
                 )}
               </div>
