@@ -5,6 +5,7 @@ export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
   full?: boolean
+  postType: string
   title: string
   description: string
 }): React.ReactElement => {
@@ -31,7 +32,7 @@ export const ExpandTExt = (props: {
           textTransform: "uppercase",
         }}
       >
-        {props.date} | notícia
+        {props.date} | {props.postType}
       </Typography>
       <div>
         <Typography

@@ -9,7 +9,7 @@ type: RIGHT
 
 author: article
 
-postType: article
+postType: artigo
 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
