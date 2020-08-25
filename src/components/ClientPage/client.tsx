@@ -112,6 +112,7 @@ export const ClientComponent = withSize()(
               >
                 {author} | {role}, {title}
                 {/* Alam Pim | CMO, {title} */}
+
               </Typography>
             </div>
           </div>
