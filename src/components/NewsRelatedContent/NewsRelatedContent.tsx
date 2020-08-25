@@ -3,10 +3,12 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { ExpandTExt } from "./NewsPage/components/expand_text"
+import { ExpandTExt } from "../NewsPage/components/expand_text"
 import { Maybe, SitePageContextNews } from "global"
 import withWidth from "@material-ui/core/withWidth"
-import { useExtrapolatedMargin } from "../templates/portifolio-post"
+import { useExtrapolatedMargin } from "../../templates/portifolio-post"
+import { RelatedNewsDesktop } from "./RelatedNewsDesktop"
+import { RelatedNewsMobile } from "./RelatedNewsMobile"
 
 export const useStyles = makeStyles((theme: Theme) => ({
   type: {
@@ -38,16 +40,23 @@ export const NewsRelatedContent = withWidth()(
       >
         <Box
           style={{
-            height: 150,
+            height: isXS ? 100 : 120,
             paddingLeft: margin,
             paddingRight: margin,
             display: "flex",
             justifyContent: "flex-start",
             alignItems: "center",
-            marginLeft: 24,
+            // marginLeft: 24,
           }}
         >
-          <Typography variant={"h2"} noWrap={false} style={{ fontSize: 30 }}>
+          <Typography
+            noWrap={false}
+            style={{
+              fontFamily: "GSThree",
+              fontSize: isXS ? 20 : 30,
+              color: "#000",
+            }}
+          >
             Conteúdo Relacionado
           </Typography>
         </Box>
@@ -58,7 +67,7 @@ export const NewsRelatedContent = withWidth()(
             paddingLeft: margin,
             paddingRight: margin,
             width: `calc( 100% - ${2 * margin}px)`,
-            justifyContent: isXS ? "unset" : "space-around",
+            justifyContent: isXS ? "unset" : "space-between",
           }}
         >
           {newVar
@@ -70,30 +79,30 @@ export const NewsRelatedContent = withWidth()(
                 <Box
                   key={index}
                   style={{
-                    height: !isXS ? 450 : 200,
                     width: isXS ? "100%" : "30%",
-                    marginBottom: 20,
                   }}
                 >
                   <Link
                     style={{
                       textDecoration: "none",
-                      display: isXS ? "flex" : "block",
-                      height: !isXS ? 450 : 200,
-                      flexDirection: "row",
+                      display: "flex",
                       marginBottom: 20,
                     }}
                     to={el?.fields?.slug || ""}
                   >
                     <div
                       style={{
-                        width: !isXS ? "100%" : "50%",
+                        height: !isXS ? "70vh" : "auto",
+                        // paddingBottom: !isXS ? 0 : "60%",
+                        width: !isXS ? "85%" : "50%",
                         background: `url(${image})`,
                         backgroundSize: "cover",
+                        backgroundPosition: "center ",
                       }}
                     >
                       {!isXS && (
-                        <ExpandTExt
+                        <RelatedNewsDesktop
+                          postType={el?.frontmatter?.postType || ""}
                           date={el?.frontmatter?.date || ""}
                           title={el?.frontmatter?.title || ""}
                           description={el?.frontmatter?.description || ""}
@@ -106,9 +115,11 @@ export const NewsRelatedContent = withWidth()(
                           height: "100%",
                           width: !isXS ? "100%" : "50%",
                           backgroundSize: "cover",
+                          backgroundPosition: "center",
                         }}
                       >
-                        <ExpandTExt
+                        <RelatedNewsMobile
+                          postType={el?.frontmatter?.postType || ""}
                           date={el?.frontmatter?.date || ""}
                           title={el?.frontmatter?.title || ""}
                           description={el?.frontmatter?.description || ""}

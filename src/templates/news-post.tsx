@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import { NewsContent } from "components/NewsContent/newsContant"
 import { NewsPageList } from "components/NewsPage/newsPageList"
-import { NewsRelatedContent } from "components/NewsRelatedContent"
+import { NewsRelatedContent } from "components/NewsRelatedContent/NewsRelatedContent"
 import {
   Maybe,
   NewsPostBySlugQuery,
