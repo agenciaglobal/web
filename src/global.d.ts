@@ -3358,7 +3358,7 @@ export type ClientQueryQuery = {
       node: Pick<Mdx, "excerpt"> & {
         fields?: Maybe<Pick<MdxFields, "slug">>
         frontmatter?: Maybe<
-          Pick<MdxFrontmatter, "date" | "name" | "description" | "image">
+          Pick<MdxFrontmatter, "date" | "name" | "description" | "image" | "author" | "role">
         >
       }
     }>
