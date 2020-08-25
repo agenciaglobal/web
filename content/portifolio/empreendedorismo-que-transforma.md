@@ -1,8 +1,8 @@
 ---
 path: Empreendedorismo-que-transforma
-date: 2020-08-24T13:19:27.324Z
+date: 2017-01-01T12:19:27.324Z
 jobDate: 2020-08-24T13:19:27.348Z
-categorie: featured
+categorie: advertising
 title: Empreendedorismo Que Transforma
 description: Sebrae RS
 cover_image: /assets/captura-de-tela-2020-08-24-as-13.26.33.png
