@@ -17,8 +17,8 @@ collections:
         label: Tipo de post
         widget: select
         options:
-          - { label: "Notícia", value: "news" }
-          - { label: "Artigo", value: "article" }
+          - { label: "Notícia", value: "notícia" }
+          - { label: "Artigo", value: "artigo" }
       - name: type
         label: Tipo do box de exibição na lista
         widget: select

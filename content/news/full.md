@@ -11,7 +11,7 @@ about: texto sobre o autor
 author_image: /assets/works/natal-iguatemi.png
 image_1: /assets/works/natal-iguatemi.png
 date: 2020-07-12T00:33:11.387Z
-postType: article
+postType: artigo
 type: FULL
 title: Feugiat vivamus at augue eget. Et ligula ullamcorper malesuada proin.
 description: Full

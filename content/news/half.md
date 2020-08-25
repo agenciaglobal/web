@@ -9,7 +9,7 @@ author: article
 
 type: HALF
 
-postType: article
+postType: artigo
 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

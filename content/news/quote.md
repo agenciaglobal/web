@@ -8,7 +8,7 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 type: QUOTE
 
 
-postType: article
+postType: artigo
 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

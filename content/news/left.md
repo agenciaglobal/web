@@ -3,8 +3,8 @@ path: left
 date: 2020-07-12T00:33:11.387Z
 title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 type: LEFT
-author: article
-postType: article
+author: manoel
+postType: artigo
 description: lulinha paz e amor
 image: /assets/works/natal-iguatemi.png
 image_1: /assets/works/natal-iguatemi.png

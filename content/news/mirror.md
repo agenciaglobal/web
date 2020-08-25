@@ -9,7 +9,7 @@ type: MIRROR
 
 author: article
 
-postType: article
+postType: artigo
 
 description: mirror
 

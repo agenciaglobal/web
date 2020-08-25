@@ -6,7 +6,7 @@ import { SitePageContextNewsNodeFrontmatter } from "global"
 
 export const FullNewsComponent = ({
   force = false,
-  current: { date, description, image, slug, title, type },
+  current: { date, description, image, slug, title, type, postType },
 }: {
   force?: boolean
   current: SitePageContextNewsNodeFrontmatter & SlugType
@@ -24,6 +24,7 @@ export const FullNewsComponent = ({
     >
       <Link style={{ textDecoration: "none" }} to={slug || ""}>
         <ExpandTExt
+          postType={postType || ""}
           date={date || ""}
           title={title || ""}
           description={description || ""}
