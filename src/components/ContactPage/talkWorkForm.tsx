@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     "& label.Mui-focused": {
       color: theme.palette.primary.contrastText,
     },
+    "& label.Mui-error": {
+      color: theme.palette.primary.contrastText,
+    },
     "& .MuiInput-underline:after": {
       borderBottomColor: theme.palette.primary.contrastText,
     },
@@ -276,7 +279,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                       max={11}
                       required={true}
                       placeholder={"Phone"}
-                      label={"Phone"}
+                      label={"Telefone"}
                       error={Boolean(errors.phone)}
                       fullWidth={true}
                       isNumericString={false}
