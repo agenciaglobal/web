@@ -33,6 +33,7 @@ export const PortifolioSwitcher = withWidth()(
       <Box
         className={classes.style}
         style={{
+          marginTop: 60,
           width: `calc( 100% + ${2 * margin}px)`,
           transform: `translate( -${margin}px , ${0}px )`,
         }}
