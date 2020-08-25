@@ -7,7 +7,7 @@ title: Empatia no Trânsito
 description: Governo do RS
 cover_image: /assets/emprrrr.png
 video: /assets/teste-gov.mp4
-image: /assets/1000x550.png
+image: /assets/emprrrr.png
 text_1: "Com o número de mortes crescendo a cada ano, o Governo do Estado do Rio
   Grande do Sul nos solicitou que encontrássemos uma solução para incentivar uma
   neste cenário. "
