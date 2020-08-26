@@ -63,7 +63,7 @@ image_25: /assets/mask-group-1.png
 image_26: /assets/group-12.png
 author: Tom Hanks
 job date: 2020-08-20T19:42:46.078Z
-categorie: featured
+categorie: Featured
 title: STORIA 2012, ALGUMAS SAFRAS SÃO EXEPCIONAIS
 description: CASA VALDUGA
 cover_image: /assets/imagem-topo.png

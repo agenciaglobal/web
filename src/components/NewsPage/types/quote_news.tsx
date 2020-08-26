@@ -27,30 +27,24 @@ export const QuoteNewsComponent = ({
   const classes = useStyles()
   return type === "QUOTE" ? (
     <div>
-      <Link
-        className={"global-news-quote"}
-        style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={slug || ""}
-      >
-        <div className={classes.lag}>
-          <div
-            style={{ display: "flex", alignItems: "center" }}
-            className={classes.style}
-          >
-            <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
-              <div style={{ height: 40 }}></div>
-              <Typography
-                style={{
-                  fontFamily: "GSThree",
-                  fontSize: 28,
-                }}
-              >
-                {quote || ""}
-              </Typography>
-            </div>
+      <div className={classes.lag}>
+        <div
+          style={{ display: "flex", alignItems: "center" }}
+          className={classes.style}
+        >
+          <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
+            <div style={{ height: 40 }}></div>
+            <Typography
+              style={{
+                fontFamily: "GSThree",
+                fontSize: 28,
+              }}
+            >
+              {quote || ""}
+            </Typography>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   ) : null
 }

@@ -2,7 +2,7 @@
 path: Lançamento Paço Santo Inácio
 date: 2020-08-24T23:04:18.548Z
 jobDate: 2016-01-01T22:04:18.570Z
-categorie: advertising
+categorie: Advertising
 title: Sem o passado não existe o presente
 description: Uma Incorporadora
 cover_image: /assets/preview-3.png

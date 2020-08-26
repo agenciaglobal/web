@@ -95,12 +95,12 @@ collections:
         label: Categoria
         widget: select
         options:
-          - { label: "featured", value: "featured" }
-          - { label: "branding e estratégia", value: "branding" }
-          - { label: "digital", value: "digital" }
-          - { label: "social", value: "social" }
-          - { label: "crm", value: "crm" }
-          - { label: "advertising", value: "advertising" }
+          - { label: "Featured", value: "Featured" }
+          - { label: "Branding & Estratégia", value: "Branding & Estratégia" }
+          - { label: "Digital Experience", value: "Digital Experience" }
+          - { label: "Social Content", value: "Social Content" }
+          - { label: "CRM", value: "CRM" }
+          - { label: "Advertising", value: "Advertising" }
       - { name: title, label: Título }
       - { name: description, label: Cliente }
 # imagem de capa é a header do post.. mesmo quando houver um vídeo exibido no grid
