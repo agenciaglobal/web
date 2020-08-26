@@ -11,18 +11,19 @@ interface Props {
 
 const useStyles = makeStyles((theme: Theme) => ({
   style: {
-    border: "3px solid",
+    border: "1px solid",
     borderColor: theme.palette.primary.contrastText,
-    width: "45%",
+    width: "48%",
   },
   lag: {
     display: "flex",
     justifyContent: "space-between",
+    height: "30vw"
   },
 }))
 
 export const QuoteNewsComponent = ({
-  current: { description, slug, title, type },
+  current: { description, slug, title, type, postType },
 }: Props): React.ReactElement | null => {
   const classes = useStyles()
   return type === "QUOTE" ? (
@@ -35,6 +36,7 @@ export const QuoteNewsComponent = ({
         <div className={classes.lag}>
           <div style={{}} className={classes.style}>
             <ExpandTExt
+              postType={postType || ""}
               date={type}
               title={title || ""}
               description={description || ""}

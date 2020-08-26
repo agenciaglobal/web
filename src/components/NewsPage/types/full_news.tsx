@@ -22,6 +22,7 @@ export const FullNewsComponent = ({
         paddingBottom: "100%",
         position: "relative",
         backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundImage: `url(${imageSrc})`,
       }}

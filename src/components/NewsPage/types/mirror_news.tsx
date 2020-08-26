@@ -37,6 +37,8 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
           <div
             style={{
               backgroundImage: `url(${imageSrc})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
               width: "48%",
             }}
           >
@@ -49,6 +51,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
           </div>
           <div style={{}} className={classes.style}>
             <ExpandTExt
+              postType={props.postType || ""}
               date={props.type}
               title={props.title || ""}
               description={props.description || ""}
