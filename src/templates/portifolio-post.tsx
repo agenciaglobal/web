@@ -78,7 +78,7 @@ export const FullImage = (props: {
   />
 )
 
-const ImageScroller = (props: { images: string[] }): React.ReactElement => (
+const ImageScrollerhe = (props: { images: string[] }): React.ReactElement => (
   <ScrollMenu
     arrowLeft={<ArrowLeft />}
     arrowRight={<ArrowRight />}
@@ -93,6 +93,33 @@ const ImageScroller = (props: { images: string[] }): React.ReactElement => (
       />
     ))}
   />
+)
+
+const ImageScroller = withWidth()(
+  (
+    props: {
+      images: string[]
+    } & WithWidthProps,
+  ): React.ReactElement => {
+    const isDesktop = isWidthUp("md", props.width || "md")
+    return (
+      <ScrollMenu
+        arrowLeft={isDesktop ? <ArrowLeft /> : null}
+        arrowRight={isDesktop? <ArrowRight /> : null}
+        alignCenter={false}
+        wheel={isDesktop ? false : true}
+        data={props.images.map((el, index) => (
+            <div
+              key={index}
+              className={`menu-item`}
+              style={{
+                background: `url(${el})`,
+              }}
+            />
+        ))}
+      />
+    )
+  },
 )
 
 const QuoteComponent = (props: {
