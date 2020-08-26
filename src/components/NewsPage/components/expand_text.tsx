@@ -13,13 +13,16 @@ export const ExpandTExt = (props: {
     <Box
       style={{
         padding: "15px",
-        maxHeight: "100%",
         display: "flex",
         flexDirection: "column",
+        // maxHeight: "100%",
         height: "calc( 100% - 30px )",
+        width: "calc (100% - 60px)",
+        // width: "100%",
+        // height: "100%",
         justifyContent: "space-between",
-        position: "relative",
-        background: "transparent",
+        // position: "relative",
+        background: "rgba(0, 0, 0, 0.35)",
         ...props.style,
       }}
     >

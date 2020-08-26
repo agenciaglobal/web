@@ -16,13 +16,25 @@ export const FullNewsComponent = ({
     <div
       className={"global-news-full"}
       style={{
-        marginBottom: 30,
+        // marginBottom: 30,
+        width: "100%",
+        height: 0,
+        paddingBottom: "100%",
+        position: "relative",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundImage: `url(${imageSrc})`,
       }}
     >
-      <Link style={{ textDecoration: "none" }} to={slug || ""}>
+      <Link style={{ 
+        textDecoration: "none",
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        }}
+        to={slug || ""}>
         <ExpandTExt
           postType={postType || ""}
           date={date || ""}
