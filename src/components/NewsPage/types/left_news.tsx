@@ -10,16 +10,17 @@ interface Props {
 }
 const useStyles = makeStyles(() => ({
   style: {
-    width: "45%",
+    width: "48%",
   },
   lag: {
     display: "flex",
     justifyContent: "space-between",
+    height: "30vw",
   },
 }))
 
 export const LeftNewsComponent = ({
-  current: { description, image, slug, title, type },
+  current: { description, image, slug, title, type, postType },
 }: Props): React.ReactElement | null => {
   const classes = useStyles()
   const imageSrc = image || ""
@@ -34,10 +35,13 @@ export const LeftNewsComponent = ({
           <div
             style={{
               backgroundImage: `url(${imageSrc})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
             className={classes.style}
           >
             <ExpandTExt
+              postType={postType || ""}
               date={type}
               title={title || ""}
               description={description || ""}

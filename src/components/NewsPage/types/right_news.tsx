@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const RightNewsComponent = ({
-  current: { description, image, slug, title, type },
+  current: { description, image, slug, title, type, postType },
 }: Props): React.ReactElement | null => {
   const imageSrc = image || ""
   return type === "RIGHT" ? (
@@ -25,16 +25,19 @@ export const RightNewsComponent = ({
             justifyContent: "space-between",
           }}
         >
-          <div style={{ width: "40%" }} />
+          <div style={{ width: "48%" }} />
           <div
             style={{
-              width: "40%",
+              width: "48%",
               // marginLeft: "auto",
               backgroundImage: `url(${imageSrc})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height: "30vw",
             }}
           >
             <ExpandTExt
-              type={"Full"}
+              postType={postType || ""}
               date={type}
               title={title || ""}
               description={description || ""}

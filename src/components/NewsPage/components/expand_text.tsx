@@ -4,7 +4,7 @@ import * as React from "react"
 export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
-  full?: boolean
+  type: string
   postType: string
   title: string
   description: string
@@ -13,13 +13,16 @@ export const ExpandTExt = (props: {
     <Box
       style={{
         padding: "15px",
-        maxHeight: "100%",
         display: "flex",
         flexDirection: "column",
+        // maxHeight: "100%",
         height: "calc( 100% - 30px )",
+        width: "calc (100% - 60px)",
+        // width: "100%",
+        // height: "100%",
         justifyContent: "space-between",
-        position: "relative",
-        background: "transparent",
+        // position: "relative",
+        background: "rgba(0, 0, 0, 0.35)",
         ...props.style,
       }}
     >
@@ -37,7 +40,7 @@ export const ExpandTExt = (props: {
       <div>
         <Typography
           style={{
-            fontSize: props.full ? "30px" : "16px",
+            fontSize: props.type === "FULL" ? "30px" : "16px",
             color: "#FFF",
             lineHeight: "1.3em",
             fontFamily: "GSThree",

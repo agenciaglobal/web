@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core"
+import { Box, Typography } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
@@ -12,18 +12,20 @@ interface Props {
 
 const useStyles = makeStyles((theme: Theme) => ({
   border: {
-    border: "3px solid",
+    border: "1px solid",
     borderColor: theme.palette.primary.contrastText,
   },
   style: {
-    width: "40%",
+    width: "48%",
   },
   style2: {
-    width: "40%",
+    width: "48%",
   },
   lag: {
     display: "flex",
     justifyContent: "space-between",
+    height: 0,
+    paddingBottom: "100%",
   },
 }))
 
@@ -42,12 +44,18 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
       >
         <Box className={classes.lag}>
           <div className={classes.style}>
-            <div style={{ height: "20%" }} />
+            <div style={{ paddingTop: "35%" }} />
             <div
-              className={classes.border}
-              style={{ height: "80%", backgroundImage: `url(${imageSrc})` }}
+              // className={classes.border}
+              style={{
+                height: "32vw",
+                backgroundImage: `url(${imageSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <ExpandTExt
+                postType={props.current?.postType || ""}
                 date={date}
                 title={props.current?.title || ""}
                 description={props.current?.description || ""}
@@ -55,12 +63,22 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
             </div>
           </div>
           <div className={classes.style2}>
-            <div className={classes.border} style={{ height: "80%" }}>
-              <ExpandTExt
-                date={date}
-                title={props.current?.title || ""}
-                description={props.current?.description || ""}
-              />
+            <div
+              className={classes.border}
+              style={{ height: "32vw", display: "flex", alignItems: "center" }}
+            >
+              <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
+                <div style={{ height: 40 }}></div>
+                <Typography
+                  style={{
+                    fontFamily: "GSThree",
+                    fontSize: 28,
+                  }}
+                >
+                  {/* {props.current?.quote || ""} */}
+                  Say something meanignfull Say something meanignfull
+                </Typography>
+              </div>
             </div>
             <div style={{ height: "20%" }} />
           </div>

@@ -5,7 +5,6 @@ import { Maybe, NewsPostBySlugQuery, SitePageContextNews } from "global"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import withWidth from "@material-ui/core/withWidth"
 import { useExtrapolatedMargin } from "src/templates/portifolio-post"
-import image from "static/ramarim.png"
 import { MarkDownRendererNews } from "components/MarkDownRenderer/markDownRendererNews"
 
 export function LongMontsetrratText(props: {
