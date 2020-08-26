@@ -1,6 +1,5 @@
-import { Typography, WithWidthProps } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import React, { useState } from "react"
-import withWidth from "@material-ui/core/withWidth"
 import { withSize, SizeMeProps } from "react-sizeme"
 
 interface Props {
