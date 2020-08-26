@@ -15,10 +15,9 @@ export const GridFour = ({
   centerRight,
   right,
 }: Props): React.ReactElement => {
-  const gutters = 10
   return (
     <Box css={{ paddingTop: 16, paddingBottom: 16 }}>
-      <Grid container>
+      <Grid spacing={2} container>
         <Grid
           item={true}
           xs={6}
@@ -28,7 +27,6 @@ export const GridFour = ({
             width: "100%",
             justifyContent: "center",
             alignItems: "center",
-            padding: 0,
           }}
         >
           <Box
@@ -37,7 +35,7 @@ export const GridFour = ({
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              paddingRight: gutters,
+              // paddingRight: gutters,
             }}
           >
             {left}
@@ -52,7 +50,6 @@ export const GridFour = ({
             width: "100%",
             justifyContent: "center",
             alignItems: "baseline",
-            padding: 0,
           }}
         >
           <Box
@@ -60,7 +57,7 @@ export const GridFour = ({
               height: "100%",
               display: "flex",
               justifyContent: "center",
-              paddingLeft: gutters,
+              // paddingLeft: gutters,
               alignItems: "center",
             }}
           >
@@ -76,7 +73,6 @@ export const GridFour = ({
             width: "100%",
             justifyContent: "center",
             alignItems: "baseline",
-            padding: 0,
           }}
         >
           <Box
@@ -84,7 +80,7 @@ export const GridFour = ({
               height: "100%",
               display: "flex",
               justifyContent: "center",
-              paddingLeft: gutters,
+              // paddingLeft: gutters,
               alignItems: "center",
             }}
           >
@@ -100,7 +96,6 @@ export const GridFour = ({
             width: "100%",
             justifyContent: "center",
             alignItems: "baseline",
-            padding: 0,
           }}
         >
           <Box
@@ -108,7 +103,7 @@ export const GridFour = ({
               height: "100%",
               display: "flex",
               justifyContent: "center",
-              paddingLeft: gutters,
+              // paddingLeft: gutters,
               alignItems: "center",
             }}
           >
