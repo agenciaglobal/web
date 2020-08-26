@@ -4,6 +4,7 @@ date: 2020-08-13T13:59:40.634Z
 title: hey
 description: fe
 postType: notícia
+quote: palavras curtas
 type: HALF
 image: /assets/10-maria-dornelles.jpg
 tags:

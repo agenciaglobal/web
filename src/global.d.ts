@@ -1607,6 +1607,7 @@ export type MdxFrontmatter = {
   categorie?: Maybe<Scalars["String"]>
   job_date?: Maybe<Scalars["Date"]>
   type?: Maybe<Scalars["String"]>
+  quote?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Maybe<Scalars["String"]>>>
   body?: Maybe<Scalars["String"]>
   testimonial?: Maybe<Scalars["String"]>
@@ -2540,6 +2541,7 @@ export type SitePageContextNewsNodeFilterInput = {
 
 export type SitePageContextNewsNodeFrontmatter = {
   postType?: Maybe<Scalars["String"]>
+  quote?: Maybe<Scalars["String"]>
   date?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
@@ -2553,6 +2555,8 @@ export type SitePageContextNewsNodeFrontmatterFilterInput = {
   description?: Maybe<StringQueryOperatorInput>
   image?: Maybe<StringQueryOperatorInput>
   type?: Maybe<StringQueryOperatorInput>
+  postType?: Maybe<StringQueryOperatorInput>
+  quote?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageContextNext = {
@@ -3466,6 +3470,7 @@ export type NewsPostBySlugQuery = {
           | "text_1"
           | "text_2"
           | "image"
+          | "quote"
         >
       >
     }

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export const QuoteNewsComponent = ({
-  current: { description, slug, title, type, postType },
+  current: { quote, slug, type },
 }: Props): React.ReactElement | null => {
   const classes = useStyles()
   return type === "QUOTE" ? (
@@ -33,7 +33,10 @@ export const QuoteNewsComponent = ({
         to={slug || ""}
       >
         <div className={classes.lag}>
-          <div style={{}} className={classes.style}>
+          <div
+            style={{ display: "flex", alignItems: "center" }}
+            className={classes.style}
+          >
             <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
               <div style={{ height: 40 }}></div>
               <Typography
@@ -42,8 +45,7 @@ export const QuoteNewsComponent = ({
                   fontSize: 28,
                 }}
               >
-                {/* {props.current?.quote || ""} */}
-                Say something meanignfull Say something meanignfull
+                {quote || ""}
               </Typography>
             </div>
           </div>

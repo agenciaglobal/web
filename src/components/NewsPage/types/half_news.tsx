@@ -75,8 +75,8 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
                     fontSize: 28,
                   }}
                 >
-                  {/* {props.current?.quote || ""} */}
-                  Say something meanignfull Say something meanignfull
+                  {props.current?.quote || ""}
+                  {/* Say something meanignfull Say something meanignfull */}
                 </Typography>
               </div>
             </div>

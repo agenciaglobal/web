@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const RightNewsComponent = ({
-  current: { description, image, slug, title, type, postType },
+  current: { description, date, image, slug, title, type, postType },
 }: Props): React.ReactElement | null => {
   const imageSrc = image || ""
   return type === "RIGHT" ? (
@@ -38,7 +38,7 @@ export const RightNewsComponent = ({
           >
             <ExpandTExt
               postType={postType || ""}
-              date={type}
+              date={date || ""}
               title={title || ""}
               description={description || ""}
             />

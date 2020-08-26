@@ -11,6 +11,8 @@ type: HALF
 
 postType: artigo
 
+quote: o dia hoje está esplendoroso
+
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 image: /assets/works/varanda.png
