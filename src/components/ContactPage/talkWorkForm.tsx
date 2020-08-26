@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     "& label": {
       fontFamily: "Montserrat, sans-serif",
     },
+    "& input": {
+      fontFamily: "Montserrat, sans-serif",
+    },
+    "& textarea": {
+      fontFamily: "Montserrat, sans-serif",
+    },
     "& label.Mui-focused": {
       color: theme.palette.primary.contrastText,
     },
@@ -281,7 +287,7 @@ export const TalkWorkForm = (): React.ReactElement => {
                       // placeholder={"Phone"}
                       label={"Telefone"}
                       error={Boolean(errors.phone)}
-                      fullWidth={true}
+                      // fullWidth={true}
                       isNumericString={false}
                       value={values.phone}
                       name={"phone"}
