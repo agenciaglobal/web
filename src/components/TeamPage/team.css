@@ -1,24 +1,40 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  grid-auto-rows: 1fr;
+.global-team-grid {
+  z-index: -1;
+  display: flex;
+  width: auto;
 }
 
-.grid::before {
-  content: "";
-  width: 0;
-  padding-bottom: 100%;
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
+.global-team-grid-column {
+  background-clip: padding-box;
 }
 
-.grid > *:first-child {
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
+.global-team-grid-column > div {
+  /*margin-bottom: 20px;*/
 }
 
-/* Just to make the grid visible */
+.global-team-grid > div:nth-child(2) {
+  /*margin-left: 20px;*/
+}
 
-.grid > * {
-  background: rgba(0, 0, 0, 0.1);
+.global-team-grid > div:nth-child(3) {
+  /*margin-left: 20px;*/
+}
+
+.global-team-grid-column > div > .global-team-right > div {
+  min-height: 300px;
+}
+.global-team-grid-column > div > .global-team-left > div {
+  min-height: 300px;
+}
+.global-team-grid-column > div > .global-team-half > div {
+  min-height: 350px;
+}
+.global-team-grid-column > .global-team-full > a > div {
+  min-height: 350px;
+}
+.global-team-grid-column > div > .global-team-mirror > div {
+  min-height: 330px;
+}
+.global-team-grid-column > div > .global-team-quote > div {
+  min-height: 320px;
 }

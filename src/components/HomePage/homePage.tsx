@@ -1,6 +1,5 @@
 import { Hidden } from "@material-ui/core"
 import * as React from "react"
-import { alphabetically } from "shared/alphabetically"
 import { HomeGrid } from "./grid"
 import "./index.css"
 import { DesktopTabs } from "./select_desktop"
@@ -20,7 +19,7 @@ export const HomePage = ({
   projects,
 }: Props): React.ReactElement => {
   const [val, setVal] = React.useState<number>(0)
-  categories = categories.sort(alphabetically)
+  categories = categories.sort((a, b) => (a.startsWith("f") ? -1 : 1))
   console.log(projects, categories)
   return (
     <React.Fragment>

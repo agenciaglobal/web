@@ -95,7 +95,7 @@ const useGridStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-const notEmpty = <TValue extends unknown>(
+export const notEmpty = <TValue extends unknown>(
   value: TValue | null | undefined,
 ): value is TValue => value !== null && value !== undefined
 

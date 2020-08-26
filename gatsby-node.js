@@ -39,6 +39,7 @@ let s = `
               title
               description
               image
+              postType
               author
               type
             }

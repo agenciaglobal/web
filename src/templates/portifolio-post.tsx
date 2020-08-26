@@ -15,7 +15,10 @@ import { GridLocal } from "./grid_local"
 import { GridSix } from "./grid_six"
 import { GridFour } from "./grid_four"
 import ScrollMenu from "react-horizontal-scrolling-menu"
-import { LongMontsetrratText } from "components/NewsContent/newsContant"
+import {
+  LongMontsetrratText,
+  notEmpty,
+} from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
 import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
 
@@ -252,6 +255,20 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const x = data?.mdx?.frontmatter
+  let tValues = [
+    x?.image_7,
+    x?.image_8,
+    x?.image_9,
+    x?.image_10,
+    x?.image_11,
+    x?.image_12,
+    x?.image_13,
+    x?.image_14,
+    x?.image_15,
+    x?.image_16,
+  ]
+    .filter(notEmpty)
+    .filter((imge) => imge !== "")
   return (
     <React.Fragment>
       <MainTranslatedImage
@@ -310,33 +327,7 @@ const PortifolioPostTemplate = ({
           </Box>
         )}
         {/* CARROSSEL */}
-        {[
-          x?.image_7,
-          x?.image_8,
-          x?.image_9,
-          x?.image_10,
-          x?.image_11,
-          x?.image_12,
-          x?.image_13,
-          x?.image_14,
-          x?.image_15,
-          x?.image_16,
-        ].filter((imge) => imge && imge !== "").length >= 4 && (
-          <ImageScroller
-            images={[
-              x?.image_7 || "",
-              x?.image_8 || "",
-              x?.image_9 || "",
-              x?.image_10 || "",
-              x?.image_11 || "",
-              x?.image_12 || "",
-              x?.image_13 || "",
-              x?.image_14 || "",
-              x?.image_15 || "",
-              x?.image_16 || "",
-            ]}
-          />
-        )}
+        {tValues.length >= 4 && <ImageScroller images={tValues} />}
         {/* TEXTO 5 */}
         {x?.text_6 && x?.text_6 !== "" && (
           <Box>
