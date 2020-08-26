@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-between",
     height: 0,
-    paddingBottom: "100%"
+    paddingBottom: "100%",
   },
 }))
 
@@ -47,7 +47,12 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
             <div style={{ paddingTop: "35%" }} />
             <div
               // className={classes.border}
-              style={{ height: "32vw", backgroundImage: `url(${imageSrc})` }}
+              style={{
+                height: "32vw",
+                backgroundImage: `url(${imageSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <ExpandTExt
                 postType={props.current?.postType || ""}

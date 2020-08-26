@@ -26,15 +26,17 @@ export const FullNewsComponent = ({
         backgroundImage: `url(${imageSrc})`,
       }}
     >
-      <Link style={{ 
-        textDecoration: "none",
-        position: "absolute",
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
+      <Link
+        style={{
+          textDecoration: "none",
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
         }}
-        to={slug || ""}>
+        to={slug || ""}
+      >
         <ExpandTExt
           postType={postType || ""}
           date={date || ""}

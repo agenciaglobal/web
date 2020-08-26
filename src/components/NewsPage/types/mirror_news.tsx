@@ -11,13 +11,14 @@ interface Props {
 
 const useStyles = makeStyles((theme: Theme) => ({
   style: {
-    border: "3px solid",
+    border: "1px solid",
     borderColor: theme.palette.primary.contrastText,
-    width: "45%",
+    width: "48%",
   },
   lag: {
     display: "flex",
     justifyContent: "space-between",
+    height: "30vw",
   },
 }))
 
@@ -36,10 +37,11 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
           <div
             style={{
               backgroundImage: `url(${imageSrc})`,
+              width: "48%",
             }}
-            className={classes.style}
           >
             <ExpandTExt
+              postType={props.postType || ""}
               date={props.type}
               title={props.title || ""}
               description={props.description || ""}
