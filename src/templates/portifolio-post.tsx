@@ -255,7 +255,7 @@ const PortifolioPostTemplate = ({
   pageContext: { next, previous },
 }: Props): React.ReactElement => {
   const x = data?.mdx?.frontmatter
-  let tValues = [
+  const tValues = [
     x?.image_7,
     x?.image_8,
     x?.image_9,
