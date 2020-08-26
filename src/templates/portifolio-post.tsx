@@ -3,6 +3,8 @@ import {
   isWidthUp,
   Typography,
   WithWidthProps,
+  Theme,
+  useTheme,
 } from "@material-ui/core"
 import { SizeMe } from "react-sizeme"
 import { graphql } from "gatsby"
@@ -78,21 +80,56 @@ export const FullImage = (props: {
   />
 )
 
-const ImageScrollerhe = (props: { images: string[] }): React.ReactElement => (
-  <ScrollMenu
-    arrowLeft={<ArrowLeft />}
-    arrowRight={<ArrowRight />}
-    alignCenter={false}
-    data={props.images.map((el, index) => (
-      <div
-        key={index}
-        className={`menu-item`}
-        style={{
-          background: `url(${el})`,
-        }}
-      />
-    ))}
-  />
+const CustoArrowLeft = (props: { theme: Theme }): React.ReactElement => (
+  <svg
+    width="35"
+    height="35"
+    viewBox="0 0 35 35"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="17.5"
+      cy="17.5"
+      r="16.5"
+      transform="rotate(-180 17.5 17.5)"
+      fill="none"
+      fill-opacity="0.75"
+      stroke="#FFCC00"
+      stroke-width="2"
+    />
+    <path
+      d="M19.9289 23.9998L13.2114 17.2823L20.2825 10.2112"
+      stroke={props.theme.custom.grey1}
+      stroke-width="2"
+    />
+  </svg>
+)
+
+const CustoArrowRight = (props: { theme: Theme }): React.ReactElement => (
+  <svg
+    width="35"
+    height="35"
+    viewBox="0 0 35 35"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="17.5"
+      cy="17.5"
+      r="16.5"
+      transform="rotate(-180 17.5 17.5)"
+      fill="none"
+      fill-opacity="0.75"
+      stroke="#FFCC00"
+      stroke-width="2"
+    />
+    <path
+      d="M15.0711 11.0002L21.7886 17.7177L14.7175 24.7888"
+      stroke={props.theme.custom.grey1}
+      stroke-width="2"
+    />
+  </svg>
 )
 
 const ImageScroller = withWidth()(
@@ -102,20 +139,21 @@ const ImageScroller = withWidth()(
     } & WithWidthProps,
   ): React.ReactElement => {
     const isDesktop = isWidthUp("md", props.width || "md")
+    const theme = useTheme()
     return (
       <ScrollMenu
-        arrowLeft={isDesktop ? <ArrowLeft /> : null}
-        arrowRight={isDesktop? <ArrowRight /> : null}
+        arrowLeft={isDesktop ? <CustoArrowLeft theme={theme} /> : null}
+        arrowRight={isDesktop ? <CustoArrowRight theme={theme} /> : null}
         alignCenter={false}
         wheel={isDesktop ? false : true}
         data={props.images.map((el, index) => (
-            <div
-              key={index}
-              className={`menu-item`}
-              style={{
-                background: `url(${el})`,
-              }}
-            />
+          <div
+            key={index}
+            className={`menu-item`}
+            style={{
+              background: `url(${el})`,
+            }}
+          />
         ))}
       />
     )
