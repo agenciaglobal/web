@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   lag: {
     display: "flex",
     justifyContent: "space-between",
-    height: "30vw"
+    height: "30vw",
   },
 }))
 

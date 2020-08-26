@@ -33,7 +33,7 @@ export const RightNewsComponent = ({
               backgroundImage: `url(${imageSrc})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "30vw"
+              height: "30vw",
             }}
           >
             <ExpandTExt

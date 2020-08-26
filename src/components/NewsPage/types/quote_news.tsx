@@ -1,4 +1,4 @@
-import { makeStyles, Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme, Typography } from "@material-ui/core"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { ExpandTExt } from "components/NewsPage/components/expand_text"
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   lag: {
     display: "flex",
     justifyContent: "space-between",
-    height: "30vw"
+    height: "30vw",
   },
 }))
 
@@ -35,12 +35,16 @@ export const QuoteNewsComponent = ({
       >
         <div className={classes.lag}>
           <div style={{}} className={classes.style}>
-            <ExpandTExt
-              postType={postType || ""}
-              date={type}
-              title={title || ""}
-              description={description || ""}
-            />
+              <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
+                <div style={{ height: 40}}></div>
+                <Typography style={{
+                  fontFamily: "GSThree",
+                  fontSize: 28,
+                }}>
+                  {/* {props.current?.quote || ""} */}
+                  Say something meanignfull Say something meanignfull
+                </Typography>
+              </div>
           </div>
         </div>
       </Link>
