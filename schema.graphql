@@ -567,6 +567,7 @@ type MdxFrontmatter {
     locale: String
   ): Date
   description: String
+  cover_image: String
   image: String
   image_1: String
   image_2: String
