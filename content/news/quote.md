@@ -7,6 +7,7 @@ title: Platea dictumst vestibulum rhoncus est pellentesque elit.
 
 type: QUOTE
 
+quote: good morning baby
 
 postType: artigo
 

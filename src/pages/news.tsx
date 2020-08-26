@@ -27,7 +27,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(filter: { fileAbsolutePath: { regex: "/content/news/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/content/news/" } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
       totalCount
       edges {
         node {
@@ -42,6 +45,7 @@ export const pageQuery = graphql`
             image
             type
             postType
+            quote
           }
         }
       }

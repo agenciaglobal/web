@@ -35,7 +35,10 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
         to={props.slug || ""}
       >
         <div className={classes.lag}>
-          <div style={{}} className={classes.style}>
+          <div
+            style={{ display: "flex", alignItems: "center" }}
+            className={classes.style}
+          >
             <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
               <div style={{ height: 40 }}></div>
               <Typography
@@ -44,8 +47,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
                   fontSize: 28,
                 }}
               >
-                {/* {props.current?.quote || ""} */}
-                Say something meanignfull Say something meanignfull
+                {props.quote || ""}
               </Typography>
             </div>
           </div>
@@ -59,7 +61,7 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
           >
             <ExpandTExt
               postType={props.postType || ""}
-              date={props.type}
+              date={props.date || ""}
               title={props.title || ""}
               description={props.description || ""}
             />

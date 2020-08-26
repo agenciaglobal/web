@@ -50,7 +50,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(filter: { fileAbsolutePath: { regex: "/content/portifolio/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/content/portifolio/" } }
+      sort: { order: DESC, fields: frontmatter___jobDate }
+    ) {
       totalCount
       edges {
         node {

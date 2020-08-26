@@ -11,6 +11,8 @@ author: article
 
 postType: artigo
 
+quote: bom dia luz do dia
+
 description: mirror
 
 image: /assets/works/empreendedorismo.png
