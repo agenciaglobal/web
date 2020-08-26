@@ -15,7 +15,6 @@ export const GridFour = ({
   centerRight,
   right,
 }: Props): React.ReactElement => {
-  const gutters = 10
   return (
     <Box css={{ paddingTop: 16, paddingBottom: 16 }}>
       <Grid spacing={2} container>
