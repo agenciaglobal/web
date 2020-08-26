@@ -1,5 +1,4 @@
 import { makeStyles, Theme, Typography } from "@material-ui/core"
-import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { SlugType } from "components/NewsPage/types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
@@ -22,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export const QuoteNewsComponent = ({
-  current: { quote, slug, type },
+  current: { quote, type },
 }: Props): React.ReactElement | null => {
   const classes = useStyles()
   return type === "QUOTE" ? (

@@ -23,7 +23,6 @@ import {
 } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
 import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
-import { ArrowRight, ArrowLeft } from "@material-ui/icons"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
