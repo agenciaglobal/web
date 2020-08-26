@@ -20,8 +20,8 @@ const useStyles = makeStyles(() => ({
       minWidth: 0,
       padding: "0px 24px 0px 0px",
       "& selected": {
-        background: "transparent"
-      }
+        background: "transparent",
+      },
     },
   },
   active: {
