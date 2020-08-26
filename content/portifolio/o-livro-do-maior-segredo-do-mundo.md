@@ -2,7 +2,7 @@
 path: O livro do maior segredo do mundo
 date: 2020-08-13T13:51:22.086Z
 jobDate: 2020-08-24T16:46:22.103Z
-categorie: featured
+categorie: Featured
 title: O Livro do Maior Segredo do Mundo
 description: Shopping Iguatemi Porto Alegre
 cover_image: /assets/1000x550.png

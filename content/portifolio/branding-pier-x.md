@@ -2,7 +2,7 @@
 path: Pier X Branding
 date: 2020-08-24T15:09:36.678Z
 jobDate: 2017-01-12T02:00:00.000Z
-categorie: branding
+categorie: Branding & Estratégia
 title: BRANDING PIER X
 description: PIER X
 cover_image: /assets/43-pier.001.jpeg

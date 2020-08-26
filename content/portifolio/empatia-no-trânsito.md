@@ -2,7 +2,7 @@
 path: Empatia no Trânsito - GOV RS
 date: 2020-09-08T03:00:00.000Z
 jobDate: 2019-01-09T02:00:00.000Z
-categorie: advertising
+categorie: Advertising
 title: Empatia no Trânsito
 description: Governo do RS
 cover_image: /assets/banner-empatia.png

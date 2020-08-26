@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Layout = ({ children, uri }: Props): React.ReactElement => {
-  const [mode, setMode] = React.useState<LightMode>("light")
+  const [mode, setMode] = React.useState<LightMode>("dark")
   return (
     <div>
       <Helmet>

@@ -2,7 +2,7 @@
 path: Verão Urbano Ramarim
 date: 2020-08-26T00:41:43.998Z
 jobDate: 2016-08-02T00:41:44.023Z
-categorie: advertising
+categorie: Advertising
 title: "Verão Urbano "
 description: Ramarim
 cover_image: /assets/veraourbano-1.jpg

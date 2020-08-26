@@ -2,7 +2,7 @@
 path: Vestibular Feevale 2018
 date: 2020-08-25T17:58:28.291Z
 jobDate: 2017-12-01T16:58:28.304Z
-categorie: advertising
+categorie: Advertising
 title: Vestibular Feevale 2018
 description: Feevale
 cover_image: /assets/feevale-vesitbular-43.jpeg

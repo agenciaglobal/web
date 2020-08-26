@@ -1,5 +1,4 @@
 import { makeStyles, Theme, Typography } from "@material-ui/core"
-import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { SlugType } from "components/NewsPage/types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
@@ -22,35 +21,29 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export const QuoteNewsComponent = ({
-  current: { quote, slug, type },
+  current: { quote, type },
 }: Props): React.ReactElement | null => {
   const classes = useStyles()
   return type === "QUOTE" ? (
     <div>
-      <Link
-        className={"global-news-quote"}
-        style={{ height: "100%", textDecoration: "none", minHeight: 300 }}
-        to={slug || ""}
-      >
-        <div className={classes.lag}>
-          <div
-            style={{ display: "flex", alignItems: "center" }}
-            className={classes.style}
-          >
-            <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
-              <div style={{ height: 40 }}></div>
-              <Typography
-                style={{
-                  fontFamily: "GSThree",
-                  fontSize: 28,
-                }}
-              >
-                {quote || ""}
-              </Typography>
-            </div>
+      <div className={classes.lag}>
+        <div
+          style={{ display: "flex", alignItems: "center" }}
+          className={classes.style}
+        >
+          <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
+            <div style={{ height: 40 }}></div>
+            <Typography
+              style={{
+                fontFamily: "GSThree",
+                fontSize: 28,
+              }}
+            >
+              {quote || ""}
+            </Typography>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   ) : null
 }

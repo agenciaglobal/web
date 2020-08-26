@@ -19,6 +19,9 @@ const useStyles = makeStyles(() => ({
     "& button": {
       minWidth: 0,
       padding: "0px 24px 0px 0px",
+      "& selected": {
+        background: "transparent",
+      },
     },
   },
   active: {
@@ -54,6 +57,7 @@ export const DesktopTabs = ({
       {categories.map((d, index) => {
         return (
           <Tab
+            disableRipple
             classes={{
               wrapper: classes.wrapper,
               // root: classNames({ [classes.active]: index === value }),

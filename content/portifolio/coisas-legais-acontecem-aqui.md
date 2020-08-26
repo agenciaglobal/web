@@ -2,7 +2,7 @@
 path: Coisas Legais Acontecem Aqui
 date: 2020-08-20T02:16:05.046Z
 jobDate: 2020-08-25T01:47:09.168Z
-categorie: digital
+categorie: Digital Experience
 title: Coisas Legais Acontecem Aqui
 description: "Shopping Iguatemi "
 cover_image: /assets/preview-6.png

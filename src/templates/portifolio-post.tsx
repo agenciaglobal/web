@@ -23,7 +23,6 @@ import {
 } from "components/NewsContent/newsContant"
 import withWidth from "@material-ui/core/withWidth"
 import { MarkDownRenderer } from "components/MarkDownRenderer/markDownRenderer"
-import { ArrowRight, ArrowLeft } from "@material-ui/icons"
 
 interface Props {
   data?: PortifolioPostBySlugQuery
@@ -94,14 +93,14 @@ const CustoArrowLeft = (props: { theme: Theme }): React.ReactElement => (
       r="16.5"
       transform="rotate(-180 17.5 17.5)"
       fill="none"
-      fill-opacity="0.75"
+      fillOpacity="0.75"
       stroke="#FFCC00"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <path
       d="M19.9289 23.9998L13.2114 17.2823L20.2825 10.2112"
       stroke={props.theme.custom.grey1}
-      stroke-width="2"
+      strokeWidth="2"
     />
   </svg>
 )
@@ -120,14 +119,14 @@ const CustoArrowRight = (props: { theme: Theme }): React.ReactElement => (
       r="16.5"
       transform="rotate(-180 17.5 17.5)"
       fill="none"
-      fill-opacity="0.75"
+      fillOpacity="0.75"
       stroke="#FFCC00"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <path
       d="M15.0711 11.0002L21.7886 17.7177L14.7175 24.7888"
       stroke={props.theme.custom.grey1}
-      stroke-width="2"
+      strokeWidth="2"
     />
   </svg>
 )

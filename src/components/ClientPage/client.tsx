@@ -45,6 +45,7 @@ export const ClientComponent = withSize()(
           // "-webkit-filter": hover ? `grayscale(0%)` : `grayscale(100%)`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          border: "1px solid #CCCCCC",
           filter: hover
             ? `grayscale(0%)`
             : active

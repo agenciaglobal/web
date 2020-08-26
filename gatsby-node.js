@@ -40,6 +40,7 @@ let s = `
               description
               image
               postType
+              quote
               author
               type
             }
