@@ -8,7 +8,6 @@ import { Button, isWidthDown, WithWidthProps } from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import withWidth from "@material-ui/core/withWidth"
 import { FullNewsComponent } from "components/NewsPage/types/full_news"
-import { GlobalPageTitle } from "components/GlobalPageTitle/globalTitle"
 
 interface Props {
   news?: Array<Maybe<SitePageContextNews>> | null | undefined

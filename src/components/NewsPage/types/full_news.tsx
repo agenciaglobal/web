@@ -39,6 +39,7 @@ export const FullNewsComponent = ({
         to={slug || ""}
       >
         <ExpandTExt
+          type={type || ""}
           postType={postType || ""}
           date={date || ""}
           title={title || ""}

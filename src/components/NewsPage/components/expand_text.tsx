@@ -4,7 +4,7 @@ import * as React from "react"
 export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
-  full?: boolean
+  type: string
   postType: string
   title: string
   description: string
@@ -40,7 +40,7 @@ export const ExpandTExt = (props: {
       <div>
         <Typography
           style={{
-            fontSize: props.full ? "30px" : "16px",
+            fontSize: props.type === "FULL" ? "30px" : "16px",
             color: "#FFF",
             lineHeight: "1.3em",
             fontFamily: "GSThree",

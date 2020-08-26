@@ -63,13 +63,18 @@ export const HalfNewsComponent = (props: Props): React.ReactElement | null => {
             </div>
           </div>
           <div className={classes.style2}>
-            <div className={classes.border} style={{ height: "32vw", display: "flex", alignItems: "center" }}>
+            <div
+              className={classes.border}
+              style={{ height: "32vw", display: "flex", alignItems: "center" }}
+            >
               <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
-                <div style={{ height: 40}}></div>
-                <Typography style={{
-                  fontFamily: "GSThree",
-                  fontSize: 28,
-                }}>
+                <div style={{ height: 40 }}></div>
+                <Typography
+                  style={{
+                    fontFamily: "GSThree",
+                    fontSize: 28,
+                  }}
+                >
                   {/* {props.current?.quote || ""} */}
                   Say something meanignfull Say something meanignfull
                 </Typography>

@@ -1,7 +1,6 @@
 import { makeStyles, Theme, Typography } from "@material-ui/core"
 import { Link } from "gatsby-plugin-react-i18next"
 import * as React from "react"
-import { ExpandTExt } from "components/NewsPage/components/expand_text"
 import { SlugType } from "components/NewsPage/types"
 import { SitePageContextNewsNodeFrontmatter } from "global"
 
@@ -35,16 +34,18 @@ export const QuoteNewsComponent = ({
       >
         <div className={classes.lag}>
           <div style={{}} className={classes.style}>
-              <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
-                <div style={{ height: 40}}></div>
-                <Typography style={{
+            <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
+              <div style={{ height: 40 }}></div>
+              <Typography
+                style={{
                   fontFamily: "GSThree",
                   fontSize: 28,
-                }}>
-                  {/* {props.current?.quote || ""} */}
-                  Say something meanignfull Say something meanignfull
-                </Typography>
-              </div>
+                }}
+              >
+                {/* {props.current?.quote || ""} */}
+                Say something meanignfull Say something meanignfull
+              </Typography>
+            </div>
           </div>
         </div>
       </Link>

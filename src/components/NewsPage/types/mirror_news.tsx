@@ -35,13 +35,15 @@ export const MirrorNewsComponent = (x: Props): React.ReactElement | null => {
         to={props.slug || ""}
       >
         <div className={classes.lag}>
-        <div style={{}} className={classes.style}>
+          <div style={{}} className={classes.style}>
             <div style={{ padding: 15, width: "calc(100% - 30px)" }}>
-              <div style={{ height: 40}}></div>
-              <Typography style={{
-                fontFamily: "GSThree",
-                fontSize: 28,
-              }}>
+              <div style={{ height: 40 }}></div>
+              <Typography
+                style={{
+                  fontFamily: "GSThree",
+                  fontSize: 28,
+                }}
+              >
                 {/* {props.current?.quote || ""} */}
                 Say something meanignfull Say something meanignfull
               </Typography>
