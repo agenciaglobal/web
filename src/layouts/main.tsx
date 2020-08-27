@@ -97,18 +97,19 @@ export const ActualLayout = ({
   const isScrollingUp = scrollDirection === "up" && !top
   const [leftHover, leftSetOpen] = useState(false)
   const [rightHover, rightSetOpen] = useState(false)
+  const IsOffset = window.pageYOffset > 160
   return (
     <div className={classes.wrapper}>
       <RightDrawer
-        open={rightHover}
+        open={IsOffset ? rightHover : false}
         setOpen={rightSetOpen}
-        scrolled={isScrollingUp}
+        scrolled={IsOffset ? isScrollingUp : false}
         uri={uri}
       />
       <LeftDrawer
-        open={leftHover}
+        open={IsOffset ? leftHover : false}
         setOpen={leftSetOpen}
-        scrolled={isScrollingUp}
+        scrolled={IsOffset ? isScrollingUp : false}
       />
       <LayoutHeaderMobile
         lightMode={lightMode}
@@ -117,9 +118,9 @@ export const ActualLayout = ({
         onTop={!top}
       />
       <LayoutHeader
-        leftHover={leftHover}
-        rightHover={rightHover}
-        hide={!top && scrollDirection !== "down"}
+        // leftHover={leftHover}
+        // rightHover={rightHover}
+        // hide={!top && scrollDirection !== "down"}
         lightMode={lightMode}
         uri={uri}
       />

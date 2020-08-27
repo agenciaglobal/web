@@ -5,8 +5,10 @@ import Toolbar from "@material-ui/core/Toolbar"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LightMode } from "shared/theme"
-import logoblack from "static/logo-black.png"
-import logo from "static/logo-white.png"
+// import logoblack from "static/logo-black.png"
+// import logo from "static/logo-white.png"
+import logoblack from "static/global_logo-preto-01.png"
+import logo from "static/global_logo-branco-01.png"
 import {
   LanguageSwitcher,
   SupportedLanguages,
@@ -71,7 +73,7 @@ export const LayoutHeader = ({
               <img
                 src={mode === "light" ? logoblack : logo}
                 alt="logo-black"
-                style={{ margin: "32px 32px 0px 0px", height: 100 }}
+                style={{ margin: "32px 32px 0px 0px", height: 30 }}
               />
             )}
           </Link>
