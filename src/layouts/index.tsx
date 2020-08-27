@@ -26,7 +26,7 @@ const Layout = ({ children, uri }: Props): React.ReactElement => {
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html:
-              '(function () { emailjs.init("user_XvcHLrQfd3bHgGYyGtdCm") })()',
+              '(function () { emailjs.init("user_t127MAqmhCkHL5pHqI4Mc") })()',
           }}
         />
       </Helmet>

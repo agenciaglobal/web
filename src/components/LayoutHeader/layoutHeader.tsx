@@ -73,7 +73,7 @@ export const LayoutHeader = ({
               <img
                 src={mode === "light" ? logoblack : logo}
                 alt="logo-black"
-                style={{ margin: "32px 32px 0px 0px", height: 30 }}
+                style={{ margin: "16px 0px 0px 0px", height: 30 }}
               />
             )}
           </Link>
