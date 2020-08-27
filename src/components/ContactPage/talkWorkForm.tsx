@@ -196,9 +196,9 @@ export const TalkWorkForm = (): React.ReactElement => {
           ) {
             await emailjs.send(
               "gmail",
-              "template_IMAOpHqW",
+              "template_MazVkhgu",
               { ...values, type: current === 0 ? "talk" : "work" },
-              "user_XvcHLrQfd3bHgGYyGtdCm",
+              "user_t127MAqmhCkHL5pHqI4Mc",
             )
             console.log("hello")
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
