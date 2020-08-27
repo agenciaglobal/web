@@ -4,6 +4,9 @@ import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import logoBlack from "static/logo-black.png"
 import logo from "static/logo-white.png"
+// import logoBlack from "static/global_logo-preto-01.png"
+// import logo from "static/global_logo-branco-01.png"
+
 import { CloseButton } from "./close"
 
 interface Props {

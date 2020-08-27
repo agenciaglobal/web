@@ -72,7 +72,7 @@ const useIsAtTop = (): boolean => {
       const condition = pageYOffset < 155
       _.debounce(() => {
         setTop(condition)
-      }, 300)()
+      }, 0)()
     }
     return () => {
       window.onscroll = null
@@ -100,15 +100,15 @@ export const ActualLayout = ({
   return (
     <div className={classes.wrapper}>
       <RightDrawer
-        open={rightHover}
+        open={!top ? rightHover : false}
         setOpen={rightSetOpen}
-        scrolled={isScrollingUp}
+        scrolled={!top ? isScrollingUp : false}
         uri={uri}
       />
       <LeftDrawer
-        open={leftHover}
+        open={!top ? leftHover : false}
         setOpen={leftSetOpen}
-        scrolled={isScrollingUp}
+        scrolled={!top ? isScrollingUp : false}
       />
       <LayoutHeaderMobile
         lightMode={lightMode}
@@ -117,9 +117,9 @@ export const ActualLayout = ({
         onTop={!top}
       />
       <LayoutHeader
-        leftHover={leftHover}
-        rightHover={rightHover}
-        hide={!top && scrollDirection !== "down"}
+        // leftHover={leftHover}
+        // rightHover={rightHover}
+        // hide={!top && scrollDirection !== "down"}
         lightMode={lightMode}
         uri={uri}
       />
