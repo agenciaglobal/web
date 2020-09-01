@@ -55,7 +55,8 @@ export const LayoutHeader = ({
         position="static"
         style={{
           height: 155,
-          backgroundColor: "transparent",
+          minHeight: 155,
+          backgroundColor: mode === "light" ? "#fff" : "#000",
           boxShadow: "none",
         }}
       >
@@ -63,6 +64,7 @@ export const LayoutHeader = ({
           style={{
             zIndex: 1,
             height: 155,
+            minHeight: 155,
             display: "flex",
             padding: "0px 120px",
             justifyContent: "space-between",
