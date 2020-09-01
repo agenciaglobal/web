@@ -12,6 +12,9 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-layout`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
     // filesystem
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,7 +36,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-layout`,
     `gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-transformer-sharp`,
@@ -55,11 +57,6 @@ module.exports = {
       },
     },
     // components
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: { stylesProvider: { injectFirst: true } },
-    },
     // netlify
     {
       resolve: `gatsby-plugin-netlify-cms`,

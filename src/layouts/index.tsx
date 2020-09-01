@@ -6,6 +6,7 @@ import { LightMode } from "shared/theme"
 import "./global.css"
 import { ActualLayout } from "./main"
 import { Helmet } from "react-helmet"
+import CssBaseline from "@material-ui/core/CssBaseline"
 
 interface Props {
   uri: string
@@ -15,7 +16,7 @@ interface Props {
 const Layout = ({ children, uri }: Props): React.ReactElement => {
   const [mode, setMode] = React.useState<LightMode>("dark")
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>global.tt</title>
         <script
@@ -31,6 +32,7 @@ const Layout = ({ children, uri }: Props): React.ReactElement => {
         />
       </Helmet>
       <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
+        <CssBaseline />
         <ActualLayout
           uri={uri}
           lightMode={mode}
@@ -39,7 +41,7 @@ const Layout = ({ children, uri }: Props): React.ReactElement => {
           {children}
         </ActualLayout>
       </ThemeProvider>
-    </div>
+    </React.Fragment>
   )
 }
 
