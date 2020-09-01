@@ -3,6 +3,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
     marginTop: `32px`,
+    backgroundColor: theme.palette.background.default,
     [theme.breakpoints.up("md")]: {
       paddingLeft: 120,
       paddingRight: 120,
@@ -21,6 +22,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     marginTop: `400px`,
   },
   scrolled: {
+    backgroundColor: theme.palette.background.default,
     [theme.breakpoints.up("md")]: {
       paddingLeft: 120,
       paddingRight: 120,
