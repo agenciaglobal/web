@@ -14,21 +14,21 @@ import useTheme from "@material-ui/core/styles/useTheme"
 interface Props {
   lightMode: LightMode
   uri: string
-  hide: boolean
-  leftHover: boolean
-  rightHover: boolean
+  // hide: boolean
+  // leftHover: boolean
+  // rightHover: boolean
 }
 
-function extracted(hide: boolean, leftHover: boolean) {
-  if (leftHover) return false
-  // let newVar = !hide && leftHover
-  return !hide
-}
+// function extracted(hide: boolean, leftHover: boolean) {
+//   if (leftHover) return false
+//   // let newVar = !hide && leftHover
+//   return !hide
+// }
 
 export const LayoutHeader = ({
-  leftHover,
-  rightHover,
-  hide,
+  // leftHover,
+  // rightHover,
+  // hide,
   uri,
 }: Props): React.ReactElement => {
   const { t } = useI18next()
@@ -41,9 +41,9 @@ export const LayoutHeader = ({
         ? "dark"
         : "light"
       : theme.themeName
-  console.log(hide, leftHover)
-  const isLogoVisible = extracted(hide, leftHover)
-  const isTabsVisible = extracted(hide, rightHover)
+  // console.log(hide, leftHover)
+  // const isLogoVisible = extracted(hide, leftHover)
+  // const isTabsVisible = extracted(hide, rightHover)
   return (
     <Hidden smDown>
       <AppBar
@@ -66,13 +66,13 @@ export const LayoutHeader = ({
           }}
         >
           <Link style={{ boxShadow: "none" }} to="/">
-            {isLogoVisible && (
+            {/* {isLogoVisible && ( */}
               <img
                 src={mode === "light" ? logoblack : logo}
                 alt="logo-black"
                 style={{ margin: "16px 0px 0px 0px", height: 30 }}
               />
-            )}
+            {/* )} */}
           </Link>
           <Box
             style={{
@@ -82,7 +82,7 @@ export const LayoutHeader = ({
               height: "100%",
             }}
           >
-            {isTabsVisible && (
+            {/* {isTabsVisible && ( */}
               <ul
                 style={{
                   color: "#AAA",
@@ -191,7 +191,7 @@ export const LayoutHeader = ({
                   }
                 />
               </ul>
-            )}
+            {/* )} */}
           </Box>
         </Toolbar>
       </AppBar>

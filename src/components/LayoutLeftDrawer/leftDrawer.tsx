@@ -17,7 +17,7 @@ const useStyles = makeStyles(() =>
       display: "flex",
       justifyContent: "space-between",
       flexDirection: "column",
-      paddingBottom: 110,
+      // paddingBottom: 110,
     },
   }),
 )

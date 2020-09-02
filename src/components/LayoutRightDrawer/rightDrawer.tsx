@@ -22,7 +22,7 @@ const useStyles = makeStyles(() =>
       border: "none",
       display: "flex",
       justifyContent: "flex-end",
-      paddingBottom: 110,
+      // paddingBottom: 110,
     },
     container: {
       zIndex: 3,
@@ -34,8 +34,9 @@ const useStyles = makeStyles(() =>
       color: "#AAA",
       listStyle: "none",
       display: "flex",
-      justifyContent: "space-evenly",
-      margin: "16px 16px 16px 80px",
+      justifyContent: "space-between",
+      paddingTop: 26,
+      margin: "0px 16px 16px 70px",
     },
   }),
 )
