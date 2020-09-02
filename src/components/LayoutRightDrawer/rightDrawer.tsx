@@ -17,12 +17,11 @@ const useStyles = makeStyles(() =>
       // zIndex: -2,
       background: "transparent",
       height: "100vh",
-      // marginBottom: 155,
       width: 120,
       border: "none",
+      overflowY: "hidden",
       display: "flex",
       justifyContent: "flex-end",
-      // paddingBottom: 110,
     },
     container: {
       zIndex: 3,

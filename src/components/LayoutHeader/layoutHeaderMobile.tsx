@@ -7,10 +7,12 @@ interface Props {
   lightMode: LightMode
   uri: string
   toggleLightMode: () => void
+  setUri: React.Dispatch<React.SetStateAction<string>>
   onTop: boolean
 }
 
 export const LayoutHeaderMobile = ({
+  setUri,
   lightMode,
   uri,
   toggleLightMode,
@@ -27,6 +29,7 @@ export const LayoutHeaderMobile = ({
         onTop={onTop}
       />
       <MobileDrawer
+        setUri={setUri}
         uri={uri}
         open={open}
         lightMode={lightMode}

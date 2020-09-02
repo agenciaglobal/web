@@ -14,23 +14,10 @@ import useTheme from "@material-ui/core/styles/useTheme"
 interface Props {
   lightMode: LightMode
   uri: string
-  // hide: boolean
-  // leftHover: boolean
-  // rightHover: boolean
+  setUri: React.Dispatch<React.SetStateAction<string>>
 }
 
-// function extracted(hide: boolean, leftHover: boolean) {
-//   if (leftHover) return false
-//   // let newVar = !hide && leftHover
-//   return !hide
-// }
-
-export const LayoutHeader = ({
-  // leftHover,
-  // rightHover,
-  // hide,
-  uri,
-}: Props): React.ReactElement => {
+export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
   const { t } = useI18next()
   const theme = useTheme()
   const mode =
@@ -41,9 +28,6 @@ export const LayoutHeader = ({
         ? "dark"
         : "light"
       : theme.themeName
-  // console.log(hide, leftHover)
-  // const isLogoVisible = extracted(hide, leftHover)
-  // const isTabsVisible = extracted(hide, rightHover)
   return (
     <Hidden smDown>
       <AppBar
@@ -66,13 +50,11 @@ export const LayoutHeader = ({
           }}
         >
           <Link style={{ boxShadow: "none" }} to="/">
-            {/* {isLogoVisible && ( */}
             <img
               src={mode === "light" ? logoblack : logo}
               alt="logo-black"
               style={{ margin: "16px 0px 0px 0px", height: 30 }}
             />
-            {/* )} */}
           </Link>
           <Box
             style={{
@@ -82,7 +64,6 @@ export const LayoutHeader = ({
               height: "100%",
             }}
           >
-            {/* {isTabsVisible && ( */}
             <ul
               style={{
                 color: "#AAA",
@@ -94,6 +75,7 @@ export const LayoutHeader = ({
               }}
             >
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 to={"/"}
                 label={t("sidebar.main")}
@@ -108,6 +90,7 @@ export const LayoutHeader = ({
                 }
               />
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 mode={
                   uri.includes("/portifolio") || uri.includes("/news/")
@@ -122,6 +105,7 @@ export const LayoutHeader = ({
                 label={t("sidebar.about")}
               />
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 mode={
                   uri.includes("/portifolio") || uri.includes("/news/")
@@ -136,6 +120,7 @@ export const LayoutHeader = ({
                 label={t("sidebar.news")}
               />
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 mode={
                   uri.includes("/portifolio") || uri.includes("/news/")
@@ -150,6 +135,7 @@ export const LayoutHeader = ({
                 label={t("sidebar.team")}
               />
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 mode={
                   uri.includes("/portifolio") || uri.includes("/news/")
@@ -164,6 +150,7 @@ export const LayoutHeader = ({
                 label={t("sidebar.client")}
               />
               <TabComponent
+                setUri={setUri}
                 uri={uri}
                 to={"/contact"}
                 label={t("sidebar.contact")}
@@ -191,7 +178,6 @@ export const LayoutHeader = ({
                 }
               />
             </ul>
-            {/* )} */}
           </Box>
         </Toolbar>
       </AppBar>

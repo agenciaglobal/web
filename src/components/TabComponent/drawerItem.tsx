@@ -86,6 +86,7 @@ export const isCurrentHook = (to: string, uri: string): boolean => {
 }
 
 export const TabComponent = ({
+  setUri,
   mode,
   label,
   uri,
@@ -121,6 +122,7 @@ export const TabComponent = ({
         color: `white`,
         textDecoration: `none`,
       }}
+      onClick={() => setUri(to)}
       className={classNameInternal}
     >
       <Typography className={labelClassName}>{label}</Typography>
@@ -129,6 +131,7 @@ export const TabComponent = ({
 }
 
 interface Props {
+  setUri: React.Dispatch<React.SetStateAction<string>>
   mode?: LightMode
   label: string
   to: string

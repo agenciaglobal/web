@@ -27,6 +27,7 @@ const useStylesMenu = makeStyles((theme: Theme) => ({
 interface Props {
   close: () => void
   label: string
+  setUri: React.Dispatch<React.SetStateAction<string>>
   uri: string
   to: string
 }
@@ -34,6 +35,7 @@ interface Props {
 export const LinkMobileComponent = ({
   uri,
   label,
+  setUri,
   close,
   to,
 }: Props): React.ReactElement => {
@@ -41,7 +43,14 @@ export const LinkMobileComponent = ({
   const isCurrent = isCurrentHook(to, uri)
   console.log(isCurrent)
   return (
-    <Link to={to} onClick={close} className={classes.link}>
+    <Link
+      onClick={() => {
+        close()
+        setUri(to)
+      }}
+      to={to}
+      className={classes.link}
+    >
       <Typography
         className={classNames(classes.text, {
           [classes.current]: isCurrent,

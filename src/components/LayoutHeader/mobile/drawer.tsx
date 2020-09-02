@@ -40,11 +40,13 @@ interface Props {
   close: () => void
   open: boolean
   lightMode: "light" | "dark"
+  setUri: React.Dispatch<React.SetStateAction<string>>
   toggleLightMode: () => void
 }
 
 export const MobileDrawer = ({
   uri,
+  setUri,
   close,
   lightMode,
   open,
@@ -76,6 +78,7 @@ export const MobileDrawer = ({
           <Container>
             {menus.map(({ label, to }, index) => (
               <LinkMobileComponent
+                setUri={setUri}
                 key={index}
                 uri={uri}
                 to={to}

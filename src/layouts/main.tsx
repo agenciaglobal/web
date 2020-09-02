@@ -12,7 +12,6 @@ import Footer from "../components/LayoutFooter/footer"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { useScrollDirection } from "./useScrollPosition"
 import { useIsAtTop } from "./useIsAtTop"
-import { useUriPolling } from "./useUriPolling"
 
 interface Props {
   lightMode: "light" | "dark"
@@ -28,7 +27,9 @@ export const ActualLayout = ({
   const [leftHover, leftSetOpen] = useState(false)
   const [rightHover, rightSetOpen] = useState(false)
   const top = useIsAtTop()
-  const uri = useUriPolling()
+  const [uri, setUri] = React.useState(
+    typeof document !== "undefined" ? document.location.pathname : "/",
+  )
   const classes = useStyles()
   const scrollDirection = useScrollDirection()
   const isScrollingUp = scrollDirection === "up" && !top
@@ -46,18 +47,13 @@ export const ActualLayout = ({
         scrolled={!top ? isScrollingUp : false}
       />
       <LayoutHeaderMobile
+        setUri={setUri}
         lightMode={lightMode}
         uri={uri}
         toggleLightMode={toggleLightMode}
         onTop={!top}
       />
-      <LayoutHeader
-        // leftHover={leftHover}
-        // rightHover={rightHover}
-        // hide={!top && scrollDirection !== "down"}
-        lightMode={lightMode}
-        uri={uri}
-      />
+      <LayoutHeader setUri={setUri} lightMode={lightMode} uri={uri} />
       <Container
         className={classNames(classes.root, {
           [classes.scrolled]: isScrollingUp,
