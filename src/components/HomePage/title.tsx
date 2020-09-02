@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
-import { useI18next } from "gatsby-plugin-react-i18next"
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 
 const useGridStyles = makeStyles(() => ({
   title: {
@@ -27,16 +27,15 @@ const useGridStyles = makeStyles(() => ({
   },
 }))
 export const HomeTitleComponent = (): React.ReactElement => {
-  const { t } = useI18next()
+  const { t } = useTranslation()
   const classes = useGridStyles()
-  const home = t("home")
   return (
     <React.Fragment>
       <Typography className={classes.title} noWrap={false}>
-        {home.title}
+        {t("home.title")}
       </Typography>
       <Typography noWrap={false} className={classes.subtitle}>
-        {home.subtitle}
+        {t("home.subtitle")}
       </Typography>
     </React.Fragment>
   )

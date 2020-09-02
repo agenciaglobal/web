@@ -6,7 +6,7 @@ import {
   WithWidthProps,
 } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { TabComponent } from "components/TabComponent/drawerItem"
 import withWidth from "@material-ui/core/withWidth"
@@ -56,7 +56,7 @@ export const RightDrawer = withWidth()(
     scrolled,
   }: Props & WithWidthProps): React.ReactElement | null => {
     const classes = useStyles()
-    const { t } = useI18next()
+    const { t } = useTranslation()
     const drawerClasses = { paper: classes.drawerPaper }
     const isDesktop = isWidthUp("md", width || "xs")
     const visible = open || (isDesktop && scrolled)

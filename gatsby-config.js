@@ -12,8 +12,9 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-layout`,
-    `gatsby-plugin-material-ui`,
+    // `gatsby-plugin-layout`,
+    // `gatsby-plugin-material-ui`,
+    `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,
     // filesystem
     {
@@ -66,29 +67,29 @@ module.exports = {
       resolve: "gatsby-plugin-netlify-cache",
       options: { cachePublic: true },
     },
-    // internationalization
-    {
-      resolve: `gatsby-plugin-react-i18next`,
-      options: {
-        path: `${__dirname}/src/locales`,
-        languages: [`en`, `pt`],
-        defaultLanguage: `pt`,
-        i18nextOptions: {
-          language: "pt",
-          ns: ["translations"],
-          defaultNS: "translations",
-          returnObjects: true,
-          debug: process.env.NODE_ENV === "development",
-          react: {
-            wait: true,
-          },
-          interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
-          },
-          nsSeparator: false,
-        },
-      },
-    },
+    // // internationalization
+    // {
+    //   resolve: `gatsby-plugin-react-i18next`,
+    //   options: {
+    //     path: `${__dirname}/src/locales`,
+    //     languages: [`en`, `pt`],
+    //     defaultLanguage: `pt`,
+    //     i18nextOptions: {
+    //       language: "pt",
+    //       ns: ["translations"],
+    //       defaultNS: "translations",
+    //       returnObjects: true,
+    //       debug: process.env.NODE_ENV === "development",
+    //       react: {
+    //         wait: true,
+    //       },
+    //       interpolation: {
+    //         escapeValue: false, // not needed for react as it escapes by default
+    //       },
+    //       nsSeparator: false,
+    //     },
+    //   },
+    // },
     // icon
     {
       resolve: `gatsby-plugin-manifest`,

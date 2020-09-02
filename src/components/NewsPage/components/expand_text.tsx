@@ -4,7 +4,7 @@ import * as React from "react"
 export const ExpandTExt = (props: {
   style?: React.CSSProperties
   date: string
-  type: string
+  type?: string
   postType: string
   title: string
   description: string

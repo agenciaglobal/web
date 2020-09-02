@@ -21,11 +21,9 @@ export const ClientGrid = ({ clients }: Props): React.ReactElement => {
         style={{
           marginTop: 24,
           paddingBottom: 120,
-          // transform: `translate( -${0}px , -${187}px )`,
         }}
       >
         {clients.map((client, index: number) => {
-          console.log(client)
           return (
             <ClientComponent
               author={client.author}

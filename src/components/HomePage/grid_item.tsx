@@ -19,7 +19,6 @@ export const GridItem = withWidth()(
       <TrackVisibility offset={props.index === 0 ? 300 : 200}>
         {({ isVisible }: { isVisible: boolean }) => {
           const date = props.portifolio?.date || ""
-          console.log(props.portifolio.title + " " + date)
           return (
             <Link style={{ textDecoration: "none" }} to={props.portifolio.slug}>
               <div style={{}}>

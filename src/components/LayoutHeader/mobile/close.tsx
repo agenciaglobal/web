@@ -1,5 +1,5 @@
 import { makeStyles, Theme } from "@material-ui/core/styles"
-import * as cs from "classnames"
+import classNames from "classnames"
 import React from "react"
 
 const useStylesClose = makeStyles((theme: Theme) => ({
@@ -45,7 +45,10 @@ export const CloseButton = (props: {
 }): React.ReactElement => {
   const classes = useStylesClose()
   const { divIconCommon, divIconOpen, menuIcon } = classes
-  const className = cs({ [divIconCommon]: true, [divIconOpen]: props.open })
+  const className = classNames({
+    [divIconCommon]: true,
+    [divIconOpen]: props.open,
+  })
   return (
     <button className={menuIcon} onClick={props.onClick}>
       <div className={className} />

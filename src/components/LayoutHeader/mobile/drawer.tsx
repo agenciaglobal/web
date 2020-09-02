@@ -1,13 +1,10 @@
 import { Container, Drawer } from "@material-ui/core"
 import { makeStyles, Theme, useTheme } from "@material-ui/core/styles"
-import { useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
-import {
-  LanguageSwitcher,
-  SupportedLanguages,
-} from "components/LanguageSwitcher/LanguageSwitcher"
+import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher"
 import { ThemeSwitch } from "components/ThemeSwitch/switch"
 import { LinkMobileComponent } from "./link"
+import { useTranslation } from "react-i18next"
 
 const useStylesV2 = makeStyles((theme: Theme) => ({
   backdrop: {
@@ -53,7 +50,7 @@ export const MobileDrawer = ({
   open,
   toggleLightMode,
 }: Props): React.ReactElement => {
-  const { t } = useI18next()
+  const { t } = useTranslation()
   const classes = useStylesV2()
   const menus = [
     { to: "/", label: t("sidebar.main") },
@@ -63,7 +60,6 @@ export const MobileDrawer = ({
     { to: "/clients", label: t("sidebar.client") },
     { to: "/contact", label: t("sidebar.contact") },
   ]
-  const { changeLanguage, language } = useI18next()
   const theme = useTheme()
   return (
     <React.Fragment>
@@ -89,11 +85,7 @@ export const MobileDrawer = ({
             ))}
           </Container>
           <Container className={classes.lower}>
-            <LanguageSwitcher
-              mode={theme.themeName}
-              language={language as SupportedLanguages}
-              changeLanguage={changeLanguage}
-            />
+            <LanguageSwitcher mode={theme.themeName} />
             <ThemeSwitch
               lightMode={lightMode}
               toggleLightMode={toggleLightMode}

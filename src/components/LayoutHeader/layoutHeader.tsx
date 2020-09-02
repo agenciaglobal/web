@@ -5,14 +5,9 @@ import Toolbar from "@material-ui/core/Toolbar"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LightMode } from "shared/theme"
-// import logoblack from "static/logo-black.png"
-// import logo from "static/logo-white.png"
 import logoblack from "static/global_logo-preto-01.png"
 import logo from "static/global_logo-branco-01.png"
-import {
-  LanguageSwitcher,
-  SupportedLanguages,
-} from "components/LanguageSwitcher/LanguageSwitcher"
+import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher"
 import { TabComponent } from "components/TabComponent/drawerItem"
 import useTheme from "@material-ui/core/styles/useTheme"
 
@@ -36,7 +31,7 @@ export const LayoutHeader = ({
   hide,
   uri,
 }: Props): React.ReactElement => {
-  const { changeLanguage, language, t } = useI18next()
+  const { t } = useI18next()
   const theme = useTheme()
   const mode =
     uri.includes("/portifolio") || uri.includes("/news/")
@@ -95,6 +90,7 @@ export const LayoutHeader = ({
                   display: "flex",
                   justifyContent: "space-evenly",
                   margin: "18px 0px 0px",
+                  paddingInlineStart: 0,
                 }}
               >
                 <TabComponent
@@ -183,9 +179,7 @@ export const LayoutHeader = ({
                 />
                 <br />
                 <LanguageSwitcher
-                  language={language as SupportedLanguages}
-                  changeLanguage={changeLanguage}
-                  style={{ paddingLeft: 24 }}
+                  style={{ marginLeft: 24 }}
                   mode={
                     uri.includes("/portifolio") || uri.includes("/news/")
                       ? "dark"

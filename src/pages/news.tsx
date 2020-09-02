@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import * as React from "react"
 import { GlobalPageTitle } from "components/GlobalPageTitle/globalTitle"
 import { NewsPageList } from "components/NewsPage/newsPageList"
@@ -8,7 +8,7 @@ import "components/NewsPage/index.css"
 
 const News = (props: { data?: BlogQueryQuery }): React.ReactElement => {
   const { data } = props
-  const { t } = useI18next()
+  const { t } = useTranslation()
   const news = data?.allMdx.edges
   return (
     <React.Fragment>

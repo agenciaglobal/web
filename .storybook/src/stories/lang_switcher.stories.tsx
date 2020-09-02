@@ -7,6 +7,7 @@ import {
 } from "../../../src/components/LanguageSwitcher/LanguageSwitcher"
 import { darkTheme } from "../../../src/shared/dark"
 import { lightTheme } from "../../../src/shared/light"
+import { LightMode } from "../../../src/shared/theme"
 
 export default {
   title: "Light Language Switcher",
@@ -17,7 +18,7 @@ interface Props {
   mode: string
 }
 
-export const portuguese = ({ language, mode }: Props) => {
+export const portuguese = ({ mode }: Props) => {
   let color = mode === "light" ? "white" : "black"
   return (
     <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
@@ -31,10 +32,7 @@ export const portuguese = ({ language, mode }: Props) => {
           backgroundColor: color,
         }}
       >
-        <LanguageSwitcher
-          language={language}
-          changeLanguage={(d: string) => {}}
-        />
+        <LanguageSwitcher mode={mode as LightMode} />
       </div>
     </ThemeProvider>
   )
