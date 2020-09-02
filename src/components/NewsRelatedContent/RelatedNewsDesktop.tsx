@@ -16,7 +16,7 @@ export const RelatedNewsDesktop = (props: {
         maxHeight: "100%",
         display: "flex",
         flexDirection: "column",
-        height: "calc( 100% - 40px )",
+        height: "calc( 100% - 0px )",
         justifyContent: "space-between",
         position: "relative",
         background: "rgba(0, 0, 0, 0.3)",

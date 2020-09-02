@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core"
 import { createStyles, makeStyles } from "@material-ui/core/styles"
 import className from "classnames"
-import { Link, useI18next } from "gatsby-plugin-react-i18next"
+import { Link } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { LightMode } from "shared/theme"
 import useTheme from "@material-ui/core/styles/useTheme"
@@ -80,11 +80,9 @@ const itemStyles = (mode: LightMode) =>
   })
 
 export const isCurrentHook = (to: string, uri: string): boolean => {
-  const { language } = useI18next()
-  const s = language === "en" ? "/" + language + to : to
-  const isWork = "/en" === uri || "/" === uri || uri.includes("trabalhos")
-  const isCurrent = to === "/" ? isWork : uri.includes(s)
-  return isCurrent
+  return to === "/"
+    ? uri === to || uri.includes("portifolio")
+    : uri.includes(to)
 }
 
 export const TabComponent = ({

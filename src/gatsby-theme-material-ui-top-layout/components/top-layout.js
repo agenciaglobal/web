@@ -61,12 +61,8 @@ i18n
     },
   })
 
-const TopLayout = ({ children, ...other }) => {
-  console.log(other)
+const TopLayout = ({ children }) => {
   const [mode, setMode] = React.useState("dark")
-  const { t } = useTranslation()
-
-  console.log(t("sidebar.main"))
   return (
     <React.Fragment>
       <Helmet>
@@ -86,7 +82,6 @@ const TopLayout = ({ children, ...other }) => {
       <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
         <CssBaseline />
         <ActualLayout
-          uri={"/"}
           lightMode={mode}
           toggleLightMode={() => setMode(mode === "light" ? "dark" : "light")}
         >

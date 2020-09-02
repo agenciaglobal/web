@@ -16,7 +16,7 @@ export const ExpandTExt = (props: {
         display: "flex",
         flexDirection: "column",
         // maxHeight: "100%",
-        height: "calc( 100% - 30px )",
+        height: "calc( 100% - 0px )",
         width: "calc (100% - 60px)",
         // width: "100%",
         // height: "100%",
