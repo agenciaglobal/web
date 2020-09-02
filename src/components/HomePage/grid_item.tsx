@@ -6,6 +6,8 @@ import TrackVisibility from "react-on-screen"
 import { Link } from "gatsby-plugin-react-i18next"
 import { ExpandTextHome } from "./expand_text_home"
 import * as React from "react"
+import { useState } from "react"
+import zIndex from "@material-ui/core/styles/zIndex"
 
 interface Props {
   index: number
@@ -15,13 +17,17 @@ interface Props {
 export const GridItem = withWidth()(
   withSize()((props: Props & WithWidthProps & SizeMeProps) => {
     const src = props.portifolio.video || ""
+    const [hover, setHover] = useState(false)
     return (
       <TrackVisibility offset={props.index === 0 ? 300 : 200}>
         {({ isVisible }: { isVisible: boolean }) => {
           const date = props.portifolio?.date || ""
           return (
             <Link style={{ textDecoration: "none" }} to={props.portifolio.slug}>
-              <div style={{}}>
+              <div
+                onMouseOver={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
                 {src === "" && (
                   <React.Fragment>
                     <Box
@@ -30,12 +36,14 @@ export const GridItem = withWidth()(
                         backgroundImage: `url(${
                           props.portifolio?.cover_image || ""
                         })`,
-                        // filter: `blur(${isVisible ? 0 : 0}px)`,
+                        filter: `saturate(${hover ? 100 : 80}%)`,
                         width: "100%",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         height: 0,
                         paddingBottom: "75%",
+                        transform: hover ? "scale(103%)" : "scale(100%)",
+                        transition: "all 400ms",
                       }}
                     >
                       <ExpandTextHome
@@ -55,17 +63,22 @@ export const GridItem = withWidth()(
                 )}
                 {src !== "" && (
                   <Box
+                    onMouseOver={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
                     style={{
                       width: "100%",
                       height: 0,
                       paddingBottom: "75%",
                       position: "relative",
+                      transform: hover ? "scale(103%)" : "scale(100%)",
+                      transition: "transform 400ms",
                     }}
                   >
                     <Box
                       style={{
                         display: "flex",
-                        filter: `blur(${isVisible ? 0 : 0}px)`,
+                        filter: `contrast(${hover ? 100 : 90}%)`,
+                        transition: "filter 400ms",
                         position: "absolute",
                         top: 0,
                         right: 0,
