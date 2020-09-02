@@ -1,10 +1,16 @@
 import * as React from "react"
 
+function extracted() {
+  if (typeof document === "undefined") return "/"
+  return document?.location?.pathname || "/"
+}
+
 export const useUriPolling = (): string => {
-  const [uri, setUri] = React.useState(document.location.pathname)
+  const url = extracted()
+  const [uri, setUri] = React.useState(url || "/")
   React.useEffect(() => {
     const interval = setInterval(() => {
-      if (uri !== document.location.pathname) setUri(document.location.pathname)
+      if (uri !== url) setUri(url)
     }, 100)
     return () => clearInterval(interval)
   })

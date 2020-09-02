@@ -6,10 +6,15 @@ on:
 jobs:
   Deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
       - run: git config --global user.email "francescoaferraro@gmail.com"
       - run: git config --global user.name "@cescoferraro"
+      - name: Turnstyle
+        uses: softprops/turnstyle@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
