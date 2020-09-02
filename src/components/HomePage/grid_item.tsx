@@ -7,7 +7,6 @@ import { Link } from "gatsby-plugin-react-i18next"
 import { ExpandTextHome } from "./expand_text_home"
 import * as React from "react"
 import { useState } from "react"
-import zIndex from "@material-ui/core/styles/zIndex"
 
 interface Props {
   index: number
