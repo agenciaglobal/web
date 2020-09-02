@@ -1,7 +1,7 @@
 import withWidth, { WithWidthProps } from "@material-ui/core/withWidth"
 import { withSize, SizeMeProps } from "react-sizeme"
 import { Portifolio } from "components/HomePage/types"
-import { Box } from "@material-ui/core"
+import { Box, makeStyles } from "@material-ui/core"
 import TrackVisibility from "react-on-screen"
 import { Link } from "gatsby-plugin-react-i18next"
 import { ExpandTextHome } from "./expand_text_home"
@@ -42,6 +42,8 @@ export const GridItem = withWidth()(
                         height: 0,
                         paddingBottom: "75%",
                         transform: hover ? "scale(103%)" : "scale(100%)",
+                        WebkitTransform: hover ? "scale(1.03)" : "scale(1)",
+                        OTransform: hover ? "scale(1.03)" : "scale(1)",
                         transition: "all 400ms",
                       }}
                     >
@@ -70,7 +72,9 @@ export const GridItem = withWidth()(
                       paddingBottom: "75%",
                       position: "relative",
                       transform: hover ? "scale(103%)" : "scale(100%)",
-                      transition: "transform 400ms",
+                      WebkitTransform: hover ? "scale(1.03)" : "scale(1)",
+                      OTransform: hover ? "scale(1.03)" : "scale(1)",
+                      transition: "all 400ms",
                     }}
                   >
                     <Box
