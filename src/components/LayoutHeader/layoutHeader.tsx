@@ -51,6 +51,7 @@ export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
         >
           <Link style={{ boxShadow: "none" }} to="/">
             <img
+              onClick={() => setUri("/")}
               src={mode === "light" ? logoblack : logo}
               alt="logo-black"
               style={{ margin: "16px 0px 0px 0px", height: 30 }}

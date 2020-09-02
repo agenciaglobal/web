@@ -19,7 +19,9 @@ export const HomePage = ({
   projects,
 }: Props): React.ReactElement => {
   const [val, setVal] = React.useState<number>(0)
-  categories = categories.sort((a) => (a.startsWith("f") ? -1 : 1))
+  categories = categories.sort((a) =>
+    a.toLowerCase().startsWith("f") ? -1 : 1,
+  )
   console.log(projects, categories)
   return (
     <React.Fragment>
