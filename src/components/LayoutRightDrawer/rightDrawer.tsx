@@ -71,7 +71,7 @@ export const RightDrawer = withWidth()(
           classes={drawerClasses}
         >
           <Container className={classes.container}>
-            <Fade in={visible}>
+            <Fade timeout={1000} in={visible}>
               <ul
                 className={classes.list}
                 style={{

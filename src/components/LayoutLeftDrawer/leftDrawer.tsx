@@ -1,4 +1,4 @@
-import { Drawer, isWidthUp, WithWidthProps } from "@material-ui/core"
+import { Drawer, isWidthUp, WithWidthProps, Fade } from "@material-ui/core"
 import { createStyles, makeStyles, useTheme } from "@material-ui/core/styles"
 import React, { Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
@@ -40,33 +40,35 @@ const LeftDrawer = withWidth()(
     const isVisible = open || scrolled
     return isDesktop ? (
       <Fragment>
-        <Drawer
-          onMouseEnter={() => {
-            console.log("enter")
-            setOpen(true)
-          }}
-          onMouseLeave={() => {
-            console.log("leave")
-            setOpen(false)
-          }}
-          variant="permanent"
-          classes={{ paper: classes.drawerPaper }}
-        >
-          <Link
-            style={{
-              visibility: isVisible ? "unset" : "hidden",
-              boxShadow: "none",
+        <Fade in={isVisible} timeout={1000}>
+          <Drawer
+            onMouseEnter={() => {
+              console.log("enter")
+              setOpen(true)
             }}
-            to="/"
+            onMouseLeave={() => {
+              console.log("leave")
+              setOpen(false)
+            }}
+            variant="permanent"
+            classes={{ paper: classes.drawerPaper }}
           >
-            <img
-              src={theme.themeName === "light" ? logoBlack : logo}
-              alt="logo-black"
-              style={{ margin: "32px 22px", height: 100 }}
-            />
-          </Link>
-          <SideFooter isVisible={isVisible} />
-        </Drawer>
+            <Link
+              style={{
+                visibility: isVisible ? "unset" : "hidden",
+                boxShadow: "none",
+              }}
+              to="/"
+            >
+              <img
+                src={theme.themeName === "light" ? logoBlack : logo}
+                alt="logo-black"
+                style={{ margin: "32px 22px", height: 100 }}
+              />
+            </Link>
+            <SideFooter isVisible={isVisible} />
+          </Drawer>
+        </Fade>
       </Fragment>
     ) : null
   },
