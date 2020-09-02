@@ -76,7 +76,7 @@ export const GridItem = withWidth()(
                     <Box
                       style={{
                         display: "flex",
-                        filter: `contrast(${hover ? 100 : 90}%)`,
+                        filter: `saturate(${hover ? 100 : 80}%)`,
                         transition: "filter 400ms",
                         position: "absolute",
                         top: 0,
