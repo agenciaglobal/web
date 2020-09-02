@@ -67,11 +67,11 @@ export const LayoutHeader = ({
         >
           <Link style={{ boxShadow: "none" }} to="/">
             {/* {isLogoVisible && ( */}
-              <img
-                src={mode === "light" ? logoblack : logo}
-                alt="logo-black"
-                style={{ margin: "16px 0px 0px 0px", height: 30 }}
-              />
+            <img
+              src={mode === "light" ? logoblack : logo}
+              alt="logo-black"
+              style={{ margin: "16px 0px 0px 0px", height: 30 }}
+            />
             {/* )} */}
           </Link>
           <Box
@@ -83,114 +83,114 @@ export const LayoutHeader = ({
             }}
           >
             {/* {isTabsVisible && ( */}
-              <ul
-                style={{
-                  color: "#AAA",
-                  listStyle: "none",
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  margin: "18px 0px 0px",
-                  paddingInlineStart: 0,
-                }}
-              >
-                <TabComponent
-                  uri={uri}
-                  to={"/"}
-                  label={t("sidebar.main")}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+            <ul
+              style={{
+                color: "#AAA",
+                listStyle: "none",
+                display: "flex",
+                justifyContent: "space-evenly",
+                margin: "18px 0px 0px",
+                paddingInlineStart: 0,
+              }}
+            >
+              <TabComponent
+                uri={uri}
+                to={"/"}
+                label={t("sidebar.main")}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/about"}
-                  label={t("sidebar.about")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/about"}
+                label={t("sidebar.about")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/news"}
-                  label={t("sidebar.news")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/news"}
+                label={t("sidebar.news")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/team"}
-                  label={t("sidebar.team")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/team"}
+                label={t("sidebar.team")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/clients"}
-                  label={t("sidebar.client")}
-                />
-                <TabComponent
-                  uri={uri}
-                  to={"/contact"}
-                  label={t("sidebar.contact")}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/clients"}
+                label={t("sidebar.client")}
+              />
+              <TabComponent
+                uri={uri}
+                to={"/contact"}
+                label={t("sidebar.contact")}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-                <br />
-                <LanguageSwitcher
-                  style={{ marginLeft: 24 }}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+              />
+              <br />
+              <LanguageSwitcher
+                style={{ marginLeft: 24 }}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-              </ul>
+                      : "light"
+                    : theme.themeName
+                }
+              />
+            </ul>
             {/* )} */}
           </Box>
         </Toolbar>
