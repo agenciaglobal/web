@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import { Typography } from "@material-ui/core"
-import { KeyboardArrowDown } from '@material-ui/icons';
+import { KeyboardArrowDown } from "@material-ui/icons"
 import { NewsContent } from "components/NewsContent/newsContant"
 import { NewsPageList } from "components/NewsPage/newsPageList"
 import { NewsRelatedContent } from "components/NewsRelatedContent/NewsRelatedContent"
@@ -29,23 +29,23 @@ const NewsPostTemplate = (props: Props): React.ReactElement => {
     <React.Fragment>
       <NewsContent body={body} current={post} news={news} />
       <NewsRelatedContent news={news} />
-      <div className="animate"
-          style={{
-            transform: `translateY(-80px)`,
-            textAlign: "center"
-          }}
-      
+      <div
+        className="animate"
+        style={{
+          transform: `translateY(-80px)`,
+          textAlign: "center",
+        }}
       >
         <Typography
           style={{
-            fontSize: 26
+            fontSize: 26,
           }}
         >
           Veja mais notícias
         </Typography>
         <KeyboardArrowDown
           style={{
-            fontSize: 26
+            fontSize: 26,
           }}
         />
       </div>
