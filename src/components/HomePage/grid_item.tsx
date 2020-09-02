@@ -30,7 +30,7 @@ export const GridItem = withWidth()(
                         backgroundImage: `url(${
                           props.portifolio?.cover_image || ""
                         })`,
-                        filter: `blur(${isVisible ? 0 : 0}px)`,
+                        // filter: `blur(${isVisible ? 0 : 0}px)`,
                         width: "100%",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
@@ -43,7 +43,7 @@ export const GridItem = withWidth()(
                         style={{
                           position: "absolute",
                           top: 0,
-                          width: "calc( 100% - 44px )",
+                          width: "100%",
                         }}
                         date={date}
                         title={props.portifolio.title || ""}
@@ -90,7 +90,7 @@ export const GridItem = withWidth()(
                         style={{
                           position: "absolute",
                           top: 0,
-                          width: "calc( 100% - 44px )",
+                          width: "100%",
                         }}
                         date={date}
                         title={props.portifolio.title || ""}
