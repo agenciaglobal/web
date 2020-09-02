@@ -52,9 +52,9 @@ export const ActualLayout = ({
         onTop={!top}
       />
       <LayoutHeader
-        leftHover={leftHover}
-        rightHover={rightHover}
-        hide={!top && scrollDirection !== "down"}
+        // leftHover={leftHover}
+        // rightHover={rightHover}
+        // hide={!top && scrollDirection !== "down"}
         lightMode={lightMode}
         uri={uri}
       />

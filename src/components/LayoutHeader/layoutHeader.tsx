@@ -14,21 +14,21 @@ import useTheme from "@material-ui/core/styles/useTheme"
 interface Props {
   lightMode: LightMode
   uri: string
-  hide: boolean
-  leftHover: boolean
-  rightHover: boolean
+  // hide: boolean
+  // leftHover: boolean
+  // rightHover: boolean
 }
 
-function extracted(hide: boolean, leftHover: boolean) {
-  if (leftHover) return false
-  // let newVar = !hide && leftHover
-  return !hide
-}
+// function extracted(hide: boolean, leftHover: boolean) {
+//   if (leftHover) return false
+//   // let newVar = !hide && leftHover
+//   return !hide
+// }
 
 export const LayoutHeader = ({
-  leftHover,
-  rightHover,
-  hide,
+  // leftHover,
+  // rightHover,
+  // hide,
   uri,
 }: Props): React.ReactElement => {
   const { t } = useI18next()
@@ -41,9 +41,9 @@ export const LayoutHeader = ({
         ? "dark"
         : "light"
       : theme.themeName
-  console.log(hide, leftHover)
-  const isLogoVisible = extracted(hide, leftHover)
-  const isTabsVisible = extracted(hide, rightHover)
+  // console.log(hide, leftHover)
+  // const isLogoVisible = extracted(hide, leftHover)
+  // const isTabsVisible = extracted(hide, rightHover)
   return (
     <Hidden smDown>
       <AppBar
@@ -66,13 +66,13 @@ export const LayoutHeader = ({
           }}
         >
           <Link style={{ boxShadow: "none" }} to="/">
-            {isLogoVisible && (
-              <img
-                src={mode === "light" ? logoblack : logo}
-                alt="logo-black"
-                style={{ margin: "16px 0px 0px 0px", height: 30 }}
-              />
-            )}
+            {/* {isLogoVisible && ( */}
+            <img
+              src={mode === "light" ? logoblack : logo}
+              alt="logo-black"
+              style={{ margin: "16px 0px 0px 0px", height: 30 }}
+            />
+            {/* )} */}
           </Link>
           <Box
             style={{
@@ -82,116 +82,116 @@ export const LayoutHeader = ({
               height: "100%",
             }}
           >
-            {isTabsVisible && (
-              <ul
-                style={{
-                  color: "#AAA",
-                  listStyle: "none",
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  margin: "18px 0px 0px",
-                  paddingInlineStart: 0,
-                }}
-              >
-                <TabComponent
-                  uri={uri}
-                  to={"/"}
-                  label={t("sidebar.main")}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+            {/* {isTabsVisible && ( */}
+            <ul
+              style={{
+                color: "#AAA",
+                listStyle: "none",
+                display: "flex",
+                justifyContent: "space-evenly",
+                margin: "18px 0px 0px",
+                paddingInlineStart: 0,
+              }}
+            >
+              <TabComponent
+                uri={uri}
+                to={"/"}
+                label={t("sidebar.main")}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/about"}
-                  label={t("sidebar.about")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/about"}
+                label={t("sidebar.about")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/news"}
-                  label={t("sidebar.news")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/news"}
+                label={t("sidebar.news")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/team"}
-                  label={t("sidebar.team")}
-                />
-                <TabComponent
-                  uri={uri}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/team"}
+                label={t("sidebar.team")}
+              />
+              <TabComponent
+                uri={uri}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                  to={"/clients"}
-                  label={t("sidebar.client")}
-                />
-                <TabComponent
-                  uri={uri}
-                  to={"/contact"}
-                  label={t("sidebar.contact")}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+                to={"/clients"}
+                label={t("sidebar.client")}
+              />
+              <TabComponent
+                uri={uri}
+                to={"/contact"}
+                label={t("sidebar.contact")}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-                <br />
-                <LanguageSwitcher
-                  style={{ marginLeft: 24 }}
-                  mode={
-                    uri.includes("/portifolio") || uri.includes("/news/")
+                      : "light"
+                    : theme.themeName
+                }
+              />
+              <br />
+              <LanguageSwitcher
+                style={{ marginLeft: 24 }}
+                mode={
+                  uri.includes("/portifolio") || uri.includes("/news/")
+                    ? "dark"
+                    : uri.includes("/contact")
+                    ? theme.themeName === "light"
                       ? "dark"
-                      : uri.includes("/contact")
-                      ? theme.themeName === "light"
-                        ? "dark"
-                        : "light"
-                      : theme.themeName
-                  }
-                />
-              </ul>
-            )}
+                      : "light"
+                    : theme.themeName
+                }
+              />
+            </ul>
+            {/* )} */}
           </Box>
         </Toolbar>
       </AppBar>
