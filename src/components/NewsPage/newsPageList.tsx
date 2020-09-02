@@ -60,9 +60,9 @@ export const NewsPageList = withWidth()(
           className="global-news-grid"
           columnClassName="global-news-grid-column"
           style={{
-            marginTop: 200,
+            // marginTop: 200,
             paddingTop: 30,
-            transform: `translate( -${0}px , -${187}px )`,
+            // transform: `translate( -${0}px , -${187}px )`,
           }}
         >
           {isXS

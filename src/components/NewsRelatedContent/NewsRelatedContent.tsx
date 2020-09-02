@@ -65,7 +65,8 @@ export const NewsRelatedContent = withWidth()(
             flexDirection: isXS ? "column" : "row",
             paddingLeft: margin,
             paddingRight: margin,
-            width: `calc( 100% - ${2 * margin}px)`,
+            width: "100%",
+            // width: `calc( 100% - ${2 * margin}px)`,
             justifyContent: isXS ? "unset" : "space-between",
           }}
         >
@@ -80,7 +81,7 @@ export const NewsRelatedContent = withWidth()(
                 <Box
                   key={index}
                   style={{
-                    width: isXS ? "100%" : "30%",
+                    width: isXS ? "100%" : "27%",
                   }}
                 >
                   <Link
@@ -95,7 +96,7 @@ export const NewsRelatedContent = withWidth()(
                       style={{
                         height: !isXS ? "70vh" : "auto",
                         // paddingBottom: !isXS ? 0 : "60%",
-                        width: !isXS ? "85%" : "50%",
+                        width: !isXS ? "100%" : "50%",
                         background: `url(${image})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center ",

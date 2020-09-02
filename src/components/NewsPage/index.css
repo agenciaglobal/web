@@ -1,7 +1,7 @@
 .global-news-grid {
   z-index: -1;
   display: flex;
-  width: auto;
+  width: 100%;
 }
 
 .global-news-grid-column {
@@ -12,12 +12,12 @@
   margin-bottom: 40px;
 }
 
-.global-news-grid > div:nth-child(1) {
+/* .global-news-grid > div:nth-child(1) {
   margin-right: 20px;
-}
+} */
 
 .global-news-grid > div:nth-child(2) {
-  margin-left: 20px;
+  padding-left: 40px;
 }
 
 /* .global-news-grid-column > div > .global-news-right > div {
