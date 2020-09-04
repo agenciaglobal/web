@@ -2,7 +2,7 @@
 path: Global conquista a conta publicitária do CCG Saúde
 date: 2020-09-04T18:41:31.402Z
 postType: notícia
-type: RIGHT
+type: FULL
 title: Global conquista a conta publicitária do CCG Saúde
 description: " "
 image: /assets/ccg-saude.001.jpeg
