@@ -2,7 +2,8 @@
 path: Alexandre é o Vice Presidente da Fundação Bienal de Artes do Mercosul
 date: 2020-09-01T22:18:52.453Z
 postType: notícia
-type: RIGHT
+type: HALF
+quote: Think With Us
 title: Alexandre é o Vice Presidente da 14ª Bienal de Arte do Mercosul
 description: A gestão liderada por Carmem Ferrão será responsável pela curadoria
   13ª Bienal de Arte do Mercosul.
