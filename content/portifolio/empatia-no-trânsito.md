@@ -18,8 +18,11 @@ text_2: "Fugindo do padrão de campanhas que abordam mortes, número de acidente
   trânsito, resolvemos traçar um caminho sobre a sensação positiva que sentimos
   quando somos empáticos no trânsito: quando paramos na faixa, quando ajudamos
   alguém com o carro parado ou quando sedemos espaço para passarem na nossa
-  frente.  "
-image_7: /assets/10-maria-dornelles.jpg
-image_8: /assets/13-sinaia.png
-image_9: /assets/14-tobias-campos.png
+  frente.  Dessa ideia, surgiu o Movimento Empatia no Trânsito. O projeto foi
+  desdobrado pensando no engajamento da população com o movimento. Para alcançar
+  isso, criamos um filme para TV, conteúdo de social media e adesivos para serem
+  colados nos carros. "
+image_7: ""
+image_8: ""
+image_9: ""
 ---
