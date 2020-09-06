@@ -14,11 +14,49 @@ let s = `
               slug
             }
             frontmatter {
-              date(formatString: "MMMM DD YYYY")
               title
               description
-              image
+              date(formatString: "MMMM DD, YYYY")
               categorie
+              image
+              cover_image
+              video
+              text_1
+              youtube
+              image_1
+              text_2
+              image_2
+              image_3
+              text_3
+              image_4
+              image_5
+              text_4
+              image_6
+              text_5
+              image_7
+              image_8
+              image_9
+              image_10
+              image_11
+              image_12
+              image_13
+              image_14
+              image_15
+              image_16
+              image_17
+              image_18
+              image_19
+              image_20
+              image_21
+              image_22
+              image_23
+              image_24
+              image_25
+              image_26
+              text_6
+              text_7
+              testimonial
+              author
               role
             }
           }
