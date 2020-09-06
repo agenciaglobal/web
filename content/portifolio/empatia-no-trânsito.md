@@ -12,7 +12,7 @@ text_1: "O Governo do Estado do Rio Grande do Sul nos provocou a criar um
   projeto que incentivasse uma mudança de comportamento da população no
   trânsito. "
 youtube: EQhVcv4dnvo
-image_1: /assets/captura-de-tela-2020-09-05-às-19.44.25.png
+image_1: /assets/17102023_239814_gd.jpg
 text_2: "Fugindo do padrão de campanhas que abordam mortes, número de acidentes
   e trabalham o aspecto negativo da consequência da falta de segurança no
   trânsito, resolvemos traçar um caminho sobre a sensação positiva que sentimos
