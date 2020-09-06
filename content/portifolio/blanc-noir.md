@@ -1,6 +1,6 @@
 ---
 path: Blanc/Noir Casa Valduga
-date: 2020-08-25T02:01:01.173Z
+date: 2017-12-13T01:01:01.173Z
 jobDate: 2017-07-13T02:01:01.190Z
 categorie: Advertising
 title: Blanc/Noir
