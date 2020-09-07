@@ -150,3 +150,40 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MdxFrontmatter implements Node {
+      text_1: String
+      text_2: String
+      text_3: String
+      text_4: String
+      text_5: String
+      text_6: String
+      image_1: String
+      image_2: String
+      image_3: String
+      image_4: String
+      image_5: String
+      image_6: String
+      image_7: String
+      image_8: String
+      image_9: String
+      image_10: String
+      image_11: String
+      image_12: String
+      image_13: String
+      image_14: String
+      image_15: String
+      image_16: String
+      image_17: String
+      image_18: String
+      image_19: String
+      image_20: String
+      image_21: String
+      image_22: String
+    }
+  `
+  createTypes(typeDefs)
+}
