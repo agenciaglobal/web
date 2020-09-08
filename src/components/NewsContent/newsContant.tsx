@@ -142,7 +142,7 @@ export const NewsContent = (props: {
   const theme = useTheme()
   return (
     <React.Fragment>
-      <TranslatedImage theme={theme}/>
+      <TranslatedImage theme={theme} />
 
       <div className={classes.div}>
         <Typography className={classes.dateText}>
@@ -151,10 +151,10 @@ export const NewsContent = (props: {
         {props.current?.mdx?.frontmatter?.postType === "artigo" &&
           author &&
           author !== "" && (
-        <Typography className={classes.authorText}>
-          {"Por " + author}
-        </Typography>
-        )}
+            <Typography className={classes.authorText}>
+              {"Por " + author}
+            </Typography>
+          )}
         <Typography className={classes.titleText}>
           {post?.frontmatter?.title}
         </Typography>
