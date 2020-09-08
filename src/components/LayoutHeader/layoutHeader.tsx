@@ -21,7 +21,7 @@ export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
   const { t } = useI18next()
   const theme = useTheme()
   const mode =
-    uri.includes("/portifolio") || uri.includes("/news/")
+    uri.includes("/portifolio")
       ? "dark"
       : uri.includes("/contact")
       ? theme.themeName === "light"
@@ -81,7 +81,7 @@ export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
                 to={"/"}
                 label={t("sidebar.main")}
                 mode={
-                  uri.includes("/portifolio") || uri.includes("/news/")
+                  uri.includes("/portifolio/")
                     ? "dark"
                     : uri.includes("/contact")
                     ? theme.themeName === "light"
