@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, SvgIcon } from "@material-ui/core"
+import { Container, SvgIcon, Fade } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -37,6 +37,7 @@ interface Props {
 const SideFooter = ({ isVisible }: Props): React.ReactElement => {
   const classes = useStyles()
   return (
+    <Fade in={isVisible} timeout={1000}>
     <Container
       style={{
         visibility: isVisible ? "unset" : "hidden",
@@ -92,6 +93,7 @@ const SideFooter = ({ isVisible }: Props): React.ReactElement => {
         </a>
       </div>
     </Container>
+    </Fade>
   )
 }
 

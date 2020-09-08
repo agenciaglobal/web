@@ -40,7 +40,6 @@ const LeftDrawer = withWidth()(
     const isVisible = open || scrolled
     return isDesktop ? (
       <Fragment>
-        <Fade in={isVisible} timeout={1000}>
           <Drawer
             onMouseEnter={() => {
               console.log("enter")
@@ -53,6 +52,7 @@ const LeftDrawer = withWidth()(
             variant="permanent"
             classes={{ paper: classes.drawerPaper }}
           >
+           <Fragment>
             <Link
               style={{
                 visibility: isVisible ? "unset" : "hidden",
@@ -60,15 +60,17 @@ const LeftDrawer = withWidth()(
               }}
               to="/"
             >
+              <Fade in={isVisible} timeout={1000}>
               <img
                 src={theme.themeName === "light" ? logoBlack : logo}
                 alt="logo-black"
                 style={{ margin: "32px 22px", height: 100 }}
               />
+              </Fade>
             </Link>
             <SideFooter isVisible={isVisible} />
+            </Fragment>
           </Drawer>
-        </Fade>
       </Fragment>
     ) : null
   },
