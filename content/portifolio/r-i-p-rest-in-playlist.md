@@ -39,6 +39,4 @@ image_26: /assets/perfffff-.004.jpeg
 ---
 ![](/assets/maxresdefault.jpg)
 
-
-
 Os espíritos criaram playlists que foram para o ar no site da Rádio Putzgrila, junto de um documentário que apresentou a conexão de Carmem com espíritos de músicos e seu trabalho realizado para o projeto.
