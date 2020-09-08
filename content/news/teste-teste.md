@@ -12,4 +12,6 @@ author: nick
 about: "estrategia "
 author_image: /assets/11-natália-ferraro.png
 ---
+![](/assets/17102023_239814_gd.jpg)
+
 Sera responsavel por toda comunicaçao nacional da marca.
