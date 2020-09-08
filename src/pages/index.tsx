@@ -45,6 +45,7 @@ export const pageQuery = graphql`
     }
     projects: allMdx(
       filter: { fileAbsolutePath: { regex: "/content/portifolio/" } }
+      sort: { order: DESC, fields: frontmatter___jobDate }
     ) {
       edges {
         node {

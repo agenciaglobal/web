@@ -40,35 +40,35 @@ const LeftDrawer = withWidth()(
     const isVisible = open || scrolled
     return isDesktop ? (
       <Fragment>
-        <Fade in={isVisible} timeout={1000}>
-          <Drawer
-            onMouseEnter={() => {
-              console.log("enter")
-              setOpen(true)
+        <Drawer
+          onMouseEnter={() => {
+            console.log("enter")
+            setOpen(true)
+          }}
+          onMouseLeave={() => {
+            console.log("leave")
+            setOpen(false)
+          }}
+          variant="permanent"
+          classes={{ paper: classes.drawerPaper }}
+        >
+          <Link
+            style={{
+              visibility: isVisible ? "unset" : "hidden",
+              boxShadow: "none",
             }}
-            onMouseLeave={() => {
-              console.log("leave")
-              setOpen(false)
-            }}
-            variant="permanent"
-            classes={{ paper: classes.drawerPaper }}
+            to="/"
           >
-            <Link
-              style={{
-                visibility: isVisible ? "unset" : "hidden",
-                boxShadow: "none",
-              }}
-              to="/"
-            >
+            <Fade in={isVisible} timeout={1000}>
               <img
                 src={theme.themeName === "light" ? logoBlack : logo}
                 alt="logo-black"
                 style={{ margin: "32px 22px", height: 100 }}
               />
-            </Link>
-            <SideFooter isVisible={isVisible} />
-          </Drawer>
-        </Fade>
+            </Fade>
+          </Link>
+          <SideFooter isVisible={isVisible} />
+        </Drawer>
       </Fragment>
     ) : null
   },

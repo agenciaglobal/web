@@ -1,7 +1,7 @@
 import withWidth, { WithWidthProps } from "@material-ui/core/withWidth"
 import { withSize, SizeMeProps } from "react-sizeme"
 import { Portifolio } from "components/HomePage/types"
-import { Box, makeStyles } from "@material-ui/core"
+import { Box } from "@material-ui/core"
 import TrackVisibility from "react-on-screen"
 import { Link } from "gatsby-plugin-react-i18next"
 import { ExpandTextHome } from "./expand_text_home"

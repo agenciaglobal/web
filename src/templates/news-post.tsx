@@ -41,7 +41,7 @@ const NewsPostTemplate = (props: Props): React.ReactElement => {
             fontSize: 26,
           }}
         >
-          Veja mais notícias
+          Continue em news
         </Typography>
         <KeyboardArrowDown
           style={{
