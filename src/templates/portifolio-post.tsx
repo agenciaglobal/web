@@ -151,6 +151,8 @@ const ImageScroller = withWidth()(
             className={`menu-item`}
             style={{
               background: `url(${el})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
             }}
           />
         ))}

@@ -31,7 +31,7 @@ collections:
           - { label: "Quote", value: "QUOTE" }
       - { name: quote, label: Quote (exibido se tipo for hallf, mirror ou quote), required: false }
       - { name: title, label: Título }
-      - { name: description, label: Descrição }
+      - { name: description, label: Descrição, required: false }
       - name: "image"
         label: "Imagem de destaque"
         widget: "image"

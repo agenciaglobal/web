@@ -1,4 +1,4 @@
-import { Typography, Theme, WithWidthProps } from "@material-ui/core"
+import { Typography, Theme, WithWidthProps, useTheme } from "@material-ui/core"
 import React from "react"
 import Box from "@material-ui/core/Box"
 import { Maybe, NewsPostBySlugQuery, SitePageContextNews } from "global"
@@ -102,7 +102,8 @@ export const notEmpty = <TValue extends unknown>(
 const TranslatedImage = withWidth()(
   (
     props: {
-      image: string
+      theme: Theme
+      // image: string
       title?: React.ReactElement
     } & WithWidthProps,
   ): React.ReactElement => {
@@ -110,13 +111,14 @@ const TranslatedImage = withWidth()(
     return (
       <Box
         css={{
-          minHeight: 250,
+          minHeight: 155,
           display: "flex",
           justifyContent: "center",
           alignSelf: "center",
           alignItems: "center",
-          backgroundImage: `url(${props.image})`,
-          backgroundSize: "cover",
+          background: props.theme.custom.grey2,
+          // backgroundImage: `url(${props.image})`,
+          // backgroundSize: "cover",
           width: `calc( 100% + ${2 * margin}px)`,
           transform: `translate( -${margin}px , -${187}px )`,
         }}
@@ -131,22 +133,28 @@ export const NewsContent = (props: {
   current: NewsPostBySlugQuery | null | undefined
   news: Maybe<SitePageContextNews>[] | null | undefined
   body: string
+  theme: Theme
 }): React.ReactElement => {
   const classes = useGridStyles()
   const gutterVertical = 25
   const post = props.current?.mdx
   const author = props.current?.mdx?.frontmatter?.author
+  const theme = useTheme()
   return (
     <React.Fragment>
-      <TranslatedImage image={props.current?.mdx?.frontmatter?.image || ""} />
+      <TranslatedImage theme={theme} />
 
       <div className={classes.div}>
         <Typography className={classes.dateText}>
           {post?.frontmatter?.date + " | " + post?.frontmatter?.postType}
         </Typography>
-        <Typography className={classes.authorText}>
-          {"Por " + author}
-        </Typography>
+        {props.current?.mdx?.frontmatter?.postType === "artigo" &&
+          author &&
+          author !== "" && (
+            <Typography className={classes.authorText}>
+              {"Por " + author}
+            </Typography>
+          )}
         <Typography className={classes.titleText}>
           {post?.frontmatter?.title}
         </Typography>
@@ -171,7 +179,7 @@ export const NewsContent = (props: {
 
         {/* TEM QUE PUXAR OS CAMPOS DO CMS: IMAGE, AUTHOR E ABOUT */}
         {/* ESSE COMPONENTE SÓ DEVE SER EXIBIDO SE O postType = "artigo" */}
-        {props.current?.mdx?.frontmatter?.postType === "article" &&
+        {props.current?.mdx?.frontmatter?.postType === "artigo" &&
           author &&
           author !== "" && (
             <Box

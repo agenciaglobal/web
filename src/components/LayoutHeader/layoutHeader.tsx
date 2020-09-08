@@ -20,14 +20,13 @@ interface Props {
 export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
   const { t } = useI18next()
   const theme = useTheme()
-  const mode =
-    uri.includes("/portifolio") || uri.includes("/news/")
+  const mode = uri.includes("/portifolio")
+    ? "dark"
+    : uri.includes("/contact")
+    ? theme.themeName === "light"
       ? "dark"
-      : uri.includes("/contact")
-      ? theme.themeName === "light"
-        ? "dark"
-        : "light"
-      : theme.themeName
+      : "light"
+    : theme.themeName
   return (
     <Hidden smDown>
       <AppBar
@@ -81,7 +80,7 @@ export const LayoutHeader = ({ setUri, uri }: Props): React.ReactElement => {
                 to={"/"}
                 label={t("sidebar.main")}
                 mode={
-                  uri.includes("/portifolio") || uri.includes("/news/")
+                  uri.includes("/portifolio/")
                     ? "dark"
                     : uri.includes("/contact")
                     ? theme.themeName === "light"
