@@ -101,7 +101,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `static/assets/gatsby-icon.png`,
+        icon: `static/assets/favicon.png`,
       },
     },
     // typescript codegen
