@@ -43,7 +43,8 @@ export const ClientComponent = withSize()(
         style={{
           display: "flex",
           // "-webkit-filter": hover ? `grayscale(0%)` : `grayscale(100%)`,
-          backgroundSize: "cover",
+          backgroundSize: "90%, contain",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           border: "1px solid #CCCCCC",
           filter: hover
