@@ -32,8 +32,8 @@ export const HomePage = ({
       <Hidden mdUp>
         <MobileSelect setValue={setVal} value={val} categories={categories} />
       </Hidden> */}
-      <HomeGrid 
-        projects={projects} 
+      <HomeGrid
+        projects={projects}
         // value={categories[val]}
       />
     </React.Fragment>
