@@ -29,7 +29,7 @@ export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
             columnClassName="global-home-grid-column"
           >
             {inner
-              .filter((tile) => tile.categorie === value)
+              // .filter((tile) => tile.categorie === value)
               .map((tile, idx) => (
                 <GridItem key={idx} portifolio={tile} index={idx} />
               ))}
