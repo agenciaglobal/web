@@ -18,21 +18,24 @@ export const HomePage = ({
   categories,
   projects,
 }: Props): React.ReactElement => {
-  const [val, setVal] = React.useState<number>(0)
-  categories = categories.sort((a) =>
-    a.toLowerCase().startsWith("f") ? -1 : 1,
-  )
+  // const [val, setVal] = React.useState<number>(0)
+  // categories = categories.sort((a) =>
+  //   a.toLowerCase().startsWith("f") ? -1 : 1,
+  // )
   console.log(projects, categories)
   return (
     <React.Fragment>
       <HomeTitleComponent />
-      <Hidden smDown>
+      {/* <Hidden smDown>
         <DesktopTabs setValue={setVal} value={val} categories={categories} />
       </Hidden>
       <Hidden mdUp>
         <MobileSelect setValue={setVal} value={val} categories={categories} />
-      </Hidden>
-      <HomeGrid projects={projects} value={categories[val]} />
+      </Hidden> */}
+      <HomeGrid 
+        projects={projects} 
+        // value={categories[val]}
+      />
     </React.Fragment>
   )
 }
