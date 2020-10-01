@@ -1,7 +1,7 @@
 ---
 path: Todas as Sensações do Cinema GNC Cinemas
 date: 2020-08-25T18:11:29.660Z
-jobDate: 2020-08-25T18:11:29.671Z
+jobDate: 2018-12-19T17:11:29.671Z
 categorie: Branding & Estratégia
 title: Reposicionamento GNC
 description: Gnc Cinemas
