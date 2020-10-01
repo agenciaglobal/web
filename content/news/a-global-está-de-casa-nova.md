@@ -2,7 +2,7 @@
 path: A Global está de casa nova
 date: 2020-01-21T13:24:53.716Z
 postType: notícia
-type: RIGHT
+type: HALF
 quote: Come Visit Us
 title: A Global está de casa nova
 description: A partir de janeiro, estaremos instalados na Fábrica do Futuro!
