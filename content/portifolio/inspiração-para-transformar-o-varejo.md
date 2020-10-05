@@ -6,7 +6,7 @@ categorie: Advertising
 title: Inspiração para transformar o varejo
 description: Sindilojas Porto Alegre
 cover_image: /assets/captura-de-tela-2020-10-05-às-19.14.53.png
-video: /assets/cortado-sindilojas.mp4
+video: /assets/filmesinditamanhook.m4v
 image: /assets/captura-de-tela-2020-10-05-às-19.16.26.png
 text_1: " "
 youtube: watch?v=ZZ-DCTmwgGs
