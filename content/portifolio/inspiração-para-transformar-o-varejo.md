@@ -1,7 +1,7 @@
 ---
 path: Inspiração para transformar o varejo
-date: 2020-10-05T22:12:48.024Z
-jobDate: 2020-10-05T22:12:48.066Z
+date: 2019-07-01T22:12:48.024Z
+jobDate: 2019-07-01T22:12:48.066Z
 categorie: Advertising
 title: Inspiração para transformar o varejo
 description: Sindilojas Porto Alegre
