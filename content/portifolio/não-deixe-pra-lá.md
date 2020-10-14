@@ -6,7 +6,7 @@ categorie: Advertising
 title: Não deixe pra lá
 description: Governo do RS
 cover_image: /assets/naodeixepralaimagem.001.jpeg
-video: /assets/naodeixeprala.mp4
+video: ""
 image: /assets/naodeixepralaimagem.001.jpeg
 text_1: "Não deixe pra lá. "
 youtube: F5No7-zSCKA
