@@ -8,8 +8,11 @@ description: Gnc Cinemas
 cover_image: /assets/gnc-posicionamento-1.jpg
 video: /assets/filme-gnc.m4v
 image: /assets/gnc-posicionamento-banner.001.jpeg
-text_1: "O cinema tem a emoção como personagem principal. É um lugar feito para
-  quem gosta de viver o filme de verdade. "
+text_1: "Para lançar o novo posicionamento Todas as Sensações do Cinema do GNC
+  Cinemas, criamos uma campanha com o objetivo de explorar sua essência: no
+  cinema, a emoção é o personagem principal. É um lugar feito para quem gosta de
+  viver o filme de verdade. Portanto, resolvemos mostrar ao público o que a
+  magia do cinema é capaz de despertar."
 text_2: O novo posicionamento do GNC Cinemas foi construído sobre a proposta de
   explorar as sensações únicas que só a magia do cinema é capaz de despertar.
 ---
