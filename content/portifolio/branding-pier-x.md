@@ -22,10 +22,8 @@ text_2: A inspiração do Pier X vem das praias da Califórnia. Um local em que
 image_2: /assets/fts-pier.001.jpeg
 image_3: /assets/fts-pier.002.jpeg
 text_3: ""
-text_4: "Criamos uma família de ícones que traduzem as mais genuínas crenças e
-  valores do Pier X. Uma iconografia que virou quadro, camiseta, adesivo e até
-  tatuagem. "
-image_6: /assets/icones-pier.001.jpeg
+text_4: ""
+image_6: ""
 image_7: /assets/pier-logo.001.jpeg
 image_8: /assets/fts-pier.001.jpeg
 image_9: /assets/fts-pier.002.jpeg
