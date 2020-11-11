@@ -14,6 +14,15 @@ module.exports = {
   plugins: [
     // `gatsby-plugin-layout`,
     // `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "GTM-NTG2M9D",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      }
+    },
     `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,
     // filesystem

@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const NewsPageList = withWidth()(
   ({ news, width }: Props & WithWidthProps): React.ReactElement => {
     const classes = useStyles()
-    const pace = 2
+    const pace = 6
     const [total, setTotal] = useState(pace)
     const isXS = isWidthDown("xs", width || "xs")
     const map = (news || [])
