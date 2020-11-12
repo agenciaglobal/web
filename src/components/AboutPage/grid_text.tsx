@@ -45,36 +45,32 @@ export const AboutTextGrid = (): React.ReactElement => {
       <Box className={classes.box}>
         <Box lineHeight={3}>
           <Typography className={classes.div}>
-            Em um contexto one a única certeza é a mudança e sua velocidade,
-            somos o parceiro para ajudar os negócios a navegá-la com clareza
-            estratégica e criatividade.
+            A Global é o reflexo de um mundo em constante transformação.
           </Typography>
         </Box>
         <Box lineHeight={3}>
           <Typography className={classes.div}>
-            O parceiro para conectar as pontas. Para dizer o que tem que ser
-            dito, mas de um jeito diferente. Para fazer conteúdo que construa
-            uma audiência engajada. Para reunir comunicação, tecnologia, dados e
-            design em prol da construção de marcas contemporâneas.
+            O comportamento mutante e volátil da sociedade nos provoca a reinventar nossa entrega a cada novo briefing.
           </Typography>
         </Box>
         <Box lineHeight={3}>
           <Typography className={classes.div}>
-            Chamamos de crowdtalent a junção dos melhores talentos com
-            diferentes skills e conhecimentos em torno de uma ideia. Um processo
-            integrado de trabalho que nos permite avançar juntos dos nossos
-            clientes na transformação de suas marcas.
+            Nós acreditamos nas pessoas e tiramos partido da complexidade de suas mentes. Combinações únicas de habilidades, conhecimentos e experiências. Chamamos de Crowdtalent a soma desses talentos em torno de uma ideia.
           </Typography>
         </Box>
         <Box lineHeight={3}>
           <Typography className={classes.div}>
-            Acreditamos que só quem consegue navegar à mudança são aqueles que
-            criativamente procuram novos caminhos.
+            Integramos estratégia, comunicação, dados e design em projetos que ajudam nossos clientes a serem protagonistas da mudança. Acreditamos no resultado da equação entre dados e criatividade para propor novos caminhos, onde a propaganda e o entretenimento estão mais próximos do que nunca e onde tudo deve ser mensurado.
+          </Typography>
+        </Box>
+        <Box lineHeight={3}>
+          <Typography className={classes.div}>
+            Acreditamos, sobretudo, que, em meio a tanta mudança, ser criativo é a melhor estratégia.
           </Typography>
         </Box>
         <Box lineHeight={1.5}>
           <Typography className={classes.div2}>
-            Change requires Creativity.
+            A mudança requer criatividade.
           </Typography>
         </Box>
       </Box>
