@@ -15,14 +15,25 @@ module.exports = {
     // `gatsby-plugin-layout`,
     // `gatsby-plugin-material-ui`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-H262HDNTFV",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        // your google analytics tracking id
+        trackingId: `G-H262HDNTFV`,
+        // Puts tracking script in the head instead of the body
         head: true,
-      }
+        // enable ip anonymization
+        anonymize: true,
+      },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: "G-H262HDNTFV",
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: true,
+    //   }
+    // },
     `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,
     // filesystem
