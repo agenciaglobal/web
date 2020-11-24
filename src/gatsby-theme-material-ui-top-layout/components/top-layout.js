@@ -71,6 +71,14 @@ const TopLayout = ({ children }) => {
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
         />
+        <link 
+          rel="stylesheet" 
+          href="https://cdn-demo.privacytools.com.br/public_api/banner/style/yBaW113151.css?t=1">
+        </link>
+        <script 
+          type="text/javascript"
+          src="https://cdn-demo.privacytools.com.br/public_api/banner/script/yBaW113151.js?p=bottom&t=1">
+        </script>
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
