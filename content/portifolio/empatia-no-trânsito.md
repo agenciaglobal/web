@@ -12,7 +12,7 @@ text_1: "O Governo do Estado do Rio Grande do Sul nos provocou a criar um
   projeto que incentivasse uma mudança de comportamento da população no
   trânsito. "
 youtube: EQhVcv4dnvo
-image_1: /assets/17102023_239814_gd.jpg
+image_1: ""
 text_2: "O trânsito de um local é uma representação da sociedade da qual faz
   parte. Seria incoerente descolar os padrões comportamentais observados no
   trânsito de um todo maior - como se na via pública emergisse, num passe de
