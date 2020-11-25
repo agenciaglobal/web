@@ -7,7 +7,7 @@ title: Inspiração para transformar o varejo
 description: Sindilojas Porto Alegre
 cover_image: /assets/teste-gallo.001.jpeg
 video: ""
-image: /assets/captura-de-tela-2020-10-05-às-19.16.26.png
+image: /assets/captura-de-tela-2020-11-25-às-17.42.19.png
 text_1: "Com a queda da legislação que obriga as empresas de determinado setor a
   contribuir com o sindicato que os representa, o Sindilojas Porto Alegre
   entendeu que entraria em uma nova era de sua organização. Um momento que
