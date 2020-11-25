@@ -28,5 +28,5 @@ text_1: "Com a queda da legislação que obriga as empresas de determinado setor
   compartilhar suas histórias e nos ajudar a inspirar toda a categoria. Criamos
   peças e conteúdos que foram veiculados em TV, Rádio, Jornal, OOH e Social
   Media. "
-youtube: watch?v=ZZ-DCTmwgGs
+youtube: v=ZZ-DCTmwgGs
 ---
