@@ -8,9 +8,8 @@ description: Governo do RS
 cover_image: /assets/17102023_239814_gd.jpg
 video: /assets/teste-gov.mp4
 image: /assets/17102023_239814_gd.jpg
-text_1: "O Governo do Estado do Rio Grande do Sul nos provocou a criar um
-  projeto que incentivasse uma mudança de comportamento da população no
-  trânsito. "
+text_1: O Governo do Estado do Rio Grande do Sul nos provocou a criar um projeto
+  que incentivasse uma mudança de comportamento da população no trânsito.
 youtube: EQhVcv4dnvo
 image_1: ""
 text_2: "O trânsito de um local é uma representação da sociedade da qual faz
