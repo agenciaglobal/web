@@ -14,7 +14,7 @@ text_1: "Com a queda da legislação que obriga as empresas de determinado setor
   demandava uma reinvenção do seu negócio, mas principalmente reconstruir a
   maneira com que era visto pelo mercado e seus clientes. "
 youtube: ZZ-DCTmwgGs
-image_1: /assets/reposicionamento-sindilojas.png
+image_1: /assets/sem-título-1.png
 text_2: "Em 2018/2019, portanto, desenvolvemos um trabalho de reposicionamento.
   Exploramos, junto do toda a equipe executiva do Sindilojas Porto Alegre, a
   história da organização, o que ela representava para os seus clientes e o
