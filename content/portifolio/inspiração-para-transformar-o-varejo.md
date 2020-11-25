@@ -26,4 +26,4 @@ Inspiração para Transformar o Varejo, o novo posicionamento do Sindilojas Port
 
 Para lançar o novo momento do Sindilojas Porto Alegre, criamos uma campanha que trouxe grandes nomes do varejo do Rio Grande do Sul para compartilhar suas histórias e nos ajudar a inspirar toda a categoria. Criamos peças e conteúdos que foram veiculados em TV, Rádio, Jornal, OOH e Social Media.
 
-![](/assets/captura-de-tela-2020-11-25-às-18.25.55.png)
+![](/assets/sindilojas.png)
