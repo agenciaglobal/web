@@ -24,6 +24,12 @@ Um espaço que contempla uma gama integrada de serviços de saúde no Centro His
 
 ![](/assets/cg001420y-an-rev-estilo-zaffari-clinica-mais_21x27-5cm.jpg)
 
+
+
+```html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VI8uLOZVDww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
 Criamos o conceito Mais Saúde no Coração de Porto Alegre e desenvolvemos uma identidade que capturasse a atenção das pessoas, principalmente quando trabalhada em mídia externa. A partir disso, fizemos uma blitz de mídia no centro e em suas redondezas para comunicar a todos que passassem por ali que o centro estava recebendo uma nova estrutura de saúde.
 
 ![](/assets/ccg-ricardo-fabrello-0025.jpg)
