@@ -1,5 +1,5 @@
 ---
-path: 1Empatia no Trânsito - GOV RS
+path: Empatia no Trânsito - GOV RS
 date: 2020-09-08T03:00:00.000Z
 jobDate: 2019-01-09T02:00:00.000Z
 categorie: Advertising
@@ -44,6 +44,6 @@ image_9: ""
 ---
 Na condição de partícipes do trânsito, todos nós temos direitos e responsabilidades claras, dentro de uma lógica em que o anseio individual não pode se sobrepor à segurança do coletivo. E é isso que queremos mostrar: no trânsito, se você se colocar no lugar do outro, se você sentir junto com outro, você tende a sair do estado anestésico e autocentrado de que o meu direito precisa ser contemplado a qualquer custo . E daí advém o senso de comunidade que tanto tem feito falta em nossas vias. A palavra-chave para esse raciocínio que estamos trazendo talvez seja batida, mas infelizmente pouco exercida: empatia. Não estamos falando de gentileza, nem de educação, nem de bons modos . A noção que estamos enfatizando aqui, de empatia, é muito mais rica. É empático aquele sente com o outro, que é capaz de realmente se colocar na posição de seu semelhante. O gentil muitas vezes age bem por medo da reprovação social, e não é essa noção que queremos trabalhar. Quem sente as agruras do outro, age melhor. Age com senso de humanidade. E isso serve para o trânsito e serve, evidentemente, para a vida. 
 
-![](/assets/detran.jpg)
+![](/assets/logo-empatia-no-transito-1000x1000.png)
 
 ![]()
