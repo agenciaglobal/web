@@ -1,35 +1,49 @@
 ---
-path: Pier X Branding2
-date: 2020-11-26T18:54:27.682Z
-jobDate: 2020-11-26T18:54:27.763Z
-categorie: Branding & Estratégia
-title: BRANDING PIER X
-description: PIER X
-cover_image: /assets/43-pier.001.jpeg
+path: 1Empatia no Trânsito - GOV RS
+date: 2020-09-08T03:00:00.000Z
+jobDate: 2019-01-09T02:00:00.000Z
+categorie: Advertising
+title: Empatia no Trânsito
+description: Governo do RS
+cover_image: /assets/17102023_239814_gd.jpg
 video: ""
-image: /assets/branding-pier-x.001.jpeg
-text_1: "O Pier X é um movimento. Não é uma loja, mas sim uma cultura. Uma
-  maneira de se pensar fluída e integrada. São percursos de um modelo de varejo
-  conhecido como Marketplace Phygital - um ambiente físico onde a experiência do
-  cliente é extremamente integrada entre pontos de contato online e offline. "
-youtube: ""
-image_1: /assets/pier-logo.001.jpeg
-text_2: A inspiração do Pier X vem das praias da Califórnia. Um local em que
-  viver a vida é um lema. O cotidiano fluido dos residentes desses locais
-  motivam a construção de uma experiência que reflita um pouco dessa leveza e
-  integração. Da casa pro trabalho, do trabalho pra praia. Do online para
-  offline, do offline para online.
-image_2: /assets/fts-pier.001.jpeg
-image_3: /assets/fts-pier.002.jpeg
+image: /assets/17102023_239814_gd.jpg
+text_1: "O trânsito de um local é uma representação da sociedade da qual faz
+  parte. Seria incoerente descolar os padrões comportamentais observados no
+  trânsito de um todo maior - como se na via pública emergisse, num passe de
+  mágica, uma realidade paralela estranha ao que se vê em outras esferas de
+  determinada sociedade. Isso porque a via pública é, por definição, um espaço
+  de convivência que proporciona interações entre pessoas, interações que se dão
+  dentro de um contexto histórico-espacial bem definido. É bem verdade que, no
+  trânsito, essas interações são bastante fugazes, mas também é inegável que são
+  capazes de deixar marcas, positivas ou negativas, passageiras ou indeléveis,
+  em todos que nelas se envolvem. "
+youtube: EQhVcv4dnvo
+image_1: /assets/detran.jpg
+text_2: "Nosso trânsito é desigual e violento. Desigual porque os modais
+  rodoviários nadam de braçada em ruas e estradas projetadas para que motores
+  potentes coloquem a desfilar suas centenas de cavalos , enquanto os pedestres
+  se acotovelam em calçadas estreitas e os ciclistas tentam fazer valer seu
+  direito de transitar com um mínimo de dignidade no contexto da via, visto que
+  as ciclovias ainda são obras raras. Já os motociclistas, estes são, muitas
+  vezes, estigmatizados, como se fossem pequenos corpos estranhos tentando
+  encontrar um espaço ao qual não têm tanto direito quanto as poderosas máquinas
+  de lata de quatro rodas . Além de desigual, nosso trânsito é violento: 40 mil
+  pessoas morrem por ano no Brasil. No Rio Grande do Sul, são em torno de 1700.
+  Imagine se pegarmos esses números e acrescentarmos os feridos e os sequelados,
+  além dos familiares e amigos das pessoas diretamente envolvidas nos
+  acidentes."
+image_2: ""
+image_3: ""
 text_3: ""
 text_4: ""
 image_6: ""
-image_7: /assets/pier-logo.001.jpeg
-image_8: /assets/fts-pier.001.jpeg
-image_9: /assets/fts-pier.002.jpeg
+image_7: ""
+image_8: ""
+image_9: ""
 ---
-Nosso desafio foi criar uma marca que funcionasse na faixada do shopping, no aplicativo mobile, impressa numa revista e estampada numa camiseta. Levamos a identidade visual da marca para um caminho contemporâneo, humano, quente e amigável.  
+Na condição de partícipes do trânsito, todos nós temos direitos e responsabilidades claras, dentro de uma lógica em que o anseio individual não pode se sobrepor à segurança do coletivo. E é isso que queremos mostrar: no trânsito, se você se colocar no lugar do outro, se você sentir junto com outro, você tende a sair do estado anestésico e autocentrado de que o meu direito precisa ser contemplado a qualquer custo . E daí advém o senso de comunidade que tanto tem feito falta em nossas vias. A palavra-chave para esse raciocínio que estamos trazendo talvez seja batida, mas infelizmente pouco exercida: empatia. Não estamos falando de gentileza, nem de educação, nem de bons modos . A noção que estamos enfatizando aqui, de empatia, é muito mais rica. É empático aquele sente com o outro, que é capaz de realmente se colocar na posição de seu semelhante. O gentil muitas vezes age bem por medo da reprovação social, e não é essa noção que queremos trabalhar. Quem sente as agruras do outro, age melhor. Age com senso de humanidade. E isso serve para o trânsito e serve, evidentemente, para a vida. 
 
-![](/assets/pier-x-sexy.001.jpeg)
+![](/assets/detran.jpg)
 
-![](/assets/mosaico-pier.001.jpeg)
+![]()
