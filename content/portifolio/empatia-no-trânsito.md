@@ -18,7 +18,7 @@ text_1: "O trânsito de um local é uma representação da sociedade da qual faz
   capazes de deixar marcas, positivas ou negativas, passageiras ou indeléveis,
   em todos que nelas se envolvem. "
 youtube: EQhVcv4dnvo
-image_1: /assets/logo-empatia-no-transito.png
+image_1: /assets/adesivo-detran.png
 text_2: "Nosso trânsito é desigual e violento. Desigual porque os modais
   rodoviários nadam de braçada em ruas e estradas projetadas para que motores
   potentes coloquem a desfilar suas centenas de cavalos , enquanto os pedestres
