@@ -14,16 +14,22 @@ text_1: "Com a queda da legislação que obriga as empresas de determinado setor
   demandava uma reinvenção do seu negócio, mas principalmente reconstruir a
   maneira com que era visto pelo mercado e seus clientes. "
 youtube: ZZ-DCTmwgGs
-image_1: /assets/sem-título-1.png
+image_1: /assets/sindilojas1.png
 text_2: "Em 2018/2019, portanto, desenvolvemos um trabalho de reposicionamento.
   Exploramos, junto do toda a equipe executiva do Sindilojas Porto Alegre, a
   história da organização, o que ela representava para os seus clientes e o
   papel que ela havia obtido na sociedade. Esse trabalho nos abriu portas para
   encontrar um novo caminho para a essência de sua comunicação. Uma visão que
   iria embasar a maneira como se pensa estrategicamente na marca e no negócio. "
+image_7: /assets/id004019x-cards-face_celebridades_1000x1000px.jpg
+image_8: /assets/id004019x-cards-face_celebridades_1000x1000px2.jpg
+image_9: /assets/id004019x-cards-face_celebridades_1000x1000px3.jpg
+image_10: /assets/id004019x-cards-face_celebridades_1000x1000px4.jpg
+image_11: /assets/id004019x-cards-face_celebridades_1000x1000px5.jpg
+image_12: /assets/id004019x-cards-face_celebridades_1000x1000px6.jpg
 ---
 Inspiração para Transformar o Varejo, o novo posicionamento do Sindilojas Porto Alegre surge como virada de chave para seu novo momento. Eles deixam, portanto, de ser apenas um Sindicato e passa a ser um grande centro de inspiração para o varejo com toda sua gama de cursos, eventos e produtos que podem e devem auxiliar o comércio. 
 
 Para lançar o novo momento do Sindilojas Porto Alegre, criamos uma campanha que trouxe grandes nomes do varejo do Rio Grande do Sul para compartilhar suas histórias e nos ajudar a inspirar toda a categoria. Criamos peças e conteúdos que foram veiculados em TV, Rádio, Jornal, OOH e Social Media.
 
-![](/assets/sindilojas.png)
+![](/assets/sindilojas2.png)
