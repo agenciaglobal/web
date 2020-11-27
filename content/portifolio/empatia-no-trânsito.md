@@ -18,7 +18,7 @@ text_1: "O trânsito de um local é uma representação da sociedade da qual faz
   capazes de deixar marcas, positivas ou negativas, passageiras ou indeléveis,
   em todos que nelas se envolvem. "
 youtube: EQhVcv4dnvo
-image_1: /assets/adesivo-detran.png
+image_1: ""
 text_2: "Nosso trânsito é desigual e violento. Desigual porque os modais
   rodoviários nadam de braçada em ruas e estradas projetadas para que motores
   potentes coloquem a desfilar suas centenas de cavalos , enquanto os pedestres
@@ -41,6 +41,8 @@ image_9: /assets/dt000119o-card-redes-900x554px.jpg
 image_10: /assets/dt000119o-card-redes-900x554px2.jpg
 image_11: /assets/dt000119o-card-redes-900x554px3.jpg
 ---
+![](/assets/adesivo-detran-transparente.png)
+
 Na condição de partícipes do trânsito, todos nós temos direitos e responsabilidades claras, dentro de uma lógica em que o anseio individual não pode se sobrepor à segurança do coletivo. E é isso que queremos mostrar: no trânsito, se você se colocar no lugar do outro, se você sentir junto com outro, você tende a sair do estado anestésico e autocentrado de que o meu direito precisa ser contemplado a qualquer custo . E daí advém o senso de comunidade que tanto tem feito falta em nossas vias. A palavra-chave para esse raciocínio que estamos trazendo talvez seja batida, mas infelizmente pouco exercida: empatia. Não estamos falando de gentileza, nem de educação, nem de bons modos . A noção que estamos enfatizando aqui, de empatia, é muito mais rica. É empático aquele sente com o outro, que é capaz de realmente se colocar na posição de seu semelhante. O gentil muitas vezes age bem por medo da reprovação social, e não é essa noção que queremos trabalhar. Quem sente as agruras do outro, age melhor. Age com senso de humanidade. E isso serve para o trânsito e serve, evidentemente, para a vida.
 
 ![](/assets/dt000119o-card-redes-900x554px.jpg)
