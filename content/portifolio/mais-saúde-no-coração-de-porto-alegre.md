@@ -6,7 +6,7 @@ categorie: Advertising
 title: Mais saúde no coração de Porto Alegre
 description: CCG Saúde
 cover_image: /assets/ccg-global-2.png
-image: /assets/cg001420x_canalvc_6.png
+image: /assets/cg001420_canalvc_6.png
 text_1: "Com o objetivo de lançar de maneira relevante para a cidade a Clínica
   Mais, o novo espaço clínico do CCG Saúde localizado no Centro Histórico de
   Porto Alegre, a Global projetou uma campanha que chamasse a atenção nas ruas e
