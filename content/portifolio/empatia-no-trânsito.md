@@ -6,7 +6,7 @@ categorie: Advertising
 title: Empatia no Trânsito
 description: Governo do RS
 cover_image: /assets/17102023_239814_gd.jpg
-video: /assets/detran-motoboy.mp4
+video: /assets/teste-gov.mp4
 image: /assets/17102023_239814_gd.jpg
 text_1: "O trânsito de um local é uma representação da sociedade da qual faz
   parte. Seria incoerente descolar os padrões comportamentais observados no
