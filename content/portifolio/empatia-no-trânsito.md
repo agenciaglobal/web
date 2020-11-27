@@ -25,14 +25,7 @@ text_2: "Nosso trânsito é desigual e violento. Desigual porque os modais
   potentes coloquem a desfilar suas centenas de cavalos , enquanto os pedestres
   se acotovelam em calçadas estreitas e os ciclistas tentam fazer valer seu
   direito de transitar com um mínimo de dignidade no contexto da via, visto que
-  as ciclovias ainda são obras raras. Já os motociclistas, estes são, muitas
-  vezes, estigmatizados, como se fossem pequenos corpos estranhos tentando
-  encontrar um espaço ao qual não têm tanto direito quanto as poderosas máquinas
-  de lata de quatro rodas . Além de desigual, nosso trânsito é violento: 40 mil
-  pessoas morrem por ano no Brasil. No Rio Grande do Sul, são em torno de 1700.
-  Imagine se pegarmos esses números e acrescentarmos os feridos e os sequelados,
-  além dos familiares e amigos das pessoas diretamente envolvidas nos
-  acidentes."
+  as ciclovias ainda são obras raras. "
 image_2: /assets/dt000119f-a-hora-260x170m.png
 image_3: /assets/dt000119o-card-redes-900x554px.jpg
 text_3: A noção que estamos enfatizando aqui, de empatia, é muito mais rica. É
@@ -48,4 +41,4 @@ image_9: ""
 image_10: ""
 image_11: ""
 ---
-Na condição de partícipes do trânsito, todos nós temos direitos e responsabilidades claras, dentro de uma lógica em que o anseio individual não pode se sobrepor à segurança do coletivo. E é isso que queremos mostrar: no trânsito, se você se colocar no lugar do outro, se você sentir junto com outro, você tende a sair do estado anestésico e autocentrado de que o meu direito precisa ser contemplado a qualquer custo. E daí advém o senso de comunidade que tanto tem feito falta em nossas vias. A palavra-chave para esse raciocínio que estamos trazendo talvez seja batida, mas infelizmente pouco exercida: empatia. Não estamos falando de gentileza, nem de educação, nem de bons modos .
+Já os motociclistas, estes são, muitas vezes, estigmatizados, como se fossem pequenos corpos estranhos tentando encontrar um espaço ao qual não têm tanto direito quanto as poderosas máquinas de lata de quatro rodas . Além de desigual, nosso trânsito é violento: 40 mil pessoas morrem por ano no Brasil. No Rio Grande do Sul, são em torno de 1700. Imagine se pegarmos esses números e acrescentarmos os feridos e os sequelados, além dos familiares e amigos das pessoas diretamente envolvidas nos acidentes. Na condição de partícipes do trânsito, todos nós temos direitos e responsabilidades claras, dentro de uma lógica em que o anseio individual não pode se sobrepor à segurança do coletivo. E é isso que queremos mostrar: no trânsito, se você se colocar no lugar do outro, se você sentir junto com outro, você tende a sair do estado anestésico e autocentrado de que o meu direito precisa ser contemplado a qualquer custo. E daí advém o senso de comunidade que tanto tem feito falta em nossas vias. A palavra-chave para esse raciocínio que estamos trazendo talvez seja batida, mas infelizmente pouco exercida: empatia. Não estamos falando de gentileza, nem de educação, nem de bons modos .
