@@ -21,7 +21,7 @@ text_2: "A Clínica Mais foi pensada para ser extremamente integrada. Ela possui
   da Psiquiatria e Psicologia dedicados; além de uma estrutura que comporta os
   mais diversos tipos de exames, como tomografia, ecografia e exames de
   laboratório. "
-image_2: /assets/ccg-ricardo-fabrello-0017.jpg
+image_2: ""
 image_3: /assets/ccg-ricardo-fabrello-0025.jpg
 ---
 ![](/assets/an-pag-clinica-mais-o-sul_digital.png)
