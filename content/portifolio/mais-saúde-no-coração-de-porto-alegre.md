@@ -21,15 +21,10 @@ text_2: "A Clínica Mais foi pensada para ser extremamente integrada. Ela possui
   da Psiquiatria e Psicologia dedicados; além de uma estrutura que comporta os
   mais diversos tipos de exames, como tomografia, ecografia e exames de
   laboratório. "
-image_2: ""
-image_3: /assets/ccg-ricardo-fabrello-0025.jpg
+image_2: /assets/106559341_918323651967374_1480987891357624301_n.jpg
+image_3: /assets/106719580_553541445342716_5981422080507570364_n.jpg
+image_4: /assets/ccg-ricardo-fabrello-0025.jpg
 ---
 ![](/assets/an-pag-clinica-mais-o-sul_digital.png)
 
 Um espaço que contempla uma gama integrada de serviços de saúde no Centro Histórico, o coração de Porto Alegre. Criamos o conceito Mais Saúde no Coração de Porto Alegre e desenvolvemos uma identidade que capturasse a atenção das pessoas, principalmente quando trabalhada em mídia externa. A partir disso, fizemos uma blitz de mídia no centro e em suas redondezas para comunicar a todos que passassem por ali que o centro estava recebendo uma nova estrutura de saúde.
-
-![]()
-
-![]()
-
-![]()
