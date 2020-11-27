@@ -27,7 +27,7 @@ text_2: "Nosso trânsito é desigual e violento. Desigual porque os modais
   direito de transitar com um mínimo de dignidade no contexto da via, visto que
   as ciclovias ainda são obras raras. "
 image_2: /assets/dt000119f-a-hora-260x170m.png
-image_3: /assets/dt000119o-card-redes-900x554px.jpg
+image_3: /assets/dt000119o-card-redes-900x554px3.jpg
 text_3: A noção que estamos enfatizando aqui, de empatia, é muito mais rica. É
   empático aquele sente com o outro, que é capaz de realmente se colocar na
   posição de seu semelhante. O gentil muitas vezes age bem por medo da
@@ -35,7 +35,7 @@ text_3: A noção que estamos enfatizando aqui, de empatia, é muito mais rica. 
   agruras do outro, age melhor. Age com senso de humanidade. E isso serve para o
   trânsito e serve, evidentemente, para a vida.
 image_4: /assets/dt000119o-card-redes-900x554px2.jpg
-image_5: /assets/dt000119o-card-redes-900x554px3.jpg
+image_5: /assets/dt000119o-card-redes-900x554px.jpg
 image_8: ""
 image_9: ""
 image_10: ""
