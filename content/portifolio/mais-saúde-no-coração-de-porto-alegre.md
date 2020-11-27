@@ -22,6 +22,8 @@ text_2: "A Clínica Mais foi pensada para ser extremamente integrada. Ela possui
   mais diversos tipos de exames, como tomografia, ecografia e exames de
   laboratório. "
 ---
+![]()
+
 Um espaço que contempla uma gama integrada de serviços de saúde no Centro Histórico, o coração de Porto Alegre. 
 
 ![](/assets/cg001420y-an-rev-estilo-zaffari-clinica-mais_21x27-5cm.jpg)
