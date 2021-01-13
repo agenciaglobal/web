@@ -1,4 +1,4 @@
-name: https://beta.global.xyz
+name: https://www.global.xyz
 on:
   push:
     branches:
