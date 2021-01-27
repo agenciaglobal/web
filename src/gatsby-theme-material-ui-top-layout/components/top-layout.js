@@ -66,7 +66,7 @@ const TopLayout = ({ children }) => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>global.tt</title>
+        <title>Agência Global</title>
         <script
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
