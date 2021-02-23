@@ -10,4 +10,4 @@ image: /assets/82601719_847797638996738_3921046210554626048_o.jpg
 tags:
   - Notícias
 ---
-A Global a partir de hoje passa a se estabelecer na Fabrica do
+A Global, a partir de hoje, passa a se estabelecer na Fábrica do Futuro, ecossistema de inovação sediado no 4º Distrito de Porto Alegre. Um lugar para se pensar num futuro mais criativo, inclusivo e sustentável.
