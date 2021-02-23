@@ -9,6 +9,6 @@ description: A gestão liderada por Carmem Ferrão será responsável pela curad
   13ª Bienal de Arte do Mercosul.
 image: /assets/alexandre-.jpg
 tags:
-  - realstate
+  - Notícias
 ---
 Na quarta-feira (19/08), foi anunciada a nova gestão da Fundação Bienal de Artes do Mercosul. O time é composto pela Presidente Carmem Ferrão, Vice Presidente Alexandre Skowronsky, além de outros participantes.
