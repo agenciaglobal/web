@@ -9,6 +9,6 @@ image: /assets/ccg-saude.001.jpeg
 tags:
   - Notícias
 ---
-O CCG Saude, empresa operadora de plano de saude verticalizada no Rio Grande do Sul, passa a ser atendida pela Global a partir de abril. 
+O CCG Saude, empresa operadora de plano de saúde verticalizado no Rio Grande do Sul, passa a ser atendida pela Global a partir de abril. 
 
-A empresa recentemente anunciou a venda de uma parcela minoritaria do negocio para a Kinea, gestora de private equity do Itau. Com a entrada do fundo, o CCG Saude ira iniciar um trabalho de investimento em expansao e novos produtos. A Global, por sua vez, ter papel fundamental como parceiro de comunicaçao para esse novo momento de transformaçao do CCG.
+A empresa recentemente anunciou a venda de uma parcela minoritária do negocio para a Kinea, gestora de private equity do Itaú. Com a entrada do fundo, o CCG Saude irá iniciar um trabalho de investimento em expansão e novos produtos. A Global, por sua vez, ter papel fundamental como parceiro de comunicação para esse novo momento de transformação do CCG.
