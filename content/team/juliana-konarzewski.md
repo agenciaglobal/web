@@ -1,9 +1,9 @@
 ---
-path: JULIANA KONARZEWSKI
-date: 2021-03-22T18:10:17.509Z
-name: JULIANA KONARZEWSKI
-job: Atendimento
+path: MATHEUS MIRANDA
+date: 2021-03-22T18:12:08.225Z
+name: MATHEUS MIRANDA
+job: ATENDIMENTO
 about: " "
-black_image: /assets/juliana-konarzewski.jpg
-image: /assets/juliana-konarzewski.jpg
+black_image: /assets/matheus-miranda.jpg
+image: /assets/matheus-miranda.jpg
 ---
