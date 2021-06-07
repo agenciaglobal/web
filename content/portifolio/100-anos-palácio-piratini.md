@@ -7,7 +7,7 @@ title: 100 anos Palácio Piratini
 description: Governo do RS
 cover_image: /assets/captura-de-tela-2021-06-06-às-17.26.48.png
 video: /assets/100-anos-palácio.mp4
-image: /assets/captura-de-tela-2021-06-06-às-17.26.48.png
+image: /assets/100years.png
 text_1: "O Palácio Piratini é um símbolo das conquistas gaúchas. No seu
   aniversário de 100 anos, o Governo do RS nos provocou a criar um projeto que
   não fosse simplesmente uma campanha com prazo de veiculação, mas algo que
