@@ -6,7 +6,7 @@ categorie: Branding & Estratégia
 title: Branding Pling
 description: Pling
 cover_image: /assets/plinglogo.001.jpeg
-image: /assets/captura-de-tela-2021-06-06-às-17.39.43.png
+image: /assets/graff.png
 text_1: "A Healthtech Pling chegou até a Global apresentando desafios em sua
   comunicação. Com um produto SaaS (Software as a Serivce) que possibilita
   profissionais autônomas de diferentes segmentos da saúde a conquistarem uma
