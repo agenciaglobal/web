@@ -7,6 +7,6 @@ title: Vem sentir
 description: Fundação Bienal do Mercosul
 cover_image: /assets/captura-de-tela-2021-06-07-às-09.32.57.png
 video: /assets/gradiente-ok.mp4
-image: /assets/captura-de-tela-2021-06-07-às-09.32.57.png
+image: /assets/blur.png
 text_1: "Soon. "
 ---
