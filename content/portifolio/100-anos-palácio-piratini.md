@@ -15,12 +15,12 @@ text_1: "O Palácio Piratini é um símbolo das conquistas gaúchas. No seu
   data comemorativa, como um patrimônio histórico. "
 youtube: p3JJe3FdMF4
 image_1: /assets/100anos_768x768.png
-text_2: Nossa inspiração teve início com uma visita guiada no Palácio para
+text_2: "Nossa inspiração teve início com uma visita guiada no Palácio para
   absorver todas as histórias e curiosidades que lá existem. Somado a isso,
   trouxemos referências de projetos de arte, museus e exposições nacionais e
   internacionais que nos dessem insumos para colocar o Palácio Piratini no
   contexto não só político, mas cultural, artístico e histórico na vida dos
-  gaúchos.  ![](/assets/100anos_03-.png)
+  gaúchos. "
 ---
 ![](/assets/100anos_03-.png)
 
