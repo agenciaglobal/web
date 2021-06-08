@@ -14,9 +14,22 @@ text_1: "O Palácio Piratini é um símbolo das conquistas gaúchas. No seu
   perdurasse como um ativo do Palácio e pudesse seguir por muito tempo além da
   data comemorativa, como um patrimônio histórico. "
 youtube: p3JJe3FdMF4
+image_1: /assets/100anos_768x768.png
+text_2: Nossa inspiração teve início com uma visita guiada no Palácio para
+  absorver todas as histórias e curiosidades que lá existem. Somado a isso,
+  trouxemos referências de projetos de arte, museus e exposições nacionais e
+  internacionais que nos dessem insumos para colocar o Palácio Piratini no
+  contexto não só político, mas cultural, artístico e histórico na vida dos
+  gaúchos.  ![](/assets/100anos_03-.png)
 ---
-Nossa inspiração teve início com uma visita guiada no Palácio para absorver todas as histórias e curiosidades que lá existem. Somado a isso, trouxemos referências de projetos de arte, museus e exposições nacionais e internacionais que nos dessem insumos para colocar o Palácio Piratini no contexto não só político, mas cultural, artístico e histórico na vida dos gaúchos.
+![](/assets/100anos_03-.png)
+
+
 
 A partir daí, desenvolvemos um trabalho que convida o povo gaúcho a conhecer o Palácio e tudo que ele representa na nossa história. Iniciamos por uma bela identidade gráfica capaz de traduzir o peso histórico do palácio, mas que possui, ao mesmo tempo, uma atmosfera contemporânea. Criamos a paleta de cores a partir das obras de Aldo Locatelli expostas no Palácio. O artista expressa o povo gaúcho de maneira muito heterogênea, o que nos chamou a atenção e nos inspirou para criar uma paleta que reflete todos os tons de cores das etnias que construíram o RS que conhecemos. Um povo miscigenado, cheio de influências e cores. O Palácio sendo representado como a casa de todos os gaúchos.
 
+![](/assets/100anos_01-.png)
+
 Produzimos, também, um filme cinematográfico em parceria com a Zepp, captado com um drone num take só e que nos instiga a conhecer, por dentro, o Palácio Piratini e um pouco de sua história. Para somar na experiência, criamos um passeio virtual com tecnologia 3D. Agora, um símbolo na história gaúcha mas que nem todos tem acesso, agora de portas abertas para todos explorarem os mínimos detalhes que lá existem.
+
+![](/assets/100anos_04-.png)
