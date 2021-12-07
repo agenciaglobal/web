@@ -1,5 +1,5 @@
 ---
-path: eduardarosa
+path: eduarda rosa
 date: 2021-12-07T03:03:56.740Z
 name: Eduarda Rosa
 job: Redatora
