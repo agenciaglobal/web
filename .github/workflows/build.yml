@@ -52,23 +52,23 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - run: yarn
       - run: yarn build
-  Storybook:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: git config --global user.email "francescoaferraro@gmail.com"
-      - run: git config --global user.name "@cescoferraro"
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.17.0
-          fetch-depth: 0
-      - uses: actions/cache@v2
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - run: yarn
-      - uses: chromaui/action@v1
-        with:
-          projectToken: jeeo3rqsvu
-          token: ${{ secrets.ACCESS_TOKEN  }}
+# Storybook:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - uses: actions/checkout@v2
+#     - run: git config --global user.email "francescoaferraro@gmail.com"
+#     - run: git config --global user.name "@cescoferraro"
+#     - name: Use Node.js
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 14.17.0
+#         fetch-depth: 0
+#     - uses: actions/cache@v2
+#       with:
+#         path: "**/node_modules"
+#         key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+#     - run: yarn
+#     - uses: chromaui/action@v1
+#       with:
+#         projectToken: jeeo3rqsvu
+#         token: ${{ secrets.ACCESS_TOKEN  }}
