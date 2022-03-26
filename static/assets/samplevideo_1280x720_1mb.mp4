@@ -466,7 +466,7 @@
                     <option value="Grand">Grand $10.00 USD</option>
                     <option value="Venti">Venti $20.00 USD</option>
             </select> 
-            <input type="image" src="http://sample-videos.com/images/buy-me-a-coffee11.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online." style="
+            <input type="image" src="http://sample-videos.com/images/buy-me-a-coffee11.png" border="0" name="submit" alt="PayPal ï¿½ The safer, easier way to pay online." style="
                 margin: 10px 0;
                 width: 165px;
             ">
@@ -671,7 +671,6 @@ amzn_assoc_bg_color = "FFFFFF";
         {
             timezone = jstz.determine();
             var a = timezone.name();
-            //console.log(a);
             if (a != 'Asia/Kolkata')
             {
                 $('#india_paypal').hide();
@@ -694,7 +693,6 @@ amzn_assoc_bg_color = "FFFFFF";
 //<![CDATA[
 $(document).ready(function() {
   setTimeout(function(){
-    console.log('asd');
       $('#facebooklikebox-12').append('<div id="fb-root"></div>');
       $('#facebooklikebox-12').append('<fb:like-box href="http://www.facebook.com/607728429342897" width="300" show_faces="true" stream="false" header="false"></fb:like-box>'); 
       jQuery.getScript('https://connect.facebook.net/en_US/all.js#xfbml=1', function() {
@@ -746,7 +744,6 @@ $(document).ready(function() {
                      $('#download_video_count').text(parseInt($('#download_video_count').text())+1);
                      
                      data = $.parseJSON(data);
-                     console.log(data);
                      
                      if (data.question != undefined)
                      {

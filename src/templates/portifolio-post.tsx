@@ -246,7 +246,6 @@ const QuoteComponent = (props: {
 export const useExtrapolatedMargin = (props: WithWidthProps): number => {
   const isDesktop = isWidthUp("md", props.width || "xs")
   const isXS = isWidthDown("xs", props.width || "xs")
-  console.log(isXS)
   return isDesktop ? 120 : isXS ? 16 : 24
 }
 

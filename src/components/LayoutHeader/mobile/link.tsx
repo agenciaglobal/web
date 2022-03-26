@@ -41,7 +41,6 @@ export const LinkMobileComponent = ({
 }: Props): React.ReactElement => {
   const classes = useStylesMenu()
   const isCurrent = isCurrentHook(to, uri)
-  console.log(isCurrent)
   return (
     <Link
       onClick={() => {

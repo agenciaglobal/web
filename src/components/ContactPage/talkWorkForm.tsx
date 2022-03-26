@@ -200,12 +200,10 @@ export const TalkWorkForm = (): React.ReactElement => {
               { ...values, type: current === 0 ? "talk" : "work" },
               "user_t127MAqmhCkHL5pHqI4Mc",
             )
-            console.log("hello")
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             resetForm(initialValues as any)
             return
           }
-          console.log("outside")
         }}
       >
         {({
@@ -217,7 +215,6 @@ export const TalkWorkForm = (): React.ReactElement => {
           handleSubmit,
           errors,
         }) => {
-          console.log(errors, isValid, initialTouched)
           const s = values.phone
             .split(" ")
             .join("")

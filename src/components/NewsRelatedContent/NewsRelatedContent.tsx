@@ -74,8 +74,6 @@ export const NewsRelatedContent = withWidth()(
             .map((d) => d?.node)
             .filter((_, index) => index < 3)
             .map((el, index) => {
-              console.log("yaya")
-              console.log(el)
               const image = el?.frontmatter?.image || ""
               return (
                 <Box

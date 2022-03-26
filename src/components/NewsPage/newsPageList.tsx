@@ -49,9 +49,6 @@ export const NewsPageList = withWidth()(
         ...f?.node?.frontmatter,
         slug: f?.node?.fields?.slug,
       }))
-    console.log(map)
-    console.log("isXS")
-    console.log(isXS)
     return (
       <React.Fragment>
         {/* <GlobalPageTitle label={"News"}></GlobalPageTitle> */}
@@ -93,7 +90,6 @@ export const NewsPageList = withWidth()(
                   total + pace < (news?.length || 0)
                     ? total + pace
                     : news?.length || 0
-                console.log(result)
                 setTotal(result)
               }}
             >

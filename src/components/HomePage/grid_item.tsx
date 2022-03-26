@@ -1,12 +1,12 @@
-import withWidth, { WithWidthProps } from "@material-ui/core/withWidth"
-import { withSize, SizeMeProps } from "react-sizeme"
-import { Portifolio } from "components/HomePage/types"
 import { Box } from "@material-ui/core"
-import TrackVisibility from "react-on-screen"
+import withWidth, { WithWidthProps } from "@material-ui/core/withWidth"
+import { Portifolio } from "components/HomePage/types"
 import { Link } from "gatsby-plugin-react-i18next"
-import { ExpandTextHome } from "./expand_text_home"
 import * as React from "react"
 import { useState } from "react"
+import TrackVisibility from "react-on-screen"
+import { SizeMeProps, withSize } from "react-sizeme"
+import { ExpandTextHome } from "./expand_text_home"
 
 interface Props {
   index: number

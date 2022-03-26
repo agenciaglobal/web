@@ -26,7 +26,6 @@ interface Props {
 // }
 
 export const mobile = (x: Props) => {
-  console.log(x)
   return (
     <MobileSelect
       setValue={x.setValue}

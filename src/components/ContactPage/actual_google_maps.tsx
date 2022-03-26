@@ -15,7 +15,6 @@ import pin from "static/pin.png"
 
 export const ActualGoogleMapsComponent = withScriptjs(
   withGoogleMap((props: WithGoogleMapProps) => {
-    console.log(props)
     const theme = useTheme()
     const initialState = {
       markers: [

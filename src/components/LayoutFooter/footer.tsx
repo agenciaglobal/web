@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import { Container, Typography, SvgIcon, Hidden } from "@material-ui/core"
 import { makeStyles, Theme } from "@material-ui/core/styles"
+import SeloAbradi from "../../../static/assets/Selo-ABRADi-01.png"
 
 const useStyles = makeStyles((theme: Theme) => ({
   SvgIcon: {
@@ -111,6 +112,17 @@ const Footer = (): React.ReactElement => {
         <div
           style={{ height: 1, width: 165, background: "#FFCC00", marginTop: 6 }}
         />
+
+        <div style={{ marginTop: "1.25rem" }}>
+          <a
+            href="https://selo.abradi.com.br/minha-pagina"
+            id="link-abradi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img alt="ABRADI" height={85} src={SeloAbradi} />
+          </a>
+        </div>
       </Container>
     </Fragment>
   )

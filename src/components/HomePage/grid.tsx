@@ -1,9 +1,9 @@
 import { Box } from "@material-ui/core"
 import makeStyles from "@material-ui/core/styles/makeStyles"
+import { GridItem } from "components/HomePage/grid_item"
 import * as React from "react"
 import Masonry from "react-masonry-css"
 import { Portifolio } from "./types"
-import { GridItem } from "components/HomePage/grid_item"
 
 interface Props {
   projects: { [key: string]: Portifolio[] }
@@ -14,7 +14,7 @@ const useGridStyles = makeStyles(() => ({
   box: { width: "100%", paddingBottom: 100, paddingTop: 30 },
 }))
 
-export const HomeGrid = ({ projects, value }: Props): React.ReactElement => {
+export const HomeGrid = ({ projects }: Props): React.ReactElement => {
   const classes = useGridStyles()
 
   return (

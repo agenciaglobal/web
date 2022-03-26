@@ -1,9 +1,6 @@
-import { Hidden } from "@material-ui/core"
 import * as React from "react"
 import { HomeGrid } from "./grid"
 import "./index.css"
-import { DesktopTabs } from "./select_desktop"
-import { MobileSelect } from "./select_mobile"
 import { HomeTitleComponent } from "./title"
 import { Portifolio } from "./types"
 
@@ -22,7 +19,6 @@ export const HomePage = ({
   // categories = categories.sort((a) =>
   //   a.toLowerCase().startsWith("f") ? -1 : 1,
   // )
-  console.log(projects, categories)
   return (
     <React.Fragment>
       <HomeTitleComponent />

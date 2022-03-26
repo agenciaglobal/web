@@ -6,7 +6,6 @@ export const useIsAtTop = (): boolean => {
   useEffect(() => {
     window.onscroll = () => {
       const pageYOffset = window.pageYOffset
-      console.log(pageYOffset)
       const condition = pageYOffset < 155
       _.debounce(() => {
         setTop(condition)

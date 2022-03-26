@@ -42,11 +42,9 @@ const LeftDrawer = withWidth()(
       <Fragment>
         <Drawer
           onMouseEnter={() => {
-            console.log("enter")
             setOpen(true)
           }}
           onMouseLeave={() => {
-            console.log("leave")
             setOpen(false)
           }}
           variant="permanent"

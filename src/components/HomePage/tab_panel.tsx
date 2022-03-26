@@ -12,7 +12,6 @@ export const TabPanel = ({
   index,
   value,
 }: Props): React.ReactElement => {
-  console.log(index, value)
   return (
     <div
       role="tabpanel"
