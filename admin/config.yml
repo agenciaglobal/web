@@ -1,0 +1,277 @@
+backend:
+  name: github
+  repo: agenciaglobal/web
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: news
+    label: Notícias
+    folder: content/news
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Data, widget: date }
+      - name: postType
+        label: Tipo de post
+        widget: select
+        options:
+          - { label: "Notícia", value: "notícia" }
+          - { label: "Artigo", value: "artigo" }
+      - name: type
+        label: Tipo do box de exibição na lista
+        widget: select
+        options:
+          - { label: "Full", value: "FULL" }
+          - { label: "Half", value: "HALF" }
+          - { label: "Mirror", value: "MIRROR" }
+          - { label: "Left", value: "LEFT" }
+          - { label: "Right", value: "RIGHT" }
+          - { label: "Quote", value: "QUOTE" }
+      - { name: quote, label: Quote (exibido se tipo for hallf, mirror ou quote), required: false }
+      - { name: title, label: Título }
+      - { name: description, label: Descrição, required: false }
+      - name: "image"
+        label: "Imagem de destaque"
+        widget: "image"
+      - { name: "body", label: "Conteúdo do blog post", widget: "markdown" }
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        multiple: true
+        searchFields: ["tag"]
+        valueField: "tag"
+        displayFields: ["tag"]
+      - { name: author, label: Autor do post, required: false }
+      - { name: about, label: Sobre o autor, required: false }
+      - name: "author_image"
+        label: "Foto do autor (1:1)"
+        widget: "image"
+        required: false
+  - name: tags
+    label: Tags
+    folder: content/tags
+    create: true
+    fields:
+      - { name: tag, label: tag, widget: string }
+  - name: client
+    label: Clientes
+    folder: content/client
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Data, widget: date }
+      - { name: name, label: Cliente }
+      - label: "Logo"
+        name: "image"
+        widget: "image"
+      - { name: testimonial, label: Depoimento, required: false }
+      - { name: author, label: Autor, required: false }
+      - label: "Foto do autor"
+        name: "author_image"
+        widget: "image"
+        required: false
+#
+#     Todos os campos estão criados e na ordem correta.
+#     Comentei em cada campo novo pra facilitar.
+#     Deixei quase todos os campos com required=false, em geral,
+#     se não tiver o campo, é só não exibir o componente, mas tem alguns casos especiais:
+#       GridLocal: no caso dos conteúdos que são exibidos em grid, se um não vier,
+#       precisa omitir o grid inteiro. 
+#       Depoimento do cliente: são 3 campos opcionais, mas se tiver algum faltando,
+#       o componente inteiro do depoimento deve ser omitido
+#
+  - name: portifolio
+    label: Portifolio
+    folder: content/portifolio
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Data publicação, widget: date }
+      - { name: jobDate, label: Data do job, widget: date }
+      - name: categorie
+        label: Categoria
+        widget: select
+        options:
+          - { label: "Featured", value: "Featured" }
+          - { label: "Branding & Estratégia", value: "Branding & Estratégia" }
+          - { label: "Digital Experience", value: "Digital Experience" }
+          - { label: "Social Content", value: "Social Content" }
+          - { label: "CRM", value: "CRM" }
+          - { label: "Advertising", value: "Advertising" }
+      - { name: title, label: Título }
+      - { name: description, label: Cliente }
+# imagem de capa é a header do post.. mesmo quando houver um vídeo exibido no grid
+      - label: "Featured image (home)"
+        name: "cover_image"
+        widget: "image"
+# video para ser exibido no grid. É opcional e quando não for inserido, a imagem de capa deve ficar no grid.
+      - label: "Featured video (home)"
+        name: "video"
+        widget: "file"
+        required: false
+      - label: "Imagem de capa (wide)"
+        name: "image"
+        widget: "image"
+
+      - { name: text_1, label: "Texto 1" }
+
+      - { name: youtube, label: "Id do vídeo (youtube)", required: false }
+
+      # Grid 1
+      - label: "Grid 1: Imagem (1:1)"
+        name: "image_1"
+        widget: "image"
+        required: false
+      - { name: text_2, label: "Grid 1: Texto", required: false }
+
+      # coloquei o markdown aqui como conteúdo adicional pra ser exibido nessa posição (entre os 2 "GridLocal")
+      - { name: "body", label: "Conteúdo adicional", widget: "markdown", required: false }
+
+      #Grid 2
+      - label: "Grid 2: Imagem 1 (1:1)"
+        name: "image_2"
+        widget: "image"
+        required: false
+      - label: "Grid 2: Imagem 2 (1:1)"
+        name: "image_3"
+        widget: "image"
+        required: false
+
+      - { name: text_3, label: "Texto 2", required: false }
+
+      #Grid 3
+      - label: "Grid 3: Imagem 1 (1:1)"
+        name: "image_4"
+        widget: "image"
+        required: false
+      - label: "Grid 3: Imagem 2 (1:1)"
+        name: "image_5"
+        widget: "image"
+        required: false 
+
+      - { name: text_4, label: "Texto 3", required: false }
+
+      # imagem nova... tava faltando inserir uma imagem... tem que parar de reutilizar a "image" na cover e no conteúdo
+      - label: "imagem 6 (wide)"
+        name: "image_6"
+        widget: "image"
+        required: false
+
+      - { name: text_5, label: "Texto 4", required: false }
+
+      #Carrossel
+      - label: "Carrossel: Imagem 1 (1:1)"
+        name: "image_7"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 2 (1:1)"
+        name: "image_8"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 3 (1:1)"
+        name: "image_9"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 4 (1:1)"
+        name: "image_10"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 5 (1:1)"
+        name: "image_11"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 6 (1:1)"
+        name: "image_12"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 7 (1:1)"
+        name: "image_13"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 8 (1:1)"
+        name: "image_14"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 9 (1:1)"
+        name: "image_15"
+        widget: "image"
+        required: false
+      - label: "Carrossel: Imagem 10 (1:1)"
+        name: "image_16"
+        widget: "image"
+        required: false
+
+      - { name: text_6, label: "Texto 5", required: false }
+
+      # Grid 4
+      - label: "Grid 4: Imagem 1 (1:1)"
+        name: "image_17"
+        widget: "image"
+        required: false
+      - label: "Grid 4: Imagem 2 (1:1)"
+        name: "image_18"
+        widget: "image"
+        required: false
+      - label: "Grid 4: Imagem 3 (1:1)"
+        name: "image_19"
+        widget: "image"
+        required: false
+      - label: "Grid 4: Imagem 4 (1:1)"
+        name: "image_20"
+        widget: "image"
+        required: false
+      - label: "Grid 4: Imagem 5 (1:1)"
+        name: "image_21"
+        widget: "image"
+        required: false
+      - label: "Grid 4: Imagem 6 (1:1)"
+        name: "image_22"
+        widget: "image"
+        required: false
+
+      # Texto 6
+      - { name: text_7, label: "Texto 6", required: false }
+    
+
+      # Grid 5
+      - label: "Grid 5: Imagem 1 (1:1)"
+        name: "image_23"
+        widget: "image"
+        required: false
+      - label: "Grid 5: Imagem 2 (1:1)"
+        name: "image_24"
+        widget: "image"
+        required: false
+      - label: "Grid 5: Imagem 3 (1:1)"
+        name: "image_25"
+        widget: "image"
+        required: false
+      - label: "Grid 5: Imagem 4 (1:1)"
+        name: "image_26"
+        widget: "image"
+        required: false
+
+      # Componente de depoimento
+      - { name: testimonial, label: "Quote: Depoimento", required: false }
+      - { name: author, label: "Quote: Autor", required: false }
+      - { name: role, label: "Quote: Cargo", required: false }
+
+  - name: team
+    label: Team
+    folder: content/team
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Data, widget: date }
+      - { name: name, label: Nome }
+      - { name: job, label: Cargo }
+      - { name: about, label: Sobre }
+      - label: "Foto P&B"
+        name: "black_image"
+        widget: "image"
+      - label: "Foto colorida"
+        name: "image"
+        widget: "image"
